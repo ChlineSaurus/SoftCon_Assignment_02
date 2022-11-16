@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="Making Dice class">
+      <change afterPath="$PROJECT_DIR$/src/Cards/Cards.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Cards/Deck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GameManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UI/Display.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/materials/Dice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/materials/Dice.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -26,7 +31,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2HJWK90zp5F9a6lMyZ6LmDNLaQe" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
@@ -35,6 +42,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors"
   }
 }]]></component>
@@ -68,6 +79,7 @@
       <workItem from="1668503331602" duration="1468000" />
       <workItem from="1668513990886" duration="614000" />
       <workItem from="1668588064871" duration="2311000" />
+      <workItem from="1668596449577" duration="1229000" />
     </task>
     <task id="LOCAL-00001" summary="Making Dice class">
       <created>1668588937558</created>
