@@ -1,10 +1,9 @@
 package Cards;
 
-public abstract class AbstractCard{
+public abstract class AbstractCard {
 
-
-
-
+    private String name;
+    private int points;
 
 }
 
