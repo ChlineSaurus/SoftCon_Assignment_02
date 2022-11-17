@@ -61,7 +61,7 @@ public class Deck
             }
         }
         Collections.shuffle(cards);
-        aCards = new DeckStack(cards);
+
     }
 
     public AbstractCard draw()

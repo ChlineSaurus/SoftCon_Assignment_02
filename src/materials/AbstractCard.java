@@ -1,9 +1,13 @@
 package materials;
 
+import materials.cards.ValidDice;
+
 public abstract class AbstractCard {
 
-    private String name;
-    private int points;
+    protected String name;
+    protected int points;
+    protected ValidDice valid;
+    protected boolean isTutorequired;
 
 }
 
