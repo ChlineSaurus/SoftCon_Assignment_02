@@ -1,4 +1,4 @@
-import Cards.*;
+import materials.Deck;
 import materials.Dice;
 
 

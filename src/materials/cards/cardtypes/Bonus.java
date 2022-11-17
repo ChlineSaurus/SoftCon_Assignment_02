@@ -1,6 +1,8 @@
-package Cards;
+package materials.cards.cardtypes;
 
-public class Bonus extends AbstractCard{
+import materials.AbstractCard;
+
+public class Bonus extends AbstractCard {
 
     private final String name="Bonus";
     public Bonus(int apoints){

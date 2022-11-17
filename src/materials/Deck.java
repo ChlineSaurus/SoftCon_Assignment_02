@@ -1,5 +1,8 @@
-package Cards;
+package materials;
 
+
+import materials.cards.cardtypes.*;
+import materials.cards.cardtypes.Double;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -71,4 +74,7 @@ public class Deck
         return aCards.isEmpty();
     }
 }
+
+
+
 
