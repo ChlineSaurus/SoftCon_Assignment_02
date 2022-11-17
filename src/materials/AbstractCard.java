@@ -1,12 +1,12 @@
 package materials;
 
-import materials.cards.ValidDice;
+import materials.cards.TutoCondition;
 
 public abstract class AbstractCard {
 
     protected String name;
     protected int points;
-    protected ValidDice valid;
+    protected TutoCondition valid;
     protected boolean isTutorequired;
 
 }

@@ -4,15 +4,18 @@ import materials.Dice;
 
 import java.util.List;
 
-public class Straight implements ValidDice{
+public class Straight implements TutoCondition {
 
 
     @Override
-    public boolean validDice(List<Dice> dices) {
+    public boolean tutoRequirements(List<Dice> dices) {
+
         for (Dice dice:dices){
             int faceValue=dice.getFaceValue();
+
 
         }
         return false;
     }
+
 }
