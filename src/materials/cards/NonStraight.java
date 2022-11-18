@@ -15,7 +15,7 @@ public class NonStraight implements TutoCondition {
     public boolean tutoRequirements(List<Dice> dices) {
         for (Dice dice: dices){
             int faceValue=dice.getFaceValue();
-            if (faceValue!=5 && faceValue!=1){
+            if (faceValue!=guaranteedpointsI && faceValue!=guaranteedPointsII){
                 if (diceCounter.containsKey(faceValue)){
                     diceCounter.put(faceValue,diceCounter.get(faceValue)+1);
                 }
