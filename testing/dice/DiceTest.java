@@ -8,7 +8,7 @@ public class DiceTest {
     Dice dice=new Dice();
 
     @Test
-    public void testRollGet(){
+    public void testRollGet (){
         int faceValue=dice.roll();
         int getFaceValue= dice.getFaceValue();
         Assertions.assertEquals(faceValue, getFaceValue);

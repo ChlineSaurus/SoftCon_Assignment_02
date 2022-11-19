@@ -12,9 +12,14 @@ public class NonStraight implements TutoCondition {
     private final int guaranteedPointsII=5;
 
     @Override
-    public boolean tutoRequirements(List<Dice> dices) {
+    public boolean tutoRequirements(List<Dice> dices) //throws IllegalgetValueException//
+     {
         for (Dice dice: dices){
+            //try{
             int faceValue=dice.getFaceValue();
+            //catch (IllegalgetValueException e){
+            //    throw new IllegalgetValueException("You are a hipo");
+            //}
             if (faceValue!=guaranteedpointsI && faceValue!=guaranteedPointsII){
                 if (diceCounter.containsKey(faceValue)){
                     diceCounter.put(faceValue,diceCounter.get(faceValue)+1);

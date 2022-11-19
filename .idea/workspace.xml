@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="running test works&#10;had to comment out wrong areas">
+      <change afterPath="$PROJECT_DIR$/src/exceptions/IllegalgetValueException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testing/UI/DiceRepresenatiotaionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cards/cards/NonStraight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/NonStraight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dice/Dice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/Dice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testing/dice/DiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/testing/dice/DiceTest.java" afterDir="false" />
     </list>
@@ -67,10 +70,26 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DiceTest.getValue">
+  <component name="RunManager" selected="JUnit.DiceRepresenatiotaionTest.testRepresent6">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="SoftCon_Assignment_02" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiceRepresenatiotaionTest.testRepresent6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SoftCon_Assignment_02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testing.UI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testing.UI" />
+      <option name="MAIN_CLASS_NAME" value="testing.UI.DiceRepresenatiotaionTest" />
+      <option name="METHOD_NAME" value="testRepresent6" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -109,6 +128,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DiceRepresenatiotaionTest.testRepresent6" />
         <item itemvalue="JUnit.DiceTest.getValue" />
         <item itemvalue="JUnit.DiceTest.testRollGet" />
         <item itemvalue="Application.Main" />
@@ -136,7 +156,7 @@
       <workItem from="1668676448649" duration="1061000" />
       <workItem from="1668677731173" duration="1718000" />
       <workItem from="1668698634153" duration="2550000" />
-      <workItem from="1668701408033" duration="19091000" />
+      <workItem from="1668701408033" duration="22578000" />
     </task>
     <task id="LOCAL-00001" summary="Making Dice class">
       <created>1668588937558</created>
@@ -208,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668866678503</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="running test works&#10;had to comment out wrong areas">
+      <created>1668867411686</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1668867411686</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
