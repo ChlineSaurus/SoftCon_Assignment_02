@@ -1,8 +1,8 @@
-package materials;
+package cards;
 
 
-import materials.cards.cardtypes.*;
-import materials.cards.cardtypes.Double;
+import cards.cards.cardtypes.*;
+import cards.cards.cardtypes.Double;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,6 +1,6 @@
-package materials;
+package cards;
 
-import materials.cards.TutoCondition;
+import cards.cards.TutoCondition;
 
 public abstract class AbstractCard {
 

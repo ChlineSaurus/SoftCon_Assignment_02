@@ -1,6 +1,6 @@
-package materials.cards.cardtypes;
+package cards.cards.cardtypes;
 
-import materials.AbstractCard;
+import cards.AbstractCard;
 
 public class Bonus extends AbstractCard {
 

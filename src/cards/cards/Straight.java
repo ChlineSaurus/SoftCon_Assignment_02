@@ -1,6 +1,6 @@
-package materials.cards;
+package cards.cards;
 
-import materials.Dice;
+import dice.Dice;
 
 import java.util.HashMap;
 import java.util.List;

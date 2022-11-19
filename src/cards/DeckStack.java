@@ -1,7 +1,5 @@
-package materials;
+package cards;
 
-
-import materials.AbstractCard;
 
 import java.util.ArrayList;
 import java.util.List;

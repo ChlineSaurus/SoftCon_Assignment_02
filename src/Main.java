@@ -1,5 +1,5 @@
-import materials.Deck;
-import materials.Dice;
+import cards.Deck;
+import dice.Dice;
 
 
 public class Main {

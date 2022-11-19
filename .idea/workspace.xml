@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="TutoCondition implemented for straight">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/materials/cards/NonStraight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/materials/cards/NonStraight.java" afterDir="false" />
-    </list>
+    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="skipTurn for skip card in AbstactCard... &#10;still needs to be implemented in constructer of AbstractCard" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,7 +87,7 @@
       <workItem from="1668676448649" duration="1061000" />
       <workItem from="1668677731173" duration="1718000" />
       <workItem from="1668698634153" duration="2550000" />
-      <workItem from="1668701408033" duration="12217000" />
+      <workItem from="1668701408033" duration="13019000" />
     </task>
     <task id="LOCAL-00001" summary="Making Dice class">
       <created>1668588937558</created>
@@ -141,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668722148960</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="skipTurn for skip card in AbstactCard... &#10;still needs to be implemented in constructer of AbstractCard">
+      <created>1668807235482</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1668807235482</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +170,7 @@
     <MESSAGE value="trying to implement interfaces&#10;Deck is currently not good &#10;still needs work to be done&#10;why can't we jjust use one deck" />
     <MESSAGE value="hardcoded tutorequirements&#10;meaning that it checks the toto requirements if it'isnt a straight" />
     <MESSAGE value="TutoCondition implemented for straight" />
-    <option name="LAST_COMMIT_MESSAGE" value="TutoCondition implemented for straight" />
+    <MESSAGE value="skipTurn for skip card in AbstactCard... &#10;still needs to be implemented in constructer of AbstractCard" />
+    <option name="LAST_COMMIT_MESSAGE" value="skipTurn for skip card in AbstactCard... &#10;still needs to be implemented in constructer of AbstractCard" />
   </component>
 </project>

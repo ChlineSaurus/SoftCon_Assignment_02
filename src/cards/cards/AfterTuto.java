@@ -1,4 +1,4 @@
-package materials.cards;
+package cards.cards;
 
 interface AfterTuto {
 

@@ -1,4 +1,4 @@
-package materials;
+package dice;
 
 import java.util.concurrent.ThreadLocalRandom;
 
