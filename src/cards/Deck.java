@@ -1,11 +1,10 @@
 package cards;
 
 
-import cards.cards.cardtypes.*;
 import cards.cards.cardtypes.Double;
+import cards.cards.cardtypes.*;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 
@@ -55,14 +54,14 @@ public class Deck
         int p=100;
         for(int i=0;i<5;i++){
             p+=100;
-            for(int j=0;j<5;j++){
-                Bonus bonus = new Bonus(p);
-                cards.add(bonus);
+            //for(int j=0;j<5;j++){
+              //  Bonus bonus = new Bonus(p);
+                //cards.add(bonus);
             }
         }
-        Collections.shuffle(cards);
+       // Collections.shuffle(cards);
 
-    }
+    //}
 
     public AbstractCard draw()
     {

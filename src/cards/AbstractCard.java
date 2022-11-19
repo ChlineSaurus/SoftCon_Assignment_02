@@ -8,7 +8,7 @@ public abstract class AbstractCard {
     protected int points;
     protected TutoCondition valid;
     protected boolean isTutorequired;
-    public final boolean skipTurn;
+    //public final boolean skipTurn;
     // needs to be added to Constructer
 
 
