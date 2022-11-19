@@ -13,7 +13,10 @@ public class Dice {
 
     }
 
-    public int getFaceValue() {
+    public int getFaceValue()  {
+        if (faceValue==0){
+            roll();
+        }
         return faceValue;
     }
 }
