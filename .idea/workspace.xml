@@ -5,25 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="running test works&#10;had to comment out wrong areas">
-      <change afterPath="$PROJECT_DIR$/src/Turn/AddScore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Turn/DrawCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Turn/EvaluateDice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Turn/EvaluateWon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Turn/MoreValidDice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Turn/NoMoreValidDice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Turn/NullDice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Turn/RollDice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Turn/SetWon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Turn/StartPlayerTurn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Turn/SwitchPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Turn/Terminate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Turn/TurnState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exceptions/IllegalgetValueException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testing/UI/DiceRepresenatiotaionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Turn/Turn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn/Turn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Turn/TurnManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing/UI/DiceRepresentationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/testing/UI/DiceRepresentationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cards/cards/NonStraight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/NonStraight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dice/Dice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/Dice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testing/dice/DiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/testing/dice/DiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,35 +42,35 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/danielmaksimovic/OneDrive - Universität Zürich UZH/Studium/HS22/Software Construction I/Java/SoftCon_Assignment_02/src&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "19",
+    "last_opened_file_path": "/Users/danielmaksimovic/OneDrive - Universität Zürich UZH/Studium/HS22/Software Construction I/Java/SoftCon_Assignment_02/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.DiceRepresenatiotaionTest.testRepresent6">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="SoftCon_Assignment_02" />
@@ -142,10 +128,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.DiceRepresenatiotaionTest.testRepresent6" />
         <item itemvalue="JUnit.DiceTest.getValue" />
         <item itemvalue="JUnit.DiceTest.testRollGet" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -278,16 +264,5 @@
     <MESSAGE value="restrucutirn project" />
     <MESSAGE value="running test works&#10;had to comment out wrong areas" />
     <option name="LAST_COMMIT_MESSAGE" value="running test works&#10;had to comment out wrong areas" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
