@@ -1,5 +1,7 @@
 package testing.dice;
 
+import dice.Dice;
+
 public class DiceTest {
 
     Dice dice=new Dice();

@@ -7,11 +7,17 @@ public class RollDice implements TurnState{
     }
     @Override
     public void next(Turn aTurn) {
-        /*Roll Dice*/
+        rollDice();
         decideIfNull();
         aTurn.setState(new EvaluateDice());
     }
     private void decideIfNull(){
         /* must be implemented*/
+    }
+    private void rollDice(){
+        System.out.println(aTurn.score);
+        aTurn.list.add(2);
+        aTurn.list.add(4);
+        System.out.println(aTurn.list);
     }
 }
