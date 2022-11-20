@@ -1,8 +1,7 @@
 package cards.cards.cardtypes;
 
-import cards.AbstractCard;
+import cards.Card;
 
-public class Cloverleaf extends AbstractCard {
-
+public class Cloverleaf extends Card {
 
 }

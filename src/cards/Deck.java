@@ -20,7 +20,7 @@ public class Deck
 
     public void shuffle()
     {
-        List<AbstractCard> cards = new ArrayList<>();
+        List<Card> cards = new ArrayList<>();
 
         Cloverleaf cloverleaf = new Cloverleaf();
         cards.add(cloverleaf);
@@ -63,7 +63,7 @@ public class Deck
 
     //}
 
-    public AbstractCard draw()
+    public Card draw()
     {
         return aCards.pop();
     }

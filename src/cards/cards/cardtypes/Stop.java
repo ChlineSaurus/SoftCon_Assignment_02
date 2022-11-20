@@ -1,7 +1,7 @@
 package cards.cards.cardtypes;
 
-import cards.AbstractCard;
+import cards.Card;
 
-public class Stop extends AbstractCard {
+public class Stop extends Card {
 
 }

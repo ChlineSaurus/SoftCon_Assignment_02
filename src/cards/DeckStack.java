@@ -6,17 +6,17 @@ import java.util.List;
 import java.util.Iterator;
 
 
-public class DeckStack implements Iterable<AbstractCard>
+public class DeckStack implements Iterable<Card>
 {
-    private final List<AbstractCard> aCards;
+    private final List<Card> aCards;
 
     public DeckStack(){
         aCards = new ArrayList<>();
     }
 
-    public DeckStack(Iterable<AbstractCard> pCards){
+    public DeckStack(Iterable<Card> pCards){
         this();
-        for(AbstractCard card : pCards)
+        for(Card card : pCards)
         {
             aCards.add(card);
         }
@@ -26,21 +26,21 @@ public class DeckStack implements Iterable<AbstractCard>
         return aCards.size()==0;
     }
 
-    public Iterator<AbstractCard> iterator(){
+    public Iterator<Card> iterator(){
         return aCards.iterator();
     }
 
-    public AbstractCard pop(){
+    public Card pop(){
         assert !isEmpty();
         return aCards.remove(aCards.size()-1);
     }
 
-    public void push(AbstractCard pCard){
+    public void push(Card pCard){
         assert pCard != null;
         aCards.add(pCard);
     }
 
-    public AbstractCard peek(){
+    public Card peek(){
         assert !isEmpty();
         return aCards.get(aCards.size()-1);
     }

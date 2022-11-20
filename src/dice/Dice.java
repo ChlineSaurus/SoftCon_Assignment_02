@@ -16,9 +16,7 @@ public class Dice {
     }
 
     public int getFaceValue()   {
-        if (!wasThrown){
-            //throw new IllegalgetValueException("The dice hasn't been thrown, you can't get the value.");
-        }
+        assert faceValue!=0;
         return faceValue;
     }
 }

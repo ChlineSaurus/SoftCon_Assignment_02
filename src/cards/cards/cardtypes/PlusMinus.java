@@ -1,8 +1,8 @@
 package cards.cards.cardtypes;
 
-import cards.AbstractCard;
+import cards.Card;
 
-public class PlusMinus extends AbstractCard {
+public class PlusMinus extends Card {
 
 
 }
