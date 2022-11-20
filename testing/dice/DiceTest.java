@@ -1,10 +1,7 @@
 package testing.dice;
 
-import dice.Dice;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-
 public class DiceTest {
+
     Dice dice=new Dice();
 
     @Test

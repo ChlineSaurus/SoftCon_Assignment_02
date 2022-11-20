@@ -1,10 +1,7 @@
 package testing.UI;
 
-import UI.DiceRepresentation;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-
 public class DiceRepresentationTest {
+
     @Test
     public void testRepresent6(){
         String expected="""
