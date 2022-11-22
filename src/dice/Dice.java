@@ -12,7 +12,6 @@ public class Dice {
         wasThrown=true;
         faceValue= ThreadLocalRandom.current().nextInt(MIN, MAX+1);
         return faceValue;
-
     }
 
     public int getFaceValue()   {
