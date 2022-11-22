@@ -1,12 +1,12 @@
 package Turn;
 
-public class Terminate implements TurnState{
-    Turn aTurn;
+public class Terminate {
+
     public Terminate(){}
 
-    @Override
-    public void next(Turn aTurn) {
-        displayWinner();
+    public int calculateOverWin(){
+        //with this function you can calculate how much a player is over the winning threshold...
+        return 3;
     }
     public void displayWinner(){
         System.out.println("Hi I am displaying the winner");
