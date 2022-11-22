@@ -38,6 +38,7 @@ public class PlayerManager {
         if (currentPlayerIndex >= totalPlayer) {
             if (playerReachedNecessaryPoints) {
                 //Terminate the Game
+                return;
             } else {
                 currentPlayerIndex = 0;
             }
