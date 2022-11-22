@@ -1,11 +1,12 @@
 package Turn.State;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public interface TurnState {
 
-     void next(Turn aTurn);
+     void next(Turn aTurn) throws IOException;
 
 
     class Turn {
@@ -17,10 +18,10 @@ public interface TurnState {
 
          };
 
-         public void setState(TurnState state){
+         public void setState(TurnState state) throws IOException {
              this.state = state;
              state.next(this);
          }
-         public void nextState(){state.next(this);}
+         public void nextState() throws IOException {state.next(this);}
      }
 }

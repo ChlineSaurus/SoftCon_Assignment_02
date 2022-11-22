@@ -1,8 +1,10 @@
 import Turn.State.TurnState;
 import dice.Dice;
 
+import java.io.IOException;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Dice d1=new Dice();
         //Deck deck = new Deck();
         //System.out.println(deck.draw());

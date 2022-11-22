@@ -1,5 +1,7 @@
 package Turn.State;
 
+import java.io.IOException;
+
 public class NoMoreValidDice implements TurnState {
     Turn aTurn;
     public NoMoreValidDice(Turn aTurn){
@@ -7,7 +9,7 @@ public class NoMoreValidDice implements TurnState {
     }
 
     @Override
-    public void next(Turn aTurn) {
+    public void next(Turn aTurn) throws IOException {
         System.out.println("Hey here is no more valid Dice");
         /*Ask user if he wants to reroll dice
 
