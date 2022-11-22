@@ -9,6 +9,8 @@ public class PlayerManager {
     private final int totalPlayer;
     private boolean playerReachedNecessaryPoints;
     private Player currentPlayer;
+    private int currentPlayerIndex;
+
 
     public PlayerManager(ArrayList<Player> players, int necessaryPoints) {
         assert necessaryPoints > 0;
@@ -20,20 +22,26 @@ public class PlayerManager {
         totalPlayer = players.size();
         playerReachedNecessaryPoints = false;
         currentPlayer = this.players.get(0);
+        currentPlayerIndex = 0;
     }
 
     public String currentPlayerName() {
         return currentPlayer.name;
     }
 
-    public void updateCurrentPlayer(int pointsToAdd) {
+    public void nextPlayersTurn(int pointsToAdd) {
         currentPlayer.updateScore(pointsToAdd);
-    }
-
-    public void nextPlayersTurn() {
         if (currentPlayer.getScore() >= necessaryPoints) {
             this.playerReachedNecessaryPoints = true;
         }
-
+        currentPlayerIndex++;
+        if (currentPlayerIndex >= totalPlayer) {
+            if (playerReachedNecessaryPoints) {
+                //Terminate the Game
+            } else {
+                currentPlayerIndex = 0;
+            }
+        }
+        currentPlayer = players.get(currentPlayerIndex);
     }
 }
