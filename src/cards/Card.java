@@ -1,6 +1,6 @@
 package cards;
 
-import Turn.TurnState;
+import Turn.State.TurnState;
 import cards.cards.TutoCondition;
 
 public class Card {

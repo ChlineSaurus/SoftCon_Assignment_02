@@ -1,4 +1,4 @@
-import Turn.Turn;
+import Turn.State.TurnState;
 import dice.Dice;
 
 public class Main {
@@ -8,7 +8,7 @@ public class Main {
         //System.out.println(deck.draw());
         d1.roll();
         System.out.println(d1.getFaceValue());
-        Turn aTurn = new Turn();
+        TurnState.Turn aTurn = new TurnState.Turn();
         aTurn.nextState();
     }
 }

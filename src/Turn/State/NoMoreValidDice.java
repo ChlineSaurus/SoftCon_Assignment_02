@@ -1,8 +1,10 @@
-package Turn;
+package Turn.State;
 
-public class NoMoreValidDice implements TurnState{
+public class NoMoreValidDice implements TurnState {
     Turn aTurn;
-    public NoMoreValidDice(){}
+    public NoMoreValidDice(Turn aTurn){
+        this.aTurn = aTurn;
+    }
 
     @Override
     public void next(Turn aTurn) {
@@ -12,10 +14,10 @@ public class NoMoreValidDice implements TurnState{
          */
         int i = 1;
         if (i==0){
-            aTurn.setState(new DrawCard());
+            aTurn.setState(new NoMoreValidDice(aTurn));
         }
         else{
-            aTurn.setState(new AddScore());
+            aTurn.setState(new Tutto(aTurn));
         }
     }
 }
