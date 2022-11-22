@@ -1,11 +1,20 @@
 package cards.cards.cardtypes;
 
-import cards.Card;
+import cards.AbstractCard;
 
-public class Straight extends Card {
+public class Straight extends AbstractCard {
     public Straight(int apoints){
         int points = apoints;
-        String name = "Straight";
-    }
 
+    }
+    private final String name="Straight";
+    public int bonusPoints(int points){
+        return points;
+    }
+    int TuttoRequiredForPoints = 1;
+    boolean EndTurn = false;
+    boolean KeepAllValidDice = false;
+    boolean Immunity = false;
+    boolean EndGame = false;
+    int TuttoRequiredForBonus = 1;
 }

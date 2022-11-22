@@ -20,7 +20,7 @@ public class Deck
 
     public void shuffle()
     {
-        List<Card> cards = new ArrayList<>();
+        List<AbstractCard> cards = new ArrayList<>();
 
         Cloverleaf cloverleaf = new Cloverleaf();
         cards.add(cloverleaf);
@@ -54,16 +54,17 @@ public class Deck
         int p=100;
         for(int i=0;i<5;i++){
             p+=100;
-            //for(int j=0;j<5;j++){
-              //  Bonus bonus = new Bonus(p);
-                //cards.add(bonus);
+            for(int j=0;j<5;j++){
+                //Bonus b = new Bonus(p);
+                //cards.add(b);
+            }
             }
         }
        // Collections.shuffle(cards);
 
     //}
 
-    public Card draw()
+    public AbstractCard draw()
     {
         return aCards.pop();
     }

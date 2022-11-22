@@ -4,7 +4,7 @@ import dice.Dice;
 
 import java.util.List;
 
-public interface TutoCondition {
+public interface TuttoCondition {
 
     public boolean tutoRequirements(List<Dice> dices);
 }

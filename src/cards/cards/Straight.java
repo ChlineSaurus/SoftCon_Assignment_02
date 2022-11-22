@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Straight implements TutoCondition {
+public class Straight implements TuttoCondition {
     private Map<Integer,Integer> diceCounter = new HashMap<Integer, Integer>();
 
     @Override
