@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="adding dicemanager and co">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="validation impletemd with stratergy still need to change it to depandcy injection problematic aspect one needs to if it is a straight card one discover this from the card">
+      <change afterPath="$PROJECT_DIR$/src/dice/ValidateDice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dice/ValidateNonStraight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dice/ValidateStraight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SoftCon_Assignment_02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SoftCon_Assignment_02.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/cards/AfterTuto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/cards/NonStraight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/NonStraight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dice/Dice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/Dice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dice/DiceTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/DiceTower.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +30,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="KEEP" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -157,7 +157,7 @@
       <workItem from="1668677731173" duration="1718000" />
       <workItem from="1668698634153" duration="2550000" />
       <workItem from="1668701408033" duration="22578000" />
-      <workItem from="1669218556148" duration="324000" />
+      <workItem from="1669218556148" duration="8702000" />
     </task>
     <task id="LOCAL-00001" summary="Making Dice class">
       <created>1668588937558</created>
@@ -243,7 +243,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668956883378</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="some changes">
+      <created>1669219216099</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1669219216099</updated>
+    </task>
+    <task id="LOCAL-00014" summary="validation impletemd with stratergy still need to change it to depandcy injection problematic aspect one needs to if it is a straight card one discover this from the card">
+      <created>1669240589496</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1669240589496</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,7 +286,9 @@
     <MESSAGE value="restrucutirn project" />
     <MESSAGE value="running test works&#10;had to comment out wrong areas" />
     <MESSAGE value="Mit Fehlsern" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mit Fehlsern" />
+    <MESSAGE value="some changes" />
+    <MESSAGE value="validation impletemd with stratergy still need to change it to depandcy injection problematic aspect one needs to if it is a straight card one discover this from the card" />
+    <option name="LAST_COMMIT_MESSAGE" value="validation impletemd with stratergy still need to change it to depandcy injection problematic aspect one needs to if it is a straight card one discover this from the card" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
