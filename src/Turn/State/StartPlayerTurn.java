@@ -1,5 +1,7 @@
 package Turn.State;
 
+import exceptions.IllegalUserInputExeption;
+
 import java.io.IOException;
 
 public class StartPlayerTurn implements TurnState {
@@ -8,7 +10,7 @@ public class StartPlayerTurn implements TurnState {
         this.aTurn = aTurn;
     }
     @Override
-    public void next(Turn aTurn) throws IOException {
+    public void next(Turn aTurn) throws IOException, IllegalUserInputExeption {
         System.out.println("I am in StartPlayerTurn");
         //here a card should be drawn...
         // if card == nullcard then end turn

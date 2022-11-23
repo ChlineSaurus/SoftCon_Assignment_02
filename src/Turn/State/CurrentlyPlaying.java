@@ -2,6 +2,7 @@ package Turn.State;
 
 import dice.DiceTower;
 import Turn.HumanInteractionManager;
+import exceptions.IllegalUserInputExeption;
 
 import java.io.IOException;
 
@@ -10,11 +11,12 @@ public class CurrentlyPlaying implements TurnState{
     private Boolean turnFinished = Boolean.FALSE;
     private Boolean interactionFinished = Boolean.FALSE;
     private Boolean tuto = Boolean.FALSE;
+    private String diceToRemove;
     public CurrentlyPlaying(Turn aTurn){this.aTurn = aTurn;}
-    public DiceTower currentPlayerDice = new DiceTower();
+    private DiceTower currentPlayerDice = new DiceTower();
     public HumanInteractionManager humanInteraction = new HumanInteractionManager();
     @Override
-    public void next(Turn aTurn) throws IOException {
+    public void next(Turn aTurn) throws IOException, IllegalUserInputExeption {
         int i = 0;
         System.out.println("I am currently playing");
         ManageGame();
@@ -25,32 +27,30 @@ public class CurrentlyPlaying implements TurnState{
             aTurn.setState(new Tutto(aTurn));
         }
     }
-    private void ManageGame() throws IOException {
+    private void ManageGame() throws IOException, IllegalUserInputExeption {
         Setup();
         TurnFlow();
     }
-    private void Setup() throws IOException {
+    private void Setup() throws IllegalUserInputExeption {
         humanInteraction.DisplayOrRoll();
         currentPlayerDice.newTurn();
         //DrawCard
         System.out.println("Your card is XXXX");
     }
-    private void TurnFlow(){
+    private void TurnFlow() throws IOException {
         while(turnFinished != Boolean.TRUE){
             currentPlayerDice.rollNotTakenDices();
             while(interactionFinished != Boolean.TRUE)
-            if(EvaluateDice(currentPlayerDice) == Boolean.TRUE){
-                humanInteraction.ChoseDice();
+            if(currentPlayerDice.ValidateDice() == Boolean.TRUE){
+                diceToRemove = humanInteraction.ChoseDice();
+                currentPlayerDice.RemoveDice(diceToRemove);
+
             }
             else{
-                humanInteraction.Reroll();
+                interactionFinished = humanInteraction.Reroll();
             }
-
+            System.out.println("interactionFinished");
 
         }
-    }
-    private Boolean EvaluateDice(DiceTower currentPlayerDice){
-        
-        return Boolean.TRUE;
     }
 }

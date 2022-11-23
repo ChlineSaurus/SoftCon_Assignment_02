@@ -1,5 +1,7 @@
 package Turn.State;
 
+import exceptions.IllegalUserInputExeption;
+
 import java.io.IOException;
 
 public class Tutto implements TurnState{
@@ -7,7 +9,7 @@ public class Tutto implements TurnState{
 
     public Tutto(Turn aTurn){this.aTurn = aTurn;}
     @Override
-    public void next(Turn aTurn) throws IOException {
+    public void next(Turn aTurn) throws IOException, IllegalUserInputExeption {
         System.out.println("I am in  Tutto");
         int i = 1;
         if (i==0){

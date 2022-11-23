@@ -1,12 +1,14 @@
 package Turn.State;
 
+import exceptions.IllegalUserInputExeption;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public interface TurnState {
 
-     void next(Turn aTurn) throws IOException;
+     void next(Turn aTurn) throws IOException, IllegalUserInputExeption;
 
 
     class Turn {
@@ -18,10 +20,10 @@ public interface TurnState {
 
          };
 
-         public void setState(TurnState state) throws IOException {
+         public void setState(TurnState state) throws IOException, IllegalUserInputExeption {
              this.state = state;
              state.next(this);
          }
-         public void nextState() throws IOException {state.next(this);}
+         public void nextState() throws IOException, IllegalUserInputExeption {state.next(this);}
      }
 }
