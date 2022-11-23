@@ -43,7 +43,7 @@ public class CurrentlyPlaying implements TurnState{
         while(turnFinished != Boolean.TRUE){
             currentPlayerDice.rollNotTakenDices();
             while(interactionFinished != Boolean.TRUE)
-            if(currentPlayerDice.ValidateDice() == Boolean.TRUE){
+            if(currentPlayerDice.validDice() == Boolean.TRUE){
                 diceToRemove = humanInteraction.ChoseDice();
                 currentPlayerDice.removeDice(diceToRemove);
 

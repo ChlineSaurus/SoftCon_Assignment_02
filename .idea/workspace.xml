@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="validation impletemd with stratergy still need to change it to depandcy injection problematic aspect one needs to if it is a straight card one discover this from the card">
-      <change afterPath="$PROJECT_DIR$/src/dice/ValidateDice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dice/ValidateNonStraight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dice/ValidateStraight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dice/DiceTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/DiceTower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Turn/State/CurrentlyPlaying.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn/State/CurrentlyPlaying.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +153,7 @@
       <workItem from="1668677731173" duration="1718000" />
       <workItem from="1668698634153" duration="2550000" />
       <workItem from="1668701408033" duration="22578000" />
-      <workItem from="1669218556148" duration="8702000" />
+      <workItem from="1669218556148" duration="9098000" />
     </task>
     <task id="LOCAL-00001" summary="Making Dice class">
       <created>1668588937558</created>
@@ -257,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669240589496</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="validation impletemd with stratergy still need to change it to depandcy injection problematic aspect one needs to if it is a straight card one discover this from the card">
+      <created>1669241453906</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1669241453906</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
