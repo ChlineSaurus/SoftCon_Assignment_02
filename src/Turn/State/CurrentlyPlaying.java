@@ -37,13 +37,13 @@ public class CurrentlyPlaying implements TurnState{
         //DrawCard
         System.out.println("Your card is XXXX");
     }
-    private void TurnFlow() throws IOException {
+    private void TurnFlow() throws IOException, IllegalUserInputExeption{
         while(turnFinished != Boolean.TRUE){
             currentPlayerDice.rollNotTakenDices();
             while(interactionFinished != Boolean.TRUE)
             if(currentPlayerDice.ValidateDice() == Boolean.TRUE){
                 diceToRemove = humanInteraction.ChoseDice();
-                currentPlayerDice.RemoveDice(diceToRemove);
+                //currentPlayerDice.removeDice(diceToRemove);
 
             }
             else{

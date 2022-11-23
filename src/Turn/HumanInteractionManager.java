@@ -72,7 +72,7 @@ public class HumanInteractionManager {
                     Arrays.sort(charArrayIndices);
                     for(int j = 1; j<charArrayIndices.length; j++){
                         if(charArrayIndices[j-1] == charArrayIndices[j]){
-                            throw new IllegalUserInputExeption("You can't hava dublicates...");
+                            throw new IllegalUserInputExeption("You can't hava duplicates...");
                         }
                     }
                 }
