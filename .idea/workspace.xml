@@ -4,25 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="running test works&#10;had to comment out wrong areas">
-      <change afterPath="$PROJECT_DIR$/src/cards/AbstractCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cards/cards/cardInterfaces/bonusSystemInterface/DeductPoints.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/junit_jupiter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/junit_jupiter.xml" afterDir="false" />
+    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="adding dicemanager and co">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/Card.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/Deck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/DeckStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/DeckStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoftCon_Assignment_02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SoftCon_Assignment_02.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cards/cards/AfterTuto.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cards/cards/NonStraight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/NonStraight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/cards/Straight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/Straight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/cards/TutoCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/TuttoCondition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/cards/cardtypes/Bonus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/cardtypes/Bonus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/cards/cardtypes/Cloverleaf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/cardtypes/Cloverleaf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/cards/cardtypes/Double.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/cardtypes/Double.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/cards/cardtypes/Fireworks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/cardtypes/Fireworks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/cards/cardtypes/PlusMinus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/cardtypes/PlusMinus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/cards/cardtypes/Stop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/cardtypes/Stop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/cards/cardtypes/Straight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/cardtypes/Straight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dice/Dice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/Dice.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +157,7 @@
       <workItem from="1668677731173" duration="1718000" />
       <workItem from="1668698634153" duration="2550000" />
       <workItem from="1668701408033" duration="22578000" />
-      <workItem from="1669160086256" duration="312000" />
+      <workItem from="1669218556148" duration="324000" />
     </task>
     <task id="LOCAL-00001" summary="Making Dice class">
       <created>1668588937558</created>
@@ -291,7 +279,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>10</line>
+          <line>9</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
