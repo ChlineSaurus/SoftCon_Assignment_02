@@ -17,7 +17,7 @@ public class Input {
     }
 
     public static Character takeCharInput() throws IllegalUserInputExeption {
-        String input = readInput();
+        String input = readInput().toUpperCase();
         if(input.length() != 1) {
             throw new IllegalUserInputExeption("You were supposed to input a single char, but your input" +
                     "was not of length one");

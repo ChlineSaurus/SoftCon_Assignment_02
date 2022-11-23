@@ -1,17 +1,19 @@
 package Turn.State;
 
+import dice.DiceFace;
 import dice.DiceTower;
 import Turn.HumanInteractionManager;
 import exceptions.IllegalUserInputExeption;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class CurrentlyPlaying implements TurnState{
     Turn aTurn;
     private Boolean turnFinished = Boolean.FALSE;
     private Boolean interactionFinished = Boolean.FALSE;
     private Boolean tuto = Boolean.FALSE;
-    private String diceToRemove;
+    private ArrayList<DiceFace> diceToRemove;
     public CurrentlyPlaying(Turn aTurn){this.aTurn = aTurn;}
     private DiceTower currentPlayerDice = new DiceTower();
     public HumanInteractionManager humanInteraction = new HumanInteractionManager();
@@ -43,7 +45,7 @@ public class CurrentlyPlaying implements TurnState{
             while(interactionFinished != Boolean.TRUE)
             if(currentPlayerDice.ValidateDice() == Boolean.TRUE){
                 diceToRemove = humanInteraction.ChoseDice();
-                //currentPlayerDice.removeDice(diceToRemove);
+                currentPlayerDice.removeDice(diceToRemove);
 
             }
             else{
