@@ -34,17 +34,17 @@ public class DiceTower {
     public Boolean ValidateDice() {
         for(int i = 1; i<7; i++){
             quantityOfSameDice =0;
-        for (Dice dice : notTakenDices) {
-            if (dice.getFaceValue() == 1 || dice.getFaceValue() == 5) {
-                hasValidDice = Boolean.TRUE;
+            for (Dice dice : notTakenDices) {
+                if (dice.getFaceValue() == DiceFace.One || dice.getFaceValue() == DiceFace.Five) {
+                    hasValidDice = Boolean.TRUE;
+                }
+                if(dice.getFaceValue().integerValue==i) {
+                    quantityOfSameDice++;
+                }
+                if(quantityOfSameDice>2){
+                    hasValidDice = Boolean.TRUE;
+                }
             }
-            if(dice.getFaceValue()==i) {
-                quantityOfSameDice++;
-            }
-            if(quantityOfSameDice>2){
-                hasValidDice = Boolean.TRUE;
-            }
-        }
         }
         System.out.println(hasValidDice);
         return hasValidDice;
@@ -78,18 +78,18 @@ public class DiceTower {
         return notTakenDices.isEmpty();
     }
 
-    public ArrayList<Integer> showTakenDices() {
+    public ArrayList<DiceFace> showTakenDices() {
         return diceListToValueList(takenDices);
     }
 
-    public ArrayList<Integer> showNotTakenDices() {
+    public ArrayList<DiceFace> showNotTakenDices() {
         return diceListToValueList(notTakenDices);
     }
 
-    private ArrayList<Integer> diceListToValueList(ArrayList<Dice> diceList) {
-        ArrayList<Integer> returnList = new ArrayList<Integer>();
-        for(Dice dice: diceList) {
-            returnList.add(dice.getFaceValue());
+    private ArrayList<DiceFace> diceListToValueList(ArrayList<Dice> diceList) {
+        ArrayList<DiceFace> returnList = new ArrayList<DiceFace>();
+        for(Dice aDice: diceList) {
+            returnList.add(aDice.getFaceValue());
         }
         return returnList;
     }

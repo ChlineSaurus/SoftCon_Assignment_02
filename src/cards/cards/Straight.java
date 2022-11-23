@@ -1,6 +1,7 @@
 package cards.cards;
 
 import dice.Dice;
+import dice.DiceFace;
 
 import java.util.HashMap;
 import java.util.List;
@@ -13,12 +14,13 @@ public class Straight implements TuttoCondition {
     public boolean tutoRequirements(List<Dice> dices) {
 
         for (Dice dice: dices){
-            int faceValue=dice.getFaceValue();
+            DiceFace faceValue = dice.getFaceValue();
 
             if (diceCounter.containsKey(faceValue)){
                 return false;}
+
             else{
-                diceCounter.put(faceValue,1);
+                //diceCounter.put(faceValue,1); Mit em aktuelle DiceTower mues d'Karte zuegriff uf de ha aber nüm merke was scho gmacht worde isch
             }
 
 

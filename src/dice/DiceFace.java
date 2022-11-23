@@ -1,9 +1,9 @@
-package UI;
+package dice;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public enum DiceRepresentation {
+public enum DiceFace {
       One(1, """
             +-------+
             |       |
@@ -41,22 +41,26 @@ public enum DiceRepresentation {
             | o   o |
             +-------+""");
 
-      private final Integer value;
+      public final Integer integerValue;
       private final String repString;
-      private static final Map<Integer, String> map = new HashMap<>();
+      private static final Map<Integer, DiceFace> map = new HashMap<>();
 
-      DiceRepresentation(Integer value, String repString) {
-            this.value = value;
+      DiceFace(Integer integerValue, String repString) {
+            this.integerValue = integerValue;
             this.repString = repString;
       }
 
       static {
-            for (DiceRepresentation diceName : DiceRepresentation.values()) {
-                  map.put(diceName.value, diceName.repString);
+            for (DiceFace aDiceName : DiceFace.values()) {
+                  map.put(aDiceName.integerValue, aDiceName);
             }
       }
 
-      public static String represent(int value) {
+      public static DiceFace get_Enum(int value) {
             return map.get(value);
+      }
+
+      public static String represent(DiceFace aDiceFace) {
+            return aDiceFace.repString;
       }
 }

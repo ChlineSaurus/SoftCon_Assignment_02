@@ -3,19 +3,16 @@ package dice;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Dice {
-    private final int MIN=1;
-    private final int MAX=6;
-    private boolean wasThrown=false;
-    private int faceValue;
+    static final DiceFace[] FaceValues = DiceFace.values();
+    private DiceFace currentFaceValue;
 
-    public int roll(){
-        wasThrown=true;
-        faceValue= ThreadLocalRandom.current().nextInt(MIN, MAX+1);
-        return faceValue;
+    public DiceFace roll(){
+        int randomIndex = ThreadLocalRandom.current().nextInt(FaceValues.length);
+        currentFaceValue = FaceValues[randomIndex];
+        return currentFaceValue;
     }
 
-    public int getFaceValue()   {
-        assert faceValue!=0;
-        return faceValue;
+    public DiceFace getFaceValue()   {
+        return currentFaceValue;
     }
 }

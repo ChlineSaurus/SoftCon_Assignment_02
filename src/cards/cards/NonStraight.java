@@ -16,7 +16,7 @@ public class NonStraight implements TuttoCondition {
      {
         for (Dice dice: dices){
             //try{
-            int faceValue=dice.getFaceValue();
+            int faceValue=dice.getFaceValue().integerValue;//nonig suber nonig, implementiert mit de neue dicefaces
             //catch (IllegalgetValueException e){
             //    throw new IllegalgetValueException("You are a hipo");
             //}
