@@ -56,7 +56,7 @@ public enum DiceFace {
             }
       }
 
-      public static DiceFace get_Enum(int value) {
+      public static DiceFace getEnum(int value) {
             return map.get(value);
       }
 

@@ -10,7 +10,7 @@ public class TuttoInput extends Input{
         ArrayList<Integer> input = Input.takeIntegerListInput();
         ArrayList<DiceFace> returnList = new ArrayList<DiceFace>();
         for (Integer aInputInteger: input){
-            DiceFace aDiceFace = DiceFace.get_Enum(aInputInteger);
+            DiceFace aDiceFace = DiceFace.getEnum(aInputInteger);
             if(aDiceFace == null) {
                 throw new IllegalUserInputExeption("Your input contained numbers that are not on a six " +
                         "faced Dice. Please give a valid Input.");
