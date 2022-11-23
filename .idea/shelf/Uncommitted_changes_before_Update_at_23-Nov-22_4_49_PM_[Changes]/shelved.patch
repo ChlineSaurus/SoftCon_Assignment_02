@@ -1,0 +1,230 @@
+Index: src/cards/cards/NonStraight.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package cards.cards;\r\n\r\nimport dice.Dice;\r\n\r\nimport java.util.HashMap;\r\nimport java.util.List;\r\nimport java.util.Map;\r\n\r\npublic class NonStraight implements TuttoCondition {\r\n    private Map<Integer,Integer> diceCounter = new HashMap<Integer, Integer>();\r\n    private final int guaranteedpointsI=1;\r\n    private final int guaranteedPointsII=5;\r\n\r\n    @Override\r\n    public boolean tutoRequirements(List<Dice> dices) //throws IllegalgetValueException//\r\n     {\r\n        for (Dice dice: dices){\r\n            //try{\r\n            int faceValue=dice.getFaceValue();\r\n            //catch (IllegalgetValueException e){\r\n            //    throw new IllegalgetValueException(\"You are a hipo\");\r\n            //}\r\n            if (faceValue!=guaranteedpointsI && faceValue!=guaranteedPointsII){\r\n                if (diceCounter.containsKey(faceValue)){\r\n                    diceCounter.put(faceValue,diceCounter.get(faceValue)+1);\r\n                }\r\n                else{\r\n                    diceCounter.put(faceValue,1);\r\n                }\r\n                {\r\n                    for (Integer occurences:diceCounter.values()){\r\n                        if (occurences!=3&&occurences!=0){\r\n                            return false;\r\n                        }\r\n                    }\r\n                }\r\n\r\n            }\r\n\r\n\r\n        }\r\n        return true;\r\n    }\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/cards/cards/NonStraight.java b/src/cards/cards/NonStraight.java
+--- a/src/cards/cards/NonStraight.java	(revision 9a2fc477de6943196f7c563edc37d1db734b742b)
++++ b/src/cards/cards/NonStraight.java	(date 1669193697441)
+@@ -7,28 +7,26 @@
+ import java.util.Map;
+ 
+ public class NonStraight implements TuttoCondition {
+-    private Map<Integer,Integer> diceCounter = new HashMap<Integer, Integer>();
++    private Map<Integer,Integer> diceCountUngaranteedPoints = new HashMap<Integer, Integer>();
+     private final int guaranteedpointsI=1;
+     private final int guaranteedPointsII=5;
+ 
+     @Override
+-    public boolean tutoRequirements(List<Dice> dices) //throws IllegalgetValueException//
++    public boolean tutoRequirements(List<Dice> dices)
+      {
+         for (Dice dice: dices){
+-            //try{
++
+             int faceValue=dice.getFaceValue();
+-            //catch (IllegalgetValueException e){
+-            //    throw new IllegalgetValueException("You are a hipo");
+-            //}
++
+             if (faceValue!=guaranteedpointsI && faceValue!=guaranteedPointsII){
+-                if (diceCounter.containsKey(faceValue)){
+-                    diceCounter.put(faceValue,diceCounter.get(faceValue)+1);
++                if (diceCountUngaranteedPoints.containsKey(faceValue)){
++                    diceCountUngaranteedPoints.put(faceValue,diceCountUngaranteedPoints.get(faceValue)+1);
+                 }
+                 else{
+-                    diceCounter.put(faceValue,1);
++                    diceCountUngaranteedPoints.put(faceValue,1);
+                 }
+                 {
+-                    for (Integer occurences:diceCounter.values()){
++                    for (Integer occurences:diceCountUngaranteedPoints.values()){
+                         if (occurences!=3&&occurences!=0){
+                             return false;
+                         }
+Index: src/cards/cards/AfterTuto.java
+===================================================================
+diff --git a/src/cards/cards/AfterTuto.java b/src/cards/cards/AfterTuto.java
+deleted file mode 100644
+--- a/src/cards/cards/AfterTuto.java	(revision 9a2fc477de6943196f7c563edc37d1db734b742b)
++++ /dev/null	(revision 9a2fc477de6943196f7c563edc37d1db734b742b)
+@@ -1,5 +0,0 @@
+-package cards.cards;
+-
+-interface AfterTuto {
+-
+-}
+Index: src/cards/cards/cardInterfaces/AfterTuto.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/cards/cards/cardInterfaces/AfterTuto.java b/src/cards/cards/cardInterfaces/AfterTuto.java
+new file mode 100644
+--- /dev/null	(date 1669193697471)
++++ b/src/cards/cards/cardInterfaces/AfterTuto.java	(date 1669193697471)
+@@ -0,0 +1,5 @@
++package cards.cards.cardInterfaces;
++
++interface AfterTuto {
++public boolean takeCardAfterTuto();
++}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"2d7c8c4b-7931-42c0-a061-826b7bfce578\" name=\"Changes\" comment=\"running test works&#10;had to comment out wrong areas\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/cards/AbstractCard.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/cards/cards/cardInterfaces/bonusSystemInterface/DeductPoints.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/libraries/junit_jupiter.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/libraries/junit_jupiter.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/cards/Card.java\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/cards/Deck.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/cards/Deck.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/cards/DeckStack.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/cards/DeckStack.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/cards/cards/NonStraight.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/cards/cards/NonStraight.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/cards/cards/Straight.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/cards/cards/Straight.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/cards/cards/TutoCondition.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/cards/cards/TuttoCondition.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/cards/cards/cardtypes/Bonus.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/cards/cards/cardtypes/Bonus.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/cards/cards/cardtypes/Cloverleaf.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/cards/cards/cardtypes/Cloverleaf.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/cards/cards/cardtypes/Double.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/cards/cards/cardtypes/Double.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/cards/cards/cardtypes/Fireworks.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/cards/cards/cardtypes/Fireworks.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/cards/cards/cardtypes/PlusMinus.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/cards/cards/cardtypes/PlusMinus.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/cards/cards/cardtypes/Stop.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/cards/cards/cardtypes/Stop.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/cards/cards/cardtypes/Straight.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/cards/cards/cardtypes/Straight.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"CodeInsightWorkspaceSettings\">\r\n    <option name=\"optimizeImportsOnTheFly\" value=\"true\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Enum\" />\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2HJWK90zp5F9a6lMyZ6LmDNLaQe\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;/Users/danielmaksimovic/OneDrive - Universität Zürich UZH/Studium/HS22/Software Construction I/Java/SoftCon_Assignment_02/src&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"$PROJECT_DIR$/src\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.Main\">\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Main\" />\r\n      <module name=\"SoftCon_Assignment_02\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"DiceRepresenatiotaionTest.testRepresent6\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"SoftCon_Assignment_02\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"testing.UI.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"testing.UI\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"testing.UI.DiceRepresenatiotaionTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"testRepresent6\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"DiceTest.getValue\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"SoftCon_Assignment_02\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"testing.dice.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"testing.dice\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"testing.dice.DiceTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"getValue\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"DiceTest.testRollGet\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"SoftCon_Assignment_02\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"testing.dice.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"testing.dice\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"testing.dice.DiceTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"testRollGet\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Main\" />\r\n        <item itemvalue=\"JUnit.DiceTest.testRollGet\" />\r\n        <item itemvalue=\"JUnit.DiceRepresenatiotaionTest.testRepresent6\" />\r\n        <item itemvalue=\"JUnit.DiceTest.getValue\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"2d7c8c4b-7931-42c0-a061-826b7bfce578\" name=\"Changes\" comment=\"\" />\r\n      <created>1668003600749</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1668003600749</updated>\r\n      <workItem from=\"1668003604479\" duration=\"1000\" />\r\n      <workItem from=\"1668004287395\" duration=\"135000\" />\r\n      <workItem from=\"1668119469469\" duration=\"156000\" />\r\n      <workItem from=\"1668119877254\" duration=\"6000\" />\r\n      <workItem from=\"1668456786595\" duration=\"623000\" />\r\n      <workItem from=\"1668503331602\" duration=\"1468000\" />\r\n      <workItem from=\"1668513990886\" duration=\"614000\" />\r\n      <workItem from=\"1668588064871\" duration=\"2311000\" />\r\n      <workItem from=\"1668596449577\" duration=\"1525000\" />\r\n      <workItem from=\"1668599635375\" duration=\"8151000\" />\r\n      <workItem from=\"1668676448649\" duration=\"1061000\" />\r\n      <workItem from=\"1668677731173\" duration=\"1718000\" />\r\n      <workItem from=\"1668698634153\" duration=\"2550000\" />\r\n      <workItem from=\"1668701408033\" duration=\"22578000\" />\r\n      <workItem from=\"1669160086256\" duration=\"312000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Making Dice class\">\r\n      <created>1668588937558</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668588937558</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Grundstruktur\">\r\n      <created>1668599524124</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668599524124</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"AbstractCard\">\r\n      <created>1668600940667</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668600940667</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"resturtucring more still needed\">\r\n      <created>1668677969001</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668677969001</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"trying to implement interfaces&#10;Deck is currently not good &#10;still needs work to be done&#10;why can't we jjust use one deck\">\r\n      <created>1668702382419</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668702382419</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"hardcoded tutorequirements&#10;meaning that it checks the toto requirements if it'isnt a straight\">\r\n      <created>1668716214478</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668716214478</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"TutoCondition implemented for straight\">\r\n      <created>1668722148960</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668722148960</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"skipTurn for skip card in AbstactCard... &#10;still needs to be implemented in constructer of AbstractCard\">\r\n      <created>1668807235482</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668807235482</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"restrucutirn project\">\r\n      <created>1668855010835</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668855010835</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"running test works&#10;had to comment out wrong areas\">\r\n      <created>1668866678503</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668866678503</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"running test works&#10;had to comment out wrong areas\">\r\n      <created>1668867411686</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668867411686</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"Mit Fehlsern\">\r\n      <created>1668956883378</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668956883378</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"13\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Making Dice class\" />\r\n    <MESSAGE value=\"Grundstruktur\" />\r\n    <MESSAGE value=\"AbstractCard\" />\r\n    <MESSAGE value=\"resturtucring more still needed\" />\r\n    <MESSAGE value=\"trying to implement interfaces&#10;Deck is currently not good &#10;still needs work to be done&#10;why can't we jjust use one deck\" />\r\n    <MESSAGE value=\"hardcoded tutorequirements&#10;meaning that it checks the toto requirements if it'isnt a straight\" />\r\n    <MESSAGE value=\"TutoCondition implemented for straight\" />\r\n    <MESSAGE value=\"skipTurn for skip card in AbstactCard... &#10;still needs to be implemented in constructer of AbstractCard\" />\r\n    <MESSAGE value=\"restrucutirn project\" />\r\n    <MESSAGE value=\"running test works&#10;had to comment out wrong areas\" />\r\n    <MESSAGE value=\"Mit Fehlsern\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Mit Fehlsern\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/Main.java</url>\r\n          <line>10</line>\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 9a2fc477de6943196f7c563edc37d1db734b742b)
++++ b/.idea/workspace.xml	(date 1669199065596)
+@@ -4,25 +4,16 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="running test works&#10;had to comment out wrong areas">
+-      <change afterPath="$PROJECT_DIR$/src/cards/AbstractCard.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/cards/cards/cardInterfaces/bonusSystemInterface/DeductPoints.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/libraries/junit_jupiter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/junit_jupiter.xml" afterDir="false" />
++    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="adding dicemanager and co">
++      <change afterPath="$PROJECT_DIR$/src/cards/cards/cardInterfaces/AfterTuto.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/cards/cards/cardInterfaces/TakeCardAfterTuto.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/cards/cards/cardInterfaces/TakeNoCardAfterTuto.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/cards/Card.java" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/cards/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/Deck.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/cards/DeckStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/DeckStack.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/SoftCon_Assignment_02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SoftCon_Assignment_02.iml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/cards/cards/AfterTuto.java" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/cards/cards/NonStraight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/NonStraight.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/cards/cards/Straight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/Straight.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/cards/cards/TutoCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/TuttoCondition.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/cards/cards/cardtypes/Bonus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/cardtypes/Bonus.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/cards/cards/cardtypes/Cloverleaf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/cardtypes/Cloverleaf.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/cards/cards/cardtypes/Double.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/cardtypes/Double.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/cards/cards/cardtypes/Fireworks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/cardtypes/Fireworks.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/cards/cards/cardtypes/PlusMinus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/cardtypes/PlusMinus.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/cards/cards/cardtypes/Stop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/cardtypes/Stop.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/cards/cards/cardtypes/Straight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/cardtypes/Straight.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/dice/Dice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/Dice.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -169,7 +160,6 @@
+       <workItem from="1668677731173" duration="1718000" />
+       <workItem from="1668698634153" duration="2550000" />
+       <workItem from="1668701408033" duration="22578000" />
+-      <workItem from="1669160086256" duration="312000" />
+     </task>
+     <task id="LOCAL-00001" summary="Making Dice class">
+       <created>1668588937558</created>
+@@ -291,7 +281,7 @@
+       <breakpoints>
+         <line-breakpoint enabled="true" type="java-line">
+           <url>file://$PROJECT_DIR$/src/Main.java</url>
+-          <line>10</line>
++          <line>8</line>
+           <option name="timeStamp" value="1" />
+         </line-breakpoint>
+       </breakpoints>
+Index: src/dice/Dice.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package dice;\r\n\r\nimport java.util.concurrent.ThreadLocalRandom;\r\n\r\npublic class Dice {\r\n    private final int MIN=1;\r\n    private final int MAX=6;\r\n    private boolean wasThrown=false;\r\n    private int faceValue;\r\n\r\n    public int roll(){\r\n        wasThrown=true;\r\n        faceValue= ThreadLocalRandom.current().nextInt(MIN, MAX+1);\r\n        return faceValue;\r\n    }\r\n\r\n    public int getFaceValue()   {\r\n        assert faceValue!=0;\r\n        return faceValue;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/dice/Dice.java b/src/dice/Dice.java
+--- a/src/dice/Dice.java	(revision 9a2fc477de6943196f7c563edc37d1db734b742b)
++++ b/src/dice/Dice.java	(date 1669193702948)
+@@ -5,11 +5,10 @@
+ public class Dice {
+     private final int MIN=1;
+     private final int MAX=6;
+-    private boolean wasThrown=false;
+     private int faceValue;
+ 
+     public int roll(){
+-        wasThrown=true;
++
+         faceValue= ThreadLocalRandom.current().nextInt(MIN, MAX+1);
+         return faceValue;
+     }
+Index: src/cards/cards/cardInterfaces/TakeNoCardAfterTuto.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/cards/cards/cardInterfaces/TakeNoCardAfterTuto.java b/src/cards/cards/cardInterfaces/TakeNoCardAfterTuto.java
+new file mode 100644
+--- /dev/null	(date 1669193702984)
++++ b/src/cards/cards/cardInterfaces/TakeNoCardAfterTuto.java	(date 1669193702984)
+@@ -0,0 +1,8 @@
++package cards.cards.cardInterfaces;
++
++public class TakeNoCardAfterTuto implements AfterTuto{
++
++    public boolean takeCardAfterTuto() {
++        return false;
++    }
++}
+Index: src/cards/cards/cardInterfaces/TakeCardAfterTuto.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/cards/cards/cardInterfaces/TakeCardAfterTuto.java b/src/cards/cards/cardInterfaces/TakeCardAfterTuto.java
+new file mode 100644
+--- /dev/null	(date 1669193702929)
++++ b/src/cards/cards/cardInterfaces/TakeCardAfterTuto.java	(date 1669193702929)
+@@ -0,0 +1,8 @@
++package cards.cards.cardInterfaces;
++
++public class TakeCardAfterTuto implements AfterTuto{
++
++    public boolean takeCardAfterTuto() {
++        return true;
++    }
++}
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_18\" project-jdk-name=\"19\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 9a2fc477de6943196f7c563edc37d1db734b742b)
++++ b/.idea/misc.xml	(date 1669193781649)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" project-jdk-name="19" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="19" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: SoftCon_Assignment_02.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"JAVA_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\r\n    <exclude-output />\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <sourceFolder url=\"file://$MODULE_DIR$\" isTestSource=\"true\" />\r\n      <sourceFolder url=\"file://$MODULE_DIR$/src\" isTestSource=\"false\" />\r\n    </content>\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n    <orderEntry type=\"module-library\" scope=\"TEST\">\r\n      <library name=\"JUnit5.8.1\">\r\n        <CLASSES>\r\n          <root url=\"jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter/5.8.1/junit-jupiter-5.8.1.jar!/\" />\r\n          <root url=\"jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.8.1/junit-jupiter-api-5.8.1.jar!/\" />\r\n          <root url=\"jar://$MAVEN_REPOSITORY$/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar!/\" />\r\n          <root url=\"jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.8.1/junit-platform-commons-1.8.1.jar!/\" />\r\n          <root url=\"jar://$MAVEN_REPOSITORY$/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar!/\" />\r\n          <root url=\"jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-params/5.8.1/junit-jupiter-params-5.8.1.jar!/\" />\r\n          <root url=\"jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-engine/5.8.1/junit-jupiter-engine-5.8.1.jar!/\" />\r\n          <root url=\"jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-engine/1.8.1/junit-platform-engine-1.8.1.jar!/\" />\r\n        </CLASSES>\r\n        <JAVADOC />\r\n        <SOURCES />\r\n      </library>\r\n    </orderEntry>\r\n    <orderEntry type=\"library\" name=\"junit.jupiter\" level=\"project\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/SoftCon_Assignment_02.iml b/SoftCon_Assignment_02.iml
+--- a/SoftCon_Assignment_02.iml	(revision 9a2fc477de6943196f7c563edc37d1db734b742b)
++++ b/SoftCon_Assignment_02.iml	(date 1669193705862)
+@@ -5,6 +5,7 @@
+     <content url="file://$MODULE_DIR$">
+       <sourceFolder url="file://$MODULE_DIR$" isTestSource="true" />
+       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++      <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
+     </content>
+     <orderEntry type="inheritedJdk" />
+     <orderEntry type="sourceFolder" forTests="false" />
