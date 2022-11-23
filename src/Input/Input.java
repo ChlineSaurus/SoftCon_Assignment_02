@@ -40,4 +40,16 @@ public class Input {
         }
         return returnList;
     }
+
+    public static Integer takeIntegerInput() throws IllegalUserInputExeption{
+        String input = readInput();
+        int returnValue;
+        try {
+            returnValue = Integer.parseInt(input);
+        } catch (NumberFormatException e) {
+            throw new IllegalUserInputExeption("You input contained other symbols than numbers." +
+                    "Please give a valid Input");
+        }
+        return returnValue;
+    }
 }
