@@ -1,4 +1,4 @@
-package testing.UI;
+package UI;
 
 import dice.DiceFace;
 import org.junit.jupiter.api.Assertions;

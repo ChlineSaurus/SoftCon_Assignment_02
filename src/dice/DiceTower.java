@@ -37,6 +37,7 @@ public class DiceTower {
     public boolean validDice(){
         return validateChecker.validateDice(notTakenDices,takenDices);
     }
+
     public void removeDice(ArrayList<DiceFace> dicesToRemove) throws IllegalUserInputExeption {
         if (dicesToRemove.size() == 0) {
             throw new IllegalUserInputExeption("Your input had no number between one and six. Please give" +

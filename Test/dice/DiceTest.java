@@ -1,8 +1,6 @@
-package testing.dice;
+package dice;
 
 
-import dice.Dice;
-import dice.DiceFace;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
