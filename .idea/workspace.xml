@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="Changing Boolean.FAlSE to false and Boolean to boolean">
-      <change afterPath="$PROJECT_DIR$/Test/dice/LegalRollNonStraightTest.java" afterDir="false" />
+    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="metaprogramming &#10;man kann eine IntegerArray zu einer List&lt;Dice&gt; machen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/UI/DiceRepresentationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/UI/DiceRepresentationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dice/DiceTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/DiceTower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dice/NotNullRoll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/LegalRoll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dice/ValidateNonStraight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/LegalRollNonStraight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dice/ValidateStraight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/LegalRollStraight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/dice/LegalRollNonStraightTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/dice/LegalRollNonStraightTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dice/LegalRollNonStraight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/LegalRollNonStraight.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,22 +68,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LegalRollNonStraightTest.legalRoll">
-    <configuration name="DiceRepresentationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SoftCon_Assignment_02" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="UI.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="UI" />
-      <option name="MAIN_CLASS_NAME" value="UI.DiceRepresentationTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.LegalRollNonStraightTest">
     <configuration name="DiceRepresentationTest.testRepresent6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftCon_Assignment_02" />
       <extension name="coverage">
@@ -99,22 +80,6 @@
       <option name="PACKAGE_NAME" value="UI" />
       <option name="MAIN_CLASS_NAME" value="UI.DiceRepresentationTest" />
       <option name="METHOD_NAME" value="testRepresent6" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DiceTest.testRollGet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SoftCon_Assignment_02" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dice" />
-      <option name="MAIN_CLASS_NAME" value="dice.DiceTest" />
-      <option name="METHOD_NAME" value="testRollGet" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -135,6 +100,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LegalRollNonStraightTest.TestIllegalRoll1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SoftCon_Assignment_02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dice" />
+      <option name="MAIN_CLASS_NAME" value="dice.LegalRollNonStraightTest" />
+      <option name="METHOD_NAME" value="TestIllegalRoll1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LegalRollNonStraightTest.legalRoll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftCon_Assignment_02" />
       <extension name="coverage">
@@ -151,13 +132,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LegalRollNonStraightTest.testLegalRoll1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SoftCon_Assignment_02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dice" />
+      <option name="MAIN_CLASS_NAME" value="dice.LegalRollNonStraightTest" />
+      <option name="METHOD_NAME" value="testLegalRoll1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LegalRollNonStraightTest.legalRoll" />
         <item itemvalue="JUnit.LegalRollNonStraightTest" />
+        <item itemvalue="JUnit.LegalRollNonStraightTest.TestIllegalRoll1" />
+        <item itemvalue="JUnit.LegalRollNonStraightTest.testLegalRoll1" />
+        <item itemvalue="JUnit.LegalRollNonStraightTest.legalRoll" />
         <item itemvalue="JUnit.DiceRepresentationTest.testRepresent6" />
-        <item itemvalue="JUnit.DiceRepresentationTest" />
-        <item itemvalue="JUnit.DiceTest.testRollGet (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -186,7 +183,7 @@
       <workItem from="1669218556148" duration="9739000" />
       <workItem from="1669277494079" duration="2638000" />
       <workItem from="1669280574635" duration="4509000" />
-      <workItem from="1669286275898" duration="10934000" />
+      <workItem from="1669286275898" duration="13344000" />
     </task>
     <task id="LOCAL-00001" summary="Making Dice class">
       <created>1668588937558</created>
@@ -328,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669303988315</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="metaprogramming &#10;man kann eine IntegerArray zu einer List&lt;Dice&gt; machen">
+      <created>1669309081611</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1669309081611</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -364,7 +368,8 @@
     <MESSAGE value="adding gameconstants necessary for win" />
     <MESSAGE value="testing should be working now" />
     <MESSAGE value="Changing Boolean.FAlSE to false and Boolean to boolean" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changing Boolean.FAlSE to false and Boolean to boolean" />
+    <MESSAGE value="metaprogramming &#10;man kann eine IntegerArray zu einer List&lt;Dice&gt; machen" />
+    <option name="LAST_COMMIT_MESSAGE" value="metaprogramming &#10;man kann eine IntegerArray zu einer List&lt;Dice&gt; machen" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
