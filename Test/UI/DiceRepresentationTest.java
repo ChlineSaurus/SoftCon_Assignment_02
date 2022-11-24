@@ -1,8 +1,9 @@
-package testing.UI;
+package UI;
 
-import UI.DiceRepresentation;
+import dice.DiceFace;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
 
 public class DiceRepresentationTest {
 
@@ -14,7 +15,7 @@ public class DiceRepresentationTest {
             | o   o |
             | o   o |
             +-------+""";
-        String actual= DiceRepresentation.represent(6);
+        String actual= DiceFace.Six.represent();
         Assertions.assertEquals(actual,expected);
     }
 }

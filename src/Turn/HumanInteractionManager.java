@@ -1,85 +1,58 @@
 package Turn;
 
+import Input.TuttoInput;
+import dice.DiceFace;
 import exceptions.IllegalUserInputExeption;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.ArrayList;
 
 public class HumanInteractionManager {
-    private String indices;
-    private String nextAction;
-    private final String possibleNextAction = "RD";
-    private final String possibleIndices = "123456";
+    private ArrayList<DiceFace> indices;
+    private Character nextAction;
     private Boolean validInput = Boolean.FALSE;
-    private final Scanner scanner;
+    private final ArrayList<Character> possibleNextAction;
 
     public HumanInteractionManager() {
-        scanner = new Scanner(System.in);
+        possibleNextAction = new ArrayList<Character>();
+        possibleNextAction.add('R');
+        possibleNextAction.add('D');
     }
-
-    private String takeInput() {
-        return scanner.nextLine();
-    }
-
     public void DisplayOrRoll() throws IllegalUserInputExeption {
-
         {
             System.out.println("For displaying your score please enter \"D\" for rolling the Dice please enter \"R\"");
             validInput = Boolean.FALSE;
             while (validInput != Boolean.TRUE) {
-                nextAction = takeInput();
-                nextAction = nextAction.toUpperCase();
+
                 try {
-                    if (!(nextAction.length() < 2 && possibleNextAction.contains(nextAction))) {
-                        throw new IllegalUserInputExeption(" You only have to enter \"D\" for displaying your score OR \"R\" for rolling the dice!");
-                    } else {
-                        validInput = Boolean.TRUE;
-                    }
+                    nextAction = TuttoInput.takeRestrictedCharInput(possibleNextAction);
                 } catch (IllegalUserInputExeption e) {
-                    System.out.println(" You only have to enter \"D\" for displaying your score OR \"R\" for rolling the dice!");
+                    //Sött eingentli nüt da usgeh werde, das chan mer denn em UI überlah
+                    System.out.println(e.getMessage());
                 }
             }
-
-
         }
         //why doesn't it execute??
-        if (nextAction == "D") {
+        if (nextAction.equals('D')) {
+            //Call UI
             int score = 23;
             String stringToDisplay = String.format("Your score is: %i", score);
             System.out.println(stringToDisplay);
             DisplayOrRoll();
         }
-
     }
 // different checks: Check for duplicate, check for not valid input
-    public String ChoseDice() throws IOException {
-        System.out.println("Please enter the index of the Dice you want to pick. It is possible to enter multiple at a time. If you do not want to take any more dice type no");
+    public ArrayList<DiceFace> ChoseDice() throws IOException {
+        System.out.println("Please enter the Values of the Dices you want to pick. It is possible to enter multiple at a time. If you do not want to take any more dice type E");
         validInput = Boolean.FALSE;
-        while (validInput != Boolean.TRUE) {
-            indices = takeInput();
+        while (validInput == Boolean.FALSE) {
             try {
-                for (int i = 0; i < indices.length(); i++) {
-                    System.out.println(indices.charAt(i));
-                    String indiceAtI = String.valueOf(indices.charAt(i));
-                    //only indices from one to six
-                    if (!(possibleIndices.contains(indiceAtI))) {
-                        throw new IllegalUserInputExeption("your input is ass");
-                }
-                char charArrayIndices [] = indices.toCharArray();
-                    Arrays.sort(charArrayIndices);
-                    for(int j = 1; j<charArrayIndices.length; j++){
-                        if(charArrayIndices[j-1] == charArrayIndices[j]){
-                            throw new IllegalUserInputExeption("You can't hava dublicates...");
-                        }
-                    }
-                }
-            } catch (IllegalUserInputExeption g) {
-                    System.out.println("False input, please enter all the indices of the dices you want to pick. You can pick also more than one. Please enter only the numbers and not any other character. P.S you only have six dice...");
+                indices = TuttoInput.takeDiceListInput();
+            } catch (IllegalUserInputExeption e) {
+                System.out.println(e.getMessage());
             }
-
         }
         //why doesn't it go further??
         return indices;

@@ -1,0 +1,39 @@
+Index: src/cards/Card.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package cards;\r\n\r\nimport Turn.State.TurnState;\r\nimport cards.cards.TutoCondition;\r\n\r\npublic class Card {\r\n\r\n    protected String name;\r\n    protected int points;\r\n    protected TutoCondition valid;\r\n\r\n    private TurnState turnState;\r\n\r\n    public TurnState getTurnState() {\r\n        return turnState;\r\n    }\r\n    //public final boolean skipTurn;\r\n    // needs to be added to Constructer\r\n\r\n\r\n\r\n}\r\n\r\n\r\n\r\n
+===================================================================
+diff --git a/src/cards/Card.java b/src/cards/Card.java
+--- a/src/cards/Card.java	
++++ b/src/cards/Card.java	
+@@ -2,18 +2,30 @@
+ 
+ import Turn.State.TurnState;
+ import cards.cards.TutoCondition;
++import dice.Dice;
++
++import java.util.List;
+ 
+ public class Card {
+ 
+     protected String name;
+     protected int points;
+     protected TutoCondition valid;
++    private boolean immunity;
+ 
++    public int addPoints(List<Dice> dices){
++        if (!valid.tutoRequirements(dices)&&!immunity){
++            return 0;
++        }
++        return 0;
++    }
+     private TurnState turnState;
+ 
++
+     public TurnState getTurnState() {
+         return turnState;
+     }
++
+     //public final boolean skipTurn;
+     // needs to be added to Constructer
+ 

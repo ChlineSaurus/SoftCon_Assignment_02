@@ -1,0 +1,24 @@
+Index: src/dice/DiceManager.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package dice;\r\n\r\npublic class DiceManager {\r\n//@Marvin does DiceManager have a copy of the current card?\r\n}\r\n
+===================================================================
+diff --git a/src/dice/DiceManager.java b/src/dice/DiceManager.java
+--- a/src/dice/DiceManager.java	
++++ b/src/dice/DiceManager.java	
+@@ -1,5 +1,15 @@
+ package dice;
+ 
++import java.util.List;
++
+ public class DiceManager {
+ //@Marvin does DiceManager have a copy of the current card?
++    private List<Dice> dices;
++    public DiceManager(){
++
++    }
++
++    public List<Dice> getDices() {
++        return dices;
++    }
+ }

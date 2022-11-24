@@ -1,7 +1,6 @@
-package testing.dice;
+package dice;
 
 
-import dice.Dice;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -13,13 +12,13 @@ public class DiceTest {
 
     @Test
     public void testRollGet (){
-        int faceValue=dice.roll();
-        int getFaceValue= dice.getFaceValue();
+        DiceFace faceValue=dice.roll();
+        DiceFace getFaceValue= dice.getFaceValue();
         Assertions.assertEquals(faceValue, getFaceValue);
     }
     @Test
     public void getValue(){
-        int faceValue=dice.getFaceValue();
+        DiceFace faceValue = dice.getFaceValue();
         Assertions.assertNotEquals(faceValue,0);
     }
 

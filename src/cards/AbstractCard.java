@@ -2,6 +2,8 @@ package cards;
 
 import Turn.State.TurnState;
 import cards.cards.TuttoCondition;
+import cards.cards.cardInterfaces.bonusSystemInterface.BonusSystem;
+import dice.DiceTower;
 
 public abstract class AbstractCard {
 
@@ -13,15 +15,29 @@ public abstract class AbstractCard {
     protected boolean KeepAllValidDice;
     protected boolean Immunity;
     protected boolean EndGame;
-    protected int TuttoRequiredForBonus; //maybe combine with TuttoRequiredForPoints
+
+    private DiceTower dices;
+    private BonusSystem tutoBonus;
+
 
 
 
     private TurnState turnState;
 
+    public int getpoints(){
+        return 0;
+    }
+
+
     public TurnState getTurnState() {
         return turnState;
     }
+    private boolean checkBonusCondition(){
+        return dices.madeTutto();
+    }
+
+
+
     //public final boolean skipTurn;
     // needs to be added to Constructor
 
