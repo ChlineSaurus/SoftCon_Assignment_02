@@ -16,10 +16,5 @@ public class DiceTest {
         DiceFace getFaceValue= dice.getFaceValue();
         Assertions.assertEquals(faceValue, getFaceValue);
     }
-    @Test
-    public void getValue(){
-        DiceFace faceValue = dice.getFaceValue();
-        Assertions.assertNotEquals(faceValue,0);
-    }
 
 }

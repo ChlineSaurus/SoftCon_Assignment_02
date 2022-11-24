@@ -13,7 +13,7 @@ public class LegalRollNonStraightTest {
 
 
     public List<Dice> DiceListSetUp(Integer[] customDiceValueArray){
-        List<Dice> diceList=new ArrayList<>();
+        List<Dice> diceList=new ArrayList<Dice>();
         for (Integer integer : customDiceValueArray) {
             Dice aDice = new Dice();
             Field[] aDiceFields = aDice.getClass().getDeclaredFields();

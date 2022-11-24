@@ -24,9 +24,7 @@ public abstract class AbstractCard {
 
     private TurnState turnState;
 
-    public int getpoints(){
-        return 0;
-    }
+    public int addBonusPoints(){return 0;}
 
 
     public TurnState getTurnState() {
