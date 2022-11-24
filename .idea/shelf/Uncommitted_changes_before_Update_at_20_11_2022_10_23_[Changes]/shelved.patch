@@ -1,0 +1,385 @@
+Index: src/Turn/TurnManager.java
+===================================================================
+diff --git a/src/Turn/TurnManager.java b/src/Turn/TurnManager.java
+deleted file mode 100644
+--- a/src/Turn/TurnManager.java	(revision e74ff35104ec061bb2d13787216b9d6c0cd09d32)
++++ /dev/null	(revision e74ff35104ec061bb2d13787216b9d6c0cd09d32)
+@@ -1,4 +0,0 @@
+-package Turn;
+-
+-public class TurnManager {
+-}
+Index: src/Turn/Turn.java
+===================================================================
+diff --git a/src/Turn/Turn.java b/src/Turn/Turn.java
+deleted file mode 100644
+--- a/src/Turn/Turn.java	(revision e74ff35104ec061bb2d13787216b9d6c0cd09d32)
++++ /dev/null	(revision e74ff35104ec061bb2d13787216b9d6c0cd09d32)
+@@ -1,4 +0,0 @@
+-package Turn;
+-
+-public class Turn {
+-}
+Index: src/Turn/EvaluateWon.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Turn/EvaluateWon.java b/src/Turn/EvaluateWon.java
+new file mode 100644
+--- /dev/null	(date 1668613870856)
++++ b/src/Turn/EvaluateWon.java	(date 1668613870856)
+@@ -0,0 +1,4 @@
++package Turn;
++
++public class EvaluateWon {
++}
+Index: src/Turn/SwitchPlayer.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Turn/SwitchPlayer.java b/src/Turn/SwitchPlayer.java
+new file mode 100644
+--- /dev/null	(date 1668613870887)
++++ b/src/Turn/SwitchPlayer.java	(date 1668613870887)
+@@ -0,0 +1,4 @@
++package Turn;
++
++public class SwitchPlayer {
++}
+Index: src/Turn/TurnState.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Turn/TurnState.java b/src/Turn/TurnState.java
+new file mode 100644
+--- /dev/null	(date 1668709556320)
++++ b/src/Turn/TurnState.java	(date 1668709556320)
+@@ -0,0 +1,65 @@
++package Turn;
++
++public interface TurnStateInterface {
++    private State state;
++    private void drawCard() {
++
++    }
++    private void displayCard() {
++
++    }
++    private void callRollDice(){
++
++    }
++    private void decideIfNull(){
++
++    }
++    private void diceIsNull(){
++
++    }
++    private void validDice(){
++
++    }
++    private void noValidDice(){
++
++    }
++    private void rollAgain(){
++
++    }
++    private void turnFinished(){
++
++    }
++    private void addPointsToScore(){
++
++    }
++    private void getUserInput(){
++
++    }
++    private void deleteScore(){
++
++    }
++    private void addPoints(){
++
++    }
++    private void addScore(){
++
++    }
++    private void setScore(){
++
++    }
++    private void setWinner(){
++
++    }
++    private void evaluateWinner(){
++
++    }
++    private void calculateWinner(){
++
++    }
++    private void callDisplayWinner(){
++
++    }
++    private void nextPlayer(){
++
++    }
++}
+Index: src/Turn/AddScore.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Turn/AddScore.java b/src/Turn/AddScore.java
+new file mode 100644
+--- /dev/null	(date 1668613870882)
++++ b/src/Turn/AddScore.java	(date 1668613870882)
+@@ -0,0 +1,4 @@
++package Turn;
++
++public class AddScore {
++}
+Index: src/Turn/RollDice.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Turn/RollDice.java b/src/Turn/RollDice.java
+new file mode 100644
+--- /dev/null	(date 1668613870927)
++++ b/src/Turn/RollDice.java	(date 1668613870927)
+@@ -0,0 +1,4 @@
++package Turn;
++
++public class RollDice {
++}
+Index: src/Turn/Terminate.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Turn/Terminate.java b/src/Turn/Terminate.java
+new file mode 100644
+--- /dev/null	(date 1668613870869)
++++ b/src/Turn/Terminate.java	(date 1668613870869)
+@@ -0,0 +1,4 @@
++package Turn;
++
++public class Terminate {
++}
+Index: src/Turn/NullDice.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Turn/NullDice.java b/src/Turn/NullDice.java
+new file mode 100644
+--- /dev/null	(date 1668613870842)
++++ b/src/Turn/NullDice.java	(date 1668613870842)
+@@ -0,0 +1,4 @@
++package Turn;
++
++public class NullDice {
++}
+Index: src/Turn/NoMoreValidDice.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Turn/NoMoreValidDice.java b/src/Turn/NoMoreValidDice.java
+new file mode 100644
+--- /dev/null	(date 1668613870910)
++++ b/src/Turn/NoMoreValidDice.java	(date 1668613870910)
+@@ -0,0 +1,4 @@
++package Turn;
++
++public class NoMoreValidDice {
++}
+Index: src/Turn/Score.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Turn/Score.java b/src/Turn/Score.java
+new file mode 100644
+--- /dev/null	(date 1668613870875)
++++ b/src/Turn/Score.java	(date 1668613870875)
+@@ -0,0 +1,4 @@
++package Turn;
++
++public class Score {
++}
+Index: src/Turn/MoreValidDice.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Turn/MoreValidDice.java b/src/Turn/MoreValidDice.java
+new file mode 100644
+--- /dev/null	(date 1668613870903)
++++ b/src/Turn/MoreValidDice.java	(date 1668613870903)
+@@ -0,0 +1,4 @@
++package Turn;
++
++public class MoreValidDice {
++}
+Index: src/Turn/DrawCard.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Turn/DrawCard.java b/src/Turn/DrawCard.java
+new file mode 100644
+--- /dev/null	(date 1668613870851)
++++ b/src/Turn/DrawCard.java	(date 1668613870851)
+@@ -0,0 +1,4 @@
++package Turn;
++
++public class DrawCard {
++}
+Index: src/Turn/StartPlayerTurn.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Turn/StartPlayerTurn.java b/src/Turn/StartPlayerTurn.java
+new file mode 100644
+--- /dev/null	(date 1668613870919)
++++ b/src/Turn/StartPlayerTurn.java	(date 1668613870919)
+@@ -0,0 +1,4 @@
++package Turn;
++
++public class StartPlayerTurn {
++}
+Index: src/Turn/EvaluateDice.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Turn/EvaluateDice.java b/src/Turn/EvaluateDice.java
+new file mode 100644
+--- /dev/null	(date 1668613870863)
++++ b/src/Turn/EvaluateDice.java	(date 1668613870863)
+@@ -0,0 +1,4 @@
++package Turn;
++
++public class EvaluateDice {
++}
+Index: src/Turn/State.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Turn/State.java b/src/Turn/State.java
+new file mode 100644
+--- /dev/null	(date 1668709368334)
++++ b/src/Turn/State.java	(date 1668709368334)
+@@ -0,0 +1,8 @@
++package Turn;
++
++public abstract class State {
++    protected Game game;
++    public State(Game game){
++        this.game = game;
++    }
++}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"2d7c8c4b-7931-42c0-a061-826b7bfce578\" name=\"Changes\" comment=\"AbstractCard\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/Cards/AbstractCard.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Cards/Cards.java\" beforeDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Enum\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2HJWK90zp5F9a6lMyZ6LmDNLaQe\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Main\" />\r\n      <module name=\"SoftCon_Assignment_02\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Main\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"2d7c8c4b-7931-42c0-a061-826b7bfce578\" name=\"Changes\" comment=\"\" />\r\n      <created>1668003600749</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1668003600749</updated>\r\n      <workItem from=\"1668003604479\" duration=\"1000\" />\r\n      <workItem from=\"1668004287395\" duration=\"135000\" />\r\n      <workItem from=\"1668119469469\" duration=\"156000\" />\r\n      <workItem from=\"1668119877254\" duration=\"6000\" />\r\n      <workItem from=\"1668456786595\" duration=\"623000\" />\r\n      <workItem from=\"1668503331602\" duration=\"1468000\" />\r\n      <workItem from=\"1668513990886\" duration=\"614000\" />\r\n      <workItem from=\"1668588064871\" duration=\"2311000\" />\r\n      <workItem from=\"1668596449577\" duration=\"1525000\" />\r\n      <workItem from=\"1668599635375\" duration=\"769000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Making Dice class\">\r\n      <created>1668588937558</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668588937558</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Grundstruktur\">\r\n      <created>1668599524124</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668599524124</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Making Dice class\" />\r\n    <MESSAGE value=\"Grundstruktur\" />\r\n    <MESSAGE value=\"AbstractCard\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"AbstractCard\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision e74ff35104ec061bb2d13787216b9d6c0cd09d32)
++++ b/.idea/workspace.xml	(date 1668892484176)
+@@ -4,10 +4,26 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="AbstractCard">
+-      <change afterPath="$PROJECT_DIR$/src/Cards/AbstractCard.java" afterDir="false" />
++    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="">
++      <change afterPath="$PROJECT_DIR$/src/Turn/AddScore.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Turn/DrawCard.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Turn/EvaluateDice.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Turn/EvaluateWon.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Turn/MoreValidDice.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Turn/NoMoreValidDice.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Turn/NullDice.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Turn/RollDice.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Turn/Score.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Turn/SetWon.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Turn/StartPlayerTurn.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Turn/State.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Turn/SwitchPlayer.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Turn/Terminate.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Turn/TurnState.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Cards/Cards.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Turn/Turn.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Turn/TurnManager.java" beforeDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -18,6 +34,7 @@
+     <option name="RECENT_TEMPLATES">
+       <list>
+         <option value="Enum" />
++        <option value="Interface" />
+         <option value="Class" />
+       </list>
+     </option>
+@@ -79,6 +96,8 @@
+       <workItem from="1668588064871" duration="2311000" />
+       <workItem from="1668596449577" duration="1525000" />
+       <workItem from="1668599635375" duration="769000" />
++      <workItem from="1668709119567" duration="1115000" />
++      <workItem from="1668884941056" duration="645000" />
+     </task>
+     <task id="LOCAL-00001" summary="Making Dice class">
+       <created>1668588937558</created>
+@@ -111,10 +130,4 @@
+       </map>
+     </option>
+   </component>
+-  <component name="VcsManagerConfiguration">
+-    <MESSAGE value="Making Dice class" />
+-    <MESSAGE value="Grundstruktur" />
+-    <MESSAGE value="AbstractCard" />
+-    <option name="LAST_COMMIT_MESSAGE" value="AbstractCard" />
+-  </component>
+ </project>
+\ No newline at end of file
+Index: src/Turn/SetWon.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Turn/SetWon.java b/src/Turn/SetWon.java
+new file mode 100644
+--- /dev/null	(date 1668613870894)
++++ b/src/Turn/SetWon.java	(date 1668613870894)
+@@ -0,0 +1,4 @@
++package Turn;
++
++public class SetWon {
++}
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_18\" project-jdk-name=\"19\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision e74ff35104ec061bb2d13787216b9d6c0cd09d32)
++++ b/.idea/misc.xml	(date 1668612677788)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" project-jdk-name="19" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="19" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file

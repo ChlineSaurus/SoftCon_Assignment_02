@@ -1,0 +1,64 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,16 +4,11 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="updated states and classes">
+-      <change afterPath="$PROJECT_DIR$/src/Turn/HumanInteractionManager.java" afterDir="false" />
++    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="kleines Update">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Turn/HumanInteractionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn/HumanInteractionManager.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/Turn/State/CurrentlyPlaying.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn/State/CurrentlyPlaying.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Turn/State/NoMoreValidDice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn/State/NoMoreValidDice.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Turn/State/StartPlayerTurn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn/State/StartPlayerTurn.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Turn/State/Turn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn/State/Turn.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Turn/State/TurnState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn/State/TurnState.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Turn/State/Tutto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn/State/Tutto.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/dice/DiceTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/DiceTower.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -160,7 +155,8 @@
+       <workItem from="1668677731173" duration="1718000" />
+       <workItem from="1668698634153" duration="2550000" />
+       <workItem from="1668701408033" duration="22578000" />
+-      <workItem from="1669140313578" duration="4510000" />
++      <workItem from="1669140313578" duration="4543000" />
++      <workItem from="1669185441484" duration="4625000" />
+     </task>
+     <task id="LOCAL-00001" summary="Making Dice class">
+       <created>1668588937558</created>
+@@ -253,7 +249,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1669127178942</updated>
+     </task>
+-    <option name="localTasksCounter" value="14" />
++    <task id="LOCAL-00014" summary="kleines Update">
++      <created>1669145290388</created>
++      <option name="number" value="00014" />
++      <option name="presentableId" value="LOCAL-00014" />
++      <option name="project" value="LOCAL" />
++      <updated>1669145290388</updated>
++    </task>
++    <option name="localTasksCounter" value="15" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -283,7 +286,8 @@
+     <MESSAGE value="running test works&#10;had to comment out wrong areas" />
+     <MESSAGE value="Mit Fehlsern" />
+     <MESSAGE value="updated states and classes" />
+-    <option name="LAST_COMMIT_MESSAGE" value="updated states and classes" />
++    <MESSAGE value="kleines Update" />
++    <option name="LAST_COMMIT_MESSAGE" value="kleines Update" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
