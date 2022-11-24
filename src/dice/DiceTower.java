@@ -9,7 +9,7 @@ public class DiceTower {
     final private ArrayList<Dice> takenDices;
 
     private boolean diceTakenSinceRoll;
-    NotNullRoll validateChecker= new ValidateStraight();
+    LegalRoll validateChecker= new LegalRollStraight();
 
     public DiceTower() {
         notTakenDices = new ArrayList<Dice>();

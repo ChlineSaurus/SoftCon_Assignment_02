@@ -2,7 +2,7 @@ package dice;
 
 import java.util.List;
 
-public class ValidateStraight implements NotNullRoll {
+public class LegalRollStraight implements LegalRoll {
 
 
 
