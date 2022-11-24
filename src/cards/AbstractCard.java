@@ -11,7 +11,7 @@ public abstract class AbstractCard {
     protected int points;
     protected TuttoCondition valid;
     protected int TuttoRequiredForPoints;
-    protected boolean EndTurn;
+    public boolean EndTurn;
     protected boolean KeepAllValidDice;
     protected boolean Immunity;
     protected boolean EndGame;
