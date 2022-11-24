@@ -60,7 +60,7 @@ public enum DiceFace {
             return map.get(value);
       }
 
-      public static String represent(DiceFace aDiceFace) {
-            return aDiceFace.repString;
+      public String represent() {
+            return this.repString;
       }
 }

@@ -14,7 +14,7 @@ public class DiceRepresentationTest {
             | o   o |
             | o   o |
             +-------+""";
-        String actual= DiceFace.represent(DiceFace.Six);
+        String actual= DiceFace.Six.represent();
         Assertions.assertEquals(actual,expected);
     }
 }
