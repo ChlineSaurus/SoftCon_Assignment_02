@@ -13,6 +13,7 @@ public class Dice {
     }
 
     public DiceFace getFaceValue()   {
+        assert currentFaceValue!=null;
         return currentFaceValue;
     }
 }

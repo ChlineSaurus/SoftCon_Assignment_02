@@ -10,9 +10,9 @@ import java.util.ArrayList;
 
 public class CurrentlyPlaying implements TurnState{
     Turn aTurn;
-    private Boolean turnFinished = Boolean.FALSE;
-    private Boolean interactionFinished = Boolean.FALSE;
-    private Boolean tuto = Boolean.FALSE;
+    private boolean turnFinished = false;
+    private boolean interactionFinished = false;
+    private boolean tuto =false;
     private ArrayList<DiceFace> diceToRemove;
     public CurrentlyPlaying(Turn aTurn){this.aTurn = aTurn;}
     private DiceTower currentPlayerDice = new DiceTower();
@@ -40,10 +40,10 @@ public class CurrentlyPlaying implements TurnState{
         System.out.println("Your card is XXXX");
     }
     private void TurnFlow() throws IOException, IllegalUserInputExeption{
-        while(turnFinished != Boolean.TRUE){
+        while(turnFinished != true){
             currentPlayerDice.rollNotTakenDices();
-            while(interactionFinished != Boolean.TRUE)
-            if(currentPlayerDice.validDice() == Boolean.TRUE){
+            while(interactionFinished != true)
+            if(currentPlayerDice.validDice() == true){
                 diceToRemove = humanInteraction.ChoseDice();
                 currentPlayerDice.removeDice(diceToRemove);
 

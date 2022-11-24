@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ValidateNonStraight implements ValidateDice {
+public class ValidateNonStraight implements NotNullRoll {
     private Map<DiceFace,Integer> diceCounter = new HashMap<DiceFace, Integer>();
 
     @Override

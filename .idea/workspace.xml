@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="adding gameconstants necessary for win">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_jupiter_params.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/junit_jupiter.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SoftCon_Assignment_02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SoftCon_Assignment_02.iml" afterDir="false" />
+    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="testing should be working now">
+      <change afterPath="$PROJECT_DIR$/Test/dice/DiceTowerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Turn/State/CurrentlyPlaying.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn/State/CurrentlyPlaying.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cards/AbstractCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/AbstractCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dice/Dice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/Dice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dice/DiceTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/DiceTower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing/UI/DiceRepresentationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/UI/DiceRepresentationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing/dice/DiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/dice/DiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dice/ValidateDice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/NotNullRoll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dice/ValidateNonStraight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/ValidateNonStraight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dice/ValidateStraight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/ValidateStraight.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,22 +112,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DiceTest.testRollGet (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SoftCon_Assignment_02" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dice" />
-      <option name="MAIN_CLASS_NAME" value="dice.DiceTest" />
-      <option name="METHOD_NAME" value="testRollGet" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DiceTest.testRollGet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftCon_Assignment_02" />
       <extension name="coverage">
@@ -137,6 +122,22 @@
       </extension>
       <option name="PACKAGE_NAME" value="testing.dice" />
       <option name="MAIN_CLASS_NAME" value="testing.dice.DiceTest" />
+      <option name="METHOD_NAME" value="testRollGet" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiceTest.testRollGet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SoftCon_Assignment_02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dice" />
+      <option name="MAIN_CLASS_NAME" value="dice.DiceTest" />
       <option name="METHOD_NAME" value="testRollGet" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -178,7 +179,7 @@
       <workItem from="1669218556148" duration="9739000" />
       <workItem from="1669277494079" duration="2638000" />
       <workItem from="1669280574635" duration="4509000" />
-      <workItem from="1669286275898" duration="4955000" />
+      <workItem from="1669286275898" duration="6147000" />
     </task>
     <task id="LOCAL-00001" summary="Making Dice class">
       <created>1668588937558</created>
@@ -306,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669297735345</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="testing should be working now">
+      <created>1669302762182</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1669302762182</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,7 +348,8 @@
     <MESSAGE value="fixed Boolean boolean mistake" />
     <MESSAGE value="caluculatepoints classes made... &#10;need to get a way to get the recently taken dice" />
     <MESSAGE value="adding gameconstants necessary for win" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding gameconstants necessary for win" />
+    <MESSAGE value="testing should be working now" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing should be working now" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
