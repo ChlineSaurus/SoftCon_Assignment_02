@@ -9,8 +9,7 @@ public class DiceTower {
     final private ArrayList<Dice> takenDices;
 
     private boolean diceTakenSinceRoll;
-    ValidateDice validatechecker= new ValidateStraight();
-
+    ValidateDice validateChecker= new ValidateStraight();
 
     public DiceTower() {
         notTakenDices = new ArrayList<Dice>();
@@ -36,13 +35,14 @@ public class DiceTower {
         }
     }
     public boolean validDice(){
-        return validatechecker.validateDice(notTakenDices,takenDices);
+        return validateChecker.validateDice(notTakenDices,takenDices);
     }
     public void removeDice(ArrayList<DiceFace> dicesToRemove) throws IllegalUserInputExeption {
         if (dicesToRemove.size() == 0) {
             throw new IllegalUserInputExeption("Your input had no number between one and six. Please give" +
                     "a valid Input.");
         }
+        //one has to check if the taken dice are valid or can the user make mistakes
         if (dicesToRemove.size() > notTakenDices.size()) {
             throw new IllegalUserInputExeption("Your wanted to take more dices than you are currently " +
                     "not taken. Please give a valid Input.");

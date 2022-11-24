@@ -6,8 +6,6 @@ import java.util.Map;
 
 public class ValidateNonStraight implements ValidateDice {
     private Map<DiceFace,Integer> diceCounter = new HashMap<DiceFace, Integer>();
-    private final int guaranteedpointsI=1;
-    private final int guaranteedPointsII=5;
 
     @Override
     public boolean validateDice(List<Dice> notTakenDices,List<Dice> TakenDices)
@@ -23,15 +21,18 @@ public class ValidateNonStraight implements ValidateDice {
                     diceCounter.put(faceValue,1);
                 }
             }
-        }
-
-        for (Integer occurences:diceCounter.values()){
-            if (occurences!=3){
-                return false;
+            else{
+                return true;
             }
         }
 
-        return true;
+        for (Integer occurences:diceCounter.values()){
+            if (occurences>=3){
+                return true;
+            }
+        }
+
+        return false;
     }
 }
 
