@@ -24,6 +24,7 @@ public abstract class AbstractCard {
 
     private TurnState turnState;
 
+
     public TurnState getTurnState() {
         return turnState;
     }

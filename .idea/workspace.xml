@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="fixed Boolean boolean mistake">
-      <change afterPath="$PROJECT_DIR$/src/dice/CalculateRollPoints.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dice/RollPointsNonStraight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dice/RollPointsStraight.java" afterDir="false" />
+    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="caluculatepoints classes made... &#10;need to get a way to get the recently taken dice">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cards/AbstractCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/AbstractCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dice/DiceTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/DiceTower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dice/ValidateNonStraight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/ValidateNonStraight.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +157,8 @@
       <workItem from="1668701408033" duration="22578000" />
       <workItem from="1669218556148" duration="9739000" />
       <workItem from="1669277494079" duration="2638000" />
-      <workItem from="1669280574635" duration="3384000" />
+      <workItem from="1669280574635" duration="4509000" />
+      <workItem from="1669286275898" duration="3501000" />
     </task>
     <task id="LOCAL-00001" summary="Making Dice class">
       <created>1668588937558</created>
@@ -275,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669241896906</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="caluculatepoints classes made... &#10;need to get a way to get the recently taken dice">
+      <created>1669284089822</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1669284089822</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,7 +311,8 @@
     <MESSAGE value="some changes" />
     <MESSAGE value="validation impletemd with stratergy still need to change it to depandcy injection problematic aspect one needs to if it is a straight card one discover this from the card" />
     <MESSAGE value="fixed Boolean boolean mistake" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed Boolean boolean mistake" />
+    <MESSAGE value="caluculatepoints classes made... &#10;need to get a way to get the recently taken dice" />
+    <option name="LAST_COMMIT_MESSAGE" value="caluculatepoints classes made... &#10;need to get a way to get the recently taken dice" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
