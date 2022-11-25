@@ -60,7 +60,7 @@ public class Deck
             }
             }
         }
-       // Collections.shuffle(cards);
+        //Collections.shuffle(cards);
 
     //}
 
@@ -68,6 +68,7 @@ public class Deck
     {
         return aCards.pop();
     }
+    public
 
     public boolean isEmpty()
     {

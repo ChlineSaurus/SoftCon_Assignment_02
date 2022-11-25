@@ -4,11 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="setup comment">
+    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="getarraywithplayermaxpoints necessary for plus/minuscard &#10;I still need to fix cards">
+      <change afterPath="$PROJECT_DIR$/src/Turn/State/EndTurnNoPoints.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Turn/State/EndTurnPoints.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dice/notNullRoll/NotNullRoll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dice/userDiceSelectionValidation/MustTakeAllValidDice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dice/userDiceSelectionValidation/ValidUserSelectionStraight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dice/userDiceSelectionValidation/ValidateUserSelectedDice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/dice/LegalRollNonStraightTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/dice/NotNullNonStraightTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/dice/LegalRollStraightTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/dice/NotNullStraightTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cards/AbstractCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/AbstractCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/players/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/players/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/players/PlayerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/players/PlayerManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cards/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cards/cards/NonStraight.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cards/cards/Straight.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dice/CalculateRollPoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/calculateRollPoints/CalculateRollPoints.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dice/DiceTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/DiceTower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dice/LegalRoll.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dice/LegalRollNonStraight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/notNullRoll/NotNullNonStraight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dice/LegalRollStraight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/notNullRoll/NotNullStraight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dice/RollPointsNonStraight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/calculateRollPoints/RollPointsNonStraight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dice/RollPointsStraight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/calculateRollPoints/RollPointsStraight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dice/ValidateChosenDice.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +91,7 @@
       <module name="SoftCon_Assignment_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dice.*" />
+          <option name="PATTERN" value="dice.notNullRoll.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -85,63 +102,63 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LegalRollNonStraightTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NotNullNonStraightTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftCon_Assignment_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dice.*" />
+          <option name="PATTERN" value="dice.notNullRoll.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="dice" />
-      <option name="MAIN_CLASS_NAME" value="dice.LegalRollNonStraightTest" />
+      <option name="MAIN_CLASS_NAME" value="dice.NotNullNonStraightTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LegalRollNonStraightTest.TestIllegalRoll1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NotNullNonStraightTest.TestIllegalRoll1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftCon_Assignment_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dice.*" />
+          <option name="PATTERN" value="dice.notNullRoll.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="dice" />
-      <option name="MAIN_CLASS_NAME" value="dice.LegalRollNonStraightTest" />
+      <option name="MAIN_CLASS_NAME" value="dice.NotNullNonStraightTest" />
       <option name="METHOD_NAME" value="TestIllegalRoll1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LegalRollNonStraightTest.testLegalRoll1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NotNullNonStraightTest.testLegalRoll1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftCon_Assignment_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dice.*" />
+          <option name="PATTERN" value="dice.notNullRoll.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="dice" />
-      <option name="MAIN_CLASS_NAME" value="dice.LegalRollNonStraightTest" />
+      <option name="MAIN_CLASS_NAME" value="dice.NotNullNonStraightTest" />
       <option name="METHOD_NAME" value="testLegalRoll1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LegalRollStraightTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NotNullStraightTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftCon_Assignment_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dice.*" />
+          <option name="PATTERN" value="dice.notNullRoll.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="dice" />
-      <option name="MAIN_CLASS_NAME" value="dice.LegalRollStraightTest" />
+      <option name="MAIN_CLASS_NAME" value="dice.NotNullStraightTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -150,10 +167,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.DiceTest" />
-        <item itemvalue="JUnit.LegalRollNonStraightTest" />
-        <item itemvalue="JUnit.LegalRollStraightTest" />
-        <item itemvalue="JUnit.LegalRollNonStraightTest.TestIllegalRoll1" />
-        <item itemvalue="JUnit.LegalRollNonStraightTest.testLegalRoll1" />
+        <item itemvalue="JUnit.NotNullNonStraightTest" />
+        <item itemvalue="JUnit.NotNullStraightTest" />
+        <item itemvalue="JUnit.NotNullNonStraightTest.TestIllegalRoll1" />
+        <item itemvalue="JUnit.NotNullNonStraightTest.testLegalRoll1" />
       </list>
     </recent_temporary>
   </component>
@@ -184,7 +201,7 @@
       <workItem from="1669280574635" duration="4509000" />
       <workItem from="1669286275898" duration="20090000" />
       <workItem from="1669323500790" duration="2699000" />
-      <workItem from="1669373652105" duration="4744000" />
+      <workItem from="1669373652105" duration="12897000" />
     </task>
     <task id="LOCAL-00001" summary="Making Dice class">
       <created>1668588937558</created>
@@ -361,7 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669374268959</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="getarraywithplayermaxpoints necessary for plus/minuscard &#10;I still need to fix cards">
+      <created>1669382465159</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1669382465159</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,7 +425,8 @@
     <MESSAGE value="fixedproblem in metaprogramming" />
     <MESSAGE value="changing tests" />
     <MESSAGE value="setup comment" />
-    <option name="LAST_COMMIT_MESSAGE" value="setup comment" />
+    <MESSAGE value="getarraywithplayermaxpoints necessary for plus/minuscard &#10;I still need to fix cards" />
+    <option name="LAST_COMMIT_MESSAGE" value="getarraywithplayermaxpoints necessary for plus/minuscard &#10;I still need to fix cards" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$DiceRepresentationTest_testRepresent6.ic" NAME="DiceRepresentationTest.testRepresent6 Coverage Results" MODIFIED="1669302462013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

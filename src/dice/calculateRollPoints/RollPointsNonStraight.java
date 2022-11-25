@@ -1,10 +1,13 @@
-package dice;
+package dice.calculateRollPoints;
+
+import dice.Dice;
+import dice.DiceFace;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class RollPointsNonStraight implements CalculateRollPoints{
+public class RollPointsNonStraight implements CalculateRollPoints {
     private Map<DiceFace,Integer> diceCounter=new HashMap<DiceFace,Integer>();
     private int points=0;
 

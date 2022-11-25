@@ -9,7 +9,7 @@ public abstract class AbstractCard {
 
     protected String name;
     protected int points;
-    protected TuttoCondition valid;
+
     protected int TuttoRequiredForPoints;
     public boolean EndTurn;
     protected boolean KeepAllValidDice;
@@ -21,14 +21,16 @@ public abstract class AbstractCard {
     public AbstractCard(String name,int bonusPoints, int TuttorequiredForPoints, int TuttoRequiredForBonus){
 
     }
-    public
+
 
 
 
     private TurnState turnState;
 
 
-    public int addBonusPoints(){return 0;}
+    public int addBonusPoints(){
+        if (TuttoRequiredForPoints)
+            return 0;}
 
 
     public TurnState getTurnState() {

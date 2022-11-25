@@ -1,6 +1,8 @@
 package dice;
 
 import Enums.Messages;
+import dice.notNullRoll.NotNullRoll;
+import dice.notNullRoll.NotNullStraight;
 import exceptions.IllegalUserInputExeption;
 
 import java.util.*;
@@ -9,8 +11,11 @@ public class DiceTower {
     final private ArrayList<Dice> notTakenDices;
     final private ArrayList<Dice> takenDices;
 
+    private ArrayList<Dice> recentlyTakenDice=new ArrayList<Dice>();
+    //the dices the user selects
+
     private boolean diceTakenSinceRoll;
-    LegalRoll validateChecker= new LegalRollStraight();
+    NotNullRoll validateChecker= new NotNullStraight();
 
     public DiceTower() {
         notTakenDices = new ArrayList<Dice>();
@@ -20,6 +25,7 @@ public class DiceTower {
         rollNotTakenDices();
         takenDices = new ArrayList<Dice>();
     }
+
 
     public void newTurn() {
         for(Dice dice: takenDices) {

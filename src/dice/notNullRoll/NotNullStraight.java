@@ -1,13 +1,15 @@
-package dice;
+package dice.notNullRoll;
+
+import dice.Dice;
 
 import java.util.List;
 
-public class LegalRollStraight implements LegalRoll {
+public class NotNullStraight implements NotNullRoll {
 
 
 
     @Override
-    public boolean validateDice(List<Dice> notTakenDices,List<Dice> TakenDices) {
+    public boolean validateDice(List<Dice> notTakenDices, List<Dice> TakenDices) {
 
         for (Dice notTakenDice: notTakenDices ){
             int faceValue = notTakenDice.getFaceValue().integerValue;
