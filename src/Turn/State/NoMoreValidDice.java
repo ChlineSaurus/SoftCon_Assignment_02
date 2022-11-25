@@ -1,5 +1,6 @@
 package Turn.State;
 
+import UI.Display;
 import exceptions.IllegalUserInputExeption;
 
 import java.io.IOException;
@@ -12,13 +13,12 @@ public class NoMoreValidDice implements TurnState {
 
     @Override
     public void next(Turn aTurn) throws IOException, IllegalUserInputExeption {
-        System.out.println("Hey here is no more valid Dice");
-        /*Ask user if he wants to reroll dice
-
-         */
-        int i = 1;
-        if (i==0){
-            aTurn.setState(new NoMoreValidDice(aTurn));
+        //Display the current Game State
+        Display.displayMessage("You can't pick any more Dice. If you want to take the risk of losing all your points of this turn, you can reroll your Dice with \"R\" if you do not want to risk them enter \"N\"");
+        char input = Input.Input.takeCharInput();
+        String reroll = String.valueOf(input);
+        if (reroll.equals("R")){
+            aTurn.setState(new CurrentlyPlaying(aTurn));
         }
         else{
             aTurn.setState(new Tutto(aTurn));

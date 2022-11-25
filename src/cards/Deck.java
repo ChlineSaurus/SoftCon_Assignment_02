@@ -1,13 +1,6 @@
 package cards;
 
 
-import cards.cards.cardtypes.Double;
-import cards.cards.cardtypes.*;
-
-import java.util.ArrayList;
-import java.util.List;
-
-
 public class Deck
 {
     private DeckStack aCards;
@@ -68,7 +61,7 @@ public class Deck
     {
         return aCards.pop();
     }
-    public
+
 
     public boolean isEmpty()
     {

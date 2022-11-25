@@ -1,14 +1,17 @@
 package Turn;
 
+import UI.Display;
+
 public class Terminate {
 
-    public Terminate(){}
+    public Terminate() {
+    }
 
-    public int calculateOverWin(){
-        //with this function you can calculate how much a player is over the winning threshold...
+    public int calculateOverWin() {
+        //Call Function in Player to calculate Ammount over the threshold. It should return the Players Name and its Score...
+        String winnermessage = "This is my big winner announcement";
+        Display.displayMessage(winnermessage);
         return 3;
     }
-    public void displayWinner(){
-        System.out.println("Hi I am displaying the winner");
-    }
 }
+

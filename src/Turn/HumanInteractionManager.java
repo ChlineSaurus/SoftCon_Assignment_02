@@ -32,19 +32,18 @@ public class HumanInteractionManager {
                     //Sött eingentli nüt da usgeh werde, das chan mer denn em UI überlah
                     System.out.println(e.getMessage());
                 }
+                validInput = Boolean.TRUE;
             }
         }
         //why doesn't it execute??
         if (nextAction.equals('D')) {
             //Call UI
-            int score = 23;
-            String stringToDisplay = String.format("Your score is: %i", score);
-            System.out.println(stringToDisplay);
+            System.out.println("here should the call to the UI be displayed...");
             DisplayOrRoll();
         }
     }
 // different checks: Check for duplicate, check for not valid input
-    public ArrayList<DiceFace> ChoseDice() throws IOException {
+    public ArrayList<DiceFace> ChoseDice() {
         System.out.println("Please enter the Values of the Dices you want to pick. It is possible to enter multiple at a time. If you do not want to take any more dice type E");
         validInput = Boolean.FALSE;
         while (validInput == Boolean.FALSE) {
@@ -53,8 +52,9 @@ public class HumanInteractionManager {
             } catch (IllegalUserInputExeption e) {
                 System.out.println(e.getMessage());
             }
+            validInput = Boolean.TRUE;
         }
-        //why doesn't it go further??
+
         return indices;
     }
         public Boolean Reroll() throws IOException {

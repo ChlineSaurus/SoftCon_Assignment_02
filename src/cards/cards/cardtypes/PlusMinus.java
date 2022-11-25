@@ -1,6 +1,5 @@
 package cards.cards.cardtypes;
 
-import cards.AbstractCard;
 
 public class PlusMinus extends AbstractCard {
     private final String name="PlusMinus";
@@ -10,4 +9,6 @@ public class PlusMinus extends AbstractCard {
     boolean Immunity = false;
     boolean EndGame = false;
     int TuttoRequiredForBonus = 1;
+
+
 }

@@ -1,7 +1,6 @@
 package cards;
 
 import Turn.State.TurnState;
-import cards.cards.TuttoCondition;
 import cards.cards.cardInterfaces.bonusSystemInterface.BonusSystem;
 import dice.DiceTower;
 
