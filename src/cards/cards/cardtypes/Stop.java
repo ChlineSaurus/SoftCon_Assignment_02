@@ -1,12 +1,11 @@
 package cards.cards.cardtypes;
 
 
+import cards.AbstractCard;
+
 public class Stop extends AbstractCard {
     private final String name="Stop";
-    int TuttoRequiredForPoints = 0;
-    boolean EndTurn = true;
-    boolean KeepAllValidDice = false;
-    boolean Immunity = false;
-    boolean EndGame = false;
-    int TuttoRequiredForBonus = 0;
+    public Stop(){
+        super("Stop",false);
+    }
 }

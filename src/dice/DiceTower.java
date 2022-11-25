@@ -17,9 +17,9 @@ public class DiceTower {
 
     private boolean diceTakenSinceRoll;
 
-    private CalculateRollPoints pointCalculator;
-    private NotNullRoll notNullRollValidator;
-    private ValidateUserSelectedDice validateUserSelectedDice;
+    private final CalculateRollPoints pointCalculator;
+    private final NotNullRoll notNullRollValidator;
+    private final ValidateUserSelectedDice validateUserSelectedDice;
 
     public DiceTower(CalculateRollPoints pointCalculator, NotNullRoll notNullValidator, ValidateUserSelectedDice validateUserSelectedDice) {
         notTakenDices = new ArrayList<Dice>();

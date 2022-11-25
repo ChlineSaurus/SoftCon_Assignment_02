@@ -1,6 +1,9 @@
 package cards;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Deck
 {
     private DeckStack aCards;
@@ -15,7 +18,7 @@ public class Deck
     {
         List<AbstractCard> cards = new ArrayList<>();
 
-        Cloverleaf cloverleaf = new Cloverleaf();
+        /*Cloverleaf cloverleaf = new Cloverleaf();
         cards.add(cloverleaf);
 
         for(int i=0;i<5;i++){
@@ -43,6 +46,8 @@ public class Deck
             Double d = new Double();
             cards.add(d);
             }
+
+         */
 
         int p=100;
         for(int i=0;i<5;i++){

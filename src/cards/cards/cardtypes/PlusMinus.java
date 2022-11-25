@@ -1,6 +1,8 @@
 package cards.cards.cardtypes;
 
 
+import cards.AbstractCard;
+
 public class PlusMinus extends AbstractCard {
     private final String name="PlusMinus";
     int TuttoRequiredForPoints = 1;
@@ -11,4 +13,7 @@ public class PlusMinus extends AbstractCard {
     int TuttoRequiredForBonus = 1;
 
 
+    public PlusMinus() {
+        super();
+    }
 }

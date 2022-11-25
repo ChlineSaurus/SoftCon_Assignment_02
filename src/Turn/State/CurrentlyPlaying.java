@@ -1,5 +1,7 @@
 package Turn.State;
 
+import cards.AbstractCard;
+import cards.cards.cardtypes.Bonus;
 import dice.DiceFace;
 import dice.DiceTower;
 import Turn.HumanInteractionManager;
@@ -16,7 +18,12 @@ public class CurrentlyPlaying implements TurnState{
     private ArrayList<DiceFace> diceToRemove;
     public CurrentlyPlaying(Turn aTurn){this.aTurn = aTurn;}
     //die Paramter für den Dicetower muss currentlyPlaying von der Karte bekommen.
-    private DiceTower currentPlayerDice = new DiceTower();
+    //die Idee wäre dass du die Karte vom Deck bekommst und nicht wie hier willkürlich intialiserd wird
+
+    AbstractCard card=new Bonus();
+    // functioniert noch nicht
+    //der dicetower verhält sich verschieden jenachdme welche Karte ist deshalb ist es wichtig dass die Karte dies gibt
+    private DiceTower currentPlayerDice = card.getDiceTower();
     public HumanInteractionManager humanInteraction = new HumanInteractionManager();
     @Override
     public void next(Turn aTurn) throws IOException, IllegalUserInputExeption {

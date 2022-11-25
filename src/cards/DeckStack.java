@@ -30,6 +30,7 @@ public class DeckStack implements Iterable<AbstractCard>
         return aCards.iterator();
     }
 
+
     public AbstractCard pop(){
         assert !isEmpty();
         return aCards.remove(aCards.size()-1);
