@@ -12,8 +12,12 @@ public enum Messages {
     //Input Exceptions
     illegalCharException("You input contained other symbols than numbers, spaces and commas. Please give a valid Input"),
     notANumberException("You input contained other symbols than numbers. Please give a valid Input"),
-    notACharException("You were supposed to input a single char, but your input was not of length one");
-
+    notACharException("You were supposed to input a single char, but your input was not of length one"),
+    notAllowedCommandException("Your gave a Character as Input for which no command exists. Please give a valid Input"),
+    notAllowedNumberException("Your input contained numbers that are not on a six faced Dice. Please give a valid Input."),
+    noDiceTakenException("Your input had length zero. Please give a valid Input."),
+    toManyDiceTakenException("Your wanted to take more dices than you are currently not taken. Please give a valid Input."),
+    notExistingDiceTakenException("You wanted to take a dice, that doesn't exist. Please give a valid Input");
 
     public final String message;
     Messages(String message) {

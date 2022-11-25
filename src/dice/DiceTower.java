@@ -1,5 +1,6 @@
 package dice;
 
+import Enums.Messages;
 import exceptions.IllegalUserInputExeption;
 
 import java.util.*;
@@ -40,13 +41,11 @@ public class DiceTower {
 
     public void removeDice(ArrayList<DiceFace> dicesToRemove) throws IllegalUserInputExeption {
         if (dicesToRemove.size() == 0) {
-            throw new IllegalUserInputExeption("Your input had no number between one and six. Please give" +
-                    "a valid Input.");
+            throw new IllegalUserInputExeption(Messages.noDiceTakenException.message);
         }
         //one has to check if the taken dice are valid or can the user make mistakes
         if (dicesToRemove.size() > notTakenDices.size()) {
-            throw new IllegalUserInputExeption("Your wanted to take more dices than you are currently " +
-                    "not taken. Please give a valid Input.");
+            throw new IllegalUserInputExeption(Messages.toManyDiceTakenException.message);
         }
         ArrayList<Dice> temporaryTakenDices = new ArrayList<>();
         for(DiceFace diceToRemove: dicesToRemove) {
@@ -60,8 +59,7 @@ public class DiceTower {
         }
         if (temporaryTakenDices.size() < dicesToRemove.size()) {
             notTakenDices.addAll(temporaryTakenDices);
-            throw new IllegalUserInputExeption("You wanted to take a dice, that doesn't exist. Please give" +
-                    "a valid Input");
+            throw new IllegalUserInputExeption(Messages.notAllowedNumberException.message);
         } else {
             diceTakenSinceRoll = true;
             takenDices.addAll(temporaryTakenDices);
