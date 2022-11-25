@@ -1,5 +1,7 @@
 package players;
 
+import java.util.Objects;
+
 public class Player implements Comparable<Player>{
     public final String name;
     private int score;
@@ -7,6 +9,12 @@ public class Player implements Comparable<Player>{
     public Player(String name) {
     this.name = name;
     score = 0;
+    }
+    public int hashCode(){
+        return Objects.hash(this.name);
+    }
+    public boolean equals(Player otherPlayer){
+        return otherPlayer.name.equals(this.name);
     }
 
     public void updateScore(int pointsToAdd) {

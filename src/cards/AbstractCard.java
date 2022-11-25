@@ -21,7 +21,7 @@ public abstract class AbstractCard {
     public AbstractCard(String name,int bonusPoints, int TuttorequiredForPoints, int TuttoRequiredForBonus){
 
     }
-
+    public
 
 
 

@@ -2,6 +2,7 @@ package players;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class PlayerManager {
     private final ArrayList<Player> players;
@@ -44,5 +45,36 @@ public class PlayerManager {
             }
         }
         currentPlayer = players.get(currentPlayerIndex);
+    }
+    public boolean currentPlayerIsPointLeader(Player currentPlayer){
+        int currentPlayersScore=currentPlayer.getScore();
+        for (Player aPlayer:players){
+            if (!aPlayer.equals(currentPlayer)&& aPlayer.getScore()>=currentPlayersScore){
+                return false;
+            }
+        }
+        return true;
+    }
+    private int getMaxScore(Player currentPlayer){
+        int maxScore=-100000;
+        for (Player aPlayer:players){
+            if (!aPlayer.equals(currentPlayer) && aPlayer.getScore()>maxScore){
+                maxScore= aPlayer.getScore();
+            }
+        }
+        return maxScore;
+
+    }
+    public List<Player> getPlayersWithMaxScore(Player currentPlayer){
+        assert !currentPlayerIsPointLeader(currentPlayer);
+        int maxScore=getMaxScore(currentPlayer);
+        List<Player> playersWithMaxScore=new ArrayList<Player>();
+
+        for (Player aPlayer:players){
+            if (!aPlayer.equals(currentPlayer) && aPlayer.getScore()==maxScore){
+                playersWithMaxScore.add(aPlayer);
+            }
+        }
+        return playersWithMaxScore;
     }
 }
