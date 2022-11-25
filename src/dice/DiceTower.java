@@ -1,11 +1,12 @@
 package dice;
 
 import Enums.Messages;
+import dice.calculateRollPoints.CalculateRollPoints;
 import dice.notNullRoll.NotNullRoll;
-import dice.notNullRoll.NotNullStraight;
+import dice.userDiceSelectionValidation.ValidateUserSelectedDice;
 import exceptions.IllegalUserInputExeption;
 
-import java.util.*;
+import java.util.ArrayList;
 
 public class DiceTower {
     final private ArrayList<Dice> notTakenDices;
@@ -15,15 +16,22 @@ public class DiceTower {
     //the dices the user selects
 
     private boolean diceTakenSinceRoll;
-    NotNullRoll validateChecker= new NotNullStraight();
 
-    public DiceTower() {
+    private CalculateRollPoints pointCalculator;
+    private NotNullRoll notNullRollValidator;
+    private ValidateUserSelectedDice validateUserSelectedDice;
+
+    public DiceTower(CalculateRollPoints pointCalculator, NotNullRoll notNullValidator, ValidateUserSelectedDice validateUserSelectedDice) {
         notTakenDices = new ArrayList<Dice>();
         for(int i = 0; i < 6; i++) {
             notTakenDices.add(new Dice());
         }
         rollNotTakenDices();
         takenDices = new ArrayList<Dice>();
+        this.pointCalculator=pointCalculator;
+        this.notNullRollValidator=notNullValidator;
+        this.validateUserSelectedDice=validateUserSelectedDice;
+
     }
 
 
@@ -41,8 +49,12 @@ public class DiceTower {
             dice.roll();
         }
     }
-    public boolean validDice(){
-        return validateChecker.validateDice(notTakenDices,takenDices);
+
+    public boolean notNullRoll(){
+        return notNullRollValidator.validateDice(notTakenDices,takenDices);
+    }
+    public int getRollPoints(){
+        return pointCalculator.calculatePoints(recentlyTakenDice);
     }
 
     public void removeDice(ArrayList<DiceFace> dicesToRemove) throws IllegalUserInputExeption {

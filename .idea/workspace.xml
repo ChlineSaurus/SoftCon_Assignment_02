@@ -4,28 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="getarraywithplayermaxpoints necessary for plus/minuscard &#10;I still need to fix cards">
-      <change afterPath="$PROJECT_DIR$/src/Turn/State/EndTurnNoPoints.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Turn/State/EndTurnPoints.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dice/notNullRoll/NotNullRoll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dice/userDiceSelectionValidation/MustTakeAllValidDice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dice/userDiceSelectionValidation/ValidUserSelectionStraight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dice/userDiceSelectionValidation/ValidateUserSelectedDice.java" afterDir="false" />
+    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="New behavoir that forces user to select valid cards&#10;&#10;restructuring files to make the structuring clearer">
+      <change afterPath="$PROJECT_DIR$/src/dice/userDiceSelectionValidation/ValidateUserSelectionNonStraight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/dice/LegalRollNonStraightTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/dice/NotNullNonStraightTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/dice/LegalRollStraightTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/dice/NotNullStraightTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/AbstractCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/AbstractCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/Deck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/cards/NonStraight.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/cards/Straight.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dice/CalculateRollPoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/calculateRollPoints/CalculateRollPoints.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Turn/State/CurrentlyPlaying.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn/State/CurrentlyPlaying.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dice/DiceTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/DiceTower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dice/LegalRoll.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dice/LegalRollNonStraight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/notNullRoll/NotNullNonStraight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dice/LegalRollStraight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/notNullRoll/NotNullStraight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dice/RollPointsNonStraight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/calculateRollPoints/RollPointsNonStraight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dice/RollPointsStraight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/calculateRollPoints/RollPointsStraight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dice/ValidateChosenDice.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +184,7 @@
       <workItem from="1669280574635" duration="4509000" />
       <workItem from="1669286275898" duration="20090000" />
       <workItem from="1669323500790" duration="2699000" />
-      <workItem from="1669373652105" duration="12897000" />
+      <workItem from="1669373652105" duration="15384000" />
     </task>
     <task id="LOCAL-00001" summary="Making Dice class">
       <created>1668588937558</created>
@@ -385,7 +368,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669382465159</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="New behavoir that forces user to select valid cards&#10;&#10;restructuring files to make the structuring clearer">
+      <created>1669394780269</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1669394780269</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -426,7 +416,8 @@
     <MESSAGE value="changing tests" />
     <MESSAGE value="setup comment" />
     <MESSAGE value="getarraywithplayermaxpoints necessary for plus/minuscard &#10;I still need to fix cards" />
-    <option name="LAST_COMMIT_MESSAGE" value="getarraywithplayermaxpoints necessary for plus/minuscard &#10;I still need to fix cards" />
+    <MESSAGE value="New behavoir that forces user to select valid cards&#10;&#10;restructuring files to make the structuring clearer" />
+    <option name="LAST_COMMIT_MESSAGE" value="New behavoir that forces user to select valid cards&#10;&#10;restructuring files to make the structuring clearer" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$DiceRepresentationTest_testRepresent6.ic" NAME="DiceRepresentationTest.testRepresent6 Coverage Results" MODIFIED="1669302462013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
