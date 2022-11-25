@@ -1,5 +1,6 @@
 package Input;
 
+import Enums.Messages;
 import dice.DiceFace;
 import exceptions.IllegalUserInputExeption;
 
@@ -12,8 +13,7 @@ public class TuttoInput extends Input{
         for (Integer aInputInteger: input){
             DiceFace aDiceFace = DiceFace.getEnum(aInputInteger);
             if(aDiceFace == null) {
-                throw new IllegalUserInputExeption("Your input contained numbers that are not on a six " +
-                        "faced Dice. Please give a valid Input.");
+                throw new IllegalUserInputExeption(Messages.notAllowedNumberException.message);
             }
             returnList.add(aDiceFace);
         }
@@ -23,8 +23,7 @@ public class TuttoInput extends Input{
     public static Character takeRestrictedCharInput(ArrayList<Character> allowedChars) throws IllegalUserInputExeption {
         Character input = Input.takeCharInput();
         if (!(allowedChars.contains(input))) {
-            throw new IllegalUserInputExeption("Your gave a Character as Input for which no command" +
-                    "exists. Please give a valid Input");
+            throw new IllegalUserInputExeption(Messages.notAllowedCommandException.message);
         }
         return input;
     }

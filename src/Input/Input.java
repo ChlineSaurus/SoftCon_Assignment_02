@@ -1,6 +1,7 @@
 package Input;
 
 import exceptions.IllegalUserInputExeption;
+import Enums.Messages;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -19,8 +20,7 @@ public class Input {
     public static Character takeCharInput() throws IllegalUserInputExeption {
         String input = readInput().toUpperCase();
         if(input.length() != 1) {
-            throw new IllegalUserInputExeption("You were supposed to input a single char, but your input" +
-                    "was not of length one");
+            throw new IllegalUserInputExeption(Messages.notACharException.message);
         }
         return input.charAt(0);
     }
@@ -35,8 +35,7 @@ public class Input {
                 returnList.add(Integer.parseInt(Character.toString(input.charAt(i))));
             }
         } catch (NumberFormatException e) {
-            throw new IllegalUserInputExeption("You input contained other symbols than number and \",\"." +
-                    "Please give a valid Input");
+            throw new IllegalUserInputExeption(Messages.illegalCharException.message);
         }
         return returnList;
     }
@@ -47,8 +46,7 @@ public class Input {
         try {
             returnValue = Integer.parseInt(input);
         } catch (NumberFormatException e) {
-            throw new IllegalUserInputExeption("You input contained other symbols than numbers." +
-                    "Please give a valid Input");
+            throw new IllegalUserInputExeption(Messages.notANumberException.message);
         }
         return returnValue;
     }

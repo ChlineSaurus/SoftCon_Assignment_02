@@ -8,7 +8,6 @@ import java.util.List;
 
 public class Display {
     private static final String COLOR_RESET = "\u001B[0m";
-    private static final String BLUE = "\u001B[34m";
     private static final String RED = "\u001B[31m";
 
     private static String diceToString(ArrayList<DiceFace> diceList) {
@@ -19,24 +18,35 @@ public class Display {
             splitUpRepresentations.add(aSplitUpRepresentation);
         }
         System.out.println(splitUpRepresentations);
-        String returnString = "";
-        System.out.println(returnString);
-        return returnString;
+        StringBuilder buildingString = new StringBuilder();
+        for(int row = 0; row < splitUpRepresentations.get(0).size(); row++) {
+            for (List<String> aDice : splitUpRepresentations) {
+                buildingString.append(aDice.get(row));
+            }
+            buildingString.append("\n");
+            buildingString.append("  ");
+        }
+        String returnString = RED + buildingString.toString() + COLOR_RESET;
+        return returnString.replaceAll("o", COLOR_RESET + "o" + RED);
     }
 
     public static void displayGameState(ArrayList<DiceFace> notTakenDice, ArrayList<DiceFace> takenDice,
                                         String playerName, String cardTitel, String cardDescription,
                                         Integer temporaryPoints, String message) {
         clearScreen();
-        String output = String.format("Current Player: %s\n\n", playerName);
-        output += String.format("Your Card: %s\n", BLUE + cardTitel + COLOR_RESET);
-        output += cardDescription + "\n\n";
-        output += "Your rolled dice: \n";
-        output += diceToString(notTakenDice) +"\n\n";
-        output += "Dice you already took: \n";
-        output += diceToString(takenDice) +"\n\n";
-        output += String.format("Your temporary Points this turn: %s\n\n", temporaryPoints);
-        output += message;
+        String output = String.format("Current Player: %s\n\n", playerName) +
+                String.format("Your Card: %s\n", cardTitel) +
+                "Card description:" +
+                cardDescription +
+                "\n\n" +
+                "Your rolled dice: \n" +
+                diceToString(notTakenDice) +
+                "\n\n" +
+                "Dice you already took: \n" +
+                diceToString(takenDice) +
+                "\n\n" +
+                String.format("Your temporary Points this turn: %s\n\n", temporaryPoints) +
+                message;
         System.out.println(output);
     }
 

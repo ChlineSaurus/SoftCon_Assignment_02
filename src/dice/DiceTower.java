@@ -1,24 +1,39 @@
 package dice;
 
+import Enums.Messages;
+import dice.calculateRollPoints.CalculateRollPoints;
+import dice.notNullRoll.NotNullRoll;
+import dice.userDiceSelectionValidation.ValidateUserSelectedDice;
 import exceptions.IllegalUserInputExeption;
 
-import java.util.*;
+import java.util.ArrayList;
 
 public class DiceTower {
     final private ArrayList<Dice> notTakenDices;
     final private ArrayList<Dice> takenDices;
 
-    private boolean diceTakenSinceRoll;
-    LegalRoll validateChecker= new LegalRollStraight();
+    private ArrayList<Dice> recentlyTakenDice=new ArrayList<Dice>();
+    //the dices the user selects
 
-    public DiceTower() {
+    private boolean diceTakenSinceRoll;
+
+    private CalculateRollPoints pointCalculator;
+    private NotNullRoll notNullRollValidator;
+    private ValidateUserSelectedDice validateUserSelectedDice;
+
+    public DiceTower(CalculateRollPoints pointCalculator, NotNullRoll notNullValidator, ValidateUserSelectedDice validateUserSelectedDice) {
         notTakenDices = new ArrayList<Dice>();
         for(int i = 0; i < 6; i++) {
             notTakenDices.add(new Dice());
         }
         rollNotTakenDices();
         takenDices = new ArrayList<Dice>();
+        this.pointCalculator=pointCalculator;
+        this.notNullRollValidator=notNullValidator;
+        this.validateUserSelectedDice=validateUserSelectedDice;
+
     }
+
 
     public void newTurn() {
         for(Dice dice: takenDices) {
@@ -34,19 +49,21 @@ public class DiceTower {
             dice.roll();
         }
     }
-    public boolean validDice(){
-        return validateChecker.validateDice(notTakenDices,takenDices);
+
+    public boolean notNullRoll(){
+        return notNullRollValidator.validateDice(notTakenDices,takenDices);
+    }
+    public int getRollPoints(){
+        return pointCalculator.calculatePoints(recentlyTakenDice);
     }
 
     public void removeDice(ArrayList<DiceFace> dicesToRemove) throws IllegalUserInputExeption {
         if (dicesToRemove.size() == 0) {
-            throw new IllegalUserInputExeption("Your input had no number between one and six. Please give" +
-                    "a valid Input.");
+            throw new IllegalUserInputExeption(Messages.noDiceTakenException.message);
         }
         //one has to check if the taken dice are valid or can the user make mistakes
         if (dicesToRemove.size() > notTakenDices.size()) {
-            throw new IllegalUserInputExeption("Your wanted to take more dices than you are currently " +
-                    "not taken. Please give a valid Input.");
+            throw new IllegalUserInputExeption(Messages.toManyDiceTakenException.message);
         }
         ArrayList<Dice> temporaryTakenDices = new ArrayList<>();
         for(DiceFace diceToRemove: dicesToRemove) {
@@ -60,8 +77,7 @@ public class DiceTower {
         }
         if (temporaryTakenDices.size() < dicesToRemove.size()) {
             notTakenDices.addAll(temporaryTakenDices);
-            throw new IllegalUserInputExeption("You wanted to take a dice, that doesn't exist. Please give" +
-                    "a valid Input");
+            throw new IllegalUserInputExeption(Messages.notAllowedNumberException.message);
         } else {
             diceTakenSinceRoll = true;
             takenDices.addAll(temporaryTakenDices);

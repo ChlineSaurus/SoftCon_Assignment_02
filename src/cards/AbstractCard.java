@@ -9,24 +9,28 @@ public abstract class AbstractCard {
 
     protected String name;
     protected int points;
-    protected TuttoCondition valid;
+
     protected int TuttoRequiredForPoints;
-    protected boolean EndTurn;
+    public boolean EndTurn;
     protected boolean KeepAllValidDice;
     protected boolean Immunity;
     protected boolean EndGame;
 
     private DiceTower dices;
-    private BonusSystem tutoBonus;
+    private BonusSystem TutoBonus;
+    public AbstractCard(String name,int bonusPoints, int TuttorequiredForPoints, int TuttoRequiredForBonus){
+
+    }
 
 
 
 
     private TurnState turnState;
 
-    public int getpoints(){
-        return 0;
-    }
+
+    public int addBonusPoints(){
+        if (TuttoRequiredForPoints)
+            return 0;}
 
 
     public TurnState getTurnState() {

@@ -1,14 +1,16 @@
-package dice;
+package dice.notNullRoll;
+
+import dice.Dice;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class LegalRollNonStraight implements LegalRoll {
+public class NotNullNonStraight implements NotNullRoll {
     private Map<Integer,Integer> diceCounter = new HashMap<Integer, Integer>();
 
     @Override
-    public boolean validateDice(List<Dice> notTakenDices,List<Dice> TakenDices)
+    public boolean validateDice(List<Dice> notTakenDices, List<Dice> TakenDices)
     {
         for (Dice dice: notTakenDices){
             Integer faceValue=dice.getFaceValue().integerValue;

@@ -15,6 +15,7 @@ public class CurrentlyPlaying implements TurnState{
     private boolean tuto =false;
     private ArrayList<DiceFace> diceToRemove;
     public CurrentlyPlaying(Turn aTurn){this.aTurn = aTurn;}
+    //die Paramter für den Dicetower muss currentlyPlaying von der Karte bekommen.
     private DiceTower currentPlayerDice = new DiceTower();
     public HumanInteractionManager humanInteraction = new HumanInteractionManager();
     @Override
@@ -43,7 +44,7 @@ public class CurrentlyPlaying implements TurnState{
         while(turnFinished != true){
             currentPlayerDice.rollNotTakenDices();
             while(interactionFinished != true)
-            if(currentPlayerDice.validDice() == true){
+            if(currentPlayerDice.notNullRoll() == true){
                 diceToRemove = humanInteraction.ChoseDice();
                 currentPlayerDice.removeDice(diceToRemove);
 

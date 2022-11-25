@@ -1,3 +1,5 @@
+import Enums.GameConstants;
+import Enums.Messages;
 import Input.Input;
 import exceptions.IllegalUserInputExeption;
 import players.Player;
@@ -12,6 +14,7 @@ public class SetUp {
         while (true) {
             System.out.println(Messages.necessaryPointsQuestion.message);
             try {
+                //make sure that is within in the limit the input
                 necessaryPoints = Input.takeIntegerInput();
                 break;
             } catch (IllegalUserInputExeption e) {

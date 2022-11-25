@@ -1,4 +1,6 @@
-package dice;
+package dice.calculateRollPoints;
+
+import dice.Dice;
 
 import java.util.List;
 
