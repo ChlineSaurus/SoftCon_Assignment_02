@@ -1,3 +1,5 @@
+package Enums;
+
 public enum GameConstants {
     minAllowedPlayers(2),
     maxAllowedPlayers(4),
