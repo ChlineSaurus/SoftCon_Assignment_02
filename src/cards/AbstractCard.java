@@ -17,12 +17,16 @@ public abstract class AbstractCard {
     protected boolean EndGame;
 
     private DiceTower dices;
-    private BonusSystem tutoBonus;
+    private BonusSystem TutoBonus;
+    public AbstractCard(String name,int bonusPoints, int TuttorequiredForPoints, int TuttoRequiredForBonus){
+
+    }
 
 
 
 
     private TurnState turnState;
+
 
     public int addBonusPoints(){return 0;}
 
