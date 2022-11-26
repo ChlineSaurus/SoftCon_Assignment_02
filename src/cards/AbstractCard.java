@@ -13,6 +13,8 @@ public abstract class AbstractCard {
     protected boolean KeepAllValidDice;
     protected boolean Immunity;
     protected boolean EndGame;
+    TuttoRequired requiredForPoints;
+    TuttoRequired requiredForBonus;
 
     protected DiceTower diceTower;
     protected BonusSystem TutoBonus;
@@ -27,6 +29,16 @@ public abstract class AbstractCard {
 
     public DiceTower getDiceTower(){
         return diceTower;
+    }
+    private boolean isBonusConditionAchieved(){
+        return this.requiredForBonus==TuttoRequired.Zero;
+    }
+
+    public void addPoints(){
+        temporaryPoints+=diceTower.getRollPoints();
+        if (diceTower.madeTutto()){
+
+        }
     }
 
 
@@ -43,8 +55,10 @@ public abstract class AbstractCard {
     public boolean isEndTurn(){
         return endTurn;
     }
-    private boolean checkBonusCondition(){
-        return diceTower.madeTutto();
+    private void checkBonusCondition(){
+        if( diceTower.madeTutto()){
+            //pass
+        }
     }
 
 

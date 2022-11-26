@@ -7,5 +7,6 @@ public class Stop extends AbstractCard {
     private final String name="Stop";
     public Stop(){
         super();
+        this.endTurn=true;
     }
 }

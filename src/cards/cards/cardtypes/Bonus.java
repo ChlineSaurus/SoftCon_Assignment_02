@@ -15,6 +15,7 @@ public class Bonus extends AbstractCard {
         this.descripiton="bla bla";
         this.endTurn=false;
 
+
     }
     }
 
