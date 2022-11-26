@@ -3,13 +3,11 @@ package cards;
 import Turn.State.TurnState;
 import cards.cards.cardInterfaces.bonusSystemInterface.BonusSystem;
 import dice.DiceTower;
-import dice.calculateRollPoints.CalculatePointsNonNullRoll;
-import dice.userDiceSelectionValidation.ValidateUserSelectedDice;
 
 public abstract class AbstractCard {
 
     protected String name;
-    protected int points;
+    protected int temporaryPoints;
 
     protected int TuttoRequiredForPoints;
     public boolean endTurn;
@@ -17,26 +15,17 @@ public abstract class AbstractCard {
     protected boolean Immunity;
     protected boolean EndGame;
 
-    private DiceTower dices;
+    private DiceTower diceTower;
     private BonusSystem TutoBonus;
     private String descripiton;
     private int bonusPoints;
-    public AbstractCard(){}
-
-    public AbstractCard(String name, String description,BonusSystem bonusSystem, int bonusPoints, int TuttorequiredForPoints, int TuttoRequiredForBonus, TurnState turnState, CalculatePointsNonNullRoll calculatePointsNonNullRoll, ValidateUserSelectedDice validateUserSelectedDice){
-        this.dices=new DiceTower(calculatePointsNonNullRoll,validateUserSelectedDice);
-        this.name=name;
-        this.descripiton=description;
-        this.bonusPoints=bonusPoints;
 
 
+    public AbstractCard(){
     }
-    public AbstractCard(String name, boolean endTurn){
-        this.endTurn=endTurn;
-        this.name=name;
-    }
+
     public DiceTower getDiceTower(){
-        return dices;
+        return diceTower;
     }
 
 
@@ -54,7 +43,7 @@ public abstract class AbstractCard {
         return turnState;
     }
     private boolean checkBonusCondition(){
-        return dices.madeTutto();
+        return diceTower.madeTutto();
     }
 
 

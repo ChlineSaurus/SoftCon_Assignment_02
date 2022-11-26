@@ -11,5 +11,8 @@ public class Fireworks extends AbstractCard {
     boolean Immunity = true;
     boolean EndGame = false;
     int TuttoRequiredForBonus = 0;
+    public Fireworks(){
+        super();
+    }
 
 }

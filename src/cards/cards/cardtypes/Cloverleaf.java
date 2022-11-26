@@ -11,4 +11,7 @@ public class Cloverleaf extends AbstractCard {
     boolean Immunity = false;
     boolean EndGame = true;
     int TuttoRequiredForBonus = 2;
+    public Cloverleaf(){
+        super();
+    }
 }

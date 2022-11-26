@@ -16,7 +16,7 @@ public class Bonus extends AbstractCard {
 
     public Bonus(int points){
 
-        super("Bonus","You get a bonus", PlusPoints,100,0,1,null, PointsStraightNonNullRoll, MustTakeAllValidDice);
+
     }
     }
 

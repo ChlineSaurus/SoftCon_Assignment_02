@@ -7,7 +7,7 @@ import exceptions.IllegalUserInputExeption;
 
 import java.util.ArrayList;
 
-public  class DiceTower {
+public abstract  class DiceTower {
     final private ArrayList<Dice> notTakenDices;
     final private ArrayList<Dice> takenDices;
 
@@ -16,9 +16,18 @@ public  class DiceTower {
 
     private boolean diceTakenSinceRoll;
 
-    protected final CalculatePointsNonNullRoll pointCalculator;
+    protected  CalculatePointsNonNullRoll pointCalculator;
 
-    protected final ValidateUserSelectedDice validateUserSelectedDice;
+    protected  ValidateUserSelectedDice validateUserSelectedDice;
+    public DiceTower(){
+        notTakenDices = new ArrayList<Dice>();
+        for(int i = 0; i < 6; i++) {
+            notTakenDices.add(new Dice());
+        }
+        rollNotTakenDices();
+        takenDices = new ArrayList<Dice>();
+
+    }
 
     public DiceTower(CalculatePointsNonNullRoll pointCalculators, ValidateUserSelectedDice validateUserSelectedDices) {
         notTakenDices = new ArrayList<Dice>();
