@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="trying to implement the the three folders into to dicetower &#10;namely CalculateRollPoints&#10;Notnullroll&#10;ValidateUserSelection works but needs to be imbed to dicetower">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_11_22__11_04__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_11_22__11_04__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/dice/NotNullNonStraightTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/dice/NotNullNonStraightTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/dice/NotNullStraightTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/dice/NotNullStraightTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/AbstractCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/AbstractCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/cards/cardtypes/Bonus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/cardtypes/Bonus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dice/DiceTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/DiceTower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dice/calculateRollPoints/CalculateRollPoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/calculateRollPoints/CalculatePointsNonNullRoll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dice/calculateRollPoints/RollPointsNonStraight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/calculateRollPoints/PointsNonStraightNonNullRoll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dice/calculateRollPoints/RollPointsStraight.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dice/notNullRoll/NotNullNonStraight.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dice/notNullRoll/NotNullRoll.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dice/notNullRoll/NotNullStraight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/calculateRollPoints/PointsStraightNonNullRoll.java" afterDir="false" />
-    </list>
+    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="DIESER PUSH ist VOLLER ERROR&#10;PRobobaly needs to be reverted" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -400,7 +384,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669398346188</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="DIESER PUSH ist VOLLER ERROR&#10;PRobobaly needs to be reverted">
+      <created>1669479405306</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1669479405306</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,7 +409,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Making Dice class" />
     <MESSAGE value="Grundstruktur" />
     <MESSAGE value="AbstractCard" />
     <MESSAGE value="resturtucring more still needed" />
@@ -443,7 +433,8 @@
     <MESSAGE value="getarraywithplayermaxpoints necessary for plus/minuscard &#10;I still need to fix cards" />
     <MESSAGE value="New behavoir that forces user to select valid cards&#10;&#10;restructuring files to make the structuring clearer" />
     <MESSAGE value="trying to implement the the three folders into to dicetower &#10;namely CalculateRollPoints&#10;Notnullroll&#10;ValidateUserSelection works but needs to be imbed to dicetower" />
-    <option name="LAST_COMMIT_MESSAGE" value="trying to implement the the three folders into to dicetower &#10;namely CalculateRollPoints&#10;Notnullroll&#10;ValidateUserSelection works but needs to be imbed to dicetower" />
+    <MESSAGE value="DIESER PUSH ist VOLLER ERROR&#10;PRobobaly needs to be reverted" />
+    <option name="LAST_COMMIT_MESSAGE" value="DIESER PUSH ist VOLLER ERROR&#10;PRobobaly needs to be reverted" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$DiceRepresentationTest_testRepresent6.ic" NAME="DiceRepresentationTest.testRepresent6 Coverage Results" MODIFIED="1669302462013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
