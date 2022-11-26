@@ -1,6 +1,4 @@
 import Turn.State.TurnState;
-import cards.Deck;
-import dice.Dice;
 import exceptions.IllegalUserInputExeption;
 
 import java.io.IOException;
@@ -8,16 +6,12 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException, IllegalUserInputExeption {
 
-        Dice d1=new Dice();
-        Deck deck = new Deck();
-        deck.shuffle();
+        SetUp.setUpGame();
         
 
 
 
-       // System.out.println(deck.draw());
-        d1.roll();
-        System.out.println(d1.getFaceValue());
+
 
         TurnState.Turn aTurn = new TurnState.Turn();
         //TurnState aEnd = new EndTurn(aTurn);
