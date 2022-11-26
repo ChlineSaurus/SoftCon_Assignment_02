@@ -64,7 +64,7 @@ public class PlayerManager {
     }
 
 
-    public boolean currentPlayerIsPointLeader(Player currentPlayer){
+    private boolean currentPlayerIsPointLeader(Player currentPlayer){
         int currentPlayersScore=currentPlayer.getScore();
         for (Player aPlayer:players){
             if (!aPlayer.equals(currentPlayer)&& aPlayer.getScore()>=currentPlayersScore){
@@ -76,14 +76,14 @@ public class PlayerManager {
     private int getMaxScore(Player currentPlayer){
         int maxScore=-100000;
         for (Player aPlayer:players){
-            if (!aPlayer.equals(currentPlayer) && aPlayer.getScore()>maxScore){
+            if (aPlayer.getScore()>maxScore){
                 maxScore= aPlayer.getScore();
             }
         }
         return maxScore;
 
     }
-    public List<Player> getPlayersWithMaxScore(Player currentPlayer){
+    private List<Player> getPlayersWithMaxScore(Player currentPlayer){
         assert !currentPlayerIsPointLeader(currentPlayer);
         int maxScore=getMaxScore(currentPlayer);
         List<Player> playersWithMaxScore=new ArrayList<Player>();
@@ -94,5 +94,13 @@ public class PlayerManager {
             }
         }
         return playersWithMaxScore;
+    }
+    public void deductLeadingPlayersPoints(int deductpoints){
+        if (!currentPlayerIsPointLeader(currentPlayer)){
+            List<Player> deductPlayerspoints=getPlayersWithMaxScore(currentPlayer);
+            for (Player aPlayer: deductPlayerspoints){
+                aPlayer.updateScore(-deductpoints);
+            }
+        }
     }
 }

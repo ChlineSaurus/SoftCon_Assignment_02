@@ -63,7 +63,7 @@ public abstract  class DiceTower {
         return pointCalculator.calculatePoints(recentlyTakenDice);
     }
 
-    public void removeDice(ArrayList<DiceFace> dicesToRemove) throws IllegalUserInputExeption {
+    public int removeDice(ArrayList<DiceFace> dicesToRemove) throws IllegalUserInputExeption {
         if (dicesToRemove.size() == 0) {
             throw new IllegalUserInputExeption(Messages.noDiceTakenException.message);
         }
@@ -83,7 +83,8 @@ public abstract  class DiceTower {
             }
         }
         if (!validateUserSelectedDice.isUserSelectionValid(temporaryTakenDices,notTakenDices,takenDices)){
-
+            notTakenDices.addAll(temporaryTakenDices);
+            throw new IllegalUserInputExeption("Make sure that only take valid dice");
         }
         if (temporaryTakenDices.size() < dicesToRemove.size()) {
             notTakenDices.addAll(temporaryTakenDices);
@@ -91,6 +92,7 @@ public abstract  class DiceTower {
         } else {
             diceTakenSinceRoll = true;
             takenDices.addAll(temporaryTakenDices);
+            return pointCalculator.calculatePoints(temporaryTakenDices);
         }
     }
 
