@@ -1,6 +1,5 @@
 package cards;
 
-import Turn.State.TurnState;
 import cards.cards.cardInterfaces.bonusSystemInterface.BonusSystem;
 import dice.DiceTower;
 
@@ -10,15 +9,17 @@ public abstract class AbstractCard {
     protected int temporaryPoints;
 
     protected int TuttoRequiredForPoints;
-    public boolean endTurn;
+    protected boolean endTurn;
     protected boolean KeepAllValidDice;
     protected boolean Immunity;
     protected boolean EndGame;
 
-    private DiceTower diceTower;
-    private BonusSystem TutoBonus;
-    private String descripiton;
-    private int bonusPoints;
+    protected DiceTower diceTower;
+    protected BonusSystem TutoBonus;
+    protected String descripiton;
+    protected int bonusPoints;
+
+
 
 
     public AbstractCard(){
@@ -35,12 +36,12 @@ public abstract class AbstractCard {
 
 
 
-    private TurnState turnState;
 
 
 
-    public TurnState getTurnState() {
-        return turnState;
+
+    public boolean isEndTurn(){
+        return endTurn;
     }
     private boolean checkBonusCondition(){
         return diceTower.madeTutto();

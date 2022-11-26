@@ -2,20 +2,18 @@ package cards.cards.cardtypes;
 
 
 import cards.AbstractCard;
+import dice.diceTowerTypes.DiceTowerStraight;
 
 public class Bonus extends AbstractCard {
 
-    private final String name="Bonus";
-    int points;
-    int TuttoRequiredForPoints = 0;
-    boolean EndTurn = false;
-    boolean KeepAllValidDice = false;
-    boolean Immunity = false;
-    boolean EndGame = false;
-    int TuttoRequiredForBonus = 1;
 
     public Bonus(int points){
-
+        assert points>0;
+        this.diceTower=new DiceTowerStraight();
+        this.bonusPoints=points;
+        this.name="Bonus"+points;
+        this.descripiton="bla bla";
+        this.endTurn=false;
 
     }
     }
