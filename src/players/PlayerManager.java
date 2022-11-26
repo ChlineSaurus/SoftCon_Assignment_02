@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+
+//singleton!!!
 public class PlayerManager {
     private final ArrayList<Player> players;
     private final int necessaryPoints;

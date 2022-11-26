@@ -1,5 +1,7 @@
 package Turn.State;
 
+import Enums.Messages;
+import Input.Input;
 import exceptions.IllegalUserInputExeption;
 
 import java.io.IOException;
@@ -11,13 +13,13 @@ public class Tutto implements TurnState{
     @Override
     public void next(Turn aTurn) throws IOException, IllegalUserInputExeption {
         System.out.println("I am in  Tutto");
-        int i = 1;
-        if (i==0){
+        System.out.println(Messages.stopOrContinueQuestion);
+        if(Input.takeStringInput()=="s"){
+            aTurn.setState(new EndTurn(aTurn));
+        }
+        else if(Input.takeStringInput()=="c"){
             System.out.println("Drawing new card");
             aTurn.setState(new CurrentlyPlaying(aTurn));
-        }
-        else{
-            aTurn.setState(new EndTurn(aTurn));
         }
     }
 }

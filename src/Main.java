@@ -10,6 +10,11 @@ public class Main {
 
         Dice d1=new Dice();
         Deck deck = new Deck();
+        deck.shuffle();
+        
+
+
+
        // System.out.println(deck.draw());
         d1.roll();
         System.out.println(d1.getFaceValue());

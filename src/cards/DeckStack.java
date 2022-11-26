@@ -9,10 +9,10 @@ import java.util.Iterator;
 public class DeckStack implements Iterable<AbstractCard>
 {
     private final List<AbstractCard> aCards;
-
     public DeckStack(){
         aCards = new ArrayList<>();
     }
+
 
     public DeckStack(Iterable<AbstractCard> pCards){
         this();
@@ -21,6 +21,8 @@ public class DeckStack implements Iterable<AbstractCard>
             aCards.add(abstractCard);
         }
     }
+
+
 
     public boolean isEmpty(){
         return aCards.size()==0;

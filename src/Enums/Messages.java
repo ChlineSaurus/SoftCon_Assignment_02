@@ -9,6 +9,8 @@ public enum Messages {
     necessaryPointsQuestion("Until how many Points do you want to play the game? Please enter a Number"),
     notEnoughPlayer("You currently dont have enough players"),
 
+    stopOrContinueQuestion("Enter 's' if you want to stop or 'c' if you want to continue: "),
+
     //Input Exceptions
     illegalCharException("You input contained other symbols than numbers, spaces and commas. Please give a valid Input"),
     notANumberException("You input contained other symbols than numbers. Please give a valid Input"),
