@@ -13,11 +13,8 @@ public class Deck
     {
         shuffle();
     }
-
-    public void shuffle()
-    {
+    private void createDeckStack(){
         List<AbstractCard> cards = new ArrayList<>();
-
         /*Cloverleaf cloverleaf = new Cloverleaf();
         cards.add(cloverleaf);
 
@@ -56,9 +53,16 @@ public class Deck
                 //Bonus b = new Bonus(p);
                 //cards.add(b);
             }
-            }
         }
+        shuffle();
+        aCards=new DeckStack(cards);
+    }
+
+    public void shuffle()
+    {
         //Collections.shuffle(cards);
+        }
+
 
     //}
 

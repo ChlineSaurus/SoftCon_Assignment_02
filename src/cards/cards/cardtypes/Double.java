@@ -1,6 +1,8 @@
 package cards.cards.cardtypes;
 
 
+import cards.AbstractCard;
+
 public class Double extends AbstractCard {
     private final String name="Double";
     int TuttoRequiredForPoints = 0;

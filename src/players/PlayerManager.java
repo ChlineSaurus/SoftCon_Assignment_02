@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class PlayerManager {
+    //Singelton
     private final ArrayList<Player> players;
     private final int necessaryPoints;
     private final int totalPlayer;

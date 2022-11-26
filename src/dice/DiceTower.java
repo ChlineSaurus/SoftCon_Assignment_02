@@ -31,7 +31,6 @@ public class DiceTower {
         this.pointCalculator=pointCalculator;
         this.notNullRollValidator=notNullValidator;
         this.validateUserSelectedDice=validateUserSelectedDice;
-
     }
 
 
@@ -65,6 +64,7 @@ public class DiceTower {
         if (dicesToRemove.size() > notTakenDices.size()) {
             throw new IllegalUserInputExeption(Messages.toManyDiceTakenException.message);
         }
+
         ArrayList<Dice> temporaryTakenDices = new ArrayList<>();
         for(DiceFace diceToRemove: dicesToRemove) {
             for(Dice aNotTakeDice: notTakenDices) {
@@ -74,6 +74,9 @@ public class DiceTower {
                     break;
                 }
             }
+        }
+        if (!validateUserSelectedDice.isUserSelectionValid(temporaryTakenDices,notTakenDices,takenDices)){
+
         }
         if (temporaryTakenDices.size() < dicesToRemove.size()) {
             notTakenDices.addAll(temporaryTakenDices);
