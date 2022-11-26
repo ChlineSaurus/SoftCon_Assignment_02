@@ -7,11 +7,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class RollPointsNonStraight implements CalculateRollPoints {
-    private Map<DiceFace,Integer> diceCounter=new HashMap<DiceFace,Integer>();
-    private int points=0;
+public class PointsNonStraightNonNullRoll implements CalculatePointsNonNullRoll {
 
-    private void setUpDiceCounter(List<Dice> newlyTakenDices){
+
+
+    private void setUpDiceCounter(List<Dice> newlyTakenDices, Map<DiceFace,Integer> diceCounter){
         for (Dice aDice:newlyTakenDices){
             DiceFace faceValue=aDice.getFaceValue();
 
@@ -25,7 +25,9 @@ public class RollPointsNonStraight implements CalculateRollPoints {
     }
 
     public int calculatePoints(List<Dice> newlyTakenDices) {
-        setUpDiceCounter(newlyTakenDices);
+        Map<DiceFace,Integer> diceCounter=new HashMap<DiceFace,Integer>();
+        int points=0;
+        setUpDiceCounter(newlyTakenDices,diceCounter);
         for (Map.Entry<DiceFace, Integer> entry : diceCounter.entrySet()){
             DiceFace faceValue=entry.getKey();
             Integer occurences=entry.getValue();
@@ -52,6 +54,34 @@ public class RollPointsNonStraight implements CalculateRollPoints {
             }
         }
         return points;
+    }
+
+
+    @Override
+    public boolean validateDice(List<Dice> notTakenDices, List<Dice> TakenDices)
+    {   Map<Integer,Integer> diceCounter = new HashMap<Integer, Integer>();
+        for (Dice dice: notTakenDices){
+            Integer faceValue=dice.getFaceValue().integerValue;
+
+            if (faceValue!=5 && faceValue!=1){
+                if (diceCounter.containsKey(faceValue)){
+                    diceCounter.put(faceValue,diceCounter.get(faceValue)+1);
+                }
+                else{
+                    diceCounter.put(faceValue,1);
+                }
+            }
+            else{
+                return true;
+            }
+        }
+        for (Integer occurences:diceCounter.values()){
+
+            if (occurences>=3){
+                return true;
+            }
+        }
+        return false;
     }
 
 }

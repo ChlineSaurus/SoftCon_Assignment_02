@@ -1,14 +1,13 @@
 package dice;
 
 import Enums.Messages;
-import dice.calculateRollPoints.CalculateRollPoints;
-import dice.notNullRoll.NotNullRoll;
+import dice.calculateRollPoints.CalculatePointsNonNullRoll;
 import dice.userDiceSelectionValidation.ValidateUserSelectedDice;
 import exceptions.IllegalUserInputExeption;
 
 import java.util.ArrayList;
 
-public class DiceTower {
+public  class DiceTower {
     final private ArrayList<Dice> notTakenDices;
     final private ArrayList<Dice> takenDices;
 
@@ -17,20 +16,19 @@ public class DiceTower {
 
     private boolean diceTakenSinceRoll;
 
-    private final CalculateRollPoints pointCalculator;
-    private final NotNullRoll notNullRollValidator;
-    private final ValidateUserSelectedDice validateUserSelectedDice;
+    protected final CalculatePointsNonNullRoll pointCalculator;
 
-    public DiceTower(CalculateRollPoints pointCalculator, NotNullRoll notNullValidator, ValidateUserSelectedDice validateUserSelectedDice) {
+    protected final ValidateUserSelectedDice validateUserSelectedDice;
+
+    public DiceTower(CalculatePointsNonNullRoll pointCalculators, ValidateUserSelectedDice validateUserSelectedDices) {
         notTakenDices = new ArrayList<Dice>();
         for(int i = 0; i < 6; i++) {
             notTakenDices.add(new Dice());
         }
         rollNotTakenDices();
         takenDices = new ArrayList<Dice>();
-        this.pointCalculator=pointCalculator;
-        this.notNullRollValidator=notNullValidator;
-        this.validateUserSelectedDice=validateUserSelectedDice;
+        this.pointCalculator=pointCalculators;
+        this.validateUserSelectedDice=validateUserSelectedDices;
     }
 
 
@@ -50,7 +48,7 @@ public class DiceTower {
     }
 
     public boolean notNullRoll(){
-        return notNullRollValidator.validateDice(notTakenDices,takenDices);
+        return pointCalculator.validateDice(notTakenDices,takenDices);
     }
     public int getRollPoints(){
         return pointCalculator.calculatePoints(recentlyTakenDice);
@@ -111,3 +109,5 @@ public class DiceTower {
         return diceTakenSinceRoll;
     }
 }
+
+

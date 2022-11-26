@@ -3,8 +3,7 @@ package cards;
 import Turn.State.TurnState;
 import cards.cards.cardInterfaces.bonusSystemInterface.BonusSystem;
 import dice.DiceTower;
-import dice.calculateRollPoints.CalculateRollPoints;
-import dice.notNullRoll.NotNullRoll;
+import dice.calculateRollPoints.CalculatePointsNonNullRoll;
 import dice.userDiceSelectionValidation.ValidateUserSelectedDice;
 
 public abstract class AbstractCard {
@@ -20,11 +19,17 @@ public abstract class AbstractCard {
 
     private DiceTower dices;
     private BonusSystem TutoBonus;
+    private String descripiton;
+    private int bonusPoints;
     public AbstractCard(){}
 
-    public AbstractCard(String name, BonusSystem bonusSystem, int bonusPoints, int TuttorequiredForPoints, int TuttoRequiredForBonus, TurnState turnState, CalculateRollPoints calculateRollPoints, NotNullRoll notNullRoll, ValidateUserSelectedDice validateUserSelectedDice){
-        this.dices=new DiceTower(calculateRollPoints,notNullRoll,validateUserSelectedDice);
+    public AbstractCard(String name, String description,BonusSystem bonusSystem, int bonusPoints, int TuttorequiredForPoints, int TuttoRequiredForBonus, TurnState turnState, CalculatePointsNonNullRoll calculatePointsNonNullRoll, ValidateUserSelectedDice validateUserSelectedDice){
+        this.dices=new DiceTower(calculatePointsNonNullRoll,validateUserSelectedDice);
         this.name=name;
+        this.descripiton=description;
+        this.bonusPoints=bonusPoints;
+
+
     }
     public AbstractCard(String name, boolean endTurn){
         this.endTurn=endTurn;

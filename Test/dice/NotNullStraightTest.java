@@ -1,8 +1,8 @@
 package dice;
 
 
-import dice.notNullRoll.NotNullRoll;
-import dice.notNullRoll.NotNullStraight;
+import dice.calculateRollPoints.CalculatePointsNonNullRoll;
+import dice.calculateRollPoints.PointsStraightNonNullRoll;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NotNullStraightTest {
-    NotNullRoll StraightValidater=new NotNullStraight();
+    CalculatePointsNonNullRoll StraightValidater=new PointsStraightNonNullRoll();
 
     public List<Dice> DiceListSetUp(Integer[] customDiceValueArray){
         List<Dice> diceList=new ArrayList<>();

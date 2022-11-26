@@ -1,13 +1,15 @@
-package dice.notNullRoll;
+package dice.calculateRollPoints;
 
 import dice.Dice;
 
 import java.util.List;
 
-public class NotNullStraight implements NotNullRoll {
+public class PointsStraightNonNullRoll implements CalculatePointsNonNullRoll {
 
 
-
+    public int calculatePoints(List<Dice> newlyTakenDices) {
+        return 0;
+    }
     @Override
     public boolean validateDice(List<Dice> notTakenDices, List<Dice> TakenDices) {
 
@@ -24,3 +26,4 @@ public class NotNullStraight implements NotNullRoll {
     }
 
 }
+
