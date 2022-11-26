@@ -2,6 +2,8 @@ package Turn.State;
 
 import UI.Display;
 
+import players.PlayerManager;
+
 public class EndTurn implements TurnState{
     Turn aTurn;
 
@@ -9,9 +11,14 @@ public class EndTurn implements TurnState{
     @Override
     public void next(Turn aTurn) {
         //Add playerPoints
+
+
         String myEndTurnMessage = "Your turn is over %s now it is the next players turn.",currentPlayerName;
 
         Display.displayMessage(myEndTurnMessage);
+
+
         //nächster Spieler aufrufen
+
     }
 }

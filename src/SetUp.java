@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class SetUp {
 
-    static PlayerManager setUpGame() {
+    static void setUpGame() {
         int necessaryPoints;
         while (true) {
             System.out.println(Messages.necessaryPointsQuestion.message);
@@ -37,6 +37,6 @@ public class SetUp {
                 playerCounter++;
             }
         }
-        return new PlayerManager(players, necessaryPoints);
+        PlayerManager.getInstance();
     }
 }

@@ -7,16 +7,29 @@ import java.util.List;
 
 //singleton!!!
 public class PlayerManager {
-    //Singelton
-    private final ArrayList<Player> players;
+
+
+    private static PlayerManager uniqueInstance;
+
+
+
+    private ArrayList<Player> players;
     private final int necessaryPoints;
     private final int totalPlayer;
     private boolean playerReachedNecessaryPoints;
     private Player currentPlayer;
     private int currentPlayerIndex;
 
+    public static PlayerManager getInstance(){
+        if(uniqueInstance==null){
+            ArrayList<Player> players = null;
+            int necessaryPoints = 0;
+            uniqueInstance = new PlayerManager(players, necessaryPoints);
+        }
+        return uniqueInstance;
+    }
 
-    public PlayerManager(ArrayList<Player> players, int necessaryPoints) {
+    private PlayerManager(ArrayList<Player> players, int necessaryPoints) {
         assert necessaryPoints > 0;
         this.necessaryPoints = necessaryPoints;
 
@@ -49,6 +62,8 @@ public class PlayerManager {
         }
         currentPlayer = players.get(currentPlayerIndex);
     }
+
+
     public boolean currentPlayerIsPointLeader(Player currentPlayer){
         int currentPlayersScore=currentPlayer.getScore();
         for (Player aPlayer:players){
