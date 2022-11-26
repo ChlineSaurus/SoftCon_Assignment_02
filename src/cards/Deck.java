@@ -1,7 +1,8 @@
 package cards;
-
+import cards.cards.cardtypes.*;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Deck
@@ -9,13 +10,12 @@ public class Deck
     private DeckStack aCards;
 
     //Creates a new deck of 56 cards, shuffled.
-    public Deck()
-    {
-        shuffle();
-    }
-    private void createDeckStack(){
+
+
+
+    public void createDeckStack(){
         List<AbstractCard> cards = new ArrayList<>();
-        /*Cloverleaf cloverleaf = new Cloverleaf();
+        Cloverleaf cloverleaf = new Cloverleaf();
         cards.add(cloverleaf);
 
         for(int i=0;i<5;i++){
@@ -40,38 +40,32 @@ public class Deck
         }
 
         for(int i=0;i<5;i++){
-            Double d = new Double();
+            x2 d = new x2();
             cards.add(d);
             }
 
-         */
+
 
         int p=100;
         for(int i=0;i<5;i++){
             p+=100;
             for(int j=0;j<5;j++){
-                //Bonus b = new Bonus(p);
-                //cards.add(b);
+                Bonus b = new Bonus(p);
+                cards.add(b);
             }
         }
-        shuffle();
+        shuffle(cards);
         aCards=new DeckStack(cards);
     }
 
-    public void shuffle()
-    {
-        //Collections.shuffle(cards);
-        }
-
-
-    //}
+    public void shuffle(List<AbstractCard> cards) {
+        Collections.shuffle(cards);
+    }
 
     public AbstractCard draw()
     {
         return aCards.pop();
     }
-
-
     public boolean isEmpty()
     {
         return aCards.isEmpty();

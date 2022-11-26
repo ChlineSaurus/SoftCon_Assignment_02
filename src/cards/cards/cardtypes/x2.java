@@ -3,7 +3,7 @@ package cards.cards.cardtypes;
 
 import cards.AbstractCard;
 
-public class Double extends AbstractCard {
+public class x2 extends AbstractCard {
     private final String name="Double";
     int TuttoRequiredForPoints = 0;
     boolean EndTurn = false;

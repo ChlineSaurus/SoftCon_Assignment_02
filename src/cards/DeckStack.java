@@ -22,8 +22,6 @@ public class DeckStack implements Iterable<AbstractCard>
         }
     }
 
-
-
     public boolean isEmpty(){
         return aCards.size()==0;
     }
@@ -36,16 +34,6 @@ public class DeckStack implements Iterable<AbstractCard>
     public AbstractCard pop(){
         assert !isEmpty();
         return aCards.remove(aCards.size()-1);
-    }
-
-    public void push(AbstractCard pCard){
-        assert pCard != null;
-        aCards.add(pCard);
-    }
-
-    public AbstractCard peek(){
-        assert !isEmpty();
-        return aCards.get(aCards.size()-1);
     }
 
     public int size(){
