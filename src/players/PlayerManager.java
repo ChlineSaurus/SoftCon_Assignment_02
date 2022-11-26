@@ -7,6 +7,7 @@ import java.util.List;
 
 //singleton!!!
 public class PlayerManager {
+    //Singelton
     private final ArrayList<Player> players;
     private final int necessaryPoints;
     private final int totalPlayer;
