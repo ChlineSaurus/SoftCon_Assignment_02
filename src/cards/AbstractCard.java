@@ -13,7 +13,7 @@ public abstract class AbstractCard {
     protected int TuttoRequiredForPoints;
     protected boolean endTurn;
     protected boolean KeepAllValidDice;
-    protected boolean Immunity;
+    protected boolean immunity;
     protected boolean EndGame;
     TuttoRequired requiredForPoints;
     TuttoRequired requiredForBonus;
@@ -33,7 +33,7 @@ public abstract class AbstractCard {
     }
     public void userTrysToEndTurn() throws IllegalUserInputExeption {
         if (requiredForPoints!=TuttoRequired.Zero){
-            throw new IllegalUserInputExeption("If you end your turn now, you'll recieve zeropoints, roll again!");
+            throw new IllegalUserInputExeption("If you end your turn now, you'll recieve zeropoints, roll again!, type 'r'");
         }
     }
 
@@ -50,14 +50,19 @@ public abstract class AbstractCard {
     }
     public void roll(){
         diceTower.rollNotTakenDices();
+        if (!isRollValid() && !immunity){
+
+        }
     }
     public boolean isRollValid(){
         return diceTower.notNullRoll();
     }
 
 
-    public void addPoints(){
-
+    public void addBonus(){
+        if (requiredForBonus==TuttoRequired.Zero){
+            temporaryPoints+=TutoBonus.bonusPoints(bonusPoints,temporaryPoints);
+        }
     }
 
 
