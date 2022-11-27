@@ -8,26 +8,25 @@ import exceptions.IllegalUserInputExeption;
 public abstract class AbstractCard {
 
     protected String name;
+    protected String descripiton;
     protected int temporaryPoints;
 
-    protected int TuttoRequiredForPoints;
     protected boolean endTurn;
     protected boolean KeepAllValidDice;
     protected boolean immunity;
-    protected boolean EndGame;
     TuttoRequired requiredForPoints;
     TuttoRequired requiredForBonus;
 
     protected DiceTower diceTower=new DiceTower();
     protected DeductPoints deductPoints;
     protected BonusSystem TutoBonus;
-    protected String descripiton;
+
     protected int bonusPoints;
     private void tuttoAchieved(){
-        if (this.requiredForPoints!=TuttoRequired.Zero){
+        if (!isPointConditionAchieved()){
             requiredForPoints=TuttoRequired.getEnum((requiredForPoints.integerValue)-1);
         }
-        if (this.requiredForBonus!=TuttoRequired.Zero){
+        if (!isBonusConditionAchieved()){
             requiredForBonus=TuttoRequired.getEnum(requiredForBonus.integerValue-1);
         }
     }
@@ -65,6 +64,13 @@ public abstract class AbstractCard {
         if (requiredForBonus==TuttoRequired.Zero){
             temporaryPoints+=TutoBonus.bonusPoints(bonusPoints,temporaryPoints);
         }
+    }
+
+    public String getName(){
+        return name;
+    }
+    public String getDescripiton(){
+        return descripiton;
     }
 
 
