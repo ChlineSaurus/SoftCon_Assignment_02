@@ -1,12 +1,10 @@
 package Turn;
 
+import Enums.Messages;
 import Input.TuttoInput;
 import dice.DiceFace;
 import exceptions.IllegalUserInputExeption;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class HumanInteractionManager {
@@ -43,31 +41,32 @@ public class HumanInteractionManager {
         }
     }
 // different checks: Check for duplicate, check for not valid input
-    public ArrayList<DiceFace> ChoseDice() {
-        System.out.println("Please enter the Values of the Dices you want to pick. It is possible to enter multiple at a time. If you do not want to take any more dice type E");
+    public ArrayList<DiceFace> ChoseDice() throws IllegalUserInputExeption {
         validInput = Boolean.FALSE;
         while (validInput == Boolean.FALSE) {
             try {
                 indices = TuttoInput.takeDiceListInput();
             } catch (IllegalUserInputExeption e) {
-                System.out.println(e.getMessage());
+                if(indices.equals(null)){
+                    Reroll();
+                }
+                System.out.println(Messages.wrongDiceInputException.message);
             }
             validInput = Boolean.TRUE;
         }
 
         return indices;
     }
-        public Boolean Reroll() throws IOException {
-            {
-                BufferedReader inputReader = new BufferedReader(
-                        new InputStreamReader(System.in)
-                );
+        public Boolean Reroll() throws IllegalUserInputExeption {
 
-                System.out.println("You have no valid dice. To see the dice enter \"D\" to reroll the dice \"R\" and if you want to end your turn \"E\"");
-                String nextAction = inputReader.readLine();
-                System.out.println(nextAction);
-            }
-            return Boolean.FALSE;
+                System.out.println("Enter to reroll the dice \"R\" and if you want to end your turn \"E\"");
+                char nextAction = TuttoInput.takeCharInput();
+                String nextActions = String.valueOf(nextAction);
+                System.out.println(nextActions);
+                if(nextActions.equals("E")){
+                    return true;
+                }
+                return false;
 
         }
     }

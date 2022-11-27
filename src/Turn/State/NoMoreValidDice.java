@@ -21,7 +21,7 @@ public class NoMoreValidDice implements TurnState {
             aTurn.setState(new CurrentlyPlaying(aTurn));
         }
         else{
-            aTurn.setState(new Tutto(aTurn));
+            aTurn.setState(new EndTurn(aTurn));
         }
     }
 }

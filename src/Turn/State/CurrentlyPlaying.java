@@ -1,10 +1,13 @@
 package Turn.State;
 
+import Input.TuttoInput;
+import Turn.HumanInteractionManager;
+import UI.Display;
 import cards.AbstractCard;
+import cards.Deck;
 import cards.cards.cardtypes.Bonus;
 import dice.DiceFace;
 import dice.DiceTower;
-import Turn.HumanInteractionManager;
 import exceptions.IllegalUserInputExeption;
 
 import java.io.IOException;
@@ -15,6 +18,7 @@ public class CurrentlyPlaying implements TurnState{
     private boolean turnFinished = false;
     private boolean interactionFinished = false;
     private boolean tuto =false;
+
     private ArrayList<DiceFace> diceToRemove;
     public CurrentlyPlaying(Turn aTurn){this.aTurn = aTurn;}
     //die Paramter für den Dicetower muss currentlyPlaying von der Karte bekommen.
@@ -23,39 +27,55 @@ public class CurrentlyPlaying implements TurnState{
     public HumanInteractionManager humanInteraction = new HumanInteractionManager();
     @Override
     public void next(Turn aTurn) throws IOException, IllegalUserInputExeption {
-        int i = 0;
+        int i = 1;
         System.out.println("I am currently playing");
         ManageGame();
         if (i ==0){
             aTurn.setState(new Tutto(aTurn));
         }
         else{
-            aTurn.setState(new Tutto(aTurn));
+            aTurn.setState(new NoMoreValidDice(aTurn));
         }
     }
-    private void ManageGame() throws IOException, IllegalUserInputExeption {
+
+    private void ManageGame() throws IllegalUserInputExeption {
         Setup();
         TurnFlow();
     }
     private void Setup() throws IllegalUserInputExeption {
         humanInteraction.DisplayOrRoll();
+        Deck myStack = new Deck();
+        myStack.createDeckStack();
+        AbstractCard playerCard = bonus;
+        System.out.println("hi");
+        currentPlayerDice = playerCard.getDiceTower();
         currentPlayerDice.newTurn();
-        //DrawCard
-        System.out.println("Your card is XXXX");
+
     }
-    private void TurnFlow() throws IOException, IllegalUserInputExeption{
+    private void TurnFlow() throws IllegalUserInputExeption{
         while(turnFinished != true){
             currentPlayerDice.rollNotTakenDices();
             while(interactionFinished != true)
             if(currentPlayerDice.notNullRoll() == true){
-                diceToRemove = humanInteraction.ChoseDice();
-                currentPlayerDice.removeDice(diceToRemove);
+                Display.displayMessage("If you want to take some of the Dice type \"Y\" if not type \"N\" ");
+                System.out.println(currentPlayerDice.showNotTakenDices());
+                char takeDice = TuttoInput.takeCharInput();
+                String takeDices = String.valueOf(takeDice);
+                if (takeDices.equals("Y")){
+                    diceToRemove = humanInteraction.ChoseDice();
+                    //currentPlayerDice.removeDice(diceToRemove);
+                    System.out.println(diceToRemove);
+                    currentPlayerDice.removeDice(diceToRemove);
+                }else{
+                    interactionFinished = humanInteraction.Reroll();
+                }
 
             }
             else{
                 interactionFinished = humanInteraction.Reroll();
             }
-            System.out.println("interactionFinished");
+            System.out.println("interaction finished");
+            break;
 
         }
     }

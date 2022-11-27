@@ -13,11 +13,11 @@ public class Tutto implements TurnState{
     @Override
     public void next(Turn aTurn) throws IOException, IllegalUserInputExeption {
         System.out.println("I am in  Tutto");
-        System.out.println(Messages.stopOrContinueQuestion);
-        if(Input.takeStringInput()=="s"){
+        System.out.println(Messages.stopOrContinueQuestion.message);
+        if(Input.takeStringInput().equalsIgnoreCase("S")){
             aTurn.setState(new EndTurn(aTurn));
         }
-        else if(Input.takeStringInput()=="c"){
+        else if(Input.takeStringInput().equalsIgnoreCase("C")){
             System.out.println("Drawing new card");
             aTurn.setState(new CurrentlyPlaying(aTurn));
         }

@@ -20,8 +20,10 @@ public enum Messages {
     notAllowedCommandException("Your gave a Character as Input for which no command exists. Please give a valid Input"),
     notAllowedNumberException("Your input contained numbers that are not on a six faced Dice. Please give a valid Input."),
     noDiceTakenException("Your input had length zero. Please give a valid Input."),
+
     toManyDiceTakenException("Your wanted to take more dices than you are currently not taken. Please give a valid Input."),
-    notExistingDiceTakenException("You wanted to take a dice, that doesn't exist. Please give a valid Input");
+    notExistingDiceTakenException("You wanted to take a dice, that doesn't exist. Please give a valid Input"),
+    wrongDiceInputException("You where supposed to enter the face value of the dice you wanted to take");
 
     public final String message;
     Messages(String message) {

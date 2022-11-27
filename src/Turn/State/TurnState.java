@@ -1,5 +1,6 @@
 package Turn.State;
 
+import cards.AbstractCard;
 import exceptions.IllegalUserInputExeption;
 
 import java.io.IOException;
@@ -12,18 +13,19 @@ public interface TurnState {
 
 
     class Turn {
-         protected int score = 0;
-         protected int dices = 0;
-         protected List<Integer> list=new ArrayList<Integer>();
-         private Turn aTurn;
-         private TurnState state = new StartPlayerTurn(aTurn){
+        public AbstractCard turnCard;
+        protected int score = 0;
+        protected int dices = 0;
+        protected List<Integer> list=new ArrayList<Integer>();
+        private Turn aTurn;
+        private TurnState state = new StartPlayerTurn(aTurn){
 
-         };
+        };
 
-         public void setState(TurnState state) throws IOException, IllegalUserInputExeption {
-             this.state = state;
-             state.next(this);
-         }
-         public void nextState() throws IOException, IllegalUserInputExeption {state.next(this);}
-     }
+        public void setState(TurnState state) throws IOException, IllegalUserInputExeption {
+            this.state = state;
+            state.next(this);
+        }
+        public void nextState() throws IOException, IllegalUserInputExeption {state.next(this);}
+    }
 }

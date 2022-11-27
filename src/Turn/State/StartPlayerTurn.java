@@ -12,11 +12,12 @@ public class StartPlayerTurn implements TurnState {
     @Override
     public void next(Turn aTurn) throws IOException, IllegalUserInputExeption {
         System.out.println("I am in StartPlayerTurn");
-        //here a card should be drawn...
-        // if card == nullcard then end turn
+        //Deck aDeck = new Deck();
+        //aDeck.createDeckStack();
+        //aTurn.turnCard = aDeck.draw();
+        //System.out.println(aTurn.turnCard);
+        //if(aTurn.turnCard.equals(cards.cards.cardtypes.Stop)) does not work, for some reason...
         aTurn.setState(new CurrentlyPlaying(aTurn));
     }
-    public void display(){
-        //here should be displayed something...
-    }
+
 }
