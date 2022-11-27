@@ -54,7 +54,7 @@ public class CurrentlyPlaying implements TurnState{
 
     }
     private void TurnFlow() throws IllegalUserInputExeption{
-        while(turnFinished != true){
+        while(!turnFinished){
             currentPlayerDice.rollNotTakenDices();
             while(interactionFinished != true)
             if(currentPlayerDice.notNullRoll()){

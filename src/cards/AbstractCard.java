@@ -17,7 +17,7 @@ public abstract class AbstractCard {
     TuttoRequired requiredForBonus;
 
     protected DiceTower diceTower=new DiceTower();
-    private int deductPoints;
+    protected int deductPoints;
     protected BonusSystem TutoBonus;
     public AbstractCard(){
         immunity=false;
@@ -92,11 +92,7 @@ public abstract class AbstractCard {
         return deductPoints;
     }
 
-    private void checkBonusCondition(){
-        if( diceTower.madeTutto()){
-            //pass
-        }
-    }
+
 
 
 

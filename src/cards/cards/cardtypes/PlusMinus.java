@@ -4,7 +4,7 @@ package cards.cards.cardtypes;
 import cards.AbstractCard;
 
 public class PlusMinus extends AbstractCard {
-    private final String name="PlusMinus";
+
     int TuttoRequiredForPoints = 1;
     boolean EndTurn = false;
     boolean KeepAllValidDice = false;
@@ -14,6 +14,10 @@ public class PlusMinus extends AbstractCard {
 
 
     public PlusMinus() {
+
+        name="PlusMinus";
         diceTower.setDiceTowerNonStraight();
+        bonusPoints=1000;
+        deductPoints=1000;
     }
 }

@@ -16,7 +16,7 @@ public class DiceTower {
     final private ArrayList<Dice> notTakenDices;
     final private ArrayList<Dice> takenDices;
 
-    private ArrayList<Dice> recentlyTakenDice=new ArrayList<Dice>();
+
     //the dices the user selects
 
     private boolean diceTakenSinceRoll;
@@ -68,9 +68,7 @@ public class DiceTower {
     public boolean notNullRoll(){
         return pointCalculator.validateDice(notTakenDices,takenDices);
     }
-    public int getRollPoints(){
-        return pointCalculator.calculatePoints(recentlyTakenDice);
-    }
+
 
     public int removeDice(ArrayList<DiceFace> dicesToRemove) throws IllegalUserInputExeption {
         if (dicesToRemove.size() == 0) {
