@@ -1,7 +1,6 @@
 package cards;
 
 import cards.cards.cardInterfaces.bonusSystemInterface.BonusSystem;
-import cards.cards.cardInterfaces.deductPoints.DeductPoints;
 import dice.DiceTower;
 import exceptions.IllegalUserInputExeption;
 
@@ -12,14 +11,17 @@ public abstract class AbstractCard {
     protected int temporaryPoints;
 
     protected boolean endTurn;
-    protected boolean KeepAllValidDice;
+
     protected boolean immunity;
     TuttoRequired requiredForPoints;
     TuttoRequired requiredForBonus;
 
     protected DiceTower diceTower=new DiceTower();
-    protected DeductPoints deductPoints;
+    private int deductPoints;
     protected BonusSystem TutoBonus;
+    public AbstractCard(){
+        immunity=false;
+    }
 
     protected int bonusPoints;
     private void tuttoAchieved(){
@@ -60,11 +62,17 @@ public abstract class AbstractCard {
     }
 
 
-    public void addBonus(){
+    public int addBonus(int currentPoints){
+        int addBoni=0;
+        tuttoAchieved();
         if (requiredForBonus==TuttoRequired.Zero){
-            temporaryPoints+=TutoBonus.bonusPoints(bonusPoints,temporaryPoints);
+            addBoni=TutoBonus.bonusPoints(bonusPoints,currentPoints);
         }
+        return addBoni;
     }
+    /*
+
+     */
 
     public String getName(){
         return name;
@@ -76,22 +84,20 @@ public abstract class AbstractCard {
 
     //what needs to be done:
     //
-
-
-
-
-
-
-
-
     public boolean isEndTurn(){
         return endTurn;
     }
+
+    public int getDeductPoints() {
+        return deductPoints;
+    }
+
     private void checkBonusCondition(){
         if( diceTower.madeTutto()){
             //pass
         }
     }
+
 
 
 

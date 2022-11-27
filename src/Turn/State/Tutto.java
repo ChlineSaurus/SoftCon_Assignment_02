@@ -3,6 +3,7 @@ package Turn.State;
 import Enums.Messages;
 import Input.Input;
 import exceptions.IllegalUserInputExeption;
+import players.PlayerManager;
 
 import java.io.IOException;
 
@@ -21,5 +22,10 @@ public class Tutto implements TurnState{
             System.out.println("Drawing new card");
             aTurn.setState(new CurrentlyPlaying(aTurn));
         }
+    }
+    //mit diesr Function kannst die Points deducten
+    public void deductPoints(int pointsToDeduct) {
+        PlayerManager playerManager=PlayerManager.getInstance();
+        playerManager.deductLeadingPlayersPoints(pointsToDeduct);
     }
 }

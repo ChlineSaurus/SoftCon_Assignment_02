@@ -13,6 +13,7 @@ public class Fireworks extends AbstractCard {
     int TuttoRequiredForBonus = 0;
     public Fireworks(){
         diceTower.setDiceTowerFirework();
+        immunity=true;
 
     }
 

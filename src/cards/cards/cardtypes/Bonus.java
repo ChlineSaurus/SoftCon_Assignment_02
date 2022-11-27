@@ -9,9 +9,10 @@ public class Bonus extends AbstractCard {
     public Bonus(int points){
         assert points>0;
         diceTower.setDiceTowerNonStraight();
-        this.bonusPoints=points;
-        this.name="Bonus "+points;
-        this.descripiton="bla bla";
+
+        name="Bonus "+points;
+        descripiton="bla bla";
+        bonusPoints=points;
         this.endTurn=false;
 
 
