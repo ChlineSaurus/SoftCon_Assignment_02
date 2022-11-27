@@ -1,6 +1,7 @@
 package cards;
 
 import cards.cards.cardInterfaces.bonusSystemInterface.BonusSystem;
+import cards.cards.cardInterfaces.deductPoints.DeductPoints;
 import dice.DiceTower;
 
 public abstract class AbstractCard {
@@ -16,7 +17,8 @@ public abstract class AbstractCard {
     TuttoRequired requiredForPoints;
     TuttoRequired requiredForBonus;
 
-    protected DiceTower diceTower;
+    protected DiceTower diceTower=new DiceTower();
+    protected DeductPoints deductPoints;
     protected BonusSystem TutoBonus;
     protected String descripiton;
     protected int bonusPoints;

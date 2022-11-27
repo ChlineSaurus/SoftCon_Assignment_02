@@ -14,6 +14,6 @@ public class PlusMinus extends AbstractCard {
 
 
     public PlusMinus() {
-        super();
+        diceTower.setDiceTowerNonStraight();
     }
 }

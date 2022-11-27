@@ -12,6 +12,6 @@ public class Cloverleaf extends AbstractCard {
     boolean EndGame = true;
     int TuttoRequiredForBonus = 2;
     public Cloverleaf(){
-        super();
+        diceTower.setDiceTowerNonStraight();
     }
 }

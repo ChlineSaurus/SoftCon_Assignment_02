@@ -56,7 +56,7 @@ public class CurrentlyPlaying implements TurnState{
         while(turnFinished != true){
             currentPlayerDice.rollNotTakenDices();
             while(interactionFinished != true)
-            if(currentPlayerDice.notNullRoll() == true){
+            if(currentPlayerDice.notNullRoll()){
                 Display.displayMessage("If you want to take some of the Dice type \"Y\" if not type \"N\" ");
                 System.out.println(currentPlayerDice.showNotTakenDices());
                 char takeDice = TuttoInput.takeCharInput();

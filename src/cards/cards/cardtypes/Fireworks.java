@@ -12,6 +12,7 @@ public class Fireworks extends AbstractCard {
     boolean EndGame = false;
     int TuttoRequiredForBonus = 0;
     public Fireworks(){
+        diceTower.setDiceTowerFirework();
 
     }
 
