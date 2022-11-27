@@ -51,6 +51,8 @@ public abstract class AbstractCard {
     public void roll(){
         diceTower.rollNotTakenDices();
         if (!isRollValid() && !immunity){
+            temporaryPoints=0;
+            //maybe return a tuple
 
         }
     }
