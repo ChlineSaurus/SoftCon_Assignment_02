@@ -3,6 +3,7 @@ package cards;
 import cards.cards.cardInterfaces.bonusSystemInterface.BonusSystem;
 import cards.cards.cardInterfaces.deductPoints.DeductPoints;
 import dice.DiceTower;
+import exceptions.IllegalUserInputExeption;
 
 public abstract class AbstractCard {
 
@@ -22,12 +23,21 @@ public abstract class AbstractCard {
     protected BonusSystem TutoBonus;
     protected String descripiton;
     protected int bonusPoints;
-
-
-
-
-    public AbstractCard(){
+    private void tuttoAchieved(){
+        if (this.requiredForPoints!=TuttoRequired.Zero){
+            requiredForPoints=TuttoRequired.getEnum((requiredForPoints.integerValue)-1);
+        }
+        if (this.requiredForBonus!=TuttoRequired.Zero){
+            requiredForBonus=TuttoRequired.getEnum(requiredForBonus.integerValue-1);
+        }
     }
+    public void userTrysToEndTurn() throws IllegalUserInputExeption {
+        if (requiredForPoints!=TuttoRequired.Zero){
+            throw new IllegalUserInputExeption("If you end your turn now, you'll recieve zeropoints, roll again!");
+        }
+    }
+
+
 
     public DiceTower getDiceTower(){
         return diceTower;
@@ -35,12 +45,19 @@ public abstract class AbstractCard {
     private boolean isBonusConditionAchieved(){
         return this.requiredForBonus==TuttoRequired.Zero;
     }
+    private boolean isPointConditionAchieved(){
+        return this.requiredForPoints==TuttoRequired.Zero;
+    }
+    public void roll(){
+        diceTower.rollNotTakenDices();
+    }
+    public boolean isRollValid(){
+        return diceTower.notNullRoll();
+    }
+
 
     public void addPoints(){
-        temporaryPoints+=diceTower.getRollPoints();
-        if (diceTower.madeTutto()){
 
-        }
     }
 
 
