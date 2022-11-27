@@ -5,10 +5,10 @@ import Turn.HumanInteractionManager;
 import UI.Display;
 import cards.AbstractCard;
 import cards.Deck;
-import cards.cards.cardtypes.Bonus;
 import dice.DiceFace;
 import dice.DiceTower;
 import exceptions.IllegalUserInputExeption;
+import players.PlayerManager;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -20,10 +20,11 @@ public class CurrentlyPlaying implements TurnState{
     private boolean tuto =false;
 
     private ArrayList<DiceFace> diceToRemove;
+
     public CurrentlyPlaying(Turn aTurn){this.aTurn = aTurn;}
     //die Paramter für den Dicetower muss currentlyPlaying von der Karte bekommen.
-    AbstractCard bonus=new Bonus(100);
-    private DiceTower currentPlayerDice = bonus.getDiceTower();
+    AbstractCard card= PlayerManager.getInstance().getCard();
+    private DiceTower currentPlayerDice = card.getDiceTower();
     public HumanInteractionManager humanInteraction = new HumanInteractionManager();
     @Override
     public void next(Turn aTurn) throws IOException, IllegalUserInputExeption {
@@ -46,7 +47,7 @@ public class CurrentlyPlaying implements TurnState{
         humanInteraction.DisplayOrRoll();
         Deck myStack = new Deck();
         myStack.createDeckStack();
-        AbstractCard playerCard = bonus;
+        AbstractCard playerCard = card;
         System.out.println("hi");
         currentPlayerDice = playerCard.getDiceTower();
         currentPlayerDice.newTurn();

@@ -1,5 +1,8 @@
 package players;
 
+import cards.AbstractCard;
+import cards.Deck;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -14,6 +17,7 @@ public class PlayerManager {
 
 
     private ArrayList<Player> players;
+    private Deck deck=new Deck();
     private final int necessaryPoints;
     private final int totalPlayer;
     private boolean playerReachedNecessaryPoints;
@@ -102,5 +106,8 @@ public class PlayerManager {
                 aPlayer.updateScore(-deductpoints);
             }
         }
+    }
+    public AbstractCard getCard(){
+        return deck.draw();
     }
 }
