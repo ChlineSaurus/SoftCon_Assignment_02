@@ -23,8 +23,9 @@ public enum Messages {
 
     toManyDiceTakenException("Your wanted to take more dices than you are currently not taken. Please give a valid Input."),
     notExistingDiceTakenException("You wanted to take a dice, that doesn't exist. Please give a valid Input"),
-    wrongDiceInputException("You where supposed to enter the face value of the dice you wanted to take");
-
+    wrongDiceInputException("You where supposed to enter the face value of the dice you wanted to take"),
+    // Game Interaction Messages
+    tuttoAndCloverleafOrFireworks("You have a tutto but you must go on.");
     public final String message;
     Messages(String message) {
         this.message = message;

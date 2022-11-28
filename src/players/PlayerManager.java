@@ -137,6 +137,12 @@ public class PlayerManager {
         }
         return playersScore;
     }
+    public boolean isCurrentPlayerWinning(int turnPoints){
+        if (currentPlayer.getScore()+turnPoints>= necessaryPoints){
+            return true;
+        }
+        else return false;
+    }
     public void addPoints(int pointsToAdd){
         currentPlayer.updateScore(pointsToAdd);
     }

@@ -2,6 +2,7 @@ package Turn.State;
 
 import Enums.Messages;
 import Input.Input;
+import UI.Display;
 import exceptions.IllegalUserInputExeption;
 
 import java.io.IOException;
@@ -13,7 +14,16 @@ public class Tutto implements TurnState{
     @Override
     public void next(Turn aTurn) throws IOException, IllegalUserInputExeption {
         System.out.println("I am in  Tutto");
-        System.out.println(Messages.stopOrContinueQuestion.message);
+        if(aTurn.turnCard.getName().equals("Fireworks")){
+            Display.displayMessage(Messages.tuttoAndCloverleafOrFireworks.message);
+            aTurn.setState(new CurrentlyPlaying(aTurn));
+        }
+        if(aTurn.turnCard.getName().equals("Cloverleaf")){
+            //something must be called to inform, that it was a tutto and Cloverleaf
+            Display.displayMessage(Messages.tuttoAndCloverleafOrFireworks.message);
+            aTurn.setState(new CurrentlyPlaying(aTurn));
+        }
+                System.out.println(Messages.stopOrContinueQuestion.message);
         if(Input.takeStringInput().equalsIgnoreCase("S")){
             aTurn.setState(new EndTurn(aTurn));
         }

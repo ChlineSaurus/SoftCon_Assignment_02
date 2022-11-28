@@ -8,7 +8,6 @@ import cards.Deck;
 import dice.DiceFace;
 import dice.DiceTower;
 import exceptions.IllegalUserInputExeption;
-import players.PlayerManager;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -17,14 +16,13 @@ public class CurrentlyPlaying implements TurnState{
     Turn aTurn;
     private boolean turnFinished = false;
     private boolean interactionFinished = false;
-    private boolean tuto =false;
+    private boolean tutto =false;
 
     private ArrayList<DiceFace> diceToRemove;
 
     public CurrentlyPlaying(Turn aTurn){this.aTurn = aTurn;}
-    //die Paramter für den Dicetower muss currentlyPlaying von der Karte bekommen.
-    AbstractCard card= PlayerManager.getInstance().getCard();
-    private DiceTower currentPlayerDice = card.getDiceTower();
+
+    private DiceTower currentPlayerDice = aTurn.turnCard.getDiceTower();
     public HumanInteractionManager humanInteraction = new HumanInteractionManager();
     @Override
     public void next(Turn aTurn) throws IOException, IllegalUserInputExeption {
@@ -39,7 +37,7 @@ public class CurrentlyPlaying implements TurnState{
         }
     }
 
-    private void ManageGame() throws IllegalUserInputExeption {
+    private void ManageGame() throws IllegalUserInputExeption, IOException {
         Setup();
         TurnFlow();
     }
@@ -47,16 +45,16 @@ public class CurrentlyPlaying implements TurnState{
         humanInteraction.DisplayOrRoll();
         Deck myStack = new Deck();
         myStack.createDeckStack();
-        AbstractCard playerCard = card;
+        AbstractCard playerCard = aTurn.turnCard;
         System.out.println("hi");
         currentPlayerDice = playerCard.getDiceTower();
         currentPlayerDice.newTurn();
 
     }
-    private void TurnFlow() throws IllegalUserInputExeption{
-        while(turnFinished != true){
+    private void TurnFlow() throws IllegalUserInputExeption, IOException {
+        while(!turnFinished){
             currentPlayerDice.rollNotTakenDices();
-            while(interactionFinished != true)
+            while(!interactionFinished)
             if(currentPlayerDice.notNullRoll()){
                 Display.displayMessage("If you want to take some of the Dice type \"Y\" if not type \"N\" ");
                 System.out.println(currentPlayerDice.showNotTakenDices());
@@ -73,7 +71,12 @@ public class CurrentlyPlaying implements TurnState{
 
             }
             else{
-                interactionFinished = humanInteraction.Reroll();
+                if(/* getImmunity*/true){
+                    interactionFinished = humanInteraction.Reroll();
+                }else{
+                    aTurn.score = 0;
+                    aTurn.setState(new EndTurn(aTurn));
+                }
             }
             System.out.println("interaction finished");
             break;
