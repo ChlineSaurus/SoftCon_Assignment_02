@@ -17,7 +17,7 @@ public class Deck
     {
         createDeckStack();
     }
-    public void createDeckStack(){
+    private void createDeckStack(){
         cards=new ArrayList<AbstractCard>();
 
         Cloverleaf cloverleaf = new Cloverleaf();

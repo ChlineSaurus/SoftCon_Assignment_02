@@ -46,7 +46,6 @@ public class CurrentlyPlaying implements TurnState{
     private void Setup() throws IllegalUserInputExeption {
         humanInteraction.DisplayOrRoll();
         Deck myStack = new Deck();
-        myStack.createDeckStack();
         AbstractCard playerCard = card;
         System.out.println("hi");
         currentPlayerDice = playerCard.getDiceTower();

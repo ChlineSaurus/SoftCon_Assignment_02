@@ -1,4 +1,5 @@
-import Turn.State.TurnState;
+import cards.AbstractCard;
+import cards.Deck;
 import exceptions.IllegalUserInputExeption;
 
 import java.io.IOException;
@@ -10,11 +11,13 @@ public class Main {
 
 
 
-        TurnState.Turn aTurn = new TurnState.Turn();
+        //TurnState.Turn aTurn = new TurnState.Turn();
         //TurnState aEnd = new EndTurn(aTurn);
         //aTurn.setState(aEnd);
-        aTurn.nextState();
-
+        //aTurn.nextState();
+        Deck a=new Deck();
+        AbstractCard b=a.draw();
+        System.out.println(b.getName());
     }
 
 }
