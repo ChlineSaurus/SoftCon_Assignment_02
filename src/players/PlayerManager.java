@@ -52,6 +52,10 @@ public class PlayerManager {
         return currentPlayer.name;
     }
 
+    public Player currentPlayer(){
+        return currentPlayer;
+    }
+
     public void nextPlayersTurn(int pointsToAdd) {
         currentPlayer.updateScore(pointsToAdd);
         if (currentPlayer.getScore() >= necessaryPoints) {
