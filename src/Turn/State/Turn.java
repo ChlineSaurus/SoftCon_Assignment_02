@@ -10,7 +10,7 @@ import java.util.List;
 public class Turn extends TurnState.Turn {
     Turn aTurn;
     protected int score = 0;
-    protected int deductPoints=0;
+    protected int pointsToDeduct=0;
     protected AbstractCard turnCard;
     protected List<Integer> list=new ArrayList<Integer>();
 
@@ -24,6 +24,7 @@ public class Turn extends TurnState.Turn {
     }
     public void nextState() throws IOException, IllegalUserInputExeption {
         state.next(this);
+
 
     }
 

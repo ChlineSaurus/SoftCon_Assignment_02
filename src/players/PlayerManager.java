@@ -24,11 +24,8 @@ public class PlayerManager {
     private Player currentPlayer;
     private int currentPlayerIndex;
 
-    public void setDeck(){
-        System.out.println("hi");
-        deck.createDeckStack();
-        System.out.println("ho");
-    }
+
+
     public static PlayerManager getInstance(){
         if(uniqueInstance==null){
             ArrayList<Player> players = null;
@@ -38,7 +35,7 @@ public class PlayerManager {
         return uniqueInstance;
     }
 
-    private PlayerManager(ArrayList<Player> players, int necessaryPoints) {
+    public PlayerManager(ArrayList<Player> players, int necessaryPoints) {
         assert necessaryPoints > 0;
         this.necessaryPoints = necessaryPoints;
 
@@ -128,5 +125,8 @@ public class PlayerManager {
             playersScore.add(aPlayer.getScore());
         }
         return playersScore;
+    }
+    public void addPoints(int pointsToAdd){
+        currentPlayer.updateScore(pointsToAdd);
     }
 }

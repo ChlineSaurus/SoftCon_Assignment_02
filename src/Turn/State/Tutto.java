@@ -2,8 +2,9 @@ package Turn.State;
 
 import Enums.Messages;
 import Input.Input;
+
 import exceptions.IllegalUserInputExeption;
-import players.PlayerManager;
+
 
 import java.io.IOException;
 
@@ -14,6 +15,7 @@ public class Tutto implements TurnState{
     @Override
     public void next(Turn aTurn) throws IOException, IllegalUserInputExeption {
         System.out.println("I am in  Tutto");
+        aTurn.score = aTurn.turnCard.addBonus(aTurn.score);
         System.out.println(Messages.stopOrContinueQuestion.message);
         if(Input.takeStringInput().equalsIgnoreCase("S")){
             aTurn.setState(new EndTurn(aTurn));
@@ -23,9 +25,5 @@ public class Tutto implements TurnState{
             aTurn.setState(new CurrentlyPlaying(aTurn));
         }
     }
-    //mit diesr Function kannst die Points deducten
-    public void deductPoints(int pointsToDeduct) {
-        PlayerManager playerManager=PlayerManager.getInstance();
-        playerManager.deductLeadingPlayersPoints(pointsToDeduct);
-    }
+
 }

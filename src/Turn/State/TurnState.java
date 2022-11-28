@@ -16,7 +16,7 @@ public interface TurnState {
     class Turn {
         public AbstractCard turnCard;
         protected int score = 0;
-        protected int dices = 0;
+        protected int pointsToDeduct = 0;
         protected List<Integer> list=new ArrayList<Integer>();
         protected Deck aDeck;
         private Turn aTurn;

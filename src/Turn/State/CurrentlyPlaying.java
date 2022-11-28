@@ -22,9 +22,8 @@ public class CurrentlyPlaying implements TurnState{
     private ArrayList<DiceFace> diceToRemove;
 
     public CurrentlyPlaying(Turn aTurn){this.aTurn = aTurn;}
-    //die Paramter für den Dicetower muss currentlyPlaying von der Karte bekommen.
-    AbstractCard card= PlayerManager.getInstance().getCard();
-    private DiceTower currentPlayerDice = card.getDiceTower();
+
+    private DiceTower currentPlayerDice = aTurn.turnCard.getDiceTower();
     public HumanInteractionManager humanInteraction = new HumanInteractionManager();
     @Override
     public void next(Turn aTurn) throws IOException, IllegalUserInputExeption {
@@ -46,7 +45,7 @@ public class CurrentlyPlaying implements TurnState{
     private void Setup() throws IllegalUserInputExeption {
         humanInteraction.DisplayOrRoll();
         Deck myStack = new Deck();
-        AbstractCard playerCard = card;
+        AbstractCard playerCard = aTurn.turnCard;
         System.out.println("hi");
         currentPlayerDice = playerCard.getDiceTower();
         currentPlayerDice.newTurn();
@@ -55,20 +54,20 @@ public class CurrentlyPlaying implements TurnState{
     private void TurnFlow() throws IllegalUserInputExeption{
         while(!turnFinished){
             currentPlayerDice.rollNotTakenDices();
-            while(interactionFinished != true)
-            if(currentPlayerDice.notNullRoll()){
-                Display.displayMessage("If you want to take some of the Dice type \"Y\" if not type \"N\" ");
-                System.out.println(currentPlayerDice.showNotTakenDices());
-                char takeDice = TuttoInput.takeCharInput();
-                String takeDices = String.valueOf(takeDice);
-                if (takeDices.equals("Y")){
-                    diceToRemove = humanInteraction.ChoseDice();
-                    //currentPlayerDice.removeDice(diceToRemove);
-                    System.out.println(diceToRemove);
-                    currentPlayerDice.removeDice(diceToRemove);
-                }else{
-                    interactionFinished = humanInteraction.Reroll();
-                }
+            while(!interactionFinished)
+                if(currentPlayerDice.notNullRoll()){
+                    Display.displayMessage("If you want to take some of the Dice type \"Y\" if not type \"N\" ");
+                    System.out.println(currentPlayerDice.showNotTakenDices());
+                    char takeDice = TuttoInput.takeCharInput();
+                    String takeDices = String.valueOf(takeDice);
+                    if (takeDices.equals("Y")){
+                        diceToRemove = humanInteraction.ChoseDice();
+                        //currentPlayerDice.removeDice(diceToRemove);
+                        System.out.println(diceToRemove);
+                        currentPlayerDice.removeDice(diceToRemove);
+                    }else{
+                        interactionFinished = humanInteraction.Reroll();
+                    }
 
             }
             else{
