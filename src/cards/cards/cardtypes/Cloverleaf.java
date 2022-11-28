@@ -13,6 +13,7 @@ public class Cloverleaf extends AbstractCard {
     int TuttoRequiredForBonus = 2;
     public Cloverleaf(){
         diceTower.setDiceTowerNonStraight();
+        //50000 are the most points the game can to
         bonusPoints=50000;
     }
 }
