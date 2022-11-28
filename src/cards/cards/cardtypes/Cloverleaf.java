@@ -1,19 +1,19 @@
 package cards.cards.cardtypes;
 
 
+import Enums.GameConstants;
 import cards.AbstractCard;
+import cards.TuttoRequired;
 
 public class Cloverleaf extends AbstractCard {
-    private final String name="Cloverleaf";
-    int TuttoRequiredForPoints = 2;
-    boolean EndTurn = false;
-    boolean KeepAllValidDice = false;
-    boolean Immunity = false;
-    boolean EndGame = true;
-    int TuttoRequiredForBonus = 2;
+
+
     public Cloverleaf(){
         diceTower.setDiceTowerNonStraight();
         //50000 are the most points the game can to
-        bonusPoints=50000;
+        bonusPoints= GameConstants.maxAllowedPoints.definedConstant;
+        name="clover";
+        requiredForPoints= TuttoRequired.Two;
+        requiredForBonus=TuttoRequired.Two;
     }
 }

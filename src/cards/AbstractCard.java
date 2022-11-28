@@ -1,6 +1,8 @@
 package cards;
 
 import cards.cards.cardInterfaces.bonusSystemInterface.BonusSystem;
+import cards.cards.cardInterfaces.bonusSystemInterface.PlusPoints;
+import cards.cards.cardInterfaces.bonusSystemInterface.TimesX2Points;
 import dice.DiceTower;
 import exceptions.IllegalUserInputExeption;
 
@@ -13,15 +15,24 @@ public abstract class AbstractCard {
     protected boolean endTurn;
 
     protected boolean immunity;
-    TuttoRequired requiredForPoints;
-    TuttoRequired requiredForBonus;
+    protected TuttoRequired requiredForPoints;
+    protected TuttoRequired requiredForBonus;
 
     protected DiceTower diceTower=new DiceTower();
     protected int deductPoints;
-    protected BonusSystem TutoBonus;
+    protected BonusSystem bonusSystem;
     public AbstractCard(){
         immunity=false;
         endTurn=false;
+        deductPoints=0;
+        setBonusSystemStandard();
+
+    }
+    protected void setBonusSystemStandard(){
+        bonusSystem=new PlusPoints();
+    }
+    protected void setBonusSystemX2(){
+        bonusSystem=new TimesX2Points();
     }
 
     protected int bonusPoints;
@@ -50,14 +61,7 @@ public abstract class AbstractCard {
     private boolean isPointConditionAchieved(){
         return this.requiredForPoints==TuttoRequired.Zero;
     }
-    public void roll(){
-        diceTower.rollNotTakenDices();
-        if (!isRollValid() && !immunity){
-            temporaryPoints=0;
-            //maybe return a tuple
 
-        }
-    }
     public boolean isRollValid(){
         return diceTower.notNullRoll();
     }
@@ -67,7 +71,7 @@ public abstract class AbstractCard {
         int addBoni=0;
         tuttoAchieved();
         if (requiredForBonus==TuttoRequired.Zero){
-            addBoni=TutoBonus.bonusPoints(bonusPoints,currentPoints);
+            addBoni= bonusSystem.bonusPoints(bonusPoints,currentPoints);
         }
         return addBoni;
     }

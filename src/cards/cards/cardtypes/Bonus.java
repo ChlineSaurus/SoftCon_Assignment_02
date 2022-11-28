@@ -2,6 +2,7 @@ package cards.cards.cardtypes;
 
 
 import cards.AbstractCard;
+import cards.TuttoRequired;
 
 public class Bonus extends AbstractCard {
 
@@ -13,7 +14,8 @@ public class Bonus extends AbstractCard {
         name="Bonus "+points;
         descripiton="bla bla";
         bonusPoints=points;
-
+        requiredForPoints=TuttoRequired.Zero;
+        requiredForBonus= TuttoRequired.One;
 
 
     }
