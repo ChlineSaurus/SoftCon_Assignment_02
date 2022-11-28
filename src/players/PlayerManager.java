@@ -26,19 +26,23 @@ public class PlayerManager {
 
 
 
-    public static PlayerManager getInstance(){
+    public static synchronized PlayerManager getInstance(){
+        assert uniqueInstance != null;
+        return uniqueInstance;
+    }
+
+    public static synchronized PlayerManager getInstance(ArrayList<Player> players,int necessaryPoints){
         if(uniqueInstance==null){
-            ArrayList<Player> players = null;
-            int necessaryPoints = 0;
             uniqueInstance = new PlayerManager(players, necessaryPoints);
         }
         return uniqueInstance;
     }
 
-    public PlayerManager(ArrayList<Player> players, int necessaryPoints) {
+
+
+    private PlayerManager(ArrayList<Player> players, int necessaryPoints) {
         assert necessaryPoints > 0;
         this.necessaryPoints = necessaryPoints;
-
         assert players.size() >= 2 && players.size() <= 4;
         this.players = players;
         Collections.sort(this.players);
@@ -73,6 +77,9 @@ public class PlayerManager {
         currentPlayer = players.get(currentPlayerIndex);
     }
 
+    public void addPlayer(Player player){
+        uniqueInstance.players.add(player);
+    }
 
     private boolean currentPlayerIsPointLeader(Player currentPlayer){
         int currentPlayersScore=currentPlayer.getScore();

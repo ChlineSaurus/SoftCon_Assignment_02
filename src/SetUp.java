@@ -33,10 +33,9 @@ public class SetUp {
                     System.out.println(Messages.notEnoughPlayer.message);
                 }
             } else {
-                players.add(new Player(name));
                 playerCounter++;
             }
         }
-        PlayerManager.getInstance();
+        PlayerManager.getInstance(players,necessaryPoints);
     }
 }

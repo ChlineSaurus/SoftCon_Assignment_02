@@ -1,7 +1,4 @@
-import Turn.State.EndTurn;
 import Turn.State.TurnState;
-import cards.AbstractCard;
-import cards.Deck;
 import exceptions.IllegalUserInputExeption;
 
 import java.io.IOException;
@@ -9,7 +6,7 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException, IllegalUserInputExeption {
 
-        //SetUp.setUpGame();
+        SetUp.setUpGame();
 
 
 
