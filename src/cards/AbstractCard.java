@@ -70,9 +70,10 @@ public abstract class AbstractCard {
         }
         return addBoni;
     }
-    /*
 
-     */
+    public int getDeductPoints() {
+            return deductPoints;
+        }
 
     public String getName(){
         return name;
@@ -88,9 +89,7 @@ public abstract class AbstractCard {
         return endTurn;
     }
 
-    public int getDeductPoints() {
-        return deductPoints;
-    }
+
 
 
 

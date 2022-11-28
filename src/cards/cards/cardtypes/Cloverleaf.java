@@ -13,5 +13,6 @@ public class Cloverleaf extends AbstractCard {
     int TuttoRequiredForBonus = 2;
     public Cloverleaf(){
         diceTower.setDiceTowerNonStraight();
+        bonusPoints=50000;
     }
 }
