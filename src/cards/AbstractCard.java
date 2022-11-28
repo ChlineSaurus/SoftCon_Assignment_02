@@ -36,6 +36,9 @@ public abstract class AbstractCard {
     }
 
     protected int bonusPoints;
+    public boolean isImmunity(){
+        return immunity;
+    }
     private void tuttoAchieved(){
         if (!isPointConditionAchieved()){
             requiredForPoints=TuttoRequired.getEnum((requiredForPoints.integerValue)-1);

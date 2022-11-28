@@ -54,6 +54,13 @@ public class CurrentlyPlaying implements TurnState{
     private void TurnFlow() throws IllegalUserInputExeption, IOException {
         while(!turnFinished){
             currentPlayerDice.rollNotTakenDices();
+            if (!currentPlayerDice.notNullRoll()){
+                if (!aTurn.turnCard.isImmunity()){
+                //hier muss man noch die Punkt und deductionpoints auf null setzen!
+
+                }
+                aTurn.setState(new EndTurn(aTurn));
+            }
             while(!interactionFinished)
             if(currentPlayerDice.notNullRoll()){
                 Display.displayMessage("If you want to take some of the Dice type \"Y\" if not type \"N\" ");

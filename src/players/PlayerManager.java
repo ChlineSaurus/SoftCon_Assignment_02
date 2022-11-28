@@ -16,8 +16,8 @@ public class PlayerManager {
 
 
 
-    private ArrayList<Player> players;
-    private Deck deck=new Deck();
+    private final ArrayList<Player> players;
+    private final Deck deck=new Deck();
     private final int necessaryPoints;
     private final int totalPlayer;
     private boolean playerReachedNecessaryPoints;
@@ -137,11 +137,9 @@ public class PlayerManager {
         }
         return playersScore;
     }
-    public boolean isCurrentPlayerWinning(int turnPoints){
-        if (currentPlayer.getScore()+turnPoints>= necessaryPoints){
-            return true;
-        }
-        else return false;
+
+    public boolean currentPlayerReachedPointFreshhold(int turnPoints){
+        return currentPlayer.getScore() + turnPoints >= necessaryPoints;
     }
     public void addPoints(int pointsToAdd){
         currentPlayer.updateScore(pointsToAdd);
