@@ -21,7 +21,7 @@ public class CurrentlyPlaying implements TurnState{
     private ArrayList<DiceFace> diceToRemove;
 
     public CurrentlyPlaying(Turn aTurn){this.aTurn = aTurn;}
-    //die Paramter für den Dicetower muss currentlyPlaying von der Karte bekommen.
+
     private DiceTower currentPlayerDice = aTurn.turnCard.getDiceTower();
     public HumanInteractionManager humanInteraction = new HumanInteractionManager();
     @Override
@@ -37,7 +37,7 @@ public class CurrentlyPlaying implements TurnState{
         }
     }
 
-    private void ManageGame() throws IllegalUserInputExeption {
+    private void ManageGame() throws IllegalUserInputExeption, IOException {
         Setup();
         TurnFlow();
     }
@@ -51,7 +51,7 @@ public class CurrentlyPlaying implements TurnState{
         currentPlayerDice.newTurn();
 
     }
-    private void TurnFlow() throws IllegalUserInputExeption{
+    private void TurnFlow() throws IllegalUserInputExeption, IOException {
         while(!turnFinished){
             currentPlayerDice.rollNotTakenDices();
             while(!interactionFinished)
@@ -71,7 +71,12 @@ public class CurrentlyPlaying implements TurnState{
 
             }
             else{
-                interactionFinished = humanInteraction.Reroll();
+                if(/* getImmunity*/true){
+                    interactionFinished = humanInteraction.Reroll();
+                }else{
+                    aTurn.score = 0;
+                    aTurn.setState(new EndTurn(aTurn));
+                }
             }
             System.out.println("interaction finished");
             break;
