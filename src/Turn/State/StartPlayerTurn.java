@@ -4,7 +4,6 @@ import exceptions.IllegalUserInputExeption;
 import players.Player;
 import players.PlayerManager;
 
-import javax.xml.namespace.QName;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -24,11 +23,13 @@ public class StartPlayerTurn implements TurnState {
         PlayerManager myManager = new PlayerManager(myPlayer,3000);
         System.out.println("get Card");
         aTurn.turnCard = myManager.getCard();
-        //aTurn.turnCard = PlayerManager.getInstance().getCard();
+
         System.out.println(aTurn.turnCard.getName());
-        //if(aTurn.turnCard.equals() StopKarte:
-        //set Score = 0
-        //aTurn.setSate(new EndTurn(aTurn));
+        if(aTurn.turnCard.getName().equals("Stop")){
+            aTurn.score = 0;
+            aTurn.setState(new EndTurn(aTurn));
+        }
+
         aTurn.setState(new CurrentlyPlaying(aTurn));
     }
 
