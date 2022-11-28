@@ -1,6 +1,7 @@
 package UI;
 
 import dice.DiceFace;
+import players.PlayerManager;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -50,11 +51,16 @@ public class Display {
         System.out.println(output);
     }
 
-    public static void displayScores(ArrayList<String> players, ArrayList<Integer> scores) {
+    public static void displayScores() {
+        PlayerManager playerManager=PlayerManager.getInstance();
+        List<String> players= playerManager.getPlayersName();
+        List<Integer> scores= playerManager.getPlayersScore();
+
         assert players.size() == scores.size();
         clearScreen();
+        System.out.println("Players points: \n");
         for(int player_index = 0; player_index < players.size(); player_index++) {
-            System.out.printf("%s has %2d Points%n", players.get(player_index),scores.get(player_index));
+            System.out.printf("%s has %2d Points\n", players.get(player_index),scores.get(player_index));
         }
     }
 

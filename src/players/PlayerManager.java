@@ -110,4 +110,18 @@ public class PlayerManager {
     public AbstractCard getCard(){
         return deck.draw();
     }
+    public List<String> getPlayersName(){
+        List<String> playersName=new ArrayList<String>();
+        for (Player aPlayer:players){
+            playersName.add(aPlayer.name);
+        }
+        return playersName;
+    }
+    public List<Integer> getPlayersScore(){
+        List<Integer> playersScore=new ArrayList<Integer>();
+        for (Player aPlayer:players){
+            playersScore.add(aPlayer.getScore());
+        }
+        return playersScore;
+    }
 }
