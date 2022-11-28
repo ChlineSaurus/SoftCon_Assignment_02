@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="displayScore doesn't deppend on input any more">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20-Nov-22_1_41_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20-Nov-22_5_10_PM_[Changes]/shelved.patch" beforeDir="false" />
+    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="made adjustments to deck so that if it empty it automatically creates a new">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/Deck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/cards/cardtypes/Cloverleaf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/cardtypes/Cloverleaf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/cards/cardtypes/Straight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/cardtypes/Straight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cards/AbstractCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/AbstractCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cards/cards/cardtypes/Bonus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/cardtypes/Bonus.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -521,7 +518,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669629618857</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="made adjustments to deck so that if it empty it automatically creates a new">
+      <created>1669632914140</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1669632914140</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -551,7 +555,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changing Boolean.FAlSE to false and Boolean to boolean" />
     <MESSAGE value="metaprogramming &#10;man kann eine IntegerArray zu einer List&lt;Dice&gt; machen" />
     <MESSAGE value="fixedproblem in metaprogramming" />
     <MESSAGE value="changing tests" />
@@ -576,7 +579,8 @@
     <MESSAGE value="starting tests" />
     <MESSAGE value="bonuspoints" />
     <MESSAGE value="displayScore doesn't deppend on input any more" />
-    <option name="LAST_COMMIT_MESSAGE" value="displayScore doesn't deppend on input any more" />
+    <MESSAGE value="made adjustments to deck so that if it empty it automatically creates a new" />
+    <option name="LAST_COMMIT_MESSAGE" value="made adjustments to deck so that if it empty it automatically creates a new" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$DiceTest.ic" NAME="DiceTest Coverage Results" MODIFIED="1669561512570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

@@ -21,6 +21,7 @@ public abstract class AbstractCard {
     protected BonusSystem TutoBonus;
     public AbstractCard(){
         immunity=false;
+        endTurn=false;
     }
 
     protected int bonusPoints;
