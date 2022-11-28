@@ -6,7 +6,7 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException, IllegalUserInputExeption {
 
-        //SetUp.setUpGame();
+        SetUp.setUpGame();
 
 
 

@@ -1,6 +1,7 @@
 package Turn.State;
 
 import exceptions.IllegalUserInputExeption;
+import players.PlayerManager;
 
 import java.io.IOException;
 
@@ -12,11 +13,14 @@ public class StartPlayerTurn implements TurnState {
     @Override
     public void next(Turn aTurn) throws IOException, IllegalUserInputExeption {
         System.out.println("I am in StartPlayerTurn");
-        //Deck aDeck = new Deck();
-        //aDeck.createDeckStack();
-        //aTurn.turnCard = aDeck.draw();
-        //System.out.println(aTurn.turnCard);
-        //if(aTurn.turnCard.equals(cards.cards.cardtypes.Stop)) does not work, for some reason...
+        System.out.println("setDeck");
+        PlayerManager.getInstance().setDeck();
+        System.out.println("get Card");
+        aTurn.turnCard = PlayerManager.getInstance().getCard();
+        System.out.println(aTurn.turnCard);
+        //if(aTurn.turnCard.equals() StopKarte:
+        //set Score = 0
+        //aTurn.setSate(new EndTurn(aTurn));
         aTurn.setState(new CurrentlyPlaying(aTurn));
     }
 

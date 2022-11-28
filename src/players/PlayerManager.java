@@ -24,6 +24,11 @@ public class PlayerManager {
     private Player currentPlayer;
     private int currentPlayerIndex;
 
+    public void setDeck(){
+        System.out.println("hi");
+        deck.createDeckStack();
+        System.out.println("ho");
+    }
     public static PlayerManager getInstance(){
         if(uniqueInstance==null){
             ArrayList<Player> players = null;

@@ -1,6 +1,7 @@
 package Turn.State;
 
 import cards.AbstractCard;
+import cards.Deck;
 import exceptions.IllegalUserInputExeption;
 
 import java.io.IOException;
@@ -17,6 +18,7 @@ public interface TurnState {
         protected int score = 0;
         protected int dices = 0;
         protected List<Integer> list=new ArrayList<Integer>();
+        protected Deck aDeck;
         private Turn aTurn;
         private TurnState state = new StartPlayerTurn(aTurn){
 
@@ -27,5 +29,6 @@ public interface TurnState {
             state.next(this);
         }
         public void nextState() throws IOException, IllegalUserInputExeption {state.next(this);}
+
     }
 }

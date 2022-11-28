@@ -5,12 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="displayScore doesn't deppend on input any more">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20-Nov-22_1_41_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20-Nov-22_5_10_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16-Nov-22_7_39_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16-Nov-22_7_39_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22-Nov-22_4_07_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22-Nov-22_4_07_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22-Nov-22_4_07_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22-Nov-22_4_07_PM__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_11_2022_14_34__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_11_2022_14_34__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23-Nov-22_10_01_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23-Nov-22_10_01_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23-Nov-22_10_43_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23-Nov-22_10_43_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23-Nov-22_4_49_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23-Nov-22_4_49_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23-Nov-22_9_54_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23-Nov-22_9_54_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23-Nov-22_9_54_AM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23-Nov-22_9_54_AM__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_2022_09_09__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_2022_09_09__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_2022_09_09__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_2022_09_09__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_11_22__11_04__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_11_22__11_04__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/Deck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/cards/cardtypes/Cloverleaf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/cardtypes/Cloverleaf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/cards/cardtypes/Straight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/cardtypes/Straight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Turn/State/StartPlayerTurn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn/State/StartPlayerTurn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Turn/State/Turn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn/State/Turn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Turn/State/TurnState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn/State/TurnState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/players/PlayerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/players/PlayerManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,32 +56,32 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "jdk.selected.JAVA_MODULE": "19",
-    "last_directory_selection": "C:/Users/chris/OneDrive/Desktop/SoftCon_Assignment_02/src/dice/userDiceSelectionValidation",
-    "last_opened_file_path": "/Users/danielmaksimovic/OneDrive - Universität Zürich UZH/Studium/HS22/Software Construction I/Java/SoftCon_Assignment_02/src",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/chris/OneDrive/Desktop/SoftCon_Assignment_02/src/dice/userDiceSelectionValidation&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/danielmaksimovic/OneDrive - Universität Zürich UZH/Studium/HS22/Software Construction I/Java/SoftCon_Assignment_02/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
@@ -81,8 +93,8 @@
       <recent name="dice.userDiceSelectionValidation" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DiceTest">
-    <configuration name="DiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="DiceTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="SoftCon_Assignment_02" />
       <extension name="coverage">
         <pattern>
@@ -97,7 +109,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MustTakeAllValidDiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MustTakeAllValidDiceTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="SoftCon_Assignment_02" />
       <extension name="coverage">
         <pattern>
@@ -160,9 +172,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DiceTest" />
         <item itemvalue="JUnit.ValidateUserSelectionNonStraightTest" />
-        <item itemvalue="JUnit.MustTakeAllValidDiceTest" />
         <item itemvalue="JUnit.MustTakeAllValidDiceTest.testValidDices" />
         <item itemvalue="JUnit.NotNullNonStraightTest" />
       </list>
@@ -198,6 +208,7 @@
       <workItem from="1669373652105" duration="16066000" />
       <workItem from="1669412958477" duration="5604000" />
       <workItem from="1669493988940" duration="4060000" />
+      <workItem from="1669640533367" duration="3806000" />
     </task>
     <task id="LOCAL-00001" summary="Making Dice class">
       <created>1668588937558</created>
@@ -579,16 +590,16 @@
     <option name="LAST_COMMIT_MESSAGE" value="displayScore doesn't deppend on input any more" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$DiceTest.ic" NAME="DiceTest Coverage Results" MODIFIED="1669561512570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>dice.notNullRoll.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$MustTakeAllValidDiceTest.ic" NAME="MustTakeAllValidDiceTest Coverage Results" MODIFIED="1669553423459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>dice.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$DiceRepresentationTest_testRepresent6.ic" NAME="DiceRepresentationTest.testRepresent6 Coverage Results" MODIFIED="1669302462013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>UI.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$DiceTest.ic" NAME="DiceTest Coverage Results" MODIFIED="1669561512570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>dice.notNullRoll.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$ValidateUserSelectionNonStraightTest.ic" NAME="ValidateUserSelectionNonStraightTest Coverage Results" MODIFIED="1669553943725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>dice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$MustTakeAllValidDiceTest.ic" NAME="MustTakeAllValidDiceTest Coverage Results" MODIFIED="1669553423459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dice.*</FILTER>
     </SUITE>
   </component>

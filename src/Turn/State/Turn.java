@@ -13,12 +13,18 @@ public class Turn extends TurnState.Turn {
     protected int deductPoints=0;
     protected AbstractCard turnCard;
     protected List<Integer> list=new ArrayList<Integer>();
+
     private TurnState state = new StartPlayerTurn(aTurn){
     };
 
     public void setState(TurnState state) throws IOException, IllegalUserInputExeption {
+
         this.state = state;
         state.next(this);
     }
-    public void nextState() throws IOException, IllegalUserInputExeption {state.next(this);}
+    public void nextState() throws IOException, IllegalUserInputExeption {
+        state.next(this);
+
+    }
+
 }
