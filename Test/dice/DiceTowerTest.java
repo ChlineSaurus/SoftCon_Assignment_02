@@ -1,7 +1,6 @@
 package dice;
 
 import exceptions.IllegalUserInputExeption;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Field;
@@ -31,7 +30,9 @@ public class DiceTowerTest {
         }
         return diceList;
     }
-    @Test
+
+
+    @Test()
     public void removeDiceTest() throws Exception{
         diceTower.setDiceTowerNonStraight();
         Integer [] array1={3,3,3};
@@ -49,8 +50,12 @@ public class DiceTowerTest {
         Field f2= diceTower.getClass().getDeclaredField("takenDices");
         f2.setAccessible(true);
         f2.set(diceTower,customdice1);
-
-        Assertions.assertThrows(IllegalUserInputExeption,diceTower.removeDice(diceFaces));
+        boolean thrown=false;
+        try{diceTower.removeDice(diceFaces);}
+        catch (IllegalUserInputExeption e){
+            thrown=true;
+        }
+        assert thrown==true;
 
 
 
