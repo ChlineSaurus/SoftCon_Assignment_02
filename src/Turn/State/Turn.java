@@ -9,12 +9,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Turn extends TurnState.Turn {
+    public static DiceTower playerDice = new DiceTower();
     Turn aTurn;
     protected int score = 0;
     protected int pointsToDeduct=0;
     protected AbstractCard turnCard;
     protected List<Integer> list=new ArrayList<Integer>();
-    protected DiceTower playerDice;
+
     private TurnState state = new StartPlayerTurn(aTurn){
     };
 

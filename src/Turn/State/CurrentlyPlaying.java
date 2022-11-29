@@ -18,7 +18,11 @@ public class CurrentlyPlaying implements TurnState{
 
     private ArrayList<DiceFace> diceToRemove;
 
-    public CurrentlyPlaying(Turn aTurn){this.aTurn = aTurn;}
+    public CurrentlyPlaying(Turn pTurn){
+        aTurn = pTurn;
+        System.out.println("I am in CurrentlyPlaying");
+    }
+
 
     private DiceTower currentPlayerDice = aTurn.turnCard.getDiceTower();
     public HumanInteractionManager humanInteraction = new HumanInteractionManager();

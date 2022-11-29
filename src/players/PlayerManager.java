@@ -3,6 +3,7 @@ package players;
 import Turn.State.TurnState;
 import cards.AbstractCard;
 import cards.Deck;
+import dice.DiceTower;
 import exceptions.IllegalUserInputExeption;
 
 import java.io.IOException;
@@ -134,6 +135,10 @@ public class PlayerManager {
     }
     public AbstractCard getCard(){
         return deck.draw();
+    }
+
+    public DiceTower getPlayerDice(){
+        return Turn.State.Turn.playerDice;
     }
     public List<String> getPlayersName(){
         List<String> playersName=new ArrayList<String>();
