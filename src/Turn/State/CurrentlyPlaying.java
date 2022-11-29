@@ -19,7 +19,7 @@ public class CurrentlyPlaying implements TurnState{
     private ArrayList<DiceFace> diceToRemove;
 
     public CurrentlyPlaying(Turn pTurn){
-        aTurn = pTurn;
+        this.aTurn = pTurn;
         System.out.println("I am in CurrentlyPlaying");
     }
 
