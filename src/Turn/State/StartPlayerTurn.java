@@ -4,7 +4,6 @@ import exceptions.IllegalUserInputExeption;
 import players.Player;
 import players.PlayerManager;
 
-import javax.xml.namespace.QName;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -21,7 +20,7 @@ public class StartPlayerTurn implements TurnState {
         myPlayer.add(max);
         myPlayer.add(mic);
         System.out.println("I am in StartPlayerTurn");
-        PlayerManager myManager = new PlayerManager(myPlayer,3000);
+        PlayerManager myManager = PlayerManager.getInstance();
         System.out.println("get Card");
         aTurn.turnCard = myManager.getCard();
         //aTurn.turnCard = PlayerManager.getInstance().getCard();
