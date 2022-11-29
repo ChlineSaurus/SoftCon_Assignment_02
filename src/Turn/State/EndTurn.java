@@ -33,7 +33,7 @@ public class EndTurn implements TurnState{
         PlayerManager playerManager=PlayerManager.getInstance();
         playerManager.deductLeadingPlayersPoints(pointsToDeduct);
     }
-    private void nextPlayer(int pointsToAdd){
+    private void nextPlayer(int pointsToAdd) throws IOException, IllegalUserInputExeption {
         PlayerManager playerManager=PlayerManager.getInstance();
         playerManager.nextPlayersTurn(pointsToAdd);
     }

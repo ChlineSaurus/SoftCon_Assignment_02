@@ -3,8 +3,6 @@ package Turn.State;
 import Input.TuttoInput;
 import Turn.HumanInteractionManager;
 import UI.Display;
-import cards.AbstractCard;
-import cards.Deck;
 import dice.DiceFace;
 import dice.DiceTower;
 import exceptions.IllegalUserInputExeption;
@@ -41,26 +39,23 @@ public class CurrentlyPlaying implements TurnState{
         Setup();
         TurnFlow();
     }
+    //wenns funktioniert, chamer die Methode lösche und d Funktionalität in ManageGame übere tue...
+    //evtl. chamer au die ganzi manage game denne lösche...
     private void Setup() throws IllegalUserInputExeption {
         humanInteraction.DisplayOrRoll();
-        Deck myStack = new Deck();
-        myStack.createDeckStack();
-        AbstractCard playerCard = aTurn.turnCard;
-        System.out.println("hi");
-        currentPlayerDice = playerCard.getDiceTower();
-        currentPlayerDice.newTurn();
-
     }
     private void TurnFlow() throws IllegalUserInputExeption, IOException {
         while(!turnFinished){
             currentPlayerDice.rollNotTakenDices();
             if (!currentPlayerDice.notNullRoll()){
                 if (!aTurn.turnCard.isImmunity()){
-                //hier muss man noch die Punkt und deductionpoints auf null setzen!
+                aTurn.score = 0;
+                aTurn.pointsToDeduct = 0;
 
                 }
                 aTurn.setState(new EndTurn(aTurn));
             }
+            //ka, ob das stimmt, chas aber nid teschte, da ich mitem Error voretäre nid z schlag chume...
             while(!interactionFinished)
             if(currentPlayerDice.notNullRoll()){
                 Display.displayMessage("If you want to take some of the Dice type \"Y\" if not type \"N\" ");
@@ -71,7 +66,7 @@ public class CurrentlyPlaying implements TurnState{
                     diceToRemove = humanInteraction.ChoseDice();
                     //currentPlayerDice.removeDice(diceToRemove);
                     System.out.println(diceToRemove);
-                    currentPlayerDice.removeDice(diceToRemove);
+                    aTurn.score += currentPlayerDice.removeDice(diceToRemove);
                 }else{
                     interactionFinished = humanInteraction.Reroll();
                 }

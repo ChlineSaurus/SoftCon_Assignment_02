@@ -1,4 +1,3 @@
-import Turn.State.TurnState;
 import exceptions.IllegalUserInputExeption;
 
 import java.io.IOException;
@@ -10,9 +9,9 @@ public class Main {
 
 
 
-        TurnState.Turn aTurn = new TurnState.Turn();
+        //TurnState.Turn aTurn = new TurnState.Turn();
 
-        aTurn.nextState();
+        //aTurn.nextState();
 
     }
 

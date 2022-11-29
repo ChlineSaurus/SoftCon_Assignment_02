@@ -14,10 +14,10 @@ public class Tutto implements TurnState{
     @Override
     public void next(Turn aTurn) throws IOException, IllegalUserInputExeption {
         System.out.println("I am in  Tutto");
-        /*if(aTurn.turnCard.getName().equals("Fireworks")){
+        if(aTurn.turnCard.getName().equals("Fireworks")){
             Display.displayMessage(Messages.tuttoAndCloverleafOrFireworks.message);
             aTurn.setState(new CurrentlyPlaying(aTurn));
-        }*/
+        }
         if(aTurn.turnCard.haveToContinueRolling()){
             //something must be called to inform, that it was a tutto and Cloverleaf
             Display.displayMessage(Messages.tuttoAndCloverleafOrFireworks.message);

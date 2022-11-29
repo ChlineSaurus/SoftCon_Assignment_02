@@ -2,6 +2,7 @@ package Turn.State;
 
 import cards.AbstractCard;
 import cards.Deck;
+import dice.DiceTower;
 import exceptions.IllegalUserInputExeption;
 
 import java.io.IOException;
@@ -14,7 +15,8 @@ public interface TurnState {
 
 
     class Turn {
-        public AbstractCard turnCard;
+        protected AbstractCard turnCard;
+        protected DiceTower playerDice;
         protected int score = 0;
         protected int pointsToDeduct = 0;
         protected List<Integer> list=new ArrayList<Integer>();

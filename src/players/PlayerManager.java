@@ -1,8 +1,11 @@
 package players;
 
+import Turn.State.TurnState;
 import cards.AbstractCard;
 import cards.Deck;
+import exceptions.IllegalUserInputExeption;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -28,19 +31,22 @@ public class PlayerManager {
 
     public static synchronized PlayerManager getInstance(){
         assert uniqueInstance != null;
+
         return uniqueInstance;
     }
 
-    public static synchronized PlayerManager getInstance(ArrayList<Player> players,int necessaryPoints){
+    public static synchronized PlayerManager getInstance(ArrayList<Player> players,int necessaryPoints) throws IOException, IllegalUserInputExeption {
         if(uniqueInstance==null){
             uniqueInstance = new PlayerManager(players, necessaryPoints);
         }
+        System.out.println("hi");
+        System.out.println(uniqueInstance);
         return uniqueInstance;
     }
 
 
 
-    private PlayerManager(ArrayList<Player> players, int necessaryPoints) {
+    private PlayerManager(ArrayList<Player> players, int necessaryPoints) throws IOException, IllegalUserInputExeption {
         assert necessaryPoints > 0;
         this.necessaryPoints = necessaryPoints;
         assert players.size() >= 2 && players.size() <= 4;
@@ -50,6 +56,7 @@ public class PlayerManager {
         playerReachedNecessaryPoints = false;
         currentPlayer = this.players.get(0);
         currentPlayerIndex = 0;
+        nextPlayersTurn(0);
     }
 
     public String currentPlayerName() {
@@ -60,7 +67,7 @@ public class PlayerManager {
         return currentPlayer;
     }
 
-    public void nextPlayersTurn(int pointsToAdd) {
+    public void nextPlayersTurn(int pointsToAdd) throws IOException, IllegalUserInputExeption {
         currentPlayer.updateScore(pointsToAdd);
         if (currentPlayer.getScore() >= necessaryPoints) {
             this.playerReachedNecessaryPoints = true;
@@ -75,6 +82,9 @@ public class PlayerManager {
             }
         }
         currentPlayer = players.get(currentPlayerIndex);
+        TurnState.Turn aTurn = new TurnState.Turn();
+
+        aTurn.nextState();
     }
 
     public void addPlayer(Player player){
