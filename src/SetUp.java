@@ -39,5 +39,6 @@ public class SetUp {
             }
         }
         PlayerManager.getInstance(players,necessaryPoints);
+        PlayerManager.getInstance().nextPlayersTurn(0);
     }
 }

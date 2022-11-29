@@ -19,7 +19,7 @@ public class StartPlayerTurn implements TurnState {
         aTurn.playerDice.newTurn();
         //aTurn.turnCard = PlayerManager.getInstance().getCard();
         System.out.println(aTurn.turnCard.getName());
-        if(aTurn.turnCard.getName().equals("Stop"){
+        if(aTurn.turnCard.getName().equals("Stop")){
             aTurn.score = 0;
             aTurn.setState(new EndTurn(aTurn));
         }

@@ -56,7 +56,7 @@ public class PlayerManager {
         playerReachedNecessaryPoints = false;
         currentPlayer = this.players.get(0);
         currentPlayerIndex = 0;
-        nextPlayersTurn(0);
+
     }
 
     public String currentPlayerName() {
@@ -66,6 +66,8 @@ public class PlayerManager {
     public Player currentPlayer(){
         return currentPlayer;
     }
+
+
 
     public void nextPlayersTurn(int pointsToAdd) throws IOException, IllegalUserInputExeption {
         currentPlayer.updateScore(pointsToAdd);
