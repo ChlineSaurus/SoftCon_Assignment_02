@@ -64,6 +64,9 @@ public abstract class AbstractCard {
     private boolean isPointConditionAchieved(){
         return this.requiredForPoints==TuttoRequired.Zero;
     }
+    public boolean haveToContinueRolling(){
+        return this.requiredForPoints!=TuttoRequired.Zero;
+    }
 
     public boolean isRollValid(){
         return diceTower.notNullRoll();

@@ -16,4 +16,8 @@ public class Cloverleaf extends AbstractCard {
         requiredForPoints= TuttoRequired.Two;
         requiredForBonus=TuttoRequired.Two;
     }
+    @Override
+    public boolean haveToContinueRolling(){
+        return true;
+    }
 }
