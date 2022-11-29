@@ -47,7 +47,7 @@ public abstract class AbstractCard {
             requiredForBonus=TuttoRequired.getEnum(requiredForBonus.integerValue-1);
         }
     }
-    public void userTrysToEndTurn() throws IllegalUserInputExeption {
+    public void userTriesToEndTurn() throws IllegalUserInputExeption {
         if (requiredForPoints!=TuttoRequired.Zero){
             throw new IllegalUserInputExeption("If you end your turn now, you'll recieve zeropoints, roll again!, type 'r'");
         }

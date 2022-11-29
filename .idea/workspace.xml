@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="the test is almost working">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_11_22__17_54__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_11_22__17_54__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_11_2022_18_23__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_11_2022_18_23__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_11_22__17_39__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_11_22__17_39__Changes_.xml" afterDir="false" />
+    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="adding further tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SetUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SetUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Turn/State/CurrentlyPlaying.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn/State/CurrentlyPlaying.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Turn/State/EndTurn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn/State/EndTurn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Turn/State/StartPlayerTurn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn/State/StartPlayerTurn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Turn/State/Turn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn/State/Turn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Turn/State/TurnState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn/State/TurnState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Turn/State/Tutto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn/State/Tutto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/players/PlayerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/players/PlayerManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cards/AbstractCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/AbstractCard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +77,7 @@
       <recent name="dice.userDiceSelectionValidation" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.ValidateUserSelectionNonStraightTest">
     <configuration name="DiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftCon_Assignment_02" />
       <extension name="coverage">
@@ -101,22 +89,6 @@
       <option name="PACKAGE_NAME" value="dice" />
       <option name="MAIN_CLASS_NAME" value="dice.DiceTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DiceTowerTest.removeDiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SoftCon_Assignment_02" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dice" />
-      <option name="MAIN_CLASS_NAME" value="dice.DiceTowerTest" />
-      <option name="METHOD_NAME" value="removeDiceTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -152,6 +124,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NotNullNonStraightTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SoftCon_Assignment_02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dice.notNullRoll.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dice" />
+      <option name="MAIN_CLASS_NAME" value="dice.NotNullNonStraightTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ValidateUserSelectionNonStraightTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftCon_Assignment_02" />
       <extension name="coverage">
@@ -169,11 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DiceTowerTest.removeDiceTest" />
         <item itemvalue="JUnit.ValidateUserSelectionNonStraightTest" />
         <item itemvalue="JUnit.MustTakeAllValidDiceTest" />
         <item itemvalue="JUnit.MustTakeAllValidDiceTest.testValidDices" />
         <item itemvalue="JUnit.DiceTest" />
+        <item itemvalue="JUnit.NotNullNonStraightTest" />
       </list>
     </recent_temporary>
   </component>
@@ -207,9 +194,6 @@
       <workItem from="1669373652105" duration="16066000" />
       <workItem from="1669412958477" duration="5604000" />
       <workItem from="1669493988940" duration="4060000" />
-      <workItem from="1669659638065" duration="584000" />
-      <workItem from="1669727475612" duration="4365000" />
-      <workItem from="1669737423363" duration="827000" />
     </task>
     <task id="LOCAL-00001" summary="Making Dice class">
       <created>1668588937558</created>
@@ -498,56 +482,7 @@
       <option name="project" value="LOCAL" />
       <updated>1669554332671</updated>
     </task>
-    <task id="LOCAL-00042" summary="wieder richtigs EndTurn">
-      <created>1669656602333</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1669656602333</updated>
-    </task>
-    <task id="LOCAL-00043" summary="Rest wieder hergestellt...">
-      <created>1669656979227</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1669656979227</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Änderungen wie mit Chris abgesprochen">
-      <created>1669659060394</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1669659060394</updated>
-    </task>
-    <task id="LOCAL-00045" summary="@Elias commentar bei currentlyplaying">
-      <created>1669666287591</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1669666287591</updated>
-    </task>
-    <task id="LOCAL-00046" summary="remove dicetsting doesn't work">
-      <created>1669702163435</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1669702163435</updated>
-    </task>
-    <task id="LOCAL-00047" summary="making changes to tutto state">
-      <created>1669731815076</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1669731815076</updated>
-    </task>
-    <task id="LOCAL-00048" summary="the test is almost working">
-      <created>1669733574014</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1669733574014</updated>
-    </task>
-    <option name="localTasksCounter" value="49" />
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -577,6 +512,13 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="validation impletemd with stratergy still need to change it to depandcy injection problematic aspect one needs to if it is a straight card one discover this from the card" />
+    <MESSAGE value="fixed Boolean boolean mistake" />
+    <MESSAGE value="caluculatepoints classes made... &#10;need to get a way to get the recently taken dice" />
+    <MESSAGE value="adding gameconstants necessary for win" />
+    <MESSAGE value="testing should be working now" />
+    <MESSAGE value="Changing Boolean.FAlSE to false and Boolean to boolean" />
+    <MESSAGE value="metaprogramming &#10;man kann eine IntegerArray zu einer List&lt;Dice&gt; machen" />
     <MESSAGE value="fixedproblem in metaprogramming" />
     <MESSAGE value="changing tests" />
     <MESSAGE value="setup comment" />
@@ -595,27 +537,17 @@
     <MESSAGE value="comments" />
     <MESSAGE value="creating test" />
     <MESSAGE value="adding further tests" />
-    <MESSAGE value="wieder richtigs EndTurn" />
-    <MESSAGE value="Rest wieder hergestellt..." />
-    <MESSAGE value="Änderungen wie mit Chris abgesprochen" />
-    <MESSAGE value="@Elias commentar bei currentlyplaying" />
-    <MESSAGE value="remove dicetsting doesn't work" />
-    <MESSAGE value="making changes to tutto state" />
-    <MESSAGE value="the test is almost working" />
-    <option name="LAST_COMMIT_MESSAGE" value="the test is almost working" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding further tests" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$DiceRepresentationTest_testRepresent6.ic" NAME="DiceRepresentationTest.testRepresent6 Coverage Results" MODIFIED="1669302462013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>UI.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$DiceTest.ic" NAME="DiceTest Coverage Results" MODIFIED="1669561512570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>dice.notNullRoll.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$ValidateUserSelectionNonStraightTest.ic" NAME="ValidateUserSelectionNonStraightTest Coverage Results" MODIFIED="1669553943725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dice.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$MustTakeAllValidDiceTest.ic" NAME="MustTakeAllValidDiceTest Coverage Results" MODIFIED="1669553423459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$DiceRepresentationTest_testRepresent6.ic" NAME="DiceRepresentationTest.testRepresent6 Coverage Results" MODIFIED="1669302462013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>UI.*</FILTER>
     </SUITE>
   </component>
 </project>
