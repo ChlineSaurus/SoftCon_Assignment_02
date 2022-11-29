@@ -32,44 +32,32 @@ public class DiceTowerTest {
         return diceList;
     }
     @Test
-    public void removeDiceTest(){
+    public void removeDiceTest() throws Exception{
         diceTower.setDiceTowerNonStraight();
         Integer [] array1={3,3,3};
         List<Dice> customdice1=DiceListSetUp(array1);
         Integer [] array2={1,2,3};
         List<Dice> customdice2=DiceListSetUp(array2);
+        ArrayList<DiceFace> diceFaces=new ArrayList<>();
+        diceFaces.add(DiceFace.Three);
 
         diceTower.setDiceTowerNonStraight();
         diceTower.rollNotTakenDices();
-        Field[] diceTowerFields = diceTower.getClass().getDeclaredFields();
-        for (Field field : diceTowerFields) {
-            if (field.getName().equals("notTakenDices")) {
-                field.setAccessible(true);
-                try{field.set("notTakenDices",customdice1);}
-                catch (IllegalAccessException e){
-                    throw new RuntimeException(e);
-                }
+        Field f = diceTower.getClass().getDeclaredField("notTakenDices");
+        f.setAccessible(true);
+        f.set(diceTower,customdice2);
+        Field f2= diceTower.getClass().getDeclaredField("takenDices");
+        f2.setAccessible(true);
+        f2.set(diceTower,customdice1);
 
-            }
-            if (field.getName().equals("TakenDices")) {
-                field.setAccessible(true);
-                try{field.set("TakenDices",customdice2);}
-                catch (IllegalAccessException e){
-                    throw new RuntimeException(e);
-                }
+        Assertions.assertThrows(IllegalUserInputExeption,diceTower.removeDice(diceFaces));
 
-            }
+
 
 
 
         }
-        ArrayList<DiceFace> chosenDiceToRemove=new ArrayList<>();
-        chosenDiceToRemove.add(DiceFace.One);
-        try{
-        Assertions.assertEquals(100,diceTower.removeDice(chosenDiceToRemove));}
-        catch (IllegalUserInputExeption e){
-            throw new RuntimeException(e);
-        }
+
 
     }
-}
+
