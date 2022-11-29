@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Field;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -82,21 +81,27 @@ public class DiceTowerTest {
     }
         @Test
         public void diceListToValueTest() throws Exception{
+
             diceTower.setDiceTowerFirework();
             Integer [] diceArray={2,4,6};
+            ArrayList<Dice> expected=DiceListSetUp(diceArray);
             ArrayList<DiceFace> diceFaces=new ArrayList<>();
             diceFaces.add(DiceFace.Two);
             diceFaces.add(DiceFace.Four);
             diceFaces.add(DiceFace.Six);
-            ArrayList<Dice> dices=DiceListSetUp(diceArray);
-            Method [] diceTowerMethods=diceTower.getClass().getMethods();
-            for (Method method:diceTowerMethods){
-                if (method.getName().equals("diceListToValue")){
-                    method.setAccessible(true);
-                    Assertions.assertEquals(method.invoke(diceTower,dices),diceFaces);
-
-                }
+            int i=0;
+            Field takenDiceField=diceTower.getClass().getDeclaredField("takenDices");
+            takenDiceField.setAccessible(true);
+            takenDiceField.set(diceTower,expected);
+            ArrayList<DiceFace> actual=diceTower.showTakenDices();
+            for (DiceFace diceFace: actual){
+                assert diceFace.integerValue==diceFaces.get(i).integerValue;
+                i++;
             }
+
+
+
+
         }
 
 

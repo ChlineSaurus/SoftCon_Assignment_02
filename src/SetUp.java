@@ -15,7 +15,7 @@ public class SetUp {
         while (true) {
             System.out.println(Messages.necessaryPointsQuestion.message);
             try {
-                //make sure that is within in the limit the input
+                //make sure that is within in the limit the input and lower level
                 necessaryPoints = Input.takeIntegerInput();
                 break;
             } catch (IllegalUserInputExeption e) {

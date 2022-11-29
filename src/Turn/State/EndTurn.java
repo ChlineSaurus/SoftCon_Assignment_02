@@ -14,6 +14,7 @@ public class EndTurn implements TurnState{
     @Override
     public void next(Turn aTurn) throws IOException, IllegalUserInputExeption {
 
+
         if(aTurn.turnCard.getName().equals("Fireworks")/*muss noch eine Expression hin, wie kein Null Wurf*/){
             aTurn.setState(new CurrentlyPlaying(aTurn));
         }
