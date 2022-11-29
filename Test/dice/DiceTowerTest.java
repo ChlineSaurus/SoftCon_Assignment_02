@@ -1,9 +1,11 @@
 package dice;
 
 import exceptions.IllegalUserInputExeption;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -55,12 +57,30 @@ public class DiceTowerTest {
         catch (IllegalUserInputExeption e){
             thrown=true;
         }
-        assert thrown==true;
+        assert thrown;
 
 
 
 
 
+        }
+        @Test
+        public void diceListToValueTest() throws Exception{
+            diceTower.setDiceTowerFirework();
+            Integer [] diceArray={2,4,6};
+            ArrayList<DiceFace> diceFaces=new ArrayList<>();
+            diceFaces.add(DiceFace.Two);
+            diceFaces.add(DiceFace.Four);
+            diceFaces.add(DiceFace.Six);
+            ArrayList<Dice> dices=DiceListSetUp(diceArray);
+            Method [] diceTowerMethods=diceTower.getClass().getMethods();
+            for (Method method:diceTowerMethods){
+                if (method.getName().equals("diceListToValue")){
+                    method.setAccessible(true);
+                    Assertions.assertEquals(method.invoke(diceTower,dices),diceFaces);
+
+                }
+            }
         }
 
 
