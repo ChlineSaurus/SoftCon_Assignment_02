@@ -6,7 +6,7 @@ public enum Messages {
             "Player. If you want to start press Enter!", GameConstants.minAllowedPlayers.definedConstant,
             GameConstants.maxAllowedPlayers.definedConstant)),
     playerNameInputToSmall("Your Player name was to long. Please give a smaller Input"),
-    necessaryPointsQuestion("Until how many Points do you want to play the game? Please enter a Number"),
+    necessaryPointsQuestion("Until how many Points do you want to play the game? Please enter a Number: "),
     notEnoughPlayer("You currently dont have enough players"),
 
     stopOrContinueQuestion("Enter 's' if you want to stop or 'c' if you want to continue: "),
