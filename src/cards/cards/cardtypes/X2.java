@@ -6,6 +6,7 @@ import cards.TuttoRequired;
 
 public class X2 extends AbstractCard {
     public X2(){
+        setBonusSystemX2();
         name = "Double";
         description="";
         bonusPoints = 2000;

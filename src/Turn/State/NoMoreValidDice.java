@@ -1,8 +1,9 @@
 package Turn.State;
 
 import Turn.Turn;
-import UI.Display;
 import exceptions.IllegalUserInputExeption;
+
+import java.util.ArrayList;
 
 public class NoMoreValidDice implements TurnState {
     Turn aTurn;
@@ -11,10 +12,23 @@ public class NoMoreValidDice implements TurnState {
     }
 
     @Override
-    public void next() throws IllegalUserInputExeption {
+    public void next() {
         //Display the current Game State
-        Display.displayMessage("You can't pick any more Dice. If you want to take the risk of losing all your points of this turn, you can reroll your Dice with \"R\" if you do not want to risk them enter \"N\"");
-        char input = Input.Input.takeCharInput();
+        aTurn.displayTurn("You can't pick any more Dice. If you want to take the risk of losing " +
+                "all your points of this turn, you can reroll your Dice with \"R\" " +
+                "if you do not want to risk them enter \"N\"");
+        ArrayList<Character> allowedAction = new ArrayList<>();
+        allowedAction.add('N');
+        allowedAction.add('R');
+        char input;
+        while(true) {
+            try {
+                input = Input.TuttoInput.takeRestrictedCharInput(allowedAction);
+                break;
+            } catch (IllegalUserInputExeption e) {
+                UI.Display.displayMessage(e.getMessage());
+            }
+        }
         String reroll = String.valueOf(input);
         if (reroll.equals("R")){
             aTurn.setCurrentState(new CurrentlyPlaying(aTurn));

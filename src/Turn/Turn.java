@@ -26,10 +26,11 @@ public class Turn {
 
     public void newTurn() {
         PlayerManager playerManager=PlayerManager.getInstance();
-        playerManager.nextPlayersTurn(temporaryScore);
         playerManager.deductLeadingPlayersPoints(pointsToDeduct);
+        playerManager.nextPlayersTurn(temporaryScore);
         temporaryScore = 0;
         pointsToDeduct = 0;
+        setCurrentState(new StartPlayerTurn(this));
     }
 
     public void draw() {
@@ -37,9 +38,11 @@ public class Turn {
             aDeck = new Deck();
         }
         turnCard = aDeck.draw();
+        aDiceTower.newTurn();
+        turnCard.injectStrategyToTower(aDiceTower);
     }
 
-    public void setCurrentState(TurnState currentState) throws IllegalUserInputExeption {
+    public void setCurrentState(TurnState currentState) {
         this.currentState = currentState;
         currentState.next();
     }

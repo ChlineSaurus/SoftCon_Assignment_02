@@ -16,7 +16,6 @@ public abstract class AbstractCard {
     protected boolean immunity;
     protected TuttoRequired requiredForPoints;
     protected TuttoRequired requiredForBonus;
-    protected DiceTower diceTower=new DiceTower();
     protected int deductionPoints;
     protected BonusSystem bonusSystem;
     protected int bonusPoints;
@@ -27,7 +26,6 @@ public abstract class AbstractCard {
         setBonusSystemStandard();
         description="still needs to implemented";
         name="still needs to be no name";
-
     }
 
 
@@ -37,25 +35,26 @@ public abstract class AbstractCard {
     }
     protected void setBonusSystemX2(){
         bonusSystem=new TimesX2Points();
-    }    public boolean isImmunity(){
+    }
+    public boolean isImmunity(){
         return immunity;
     }
-    private void tuttoAchieved(){
+    public int tuttoAchieved(int currentPoints){
         if (!isPointConditionAchieved()){
             requiredForPoints=TuttoRequired.getEnum((requiredForPoints.integerValue)-1);
         }
         if (!isBonusConditionAchieved()){
             requiredForBonus=TuttoRequired.getEnum(requiredForBonus.integerValue-1);
         }
+        if (isBonusConditionAchieved()) {
+            return bonusSystem.bonusPoints(bonusPoints, currentPoints);
+        }
+        return currentPoints;
     }
     public void userTriesToEndTurn() throws IllegalUserInputExeption {
         if (requiredForPoints!=TuttoRequired.Zero){
             throw new IllegalUserInputExeption("If you end your turn now, you'll recieve zeropoints, roll again!, type 'r'");
         }
-    }
-
-    public DiceTower getDiceTower(){
-        return diceTower;
     }
     private boolean isBonusConditionAchieved(){
         return this.requiredForBonus==TuttoRequired.Zero;
@@ -65,17 +64,6 @@ public abstract class AbstractCard {
     }
     public boolean haveToContinueRolling(){
         return this.requiredForPoints!=TuttoRequired.Zero;
-    }
-
-
-
-    public int addBonus(int currentPoints){
-        int addBoni=0;
-        tuttoAchieved();
-        if (requiredForBonus==TuttoRequired.Zero){
-            addBoni= bonusSystem.bonusPoints(bonusPoints,currentPoints);
-        }
-        return addBoni;
     }
 
     public void injectStrategyToTower(DiceTower aDiceTower) {
@@ -92,26 +80,14 @@ public abstract class AbstractCard {
         return description;
     }
 
-
     //what needs to be done:
     //
     public boolean isEndTurn(){
         return endTurn;
     }
 
-
-
-
-
-
-
-
-
     //public final boolean skipTurn;
     // needs to be added to Constructor
-
-
-
 }
 
 

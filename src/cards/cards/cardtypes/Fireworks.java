@@ -24,4 +24,9 @@ public class Fireworks extends AbstractCard {
         aDiceTower.setStrategy(new PointsCalculatorStandard(), new DiceSelectionValidatorFirework());
     }
 
+    @Override
+    public boolean haveToContinueRolling() {
+        return true;
+    }
+
 }

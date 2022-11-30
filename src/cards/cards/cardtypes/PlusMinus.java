@@ -6,9 +6,6 @@ import cards.TuttoRequired;
 
 public class PlusMinus extends AbstractCard {
 
-
-
-
     public PlusMinus() {
 
         name="PlusMinus";
@@ -18,5 +15,11 @@ public class PlusMinus extends AbstractCard {
         deductionPoints=1000;
         requiredForPoints= TuttoRequired.One;
         requiredForBonus=TuttoRequired.One;
+    }
+
+    @Override
+    public int tuttoAchieved(int currentPoints) {
+        super.tuttoAchieved(currentPoints);
+        return 1000;
     }
 }

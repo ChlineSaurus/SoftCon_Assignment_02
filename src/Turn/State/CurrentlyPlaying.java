@@ -20,12 +20,20 @@ public class CurrentlyPlaying implements TurnState{
         assert pTurn!=null;
         this.aTurn = pTurn;
     }
-    private DiceTower currentPlayerDice = aTurn.turnCard.getDiceTower(); //needs to be done differently
+
     public HumanInteractionManager humanInteraction = new HumanInteractionManager();
     @Override
     public void next() throws IllegalUserInputExeption {
+
         int i = 1;
         System.out.println("I am currently playing");
+        aTurn.draw();
+        if(aTurn.turnCard.isEndTurn()) {
+            aTurn.temporaryScore = 0;
+            aTurn.setCurrentState(new EndTurn(aTurn));
+        } else {
+            aTurn.setCurrentState(new CurrentlyPlaying(aTurn));
+        }
         ManageGame();
         if (i ==0){
             aTurn.setCurrentState(new Tutto(aTurn));

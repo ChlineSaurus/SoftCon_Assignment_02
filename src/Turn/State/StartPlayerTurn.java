@@ -4,8 +4,6 @@ import Input.TuttoInput;
 import Turn.Turn;
 import UI.Display;
 import exceptions.IllegalUserInputExeption;
-import players.PlayerManager;
-import Turn.HumanInteractionManager;
 
 import java.util.ArrayList;
 
@@ -15,22 +13,16 @@ public class StartPlayerTurn implements TurnState {
         this.aTurn = aTurn;
     }
     @Override
-    public void next() throws IllegalUserInputExeption {
-        System.out.println("I am in StartPlayerTurn");
-        DisplayOrRoll();
-        PlayerManager currentPlayer = PlayerManager.getInstance();
-        aTurn.turnCard = currentPlayer.getCard();
-        aTurn.playerDice = currentPlayer.getCard().getDiceTower();
-        aTurn.playerDice.newTurn();
-        //aTurn.turnCard = PlayerManager.getInstance().getCard();
-        System.out.println(aTurn.turnCard.getName());
-        /*if stop card */
-        if(aTurn.turnCard.isEndTurn()) {
-            aTurn.score = 0;
-            aTurn.setCurrentState(new EndTurn(aTurn));
+    public void next() {
+    System.out.println("I am in StartPlayerTurn");
+        while(true) {
+            try {
+                DisplayOrRoll();
+                break;
+            } catch (IllegalUserInputExeption e) {
+                UI.Display.displayMessage(e.getMessage());
+            }
         }
-
-        aTurn.setCurrentState(new CurrentlyPlaying(aTurn));
     }
 
     private void DisplayOrRoll() throws IllegalUserInputExeption {

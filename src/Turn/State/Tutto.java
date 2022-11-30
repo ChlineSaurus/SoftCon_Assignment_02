@@ -1,34 +1,45 @@
 package Turn.State;
 
 import Enums.Messages;
-import Input.Input;
+import Input.TuttoInput;
 import Turn.Turn;
 import UI.Display;
 import exceptions.IllegalUserInputExeption;
+
+import java.util.ArrayList;
 
 public class Tutto implements TurnState{
     Turn aTurn;
 
     public Tutto(Turn aTurn){this.aTurn = aTurn;}
     @Override
-    public void next() throws IllegalUserInputExeption {
-        System.out.println("I am in  Tutto");
-        if(aTurn.turnCard.getName().equals("Fireworks")){
-            Display.displayMessage(Messages.tuttoAndCloverleafOrFireworks.message);
-            aTurn.setCurrentState(new CurrentlyPlaying(aTurn));
-        }
+    public void next() {
+        aTurn.temporaryScore = aTurn.turnCard.tuttoAchieved(aTurn.temporaryScore);
+        aTurn.pointsToDeduct += aTurn.turnCard.getDeductPoints();
         if(aTurn.turnCard.haveToContinueRolling()){
             //something must be called to inform, that it was a tutto and Cloverleaf
             Display.displayMessage(Messages.tuttoAndCloverleafOrFireworks.message);
             aTurn.setCurrentState(new CurrentlyPlaying(aTurn));
-        }
-                System.out.println(Messages.stopOrContinueQuestion.message);
-        if(Input.takeStringInput().equalsIgnoreCase("S")){
-            aTurn.setCurrentState(new EndTurn(aTurn));
-        }
-        else if(Input.takeStringInput().equalsIgnoreCase("C")){
-            System.out.println("Drawing new card");
-            aTurn.setCurrentState(new CurrentlyPlaying(aTurn));
+        } else {
+            Display.displayMessage(Messages.stopOrContinueQuestion.message);
+            ArrayList<Character> allowedAction = new ArrayList<>();
+            allowedAction.add('S');
+            allowedAction.add('C');
+            Character action;
+            while(true) {
+                try{
+                    action = TuttoInput.takeRestrictedCharInput(allowedAction);
+                    break;
+                } catch (IllegalUserInputExeption e) {
+                    Display.displayMessage(e.getMessage());
+                }
+            }
+            if(action.equals('S')){
+                aTurn.setCurrentState(new EndTurn(aTurn));
+            }
+            else if(action.equals('C')){
+                aTurn.setCurrentState(new CurrentlyPlaying(aTurn));
+            }
         }
         //else throw error
     }
