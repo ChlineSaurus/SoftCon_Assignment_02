@@ -6,7 +6,7 @@ import cards.AbstractCard;
 public class Stop extends AbstractCard {
 
     public Stop(){
-        super();
+        description="You have to end your turn, and your left neighbour has his turn.";
         this.endTurn=true;
         name="Stop";
     }

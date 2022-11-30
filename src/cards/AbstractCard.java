@@ -12,33 +12,32 @@ public abstract class AbstractCard {
 
     protected String name;
     protected String description;
-    protected int temporaryPoints;
-
     protected boolean endTurn;
-
     protected boolean immunity;
     protected TuttoRequired requiredForPoints;
     protected TuttoRequired requiredForBonus;
-
     protected DiceTower diceTower=new DiceTower();
-    protected int deductPoints;
+    protected int deductionPoints;
     protected BonusSystem bonusSystem;
+    protected int bonusPoints;
     public AbstractCard(){
         immunity=false;
         endTurn=false;
-        deductPoints=0;
+        deductionPoints=0;
         setBonusSystemStandard();
+        description="still needs to implemented";
+        name="still needs to be no name";
 
     }
+
+
+
     protected void setBonusSystemStandard(){
         bonusSystem=new PlusPoints();
     }
     protected void setBonusSystemX2(){
         bonusSystem=new TimesX2Points();
-    }
-
-    protected int bonusPoints;
-    public boolean isImmunity(){
+    }    public boolean isImmunity(){
         return immunity;
     }
     private void tuttoAchieved(){
@@ -68,9 +67,7 @@ public abstract class AbstractCard {
         return this.requiredForPoints!=TuttoRequired.Zero;
     }
 
-    public boolean isRollValid(){
-        return diceTower.notNullRoll();
-    }
+
 
     public int addBonus(int currentPoints){
         int addBoni=0;
@@ -85,7 +82,7 @@ public abstract class AbstractCard {
         aDiceTower.setStrategy(new PointsCalculatorStandard(), new DiceSelectionValidatorStandard());
     }
     public int getDeductPoints() {
-            return deductPoints;
+            return deductionPoints;
         }
 
     public String getName(){

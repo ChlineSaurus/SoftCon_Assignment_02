@@ -7,7 +7,6 @@ import cards.TuttoRequired;
 public class Bonus extends AbstractCard {
     public Bonus(int points){
         assert points>0;
-        diceTower.setDiceTowerNonStraight();
 
         name="Bonus "+points;
         description ="bla bla";

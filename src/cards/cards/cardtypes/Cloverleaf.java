@@ -12,6 +12,7 @@ public class Cloverleaf extends AbstractCard {
         //50000 are the most points the game can to
         bonusPoints= GameConstants.maxAllowedPoints.definedConstant;
         name="clover";
+        description="";
         requiredForPoints= TuttoRequired.Two;
         requiredForBonus=TuttoRequired.Two;
     }

@@ -7,7 +7,8 @@ import cards.TuttoRequired;
 public class X2 extends AbstractCard {
     public X2(){
         name = "Double";
-        bonusPoints = 2000; //provisorisch
+        description="";
+        bonusPoints = 2000;
         requiredForPoints = TuttoRequired.Zero;
         requiredForBonus = TuttoRequired.One;
     }
