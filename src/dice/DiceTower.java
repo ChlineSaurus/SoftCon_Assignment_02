@@ -1,8 +1,8 @@
 package dice;
 
 import Enums.Messages;
-import dice.calculateRollPoints.CalculatePointsNonNullRoll;
-import dice.userDiceSelectionValidation.ValidateUserSelectedDice;
+import dice.pointCalculator.PointCalculator;
+import dice.diceSelectionValidator.DiceSelectionValidator;
 import exceptions.IllegalUserInputExeption;
 
 import java.util.ArrayList;
@@ -14,9 +14,9 @@ public class DiceTower {
     //the dices the user selects
     private boolean diceTakenSinceRoll;
 
-    protected  CalculatePointsNonNullRoll pointCalculator;
+    protected PointCalculator pointCalculator;
 
-    protected  ValidateUserSelectedDice validateUserSelectedDice;
+    protected DiceSelectionValidator diceSelectionValidator;
     public DiceTower(){
         notTakenDices = new ArrayList<Dice>();
         for(int i = 0; i < 6; i++) {
@@ -27,9 +27,9 @@ public class DiceTower {
 
     }
 
-    public void setStrategy(CalculatePointsNonNullRoll pPointStrategy, ValidateUserSelectedDice pValidationStrategy){
+    public void setStrategy(PointCalculator pPointStrategy, DiceSelectionValidator pValidationStrategy){
         pointCalculator = pPointStrategy;
-        validateUserSelectedDice = pValidationStrategy;
+        diceSelectionValidator = pValidationStrategy;
     }
 
     public void newTurn() {
@@ -69,7 +69,7 @@ public class DiceTower {
                 }
             }
         }
-        if (!validateUserSelectedDice.isUserSelectionValid(temporaryTakenDices,notTakenDices,takenDices)){
+        if (!diceSelectionValidator.isUserSelectionValid(temporaryTakenDices,notTakenDices,takenDices)){
             notTakenDices.addAll(temporaryTakenDices);
             throw new IllegalUserInputExeption("Make sure that only take valid dice");
         }

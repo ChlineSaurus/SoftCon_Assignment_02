@@ -1,7 +1,7 @@
 package dice;
 
-import dice.userDiceSelectionValidation.ValidateUserSelectedDice;
-import dice.userDiceSelectionValidation.ValidateUserSelectionNonStraight;
+import dice.diceSelectionValidator.DiceSelectionValidator;
+import dice.diceSelectionValidator.DiceSelectionValidatorStandard;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -9,8 +9,8 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ValidateUserSelectionNonStraightTest {
-    ValidateUserSelectedDice validateNonStraight=new ValidateUserSelectionNonStraight();
+public class diceSelectionValidatorStandardTest {
+    DiceSelectionValidator validateNonStraight=new DiceSelectionValidatorStandard();
 
     public List<Dice> diceListSetUp(Integer[] customDiceValueArray){
         List<Dice> diceList=new ArrayList<Dice>();

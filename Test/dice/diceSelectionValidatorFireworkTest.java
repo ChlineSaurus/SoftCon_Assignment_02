@@ -1,7 +1,7 @@
 package dice;
 
-import dice.userDiceSelectionValidation.MustTakeAllValidDice;
-import dice.userDiceSelectionValidation.ValidateUserSelectedDice;
+import dice.diceSelectionValidator.DiceSelectionValidatorFirework;
+import dice.diceSelectionValidator.DiceSelectionValidator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -9,8 +9,8 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MustTakeAllValidDiceTest {
-    ValidateUserSelectedDice mustSelectAllValidDice=new MustTakeAllValidDice();
+public class diceSelectionValidatorFireworkTest {
+    DiceSelectionValidator mustSelectAllValidDice=new DiceSelectionValidatorFirework();
 
     public List<Dice> diceListSetUp(Integer[] customDiceValueArray){
         List<Dice> diceList=new ArrayList<Dice>();

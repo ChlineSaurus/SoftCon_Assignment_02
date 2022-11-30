@@ -19,7 +19,7 @@ public class PlayerManagerTest {
         players.add(new Player("bob"));
         players.add(new Player("billy"));
         players.add(new Player("Sam"));
-        players.add(testPlayer);
+
         return players;
     }
 

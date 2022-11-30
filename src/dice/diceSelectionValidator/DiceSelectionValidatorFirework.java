@@ -1,4 +1,4 @@
-package dice.userDiceSelectionValidation;
+package dice.diceSelectionValidator;
 
 import dice.Dice;
 import dice.DiceFace;
@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MustTakeAllValidDice implements ValidateUserSelectedDice{
+public class DiceSelectionValidatorFirework implements DiceSelectionValidator {
     private Map<DiceFace,Integer> requiredToBeSelected=new HashMap<DiceFace,Integer>();
 
     private void setUpRequiredDice(List<Dice> rolledDices){

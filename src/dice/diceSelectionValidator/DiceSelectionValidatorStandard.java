@@ -1,4 +1,4 @@
-package dice.userDiceSelectionValidation;
+package dice.diceSelectionValidator;
 
 import dice.Dice;
 import dice.DiceFace;
@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ValidateUserSelectionNonStraight implements ValidateUserSelectedDice{
+public class DiceSelectionValidatorStandard implements DiceSelectionValidator {
 
     private Map<DiceFace,Integer> selectedDice=new HashMap<DiceFace,Integer>();
 

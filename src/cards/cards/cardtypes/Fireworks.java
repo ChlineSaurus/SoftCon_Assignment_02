@@ -4,8 +4,8 @@ package cards.cards.cardtypes;
 import cards.AbstractCard;
 import cards.TuttoRequired;
 import dice.DiceTower;
-import dice.calculateRollPoints.PointsNonStraightNonNullRoll;
-import dice.userDiceSelectionValidation.MustTakeAllValidDice;
+import dice.pointCalculator.PointsCalculatorStandard;
+import dice.diceSelectionValidator.DiceSelectionValidatorFirework;
 
 public class Fireworks extends AbstractCard {
 
@@ -21,7 +21,7 @@ public class Fireworks extends AbstractCard {
     }
     @Override
     public void injectStrategyToTower(DiceTower aDiceTower) {
-        aDiceTower.setStrategy(new PointsNonStraightNonNullRoll(), new MustTakeAllValidDice());
+        aDiceTower.setStrategy(new PointsCalculatorStandard(), new DiceSelectionValidatorFirework());
     }
 
 }

@@ -20,7 +20,7 @@ public class StartPlayerTurn implements TurnState {
         DisplayOrRoll();
         PlayerManager currentPlayer = PlayerManager.getInstance();
         aTurn.turnCard = currentPlayer.getCard();
-        aTurn.playerDice = currentPlayer.getPlayerDice();
+        aTurn.playerDice = currentPlayer.getCard().getDiceTower();
         aTurn.playerDice.newTurn();
         //aTurn.turnCard = PlayerManager.getInstance().getCard();
         System.out.println(aTurn.turnCard.getName());

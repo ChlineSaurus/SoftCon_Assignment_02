@@ -1,10 +1,10 @@
-package dice.calculateRollPoints;
+package dice.pointCalculator;
 
 import dice.Dice;
 
 import java.util.List;
 
-public class PointsStraightNonNullRoll implements CalculatePointsNonNullRoll {
+public class PointsStraightNonNullRoll implements PointCalculator {
 
 
     public int calculatePoints(List<Dice> newlyTakenDices) {

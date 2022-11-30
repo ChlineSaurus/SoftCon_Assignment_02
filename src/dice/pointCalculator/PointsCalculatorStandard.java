@@ -1,4 +1,4 @@
-package dice.calculateRollPoints;
+package dice.pointCalculator;
 
 import dice.Dice;
 import dice.DiceFace;
@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class PointsNonStraightNonNullRoll implements CalculatePointsNonNullRoll {
+public class PointsCalculatorStandard implements PointCalculator {
 
 
 
