@@ -69,6 +69,11 @@ public class Display {
         System.out.println(message);
     }
 
+    public static void declareWinner(String Winner) {
+        displayScores();
+        System.out.printf("%s has won the Game! Congratulations!", RED + Winner + COLOR_RESET);
+    }
+
     private static void clearScreen() {
         System.out.print("\033[H\033[2J");
         System.out.flush();
