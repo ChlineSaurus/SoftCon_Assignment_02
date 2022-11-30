@@ -13,7 +13,6 @@ public class DeckStack implements Iterable<AbstractCard>
         aCards = new ArrayList<>();
     }
 
-
     public DeckStack(Iterable<AbstractCard> pCards){
         this();
         for(AbstractCard abstractCard : pCards)
@@ -30,13 +29,8 @@ public class DeckStack implements Iterable<AbstractCard>
         return aCards.iterator();
     }
 
-
     public AbstractCard pop(){
         assert !isEmpty();
         return aCards.remove(aCards.size()-1);
-    }
-
-    public int size(){
-        return aCards.size();
     }
 }

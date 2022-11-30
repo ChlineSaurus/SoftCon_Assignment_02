@@ -68,9 +68,6 @@ public class Deck
         Collections.shuffle(cards);
         }
 
-
-    //}
-
     public AbstractCard draw()
     {
         if (isEmpty()){
@@ -78,7 +75,6 @@ public class Deck
         }
         return aCards.pop();
     }
-
 
     public boolean isEmpty()
     {

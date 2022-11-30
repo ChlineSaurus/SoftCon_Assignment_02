@@ -1,10 +1,6 @@
 package players;
 
 import Enums.GameConstants;
-import Turn.State.TurnState;
-import cards.AbstractCard;
-import cards.Deck;
-import dice.DiceTower;
 import exceptions.IllegalUserInputExeption;
 
 import java.io.IOException;
@@ -20,15 +16,12 @@ public class PlayerManager {
 
     private static PlayerManager uniqueInstance;
     private final ArrayList<Player> players;
-    private final Deck deck=new Deck();
     private final int necessaryPoints;
-    private boolean playerReachedNecessaryPoints;
     private Player currentPlayer;
     private int currentPlayerIndex;
 
     public static synchronized PlayerManager getInstance(){
         assert uniqueInstance != null;
-
         return uniqueInstance;
     }
 
@@ -36,8 +29,6 @@ public class PlayerManager {
         if(uniqueInstance==null){
             uniqueInstance = new PlayerManager(players, necessaryPoints);
         }
-        System.out.println("hi");
-        System.out.println(uniqueInstance);
         return uniqueInstance;
     }
 
@@ -48,21 +39,15 @@ public class PlayerManager {
                 players.size() <= GameConstants.maxAllowedPlayers.definedConstant;
         this.players = players;
         Collections.sort(this.players);
-        playerReachedNecessaryPoints = false;
         currentPlayer = this.players.get(0);
         currentPlayerIndex = 0;
-
     }
 
     public String currentPlayerName() {
         return currentPlayer.name;
     }
 
-    public Player currentPlayer(){
-        return currentPlayer;
-    }
-
-    public void nextPlayersTurn(int pointsToAdd) throws IOException, IllegalUserInputExeption {
+    public void nextPlayersTurn(int pointsToAdd) {
         currentPlayer.updateScore(pointsToAdd);
         currentPlayerIndex++;
         if (currentPlayerIndex >= players.size()) {
@@ -73,9 +58,6 @@ public class PlayerManager {
             }
         }
         currentPlayer = players.get(currentPlayerIndex);
-        TurnState.Turn aTurn = new TurnState.Turn();
-
-        aTurn.nextState();
     }
 
     public void addPlayer(Player player){
@@ -121,14 +103,7 @@ public class PlayerManager {
             }
         }
     }
-    public AbstractCard getCard(){
-        assert !deck.isEmpty();
-        return deck.draw();
-    }
 
-    public DiceTower getPlayerDice(){
-        return Turn.State.Turn.playerDice;
-    }
     public List<String> getPlayersName(){
         List<String> playersName=new ArrayList<String>();
         for (Player aPlayer:players){
@@ -142,10 +117,6 @@ public class PlayerManager {
             playersScore.add(aPlayer.getScore());
         }
         return playersScore;
-    }
-
-    public boolean currentPlayerReachedPointFreshhold(int turnPoints){
-        return currentPlayer.getScore() + turnPoints >= necessaryPoints;
     }
 
     private void declareWinner() {

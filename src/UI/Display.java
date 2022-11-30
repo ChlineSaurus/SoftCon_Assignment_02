@@ -34,7 +34,6 @@ public class Display {
     public static void displayGameState(ArrayList<DiceFace> notTakenDice, ArrayList<DiceFace> takenDice,
                                         String playerName, String cardTitel, String cardDescription,
                                         Integer temporaryPoints, String message) {
-        clearScreen();
         String output = String.format("Current Player: %s\n\n", playerName) +
                 String.format("Your Card: %s\n", cardTitel) +
                 "Card description:" +
@@ -48,6 +47,7 @@ public class Display {
                 "\n\n" +
                 String.format("Your temporary Points this turn: %s\n\n", temporaryPoints) +
                 message;
+        clearScreen();
         System.out.println(output);
     }
 

@@ -1,9 +1,13 @@
 package Turn.State;
 
+import Input.TuttoInput;
+import Turn.Turn;
+import UI.Display;
 import exceptions.IllegalUserInputExeption;
 import players.PlayerManager;
+import Turn.HumanInteractionManager;
 
-import java.io.IOException;
+import java.util.ArrayList;
 
 public class StartPlayerTurn implements TurnState {
     Turn aTurn;
@@ -11,9 +15,9 @@ public class StartPlayerTurn implements TurnState {
         this.aTurn = aTurn;
     }
     @Override
-    public void next(Turn aTurn) throws IOException, IllegalUserInputExeption {
-
+    public void next() throws IllegalUserInputExeption {
         System.out.println("I am in StartPlayerTurn");
+        DisplayOrRoll();
         PlayerManager currentPlayer = PlayerManager.getInstance();
         aTurn.turnCard = currentPlayer.getCard();
         aTurn.playerDice = currentPlayer.getPlayerDice();
@@ -22,10 +26,31 @@ public class StartPlayerTurn implements TurnState {
         System.out.println(aTurn.turnCard.getName());
         if(aTurn.turnCard.getName().equals("Stop")){
             aTurn.score = 0;
-            aTurn.setState(new EndTurn(aTurn));
+            aTurn.setCurrentState(new EndTurn(aTurn));
         }
 
-        aTurn.setState(new CurrentlyPlaying(aTurn));
+        aTurn.setCurrentState(new CurrentlyPlaying(aTurn));
+    }
+
+    private void DisplayOrRoll() throws IllegalUserInputExeption {
+        Character nextAction = null;
+        ArrayList<Character> possibleNextAction = new ArrayList<>();
+        possibleNextAction.add('R');
+        possibleNextAction.add('D');
+        UI.Display.displayMessage("For displaying your score please enter \"D\" for rolling the Dice please enter \"R\"");
+        boolean validInput = false;
+        while (!validInput) {
+            try {
+                nextAction = TuttoInput.takeRestrictedCharInput(possibleNextAction);
+                validInput = true;
+            } catch (IllegalUserInputExeption e) {
+                UI.Display.displayMessage(e.getMessage());
+            }
+        }
+        if (nextAction.equals('D')) {
+            Display.displayScores();
+            DisplayOrRoll();
+        }
     }
 
 }

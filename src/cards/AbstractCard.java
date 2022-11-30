@@ -4,12 +4,14 @@ import cards.cards.cardInterfaces.bonusSystemInterface.BonusSystem;
 import cards.cards.cardInterfaces.bonusSystemInterface.PlusPoints;
 import cards.cards.cardInterfaces.bonusSystemInterface.TimesX2Points;
 import dice.DiceTower;
+import dice.calculateRollPoints.PointsNonStraightNonNullRoll;
+import dice.userDiceSelectionValidation.ValidateUserSelectionNonStraight;
 import exceptions.IllegalUserInputExeption;
 
 public abstract class AbstractCard {
 
     protected String name;
-    protected String descripiton;
+    protected String description;
     protected int temporaryPoints;
 
     protected boolean endTurn;
@@ -53,8 +55,6 @@ public abstract class AbstractCard {
         }
     }
 
-
-
     public DiceTower getDiceTower(){
         return diceTower;
     }
@@ -72,7 +72,6 @@ public abstract class AbstractCard {
         return diceTower.notNullRoll();
     }
 
-
     public int addBonus(int currentPoints){
         int addBoni=0;
         tuttoAchieved();
@@ -82,6 +81,9 @@ public abstract class AbstractCard {
         return addBoni;
     }
 
+    public void injectStrategyToTower(DiceTower aDiceTower) {
+        aDiceTower.setStrategy(new PointsNonStraightNonNullRoll(), new ValidateUserSelectionNonStraight());
+    }
     public int getDeductPoints() {
             return deductPoints;
         }
@@ -89,8 +91,8 @@ public abstract class AbstractCard {
     public String getName(){
         return name;
     }
-    public String getDescripiton(){
-        return descripiton;
+    public String getDescription(){
+        return description;
     }
 
 

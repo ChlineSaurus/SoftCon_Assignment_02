@@ -1,36 +1,9 @@
 package Turn.State;
 
-import cards.AbstractCard;
-import cards.Deck;
-import dice.DiceTower;
 import exceptions.IllegalUserInputExeption;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public interface TurnState {
 
-     void next(Turn aTurn) throws IOException, IllegalUserInputExeption;
+     void next() throws IllegalUserInputExeption;
 
-
-    class Turn {
-        protected AbstractCard turnCard;
-        protected DiceTower playerDice;
-        protected int score = 0;
-        protected int pointsToDeduct = 0;
-        protected List<Integer> list=new ArrayList<Integer>();
-        protected Deck aDeck;
-        private Turn aTurn;
-        private TurnState state = new StartPlayerTurn(aTurn){
-
-        };
-
-        public void setState(TurnState state) throws IOException, IllegalUserInputExeption {
-            this.state = state;
-            state.next(this);
-        }
-        public void nextState() throws IOException, IllegalUserInputExeption {state.next(this);}
-
-    }
 }

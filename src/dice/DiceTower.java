@@ -2,12 +2,7 @@ package dice;
 
 import Enums.Messages;
 import dice.calculateRollPoints.CalculatePointsNonNullRoll;
-import dice.calculateRollPoints.PointsNonStraightNonNullRoll;
-import dice.calculateRollPoints.PointsStraightNonNullRoll;
-import dice.userDiceSelectionValidation.MustTakeAllValidDice;
-import dice.userDiceSelectionValidation.ValidUserSelectionStraight;
 import dice.userDiceSelectionValidation.ValidateUserSelectedDice;
-import dice.userDiceSelectionValidation.ValidateUserSelectionNonStraight;
 import exceptions.IllegalUserInputExeption;
 
 import java.util.ArrayList;
@@ -31,19 +26,10 @@ public class DiceTower {
         takenDices = new ArrayList<Dice>();
 
     }
-    public void setDiceTowerFirework(){
-        pointCalculator=new PointsNonStraightNonNullRoll();
-        validateUserSelectedDice=new MustTakeAllValidDice();
-    }
 
-    public void setDiceTowerNonStraight(){
-        pointCalculator=new PointsNonStraightNonNullRoll();
-        validateUserSelectedDice=new ValidateUserSelectionNonStraight();
-    }
-
-    public void setDiceTowerStraight(){
-        pointCalculator=new PointsStraightNonNullRoll();
-        validateUserSelectedDice=new ValidUserSelectionStraight();
+    public void setStrategy(CalculatePointsNonNullRoll pPointStrategy, ValidateUserSelectedDice pValidationStrategy){
+        pointCalculator = pPointStrategy;
+        validateUserSelectedDice = pValidationStrategy;
     }
 
     public void newTurn() {

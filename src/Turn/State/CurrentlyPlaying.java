@@ -6,41 +6,36 @@ import UI.Display;
 import dice.DiceFace;
 import dice.DiceTower;
 import exceptions.IllegalUserInputExeption;
+import Turn.Turn;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class CurrentlyPlaying implements TurnState{
     Turn aTurn;
-    private boolean turnFinished = false;
     private boolean interactionFinished = false;
-    private boolean tutto =false;
-
-    private ArrayList<DiceFace> diceToRemove;
+    private boolean tutto = false;
 
     public CurrentlyPlaying(Turn pTurn){
         assert pTurn!=null;
         this.aTurn = pTurn;
-        System.out.println("I am in CurrentlyPlaying");
     }
-
-
     private DiceTower currentPlayerDice = aTurn.turnCard.getDiceTower();
     public HumanInteractionManager humanInteraction = new HumanInteractionManager();
     @Override
-    public void next(Turn aTurn) throws IOException, IllegalUserInputExeption {
+    public void next() throws IllegalUserInputExeption {
         int i = 1;
         System.out.println("I am currently playing");
         ManageGame();
         if (i ==0){
-            aTurn.setState(new Tutto(aTurn));
+            aTurn.setCurrentState(new Tutto(aTurn));
         }
         else{
-            aTurn.setState(new NoMoreValidDice(aTurn));
+            aTurn.setCurrentState(new NoMoreValidDice(aTurn));
         }
     }
 
-    private void ManageGame() throws IllegalUserInputExeption, IOException {
+    private void ManageGame() throws IllegalUserInputExeption {
         Setup();
         TurnFlow();
     }
@@ -49,7 +44,8 @@ public class CurrentlyPlaying implements TurnState{
     private void Setup() throws IllegalUserInputExeption {
         humanInteraction.DisplayOrRoll();
     }
-    private void TurnFlow() throws IllegalUserInputExeption, IOException {
+    private void TurnFlow() throws IllegalUserInputExeption {
+        boolean turnFinished = false;
         while(!turnFinished){
             currentPlayerDice.rollNotTakenDices();
             if (!currentPlayerDice.notNullRoll()){
@@ -58,7 +54,7 @@ public class CurrentlyPlaying implements TurnState{
                 aTurn.pointsToDeduct = 0;
 
                 }
-                aTurn.setState(new EndTurn(aTurn));
+                aTurn.setCurrentState(new EndTurn(aTurn));
             }
             //ka, ob das stimmt, chas aber nid teschte, da ich mitem Error voretäre nid z schlag chume...
             while(!interactionFinished)
@@ -68,7 +64,7 @@ public class CurrentlyPlaying implements TurnState{
                 char takeDice = TuttoInput.takeCharInput();
                 String takeDices = String.valueOf(takeDice);
                 if (takeDices.equals("Y")){
-                    diceToRemove = humanInteraction.ChoseDice();
+                    ArrayList<DiceFace> diceToRemove = humanInteraction.ChoseDice();
                     //currentPlayerDice.removeDice(diceToRemove);
                     System.out.println(diceToRemove);
                     aTurn.score += currentPlayerDice.removeDice(diceToRemove);
@@ -82,7 +78,7 @@ public class CurrentlyPlaying implements TurnState{
                     interactionFinished = humanInteraction.Reroll();
                 }else{
                     aTurn.score = 0;
-                    aTurn.setState(new EndTurn(aTurn));
+                    aTurn.setCurrentState(new EndTurn(aTurn));
                 }
             }
             System.out.println("interaction finished");

@@ -12,7 +12,6 @@ public class PlusMinus extends AbstractCard {
     public PlusMinus() {
 
         name="PlusMinus";
-        diceTower.setDiceTowerNonStraight();
         bonusPoints=1000;
         deductPoints=1000;
         requiredForPoints= TuttoRequired.One;
