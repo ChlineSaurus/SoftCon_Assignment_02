@@ -4,7 +4,7 @@ import dice.Dice;
 
 import java.util.List;
 
-public class PointsStraightNonNullRoll implements PointCalculator {
+public class PointCalculatorStraight implements PointCalculator {
 
 
     public int calculatePoints(List<Dice> newlyTakenDices) {

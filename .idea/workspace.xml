@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="renaming dicetower variables so that they make sense">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Turn/State/CurrentlyPlaying.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn/State/CurrentlyPlaying.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/AbstractCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/AbstractCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/cards/cardtypes/Bonus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/cardtypes/Bonus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/cards/cardtypes/Cloverleaf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/cardtypes/Cloverleaf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/cards/cardtypes/PlusMinus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/cardtypes/PlusMinus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/cards/cardtypes/Stop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/cardtypes/Stop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/cards/cardtypes/X2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/cardtypes/X2.java" afterDir="false" />
+    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="adding comments and description to cards">
+      <change beforePath="$PROJECT_DIR$/Test/dice/NotNullStraightTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/dice/NotNullStraightTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Turn/State/StartPlayerTurn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn/State/StartPlayerTurn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cards/cards/cardtypes/Straight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/cardtypes/Straight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dice/pointCalculator/PointsStraightNonNullRoll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/pointCalculator/PointCalculatorStraight.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +189,7 @@
       <workItem from="1669373652105" duration="16066000" />
       <workItem from="1669412958477" duration="5604000" />
       <workItem from="1669493988940" duration="4060000" />
-      <workItem from="1669822402528" duration="6099000" />
+      <workItem from="1669822402528" duration="6513000" />
     </task>
     <task id="LOCAL-00001" summary="Making Dice class">
       <created>1668588937558</created>
@@ -503,7 +499,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669829036045</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="adding comments and description to cards">
+      <created>1669830058832</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1669830058832</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -533,7 +536,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adding gameconstants necessary for win" />
     <MESSAGE value="testing should be working now" />
     <MESSAGE value="Changing Boolean.FAlSE to false and Boolean to boolean" />
     <MESSAGE value="metaprogramming &#10;man kann eine IntegerArray zu einer List&lt;Dice&gt; machen" />
@@ -558,7 +560,8 @@
     <MESSAGE value="Better Names" />
     <MESSAGE value="problems with testing playermanger &#10;code should still compile" />
     <MESSAGE value="renaming dicetower variables so that they make sense" />
-    <option name="LAST_COMMIT_MESSAGE" value="renaming dicetower variables so that they make sense" />
+    <MESSAGE value="adding comments and description to cards" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding comments and description to cards" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
