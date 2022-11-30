@@ -32,6 +32,8 @@ public class SetUp {
             } else if (name.length() == 0) {
                 if (playerCounter < GameConstants.minAllowedPlayers.definedConstant) {
                     System.out.println(Messages.notEnoughPlayer.message);
+                } else {
+                    break;
                 }
             } else {
                 players.add(new Player(name));
