@@ -16,9 +16,7 @@ public class DiceTower {
     final private ArrayList<Dice> notTakenDices;
     final private ArrayList<Dice> takenDices;
 
-
     //the dices the user selects
-
     private boolean diceTakenSinceRoll;
 
     protected  CalculatePointsNonNullRoll pointCalculator;
@@ -48,8 +46,6 @@ public class DiceTower {
         validateUserSelectedDice=new ValidUserSelectionStraight();
     }
 
-
-
     public void newTurn() {
         for(Dice dice: takenDices) {
             notTakenDices.add(dice);
@@ -69,7 +65,6 @@ public class DiceTower {
         return pointCalculator.validateDice(notTakenDices,takenDices);
     }
 
-
     public int removeDice(ArrayList<DiceFace> dicesToRemove) throws IllegalUserInputExeption {
         if (dicesToRemove.size() == 0) {
             throw new IllegalUserInputExeption(Messages.noDiceTakenException.message);
@@ -78,7 +73,6 @@ public class DiceTower {
         if (dicesToRemove.size() > notTakenDices.size()) {
             throw new IllegalUserInputExeption(Messages.toManyDiceTakenException.message);
         }
-
         ArrayList<Dice> temporaryTakenDices = new ArrayList<>();
         for(DiceFace diceToRemove: dicesToRemove) {
             for(Dice aNotTakeDice: notTakenDices) {
