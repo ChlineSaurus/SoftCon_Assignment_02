@@ -1,14 +1,15 @@
 package dice;
 
 import Enums.Messages;
-import dice.pointCalculator.PointCalculator;
 import dice.diceSelectionValidator.DiceSelectionValidator;
+import dice.pointCalculator.PointCalculator;
 import exceptions.IllegalUserInputExeption;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class DiceTower {
-    final private ArrayList<Dice> notTakenDices;
+     private ArrayList<Dice> notTakenDices;
     final private ArrayList<Dice> takenDices;
 
     //the dices the user selects
@@ -44,6 +45,28 @@ public class DiceTower {
             dice.roll();
         }
     }
+    private ArrayList<Dice> createTemporaryTakenDices(ArrayList<DiceFace> dicesToRemove){
+        ArrayList<Dice> temporaryTakenDices = new ArrayList<>();
+        for(DiceFace diceToRemove: dicesToRemove) {
+
+            for(Dice aNotTakeDice: notTakenDices) {
+                if (aNotTakeDice.getFaceValue().equals(diceToRemove)) {
+                    temporaryTakenDices.add(aNotTakeDice);
+
+                }
+            }
+        }
+        return temporaryTakenDices;
+
+    }
+    private void removeTemporaryTakenDices(List<Dice> temporaryTakenDices){
+
+        for (Dice aDice:temporaryTakenDices){
+            takenDices.add(aDice);
+            notTakenDices.remove(aDice);
+        }
+    }
+
 
     public boolean notNullRoll(){
         return pointCalculator.validateDice(notTakenDices, takenDices);
@@ -57,26 +80,19 @@ public class DiceTower {
         if (dicesToRemove.size() > notTakenDices.size()) {
             throw new IllegalUserInputExeption(Messages.toManyDiceTakenException.message);
         }
-        ArrayList<Dice> temporaryTakenDices = new ArrayList<>();
-        for(DiceFace diceToRemove: dicesToRemove) {
-            for(Dice aNotTakeDice: notTakenDices) {
-                if (aNotTakeDice.getFaceValue().equals(diceToRemove)) {
-                    temporaryTakenDices.add(aNotTakeDice);
-                    notTakenDices.remove(aNotTakeDice);
-                    break;
-                }
-            }
+        ArrayList<Dice> temporaryTakenDices = createTemporaryTakenDices(dicesToRemove);
+
+        if (temporaryTakenDices.size() < dicesToRemove.size()) {
+
+            throw new IllegalUserInputExeption(Messages.notAllowedNumberException.message);
         }
+
         if (!diceSelectionValidator.isUserSelectionValid(temporaryTakenDices,notTakenDices,takenDices)){
-            notTakenDices.addAll(temporaryTakenDices);
             throw new IllegalUserInputExeption("Make sure that only take valid dice");
         }
-        if (temporaryTakenDices.size() < dicesToRemove.size()) {
-            notTakenDices.addAll(temporaryTakenDices);
-            throw new IllegalUserInputExeption(Messages.notAllowedNumberException.message);
-        } else {
+ else {
             diceTakenSinceRoll = true;
-            takenDices.addAll(temporaryTakenDices);
+            removeTemporaryTakenDices(temporaryTakenDices);
             return pointCalculator.calculatePoints(temporaryTakenDices);
         }
     }

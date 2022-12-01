@@ -9,11 +9,12 @@ import java.util.Map;
 
 public class DiceSelectionValidatorStandard implements DiceSelectionValidator {
 
-    private Map<DiceFace,Integer> selectedDice=new HashMap<DiceFace,Integer>();
+    private Map<DiceFace,Integer> selectedDice;
 
 
     @Override
     public boolean isUserSelectionValid(List<Dice> chosenDicesToKeep, List<Dice> rolledDices, List<Dice> takenDices) {
+        selectedDice=new HashMap<DiceFace, Integer>();
         for (Dice chosenDice: chosenDicesToKeep){
             DiceFace faceValue=chosenDice.getFaceValue();
             if (faceValue!=DiceFace.One && faceValue!=DiceFace.Five){

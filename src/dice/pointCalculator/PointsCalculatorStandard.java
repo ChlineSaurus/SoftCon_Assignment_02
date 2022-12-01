@@ -62,6 +62,7 @@ public class PointsCalculatorStandard implements PointCalculator {
     {   Map<Integer,Integer> diceCounter = new HashMap<Integer, Integer>();
         for (Dice dice: notTakenDices){
             Integer faceValue=dice.getFaceValue().integerValue;
+            assert faceValue==null;
 
             if (faceValue!=5 && faceValue!=1){
                 if (diceCounter.containsKey(faceValue)){
