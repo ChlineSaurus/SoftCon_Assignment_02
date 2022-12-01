@@ -14,7 +14,6 @@ public class StartPlayerTurn implements TurnState {
     }
     @Override
     public void next() {
-    System.out.println("I am in StartPlayerTurn");
         while(true) {
             try {
                 DisplayOrRoll();

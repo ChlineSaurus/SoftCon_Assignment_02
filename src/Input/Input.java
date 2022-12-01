@@ -19,6 +19,9 @@ public class Input {
 
     public static Character takeCharInput() throws IllegalUserInputExeption {
         String input = readInput().toUpperCase();
+        if(input.length() == 0) {
+            return '#';
+        }
         if(input.length() != 1) {
             throw new IllegalUserInputExeption(Messages.notACharException.message);
         }

@@ -17,7 +17,6 @@ public class Tutto implements TurnState{
         aTurn.temporaryScore = aTurn.turnCard.tuttoAchieved(aTurn.temporaryScore);
         aTurn.pointsToDeduct += aTurn.turnCard.getDeductPoints();
         if(aTurn.turnCard.haveToContinueRolling()){
-            //something must be called to inform, that it was a tutto and Cloverleaf
             Display.displayMessage(Messages.tuttoAndCloverleafOrFireworks.message);
             aTurn.setCurrentState(new CurrentlyPlaying(aTurn));
         } else {

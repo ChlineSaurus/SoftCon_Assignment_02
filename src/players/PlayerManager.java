@@ -56,6 +56,7 @@ public class PlayerManager {
                     declareWinner();
                 }
             }
+            currentPlayerIndex = 0;
         }
         currentPlayer = players.get(currentPlayerIndex);
     }

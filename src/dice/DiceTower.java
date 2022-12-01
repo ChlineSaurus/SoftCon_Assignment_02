@@ -33,10 +33,8 @@ public class DiceTower {
     }
 
     public void newTurn() {
-        for(Dice dice: takenDices) {
-            notTakenDices.add(dice);
-            takenDices.remove(dice);
-        }
+        notTakenDices.addAll(takenDices);
+        takenDices.clear();
         this.rollNotTakenDices();
     }
 

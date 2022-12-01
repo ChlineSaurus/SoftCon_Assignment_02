@@ -10,7 +10,6 @@ import java.util.ArrayList;
 
 public class CurrentlyPlaying implements TurnState{
     Turn aTurn;
-    private boolean interactionFinished = false;
 
     public CurrentlyPlaying(Turn pTurn){
         assert pTurn!=null;
@@ -27,9 +26,6 @@ public class CurrentlyPlaying implements TurnState{
         TurnFlow();
     }
 
-    //wenns funktioniert, chamer die Methode lösche und d Funktionalität in ManageGame übere tue...
-    //evtl. chamer au die ganzi manage game denne lösche...
-
     private void TurnFlow() {
         while(true) {
             aTurn.rollNotTakenDices();
@@ -40,6 +36,7 @@ public class CurrentlyPlaying implements TurnState{
                     aTurn.pointsToDeduct = 0;
                 }
                 aTurn.setCurrentState(new EndTurn(aTurn));
+                break;
             } else {
                 takeDice();
                 if (aTurn.tuttoMade()) {
