@@ -70,11 +70,17 @@ public class Display {
     }
 
     public static void declareWinner(String Winner) {
+        clearScreen();
         displayScores();
         System.out.printf("%s has won the Game! Congratulations!", RED + Winner + COLOR_RESET);
     }
 
     private static void clearScreen() {
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            System.out.println("Huston, we have a problem");
+        }
         System.out.print("\033[H\033[2J");
         System.out.flush();
     }
