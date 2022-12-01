@@ -38,7 +38,7 @@ public class Display {
                                         Integer temporaryPoints, String message) {
         String output = String.format("Current Player: %s\n\n", playerName) +
                 String.format("Your Card: %s\n", cardTitel) +
-                "Card description:" +
+                "Card description: " +
                 cardDescription +
                 "\n\n" +
                 "Your rolled dice: \n" +
