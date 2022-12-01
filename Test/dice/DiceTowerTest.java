@@ -1,5 +1,8 @@
 package dice;
 
+import dice.diceSelectionValidator.DiceSelectionValidatorFirework;
+import dice.diceSelectionValidator.DiceSelectionValidatorStandard;
+import dice.pointCalculator.PointsCalculatorStandard;
 import exceptions.IllegalUserInputExeption;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -35,7 +38,8 @@ public class DiceTowerTest {
 
     @Test()
     public void removeDiceTestInvalid() throws Exception{
-        diceTower.setDiceTowerNonStraight();
+
+        diceTower.setStrategy(new PointsCalculatorStandard(),new DiceSelectionValidatorStandard());
         Integer [] array1={3,3,3};
         List<Dice> customdice1=DiceListSetUp(array1);
         Integer [] array2={1,2,3};
@@ -43,7 +47,7 @@ public class DiceTowerTest {
         ArrayList<DiceFace> diceFaces=new ArrayList<>();
         diceFaces.add(DiceFace.Three);
 
-        diceTower.setDiceTowerNonStraight();
+
         diceTower.rollNotTakenDices();
         Field f = diceTower.getClass().getDeclaredField("notTakenDices");
         f.setAccessible(true);
@@ -60,7 +64,7 @@ public class DiceTowerTest {
     }
     @Test
     public void removeDiceTestValid() throws Exception{
-        diceTower.setDiceTowerNonStraight();
+        diceTower.setStrategy(new PointsCalculatorStandard(),new DiceSelectionValidatorStandard());
         Integer [] array1={3,3,3};
         List<Dice> customdice1=DiceListSetUp(array1);
         Integer [] array2={1,2,3};
@@ -68,7 +72,7 @@ public class DiceTowerTest {
         ArrayList<DiceFace> diceFaces=new ArrayList<>();
         diceFaces.add(DiceFace.One);
 
-        diceTower.setDiceTowerNonStraight();
+
         diceTower.rollNotTakenDices();
         Field f = diceTower.getClass().getDeclaredField("notTakenDices");
         f.setAccessible(true);
@@ -82,7 +86,7 @@ public class DiceTowerTest {
         @Test
         public void diceListToValueTest() throws Exception{
 
-            diceTower.setDiceTowerFirework();
+            diceTower.setStrategy(new PointsCalculatorStandard(),new DiceSelectionValidatorFirework());
             Integer [] diceArray={2,4,6};
             ArrayList<Dice> expected=DiceListSetUp(diceArray);
             ArrayList<DiceFace> diceFaces=new ArrayList<>();
