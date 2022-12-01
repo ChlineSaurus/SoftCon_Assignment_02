@@ -1,0 +1,58 @@
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>### IntelliJ IDEA ###\nout/\n!**/src/main/**/out/\n!**/src/test/**/out/\n\n### Eclipse ###\n.apt_generated\n.classpath\n.factorypath\n.project\n.settings\n.springBeans\n.sts4-cache\nbin/\n!**/src/main/**/bin/\n!**/src/test/**/bin/\n\n### NetBeans ###\n/nbproject/private/\n/nbbuild/\n/dist/\n/nbdist/\n/.nb-gradle/\n\n### VS Code ###\n.vscode/\n\n### Mac OS ###\n.DS_Store
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.gitignore b/.gitignore
+--- a/.gitignore	
++++ b/.gitignore	
+@@ -26,4 +26,45 @@
+ .vscode/
+ 
+ ### Mac OS ###
+-.DS_Store
+\ No newline at end of file
++.DS_Store
++/lib/apiguardian-api-1.1.2.jar
++/lib/junit-jupiter-5.9.0-RC1.jar
++/lib/junit-jupiter-api-5.9.0-RC1.jar
++/lib/junit-jupiter-engine-5.9.0-RC1.jar
++/lib/junit-jupiter-params-5.9.0-RC1.jar
++/lib/junit-platform-commons-1.9.0-RC1.jar
++/lib/junit-platform-engine-1.9.0-RC1.jar
++/lib/opentest4j-1.2.0.jar
++/.idea/shelf/Uncommitted_changes_before_Update_at_18_11_22,_13_08_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_19_11_22,_18_28_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_20_11_22,_14_36_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_20_11_22,_16_08_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_22_11_22,_13_47_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_22_11_22,_15_48_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_22_11_22,_21_09_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_22,_14_53_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_22,_17_15_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_24_11_22,_11_05_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_24_11_22,_11_51_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_18_11_22__13_08__Changes_.xml
++/.idea/shelf/Uncommitted_changes_before_Update_at_19_11_22__18_28__Changes_.xml
++/.idea/shelf/Uncommitted_changes_before_Update_at_20_11_22__14_36__Changes_.xml
++/.idea/shelf/Uncommitted_changes_before_Update_at_20_11_22__16_08__Changes_.xml
++/.idea/shelf/Uncommitted_changes_before_Update_at_22_11_22__13_47__Changes_.xml
++/.idea/shelf/Uncommitted_changes_before_Update_at_22_11_22__15_48__Changes_.xml
++/.idea/shelf/Uncommitted_changes_before_Update_at_22_11_22__21_09__Changes_.xml
++/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_22__14_53__Changes_.xml
++/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_22__17_15__Changes_.xml
++/.idea/shelf/Uncommitted_changes_before_Update_at_24_11_22__11_05__Changes_.xml
++/.idea/shelf/Uncommitted_changes_before_Update_at_24_11_22__11_51__Changes_.xml
++/.idea/shelf/Uncommitted_changes_before_Update_at_18_11_22,_13_08_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_19_11_22,_18_28_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_20_11_22,_14_36_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_20_11_22,_16_08_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_22_11_22,_13_47_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_22_11_22,_15_48_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_22_11_22,_21_09_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_22,_14_53_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_22,_17_15_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_24_11_22,_11_05_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_24_11_22,_11_51_[Changes]/shelved.patch

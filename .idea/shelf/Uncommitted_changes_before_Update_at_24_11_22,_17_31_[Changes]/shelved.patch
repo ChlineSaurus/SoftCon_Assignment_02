@@ -1,0 +1,375 @@
+Index: src/UI/Display.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package UI;\n\npublic class Display {\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/UI/Display.java b/src/UI/Display.java
+--- a/src/UI/Display.java	(revision 68735404a3fcb38bdbcdb8830eb61e501c56d403)
++++ b/src/UI/Display.java	(date 1669307468707)
+@@ -1,4 +1,51 @@
+ package UI;
+ 
++import dice.DiceFace;
++
++import java.util.ArrayList;
++
+ public class Display {
++    private static final String COLOR_RESET = "\u001B[0m";
++    private static final String BLUE = "\u001B[34m";
++    private static final String RED = "\u001B[31m";
++
++    private static String diceToString(ArrayList<DiceFace> diceList) {
++        ArrayList<String> diceRepresentations = new ArrayList<String>();
++        for(DiceFace aDice: diceList) {
++            diceRepresentations.add(aDice.represent());
++        }
++    }
++
++    public static void displayGameState(ArrayList<DiceFace> notTakenDice, ArrayList<DiceFace> takenDice,
++                                        String playerName, String cardTitel, String cardDescription,
++                                        Integer temporaryPoints, String message) {
++        clearScreen();
++        String output = String.format("Current Player: %s\n\n", playerName);
++        output += String.format("Your Card: %s\n", BLUE + cardTitel + COLOR_RESET);
++        output += cardDescription + "\n\n";
++        output += "Your rolled dice: \n";
++        output += diceToString(notTakenDice) +"\n\n";
++        output += "Dice you already took: \n";
++        output += diceToString(takenDice) +"\n\n";
++        output += String.format("Your temporary Points this turn: %s\n\n", temporaryPoints);
++        output += message;
++    }
++
++    public static void displayScores(ArrayList<String> players, ArrayList<Integer> scores) {
++        assert players.size() == scores.size();
++        clearScreen();
++        for(int player_index = 0; player_index < players.size(); player_index++) {
++            System.out.printf("%s has %2d Points%n", players.get(player_index),scores.get(player_index));
++        }
++    }
++
++    public static void displayMessage(String message) {
++        clearScreen();
++        System.out.println(message);
++    }
++
++    private static void clearScreen() {
++        System.out.print("\033[H\033[2J");
++        System.out.flush();
++    }
+ }
+Index: src/dice/DiceFace.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package dice;\n\nimport java.util.HashMap;\nimport java.util.Map;\n\npublic enum DiceFace {\n      One(1, \"\"\"\n            +-------+\n            |       |\n            |   o   |\n            |       |\n            +-------+\"\"\"),\n      Two(2, \"\"\"\n            +-------+\n            | o     |\n            |       |\n            |     o |\n            +-------+\"\"\"),\n      Three(3, \"\"\"\n            +-------+\n            | o     |\n            |   o   |\n            |     o |\n            +-------+\"\"\"),\n      Four(4, \"\"\"\n            +-------+\n            | o   o |\n            |       |\n            | o   o |\n            +-------+\"\"\"),\n      Five(5, \"\"\"\n            +-------+\n            | o   o |\n            |   o   |\n            | o   o |\n            +-------+\"\"\"),\n      Six(6, \"\"\"\n            +-------+\n            | o   o |\n            | o   o |\n            | o   o |\n            +-------+\"\"\");\n\n      public final Integer integerValue;\n      private final String repString;\n      private static final Map<Integer, DiceFace> map = new HashMap<>();\n\n      DiceFace(Integer integerValue, String repString) {\n            this.integerValue = integerValue;\n            this.repString = repString;\n      }\n\n      static {\n            for (DiceFace aDiceName : DiceFace.values()) {\n                  map.put(aDiceName.integerValue, aDiceName);\n            }\n      }\n\n      public static DiceFace getEnum(int value) {\n            return map.get(value);\n      }\n\n      public static String represent(DiceFace aDiceFace) {\n            return aDiceFace.repString;\n      }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/dice/DiceFace.java b/src/dice/DiceFace.java
+--- a/src/dice/DiceFace.java	(revision 68735404a3fcb38bdbcdb8830eb61e501c56d403)
++++ b/src/dice/DiceFace.java	(date 1669307468699)
+@@ -60,7 +60,7 @@
+             return map.get(value);
+       }
+ 
+-      public static String represent(DiceFace aDiceFace) {
+-            return aDiceFace.repString;
++      public String represent() {
++            return this.repString;
+       }
+ }
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>### IntelliJ IDEA ###\nout/\n!**/src/main/**/out/\n!**/src/test/**/out/\n\n### Eclipse ###\n.apt_generated\n.classpath\n.factorypath\n.project\n.settings\n.springBeans\n.sts4-cache\nbin/\n!**/src/main/**/bin/\n!**/src/test/**/bin/\n\n### NetBeans ###\n/nbproject/private/\n/nbbuild/\n/dist/\n/nbdist/\n/.nb-gradle/\n\n### VS Code ###\n.vscode/\n\n### Mac OS ###\n.DS_Store
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.gitignore b/.gitignore
+--- a/.gitignore	(revision 68735404a3fcb38bdbcdb8830eb61e501c56d403)
++++ b/.gitignore	(date 1669303560884)
+@@ -26,4 +26,45 @@
+ .vscode/
+ 
+ ### Mac OS ###
+-.DS_Store
+\ No newline at end of file
++.DS_Store
++/lib/apiguardian-api-1.1.2.jar
++/lib/junit-jupiter-5.9.0-RC1.jar
++/lib/junit-jupiter-api-5.9.0-RC1.jar
++/lib/junit-jupiter-engine-5.9.0-RC1.jar
++/lib/junit-jupiter-params-5.9.0-RC1.jar
++/lib/junit-platform-commons-1.9.0-RC1.jar
++/lib/junit-platform-engine-1.9.0-RC1.jar
++/lib/opentest4j-1.2.0.jar
++/.idea/shelf/Uncommitted_changes_before_Update_at_18_11_22,_13_08_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_19_11_22,_18_28_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_20_11_22,_14_36_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_20_11_22,_16_08_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_22_11_22,_13_47_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_22_11_22,_15_48_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_22_11_22,_21_09_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_22,_14_53_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_22,_17_15_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_24_11_22,_11_05_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_24_11_22,_11_51_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_18_11_22__13_08__Changes_.xml
++/.idea/shelf/Uncommitted_changes_before_Update_at_19_11_22__18_28__Changes_.xml
++/.idea/shelf/Uncommitted_changes_before_Update_at_20_11_22__14_36__Changes_.xml
++/.idea/shelf/Uncommitted_changes_before_Update_at_20_11_22__16_08__Changes_.xml
++/.idea/shelf/Uncommitted_changes_before_Update_at_22_11_22__13_47__Changes_.xml
++/.idea/shelf/Uncommitted_changes_before_Update_at_22_11_22__15_48__Changes_.xml
++/.idea/shelf/Uncommitted_changes_before_Update_at_22_11_22__21_09__Changes_.xml
++/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_22__14_53__Changes_.xml
++/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_22__17_15__Changes_.xml
++/.idea/shelf/Uncommitted_changes_before_Update_at_24_11_22__11_05__Changes_.xml
++/.idea/shelf/Uncommitted_changes_before_Update_at_24_11_22__11_51__Changes_.xml
++/.idea/shelf/Uncommitted_changes_before_Update_at_18_11_22,_13_08_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_19_11_22,_18_28_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_20_11_22,_14_36_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_20_11_22,_16_08_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_22_11_22,_13_47_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_22_11_22,_15_48_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_22_11_22,_21_09_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_22,_14_53_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_22,_17_15_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_24_11_22,_11_05_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Update_at_24_11_22,_11_51_[Changes]/shelved.patch
+Index: Test/UI/DiceRepresentationTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package UI;\n\nimport dice.DiceFace;\nimport org.junit.jupiter.api.Assertions;\nimport org.junit.jupiter.api.Test;\n\npublic class DiceRepresentationTest {\n\n    @Test\n    public void testRepresent6(){\n        String expected=\"\"\"\n            +-------+\n            | o   o |\n            | o   o |\n            | o   o |\n            +-------+\"\"\";\n        String actual= DiceFace.represent(DiceFace.Six);\n        Assertions.assertEquals(actual,expected);\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Test/UI/DiceRepresentationTest.java b/Test/UI/DiceRepresentationTest.java
+--- a/Test/UI/DiceRepresentationTest.java	(revision 68735404a3fcb38bdbcdb8830eb61e501c56d403)
++++ b/Test/UI/DiceRepresentationTest.java	(date 1669307468692)
+@@ -14,7 +14,7 @@
+             | o   o |
+             | o   o |
+             +-------+""";
+-        String actual= DiceFace.represent(DiceFace.Six);
++        String actual= DiceFace.Six.represent();
+         Assertions.assertEquals(actual,expected);
+     }
+ }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"2d7c8c4b-7931-42c0-a061-826b7bfce578\" name=\"Changes\" comment=\"adding gameconstants necessary for win\">\n      <change afterPath=\"$PROJECT_DIR$/.idea/libraries/junit_jupiter_params.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/libraries/junit_jupiter.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/SoftCon_Assignment_02.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/SoftCon_Assignment_02.iml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/dice/DiceTower.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/dice/DiceTower.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/testing/UI/DiceRepresentationTest.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Test/UI/DiceRepresentationTest.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/testing/dice/DiceTest.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Test/dice/DiceTest.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"CodeInsightWorkspaceSettings\">\n    <option name=\"optimizeImportsOnTheFly\" value=\"true\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Enum\" />\n        <option value=\"Interface\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n    <option name=\"RESET_MODE\" value=\"KEEP\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2HJWK90zp5F9a6lMyZ6LmDNLaQe\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"Downloaded.Files.Path.Enabled\": \"false\",\n    \"Repository.Attach.Annotations\": \"false\",\n    \"Repository.Attach.JavaDocs\": \"false\",\n    \"Repository.Attach.Sources\": \"false\",\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\n    \"WebServerToolWindowFactoryState\": \"false\",\n    \"jdk.selected.JAVA_MODULE\": \"19\",\n    \"last_opened_file_path\": \"/Users/danielmaksimovic/OneDrive - Universität Zürich UZH/Studium/HS22/Software Construction I/Java/SoftCon_Assignment_02/src\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"nodejs_package_manager_path\": \"npm\",\n    \"project.structure.last.edited\": \"Libraries\",\n    \"project.structure.proportion\": \"0.15\",\n    \"project.structure.side.proportion\": \"0.2\",\n    \"settings.editor.selected.configurable\": \"reference.settingsdialog.IDE.editor.colors\"\n  }\n}]]></component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src\" />\n    </key>\n  </component>\n  <component name=\"RunManager\" selected=\"JUnit.DiceRepresentationTest.testRepresent6\">\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"Main\" />\n      <module name=\"SoftCon_Assignment_02\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"DiceRepresentationTest\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"SoftCon_Assignment_02\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"UI.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"UI\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"UI.DiceRepresentationTest\" />\n      <option name=\"TEST_OBJECT\" value=\"class\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"DiceRepresentationTest.testRepresent6\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"SoftCon_Assignment_02\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"UI.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"UI\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"UI.DiceRepresentationTest\" />\n      <option name=\"METHOD_NAME\" value=\"testRepresent6\" />\n      <option name=\"TEST_OBJECT\" value=\"method\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"DiceTest.testRollGet (1)\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"SoftCon_Assignment_02\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"dice.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"dice\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"dice.DiceTest\" />\n      <option name=\"METHOD_NAME\" value=\"testRollGet\" />\n      <option name=\"TEST_OBJECT\" value=\"method\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"DiceTest.testRollGet\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"SoftCon_Assignment_02\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"testing.dice.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"testing.dice\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"testing.dice.DiceTest\" />\n      <option name=\"METHOD_NAME\" value=\"testRollGet\" />\n      <option name=\"TEST_OBJECT\" value=\"method\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"JUnit.DiceRepresentationTest.testRepresent6\" />\n        <item itemvalue=\"JUnit.DiceRepresentationTest\" />\n        <item itemvalue=\"JUnit.DiceTest.testRollGet (1)\" />\n        <item itemvalue=\"Application.Main\" />\n        <item itemvalue=\"JUnit.DiceTest.testRollGet\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"2d7c8c4b-7931-42c0-a061-826b7bfce578\" name=\"Changes\" comment=\"\" />\n      <created>1668003600749</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1668003600749</updated>\n      <workItem from=\"1668003604479\" duration=\"1000\" />\n      <workItem from=\"1668004287395\" duration=\"135000\" />\n      <workItem from=\"1668119469469\" duration=\"156000\" />\n      <workItem from=\"1668119877254\" duration=\"6000\" />\n      <workItem from=\"1668456786595\" duration=\"623000\" />\n      <workItem from=\"1668503331602\" duration=\"1468000\" />\n      <workItem from=\"1668513990886\" duration=\"614000\" />\n      <workItem from=\"1668588064871\" duration=\"2311000\" />\n      <workItem from=\"1668596449577\" duration=\"1525000\" />\n      <workItem from=\"1668599635375\" duration=\"8151000\" />\n      <workItem from=\"1668676448649\" duration=\"1061000\" />\n      <workItem from=\"1668677731173\" duration=\"1718000\" />\n      <workItem from=\"1668698634153\" duration=\"2550000\" />\n      <workItem from=\"1668701408033\" duration=\"22578000\" />\n      <workItem from=\"1669218556148\" duration=\"9739000\" />\n      <workItem from=\"1669277494079\" duration=\"2638000\" />\n      <workItem from=\"1669280574635\" duration=\"4509000\" />\n      <workItem from=\"1669286275898\" duration=\"4955000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Making Dice class\">\n      <created>1668588937558</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668588937558</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"Grundstruktur\">\n      <created>1668599524124</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668599524124</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"AbstractCard\">\n      <created>1668600940667</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668600940667</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"resturtucring more still needed\">\n      <created>1668677969001</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668677969001</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"trying to implement interfaces&#10;Deck is currently not good &#10;still needs work to be done&#10;why can't we jjust use one deck\">\n      <created>1668702382419</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668702382419</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"hardcoded tutorequirements&#10;meaning that it checks the toto requirements if it'isnt a straight\">\n      <created>1668716214478</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668716214478</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"TutoCondition implemented for straight\">\n      <created>1668722148960</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668722148960</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"skipTurn for skip card in AbstactCard... &#10;still needs to be implemented in constructer of AbstractCard\">\n      <created>1668807235482</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668807235482</updated>\n    </task>\n    <task id=\"LOCAL-00009\" summary=\"restrucutirn project\">\n      <created>1668855010835</created>\n      <option name=\"number\" value=\"00009\" />\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668855010835</updated>\n    </task>\n    <task id=\"LOCAL-00010\" summary=\"running test works&#10;had to comment out wrong areas\">\n      <created>1668866678503</created>\n      <option name=\"number\" value=\"00010\" />\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668866678503</updated>\n    </task>\n    <task id=\"LOCAL-00011\" summary=\"running test works&#10;had to comment out wrong areas\">\n      <created>1668867411686</created>\n      <option name=\"number\" value=\"00011\" />\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668867411686</updated>\n    </task>\n    <task id=\"LOCAL-00012\" summary=\"Mit Fehlsern\">\n      <created>1668956883378</created>\n      <option name=\"number\" value=\"00012\" />\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668956883378</updated>\n    </task>\n    <task id=\"LOCAL-00013\" summary=\"some changes\">\n      <created>1669219216099</created>\n      <option name=\"number\" value=\"00013\" />\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669219216099</updated>\n    </task>\n    <task id=\"LOCAL-00014\" summary=\"validation impletemd with stratergy still need to change it to depandcy injection problematic aspect one needs to if it is a straight card one discover this from the card\">\n      <created>1669240589496</created>\n      <option name=\"number\" value=\"00014\" />\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669240589496</updated>\n    </task>\n    <task id=\"LOCAL-00015\" summary=\"validation impletemd with stratergy still need to change it to depandcy injection problematic aspect one needs to if it is a straight card one discover this from the card\">\n      <created>1669241453906</created>\n      <option name=\"number\" value=\"00015\" />\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669241453906</updated>\n    </task>\n    <task id=\"LOCAL-00016\" summary=\"fixed Boolean boolean mistake\">\n      <created>1669241896906</created>\n      <option name=\"number\" value=\"00016\" />\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669241896906</updated>\n    </task>\n    <task id=\"LOCAL-00017\" summary=\"caluculatepoints classes made... &#10;need to get a way to get the recently taken dice\">\n      <created>1669284089822</created>\n      <option name=\"number\" value=\"00017\" />\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669284089822</updated>\n    </task>\n    <task id=\"LOCAL-00018\" summary=\"adding gameconstants necessary for win\">\n      <created>1669297735345</created>\n      <option name=\"number\" value=\"00018\" />\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669297735345</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"19\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Making Dice class\" />\n    <MESSAGE value=\"Grundstruktur\" />\n    <MESSAGE value=\"AbstractCard\" />\n    <MESSAGE value=\"resturtucring more still needed\" />\n    <MESSAGE value=\"trying to implement interfaces&#10;Deck is currently not good &#10;still needs work to be done&#10;why can't we jjust use one deck\" />\n    <MESSAGE value=\"hardcoded tutorequirements&#10;meaning that it checks the toto requirements if it'isnt a straight\" />\n    <MESSAGE value=\"TutoCondition implemented for straight\" />\n    <MESSAGE value=\"skipTurn for skip card in AbstactCard... &#10;still needs to be implemented in constructer of AbstractCard\" />\n    <MESSAGE value=\"restrucutirn project\" />\n    <MESSAGE value=\"running test works&#10;had to comment out wrong areas\" />\n    <MESSAGE value=\"Mit Fehlsern\" />\n    <MESSAGE value=\"some changes\" />\n    <MESSAGE value=\"validation impletemd with stratergy still need to change it to depandcy injection problematic aspect one needs to if it is a straight card one discover this from the card\" />\n    <MESSAGE value=\"fixed Boolean boolean mistake\" />\n    <MESSAGE value=\"caluculatepoints classes made... &#10;need to get a way to get the recently taken dice\" />\n    <MESSAGE value=\"adding gameconstants necessary for win\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"adding gameconstants necessary for win\" />\n  </component>\n  <component name=\"XDebuggerManager\">\n    <breakpoint-manager>\n      <breakpoints>\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\n          <url>file://$PROJECT_DIR$/src/Main.java</url>\n          <line>9</line>\n          <option name=\"timeStamp\" value=\"1\" />\n        </line-breakpoint>\n      </breakpoints>\n    </breakpoint-manager>\n  </component>\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\n    <SUITE FILE_PATH=\"coverage/SoftCon_Assignment_02$DiceRepresentationTest_testRepresent6.ic\" NAME=\"DiceRepresentationTest.testRepresent6 Coverage Results\" MODIFIED=\"1669302462013\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\">\n      <FILTER>UI.*</FILTER>\n    </SUITE>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 68735404a3fcb38bdbcdb8830eb61e501c56d403)
++++ b/.idea/workspace.xml	(date 1669307468753)
+@@ -4,14 +4,12 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="adding gameconstants necessary for win">
+-      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_jupiter_params.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/libraries/junit_jupiter.xml" beforeDir="false" />
++    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="unversioned files">
++      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/SoftCon_Assignment_02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SoftCon_Assignment_02.iml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/dice/DiceTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/DiceTower.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/testing/UI/DiceRepresentationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/UI/DiceRepresentationTest.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/testing/dice/DiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/dice/DiceTest.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Test/UI/DiceRepresentationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/UI/DiceRepresentationTest.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/UI/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Display.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/dice/DiceFace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/DiceFace.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -44,35 +42,35 @@
+   <component name="ProjectViewState">
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "Downloaded.Files.Path.Enabled": "false",
+-    "Repository.Attach.Annotations": "false",
+-    "Repository.Attach.JavaDocs": "false",
+-    "Repository.Attach.Sources": "false",
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "WebServerToolWindowFactoryState": "false",
+-    "jdk.selected.JAVA_MODULE": "19",
+-    "last_opened_file_path": "/Users/danielmaksimovic/OneDrive - Universität Zürich UZH/Studium/HS22/Software Construction I/Java/SoftCon_Assignment_02/src",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "project.structure.last.edited": "Libraries",
+-    "project.structure.proportion": "0.15",
+-    "project.structure.side.proportion": "0.2",
+-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
++    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
++    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
++    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
++    &quot;last_opened_file_path&quot;: &quot;/Users/danielmaksimovic/OneDrive - Universität Zürich UZH/Studium/HS22/Software Construction I/Java/SoftCon_Assignment_02/src&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="$PROJECT_DIR$/src" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="JUnit.DiceRepresentationTest.testRepresent6">
++  <component name="RunManager" selected="Application.Main">
+     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="Main" />
+       <module name="SoftCon_Assignment_02" />
+@@ -80,48 +78,33 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="DiceRepresentationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+-      <module name="SoftCon_Assignment_02" />
+-      <extension name="coverage">
+-        <pattern>
+-          <option name="PATTERN" value="UI.*" />
+-          <option name="ENABLED" value="true" />
+-        </pattern>
+-      </extension>
+-      <option name="PACKAGE_NAME" value="UI" />
+-      <option name="MAIN_CLASS_NAME" value="UI.DiceRepresentationTest" />
+-      <option name="TEST_OBJECT" value="class" />
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+-    <configuration name="DiceRepresentationTest.testRepresent6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++    <configuration name="DiceRepresenatiotaionTest.testRepresent6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="SoftCon_Assignment_02" />
+       <extension name="coverage">
+         <pattern>
+-          <option name="PATTERN" value="UI.*" />
++          <option name="PATTERN" value="testing.UI.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+-      <option name="PACKAGE_NAME" value="UI" />
+-      <option name="MAIN_CLASS_NAME" value="UI.DiceRepresentationTest" />
++      <option name="PACKAGE_NAME" value="testing.UI" />
++      <option name="MAIN_CLASS_NAME" value="testing.UI.DiceRepresenatiotaionTest" />
+       <option name="METHOD_NAME" value="testRepresent6" />
+       <option name="TEST_OBJECT" value="method" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="DiceTest.testRollGet (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++    <configuration name="DiceTest.getValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="SoftCon_Assignment_02" />
+       <extension name="coverage">
+         <pattern>
+-          <option name="PATTERN" value="dice.*" />
++          <option name="PATTERN" value="testing.dice.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+-      <option name="PACKAGE_NAME" value="dice" />
+-      <option name="MAIN_CLASS_NAME" value="dice.DiceTest" />
+-      <option name="METHOD_NAME" value="testRollGet" />
++      <option name="PACKAGE_NAME" value="testing.dice" />
++      <option name="MAIN_CLASS_NAME" value="testing.dice.DiceTest" />
++      <option name="METHOD_NAME" value="getValue" />
+       <option name="TEST_OBJECT" value="method" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+@@ -145,11 +128,10 @@
+     </configuration>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="JUnit.DiceRepresentationTest.testRepresent6" />
+-        <item itemvalue="JUnit.DiceRepresentationTest" />
+-        <item itemvalue="JUnit.DiceTest.testRollGet (1)" />
+         <item itemvalue="Application.Main" />
+         <item itemvalue="JUnit.DiceTest.testRollGet" />
++        <item itemvalue="JUnit.DiceRepresenatiotaionTest.testRepresent6" />
++        <item itemvalue="JUnit.DiceTest.getValue" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -177,8 +159,7 @@
+       <workItem from="1668701408033" duration="22578000" />
+       <workItem from="1669218556148" duration="9739000" />
+       <workItem from="1669277494079" duration="2638000" />
+-      <workItem from="1669280574635" duration="4509000" />
+-      <workItem from="1669286275898" duration="4955000" />
++      <workItem from="1669280574635" duration="3384000" />
+     </task>
+     <task id="LOCAL-00001" summary="Making Dice class">
+       <created>1668588937558</created>
+@@ -292,21 +273,7 @@
+       <option name="project" value="LOCAL" />
+       <updated>1669241896906</updated>
+     </task>
+-    <task id="LOCAL-00017" summary="caluculatepoints classes made... &#10;need to get a way to get the recently taken dice">
+-      <created>1669284089822</created>
+-      <option name="number" value="00017" />
+-      <option name="presentableId" value="LOCAL-00017" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1669284089822</updated>
+-    </task>
+-    <task id="LOCAL-00018" summary="adding gameconstants necessary for win">
+-      <created>1669297735345</created>
+-      <option name="number" value="00018" />
+-      <option name="presentableId" value="LOCAL-00018" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1669297735345</updated>
+-    </task>
+-    <option name="localTasksCounter" value="19" />
++    <option name="localTasksCounter" value="17" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -338,9 +305,7 @@
+     <MESSAGE value="some changes" />
+     <MESSAGE value="validation impletemd with stratergy still need to change it to depandcy injection problematic aspect one needs to if it is a straight card one discover this from the card" />
+     <MESSAGE value="fixed Boolean boolean mistake" />
+-    <MESSAGE value="caluculatepoints classes made... &#10;need to get a way to get the recently taken dice" />
+-    <MESSAGE value="adding gameconstants necessary for win" />
+-    <option name="LAST_COMMIT_MESSAGE" value="adding gameconstants necessary for win" />
++    <option name="LAST_COMMIT_MESSAGE" value="fixed Boolean boolean mistake" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
+@@ -353,9 +318,4 @@
+       </breakpoints>
+     </breakpoint-manager>
+   </component>
+-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$DiceRepresentationTest_testRepresent6.ic" NAME="DiceRepresentationTest.testRepresent6 Coverage Results" MODIFIED="1669302462013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+-      <FILTER>UI.*</FILTER>
+-    </SUITE>
+-  </component>
+ </project>
+\ No newline at end of file
