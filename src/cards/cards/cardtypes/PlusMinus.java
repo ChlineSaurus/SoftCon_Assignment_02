@@ -9,8 +9,10 @@ public class PlusMinus extends AbstractCard {
     public PlusMinus() {
 
         name="PlusMinus";
-        description="You only can achieve if you roll a tutto. You'll recieve 1000 points" +
-                " and 1000 points are going to be deducted from the leader. ";
+        description= """
+                You must try to accomplish a 'Tutto' and may not stop before you do. If you roll a null, you don't
+                score any points. But if you succeed, you score exactly 1000 points, irrespective of the number of
+                points you have rolled. Besides this, the leading player has 1000 Points deducted.""";
         bonusPoints=1000;
         deductionPoints=1000;
         requiredForPoints= TuttoRequired.One;

@@ -14,6 +14,12 @@ public class Fireworks extends AbstractCard {
         immunity=true;
         bonusPoints=0;
         name="Fireworks";
+        description = """
+                You have to keep throwing the dice until you roll a null. After each roll, you need to keep
+                all valid single dice and triplets. If you accomplish a 'Tutto' you have to continue without revealing
+                revealing a new card. Your turn ends only when you roll a null. However, you score all points you have
+                rolled so far.
+                """;
         requiredForPoints= TuttoRequired.Zero;
         requiredForBonus=TuttoRequired.Zero;
 
