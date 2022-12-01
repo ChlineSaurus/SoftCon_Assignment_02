@@ -22,6 +22,7 @@ public class CurrentlyPlaying implements TurnState{
         if(aTurn.turnCard.isEndTurn()) {
             aTurn.temporaryScore = 0;
             aTurn.setCurrentState(new EndTurn(aTurn));
+            return;
         }
         TurnFlow();
     }
