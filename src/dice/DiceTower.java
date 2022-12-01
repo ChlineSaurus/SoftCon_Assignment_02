@@ -100,7 +100,7 @@ public class DiceTower {
         if (!diceSelectionValidator.isUserSelectionValid(temporaryTakenDices,notTakenDices,takenDices)){
             throw new IllegalUserInputExeption("Make sure that only take valid dice");
         }
- else {
+        else {
             diceTakenSinceRoll = true;
             removeTemporaryTakenDices(temporaryTakenDices);
             return pointCalculator.calculatePoints(temporaryTakenDices);

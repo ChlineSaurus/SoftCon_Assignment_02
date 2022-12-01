@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="fixing 7 dice problem think dices are good to go">
+    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="fixed issues removes correct dices problem is that if you roll 5 5 5 and select them singley you'll recieve 150 points and not 500">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SetUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SetUp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dice/DiceTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/DiceTower.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -191,13 +193,6 @@
       <workItem from="1669412958477" duration="5604000" />
       <workItem from="1669493988940" duration="4060000" />
       <workItem from="1669822402528" duration="6513000" />
-    </task>
-    <task id="LOCAL-00001" summary="Making Dice class">
-      <created>1668588937558</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1668588937558</updated>
     </task>
     <task id="LOCAL-00002" summary="Grundstruktur">
       <created>1668599524124</created>
@@ -535,7 +530,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669922831120</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="fixed issues removes correct dices problem is that if you roll 5 5 5 and select them singley you'll recieve 150 points and not 500">
+      <created>1669923372628</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1669923372629</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -565,7 +567,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changing tests" />
     <MESSAGE value="setup comment" />
     <MESSAGE value="getarraywithplayermaxpoints necessary for plus/minuscard &#10;I still need to fix cards" />
     <MESSAGE value="New behavoir that forces user to select valid cards&#10;&#10;restructuring files to make the structuring clearer" />
@@ -590,7 +591,8 @@
     <MESSAGE value="Changes dicetower so that it works temporary dice" />
     <MESSAGE value="better now but problem that 7 dice" />
     <MESSAGE value="fixing 7 dice problem think dices are good to go" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing 7 dice problem think dices are good to go" />
+    <MESSAGE value="fixed issues removes correct dices problem is that if you roll 5 5 5 and select them singley you'll recieve 150 points and not 500" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed issues removes correct dices problem is that if you roll 5 5 5 and select them singley you'll recieve 150 points and not 500" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
