@@ -66,8 +66,13 @@ public class DiceTower {
 
         for (Dice aDice:temporaryTakenDices){
             takenDices.add(aDice);
+            for (Dice notTakenDice:notTakenDices){
+                if (notTakenDice.getFaceValue()==aDice.getFaceValue()){
+                    notTakenDices.remove(notTakenDice);
+                    break;
+                }
+            }
 
-            notTakenDices.remove(0);
         }
     }
 

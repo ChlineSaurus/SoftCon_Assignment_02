@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="better now but problem that 7 dice">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/dice/DiceTowerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/dice/DiceTowerTest.java" afterDir="false" />
+    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="fixing 7 dice problem think dices are good to go">
       <change beforePath="$PROJECT_DIR$/src/dice/DiceTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/DiceTower.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -530,7 +528,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669921271754</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="fixing 7 dice problem think dices are good to go">
+      <created>1669922831120</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1669922831120</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -560,7 +565,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixedproblem in metaprogramming" />
     <MESSAGE value="changing tests" />
     <MESSAGE value="setup comment" />
     <MESSAGE value="getarraywithplayermaxpoints necessary for plus/minuscard &#10;I still need to fix cards" />
@@ -585,7 +589,8 @@
     <MESSAGE value="renaming tests so that they don't fail" />
     <MESSAGE value="Changes dicetower so that it works temporary dice" />
     <MESSAGE value="better now but problem that 7 dice" />
-    <option name="LAST_COMMIT_MESSAGE" value="better now but problem that 7 dice" />
+    <MESSAGE value="fixing 7 dice problem think dices are good to go" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing 7 dice problem think dices are good to go" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
