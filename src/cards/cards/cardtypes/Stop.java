@@ -7,7 +7,7 @@ public class Stop extends AbstractCard {
 
     public Stop(){
         name="Stop";
-        description="Though Luck! You have to end your turn, and your left neighbour has his turn.";
+        description="Tough Luck! You have to end your turn, and your left neighbour has his turn.";
         this.endTurn=true;
     }
 }

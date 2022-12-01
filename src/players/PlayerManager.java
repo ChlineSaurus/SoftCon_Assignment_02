@@ -130,4 +130,8 @@ public class PlayerManager {
         UI.Display.declareWinner(winner.name);
         exit(0);
     }
+    public String getNextPlayersName(){
+        int nextPlayersIndex=(currentPlayerIndex+1)%(players.size()-1);
+        return players.get(nextPlayersIndex).name;
+    }
 }

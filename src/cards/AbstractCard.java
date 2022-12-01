@@ -85,9 +85,6 @@ public abstract class AbstractCard {
     public boolean isEndTurn(){
         return endTurn;
     }
-
-    //public final boolean skipTurn;
-    // needs to be added to Constructor
 }
 
 
