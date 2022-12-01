@@ -52,6 +52,7 @@ public class DiceTower {
             for(Dice aNotTakeDice: notTakenDices) {
                 if (aNotTakeDice.getFaceValue().equals(diceToRemove)) {
                     temporaryTakenDices.add(aNotTakeDice);
+                    break;
 
                 }
             }
@@ -63,6 +64,7 @@ public class DiceTower {
 
         for (Dice aDice:temporaryTakenDices){
             takenDices.add(aDice);
+            assert notTakenDices.contains(aDice);
             notTakenDices.remove(aDice);
         }
     }
@@ -73,6 +75,7 @@ public class DiceTower {
     }
 
     public int removeDice(ArrayList<DiceFace> dicesToRemove) throws IllegalUserInputExeption {
+        assert notTakenDices.size()+takenDices.size()==6;
         if (dicesToRemove.size() == 0) {
             throw new IllegalUserInputExeption(Messages.noDiceTakenException.message);
         }
