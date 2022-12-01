@@ -107,6 +107,30 @@ public class DiceTowerTest {
 
 
         }
+        @Test
+        public void checklengthofTaken() throws Exception{
+            diceTower.setStrategy(new PointsCalculatorStandard(),new DiceSelectionValidatorStandard());
+            Integer [] array1={1,3,3};
+            List<Dice> customdice1=DiceListSetUp(array1);
+            Integer [] array2={3,3,3};
+            List<Dice> customdice2=DiceListSetUp(array2);
+            ArrayList<DiceFace> diceFaces=new ArrayList<>();
+            diceFaces.add(DiceFace.Three);
+            diceFaces.add(DiceFace.Three);
+            diceFaces.add(DiceFace.Three);
+            diceTower.rollNotTakenDices();
+            Field f = diceTower.getClass().getDeclaredField("notTakenDices");
+            f.setAccessible(true);
+            f.set(diceTower,customdice2);
+            Field f2= diceTower.getClass().getDeclaredField("takenDices");
+            f2.setAccessible(true);
+            f2.set(diceTower,customdice1);
+
+            diceTower.removeDice(diceFaces);
+            int actual=diceTower.showNotTakenDices().size()+diceTower.showTakenDices().size();
+
+            Assertions.assertEquals(6,actual);
+        }
 
 
     }

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DiceTower {
-     private ArrayList<Dice> notTakenDices;
+    final private ArrayList<Dice> notTakenDices;
     final private ArrayList<Dice> takenDices;
 
     //the dices the user selects
@@ -61,11 +61,13 @@ public class DiceTower {
 
     }
     private void removeTemporaryTakenDices(List<Dice> temporaryTakenDices){
+        assert temporaryTakenDices!=null;
+        assert temporaryTakenDices.size()<=notTakenDices.size();
 
         for (Dice aDice:temporaryTakenDices){
             takenDices.add(aDice);
-            assert notTakenDices.contains(aDice);
-            notTakenDices.remove(aDice);
+
+            notTakenDices.remove(0);
         }
     }
 
