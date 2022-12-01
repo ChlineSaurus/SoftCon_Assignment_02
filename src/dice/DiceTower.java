@@ -48,7 +48,7 @@ public class DiceTower {
     }
 
     public boolean notNullRoll(){
-        return pointCalculator.validateDice(notTakenDices,takenDices);
+        return pointCalculator.validateDice(notTakenDices, takenDices);
     }
 
     public int removeDice(ArrayList<DiceFace> dicesToRemove) throws IllegalUserInputExeption {
