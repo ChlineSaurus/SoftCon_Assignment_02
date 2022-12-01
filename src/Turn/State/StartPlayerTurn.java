@@ -18,6 +18,7 @@ public class StartPlayerTurn implements TurnState {
         while(true) {
             try {
                 DisplayOrRoll();
+                aTurn.setCurrentState(new CurrentlyPlaying(aTurn));
                 break;
             } catch (IllegalUserInputExeption e) {
                 UI.Display.displayMessage(e.getMessage());

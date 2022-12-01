@@ -46,9 +46,8 @@ public class Turn {
 
     public void setCurrentState(TurnState currentState) {
         this.currentState = currentState;
-        currentState.next();
     }
-    public void nextState() throws IllegalUserInputExeption {
+    public void execute() throws IllegalUserInputExeption {
         currentState.next();
     }
     public void displayTurn(String message) {
@@ -71,7 +70,7 @@ public class Turn {
     }
 
     public boolean tuttoMade() {
-        return aDiceTower.tuttoAccomplished();
+        return aDiceTower.madeTutto();
     }
 
     public boolean isDiceTakenSinceRoll(){

@@ -31,8 +31,7 @@ public class CurrentlyPlaying implements TurnState{
     //evtl. chamer au die ganzi manage game denne lösche...
 
     private void TurnFlow() {
-        boolean turnFinished = false;
-        while(!turnFinished) {
+        while(true) {
             aTurn.rollNotTakenDices();
             if (!aTurn.validDiceExist()) {
                 aTurn.displayTurn("You rolled a Null");

@@ -12,20 +12,22 @@ public class Display {
     private static final String RED = "\u001B[31m";
 
     private static String diceToString(ArrayList<DiceFace> diceList) {
+        if (diceList.size() == 0) {
+            return "";
+        }
         ArrayList<List<String>> splitUpRepresentations = new ArrayList<>();
         for(DiceFace aDice: diceList) {
             String diceRepresentations = (aDice.represent());
             List<String> aSplitUpRepresentation = Arrays.asList(diceRepresentations.split("\n"));
             splitUpRepresentations.add(aSplitUpRepresentation);
         }
-        System.out.println(splitUpRepresentations);
         StringBuilder buildingString = new StringBuilder();
         for(int row = 0; row < splitUpRepresentations.get(0).size(); row++) {
             for (List<String> aDice : splitUpRepresentations) {
                 buildingString.append(aDice.get(row));
             }
             buildingString.append("\n");
-            buildingString.append("  ");
+            buildingString.append("");
         }
         String returnString = RED + buildingString.toString() + COLOR_RESET;
         return returnString.replaceAll("o", COLOR_RESET + "o" + RED);
@@ -49,6 +51,7 @@ public class Display {
                 message;
         clearScreen();
         System.out.println(output);
+        waiting();
     }
 
     public static void displayScores() {
@@ -62,25 +65,31 @@ public class Display {
         for(int player_index = 0; player_index < players.size(); player_index++) {
             System.out.printf("%s has %2d Points\n", players.get(player_index),scores.get(player_index));
         }
+        waiting();
     }
 
     public static void displayMessage(String message) {
         clearScreen();
         System.out.println(message);
+        waiting();
     }
 
     public static void declareWinner(String Winner) {
         clearScreen();
         displayScores();
         System.out.printf("%s has won the Game! Congratulations!", RED + Winner + COLOR_RESET);
+        waiting();
     }
 
-    private static void clearScreen() {
+    private static void waiting() {
         try {
-            Thread.sleep(5000);
+            Thread.sleep(50);
         } catch (InterruptedException e) {
             System.out.println("Huston, we have a problem");
         }
+    }
+
+    private static void clearScreen() {
         System.out.print("\033[H\033[2J");
         System.out.flush();
     }

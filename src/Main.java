@@ -8,8 +8,9 @@ public class Main {
 
         SetUp.setUpGame();
         Turn aTurn = new Turn();
-        aTurn.nextState();
-
+        while (true) {
+            aTurn.execute();
+        }
 
         //TurnState.Turn aTurn = new TurnState.Turn();
 
