@@ -18,8 +18,7 @@ public class SetUp {
                 //make sure that is within in the limit the input and lower level
                 necessaryPoints = Input.takeIntegerInput();
                 if (necessaryPoints<GameConstants.minAllowedPoints.definedConstant || necessaryPoints>GameConstants.maxAllowedPoints.definedConstant){
-                throw new IllegalUserInputExeption("The minimum necessary points is "
-                        + GameConstants.minAllowedPoints.definedConstant + "the maximum is" +GameConstants.maxAllowedPoints.definedConstant);
+                throw new IllegalUserInputExeption(Msg.pointInputOutOfBounds.message);
                 }
                 break;
             } catch (IllegalUserInputExeption e) {

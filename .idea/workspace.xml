@@ -4,24 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="next player replaced with the name of the next player">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_11_22,_16_25_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_11_22,_17_31_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_11_22__16_25__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_11_22__17_31__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/dice/NotNullNonStraightTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/dice/NotNullNonStraightTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/dice/NotNullStraightTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/dice/NotNullStraightTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Enums/Messages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Enums/Msg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Input/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Input/Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Input/TuttoInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Input/TuttoInput.java" afterDir="false" />
+    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="next player works now ... message is now callled msg">
+      <change beforePath="$PROJECT_DIR$/src/Enums/Msg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Enums/Msg.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SetUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SetUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Turn/State/Tutto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn/State/Tutto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dice/DiceTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/DiceTower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dice/pointCalculator/PointCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/pointCalculator/PointCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dice/pointCalculator/PointCalculatorStraight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/pointCalculator/PointCalculatorStraight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dice/pointCalculator/PointsCalculatorStandard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/pointCalculator/PointsCalculatorStandard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/players/PlayerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/players/PlayerManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,14 +194,7 @@
       <workItem from="1669412958477" duration="5604000" />
       <workItem from="1669493988940" duration="4060000" />
       <workItem from="1669822402528" duration="6513000" />
-      <workItem from="1669967769785" duration="712000" />
-    </task>
-    <task id="LOCAL-00004" summary="resturtucring more still needed">
-      <created>1668677969001</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1668677969001</updated>
+      <workItem from="1669967769785" duration="1023000" />
     </task>
     <task id="LOCAL-00005" summary="trying to implement interfaces&#10;Deck is currently not good &#10;still needs work to be done&#10;why can't we jjust use one deck">
       <created>1668702382419</created>
@@ -554,7 +532,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669930269706</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="next player works now ... message is now callled msg">
+      <created>1669968531404</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1669968531404</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -584,7 +569,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="New behavoir that forces user to select valid cards&#10;&#10;restructuring files to make the structuring clearer" />
     <MESSAGE value="trying to implement the the three folders into to dicetower &#10;namely CalculateRollPoints&#10;Notnullroll&#10;ValidateUserSelection works but needs to be imbed to dicetower" />
     <MESSAGE value="Singleton PlayerManager" />
     <MESSAGE value="get dicetowers to work" />
@@ -609,7 +593,8 @@
     <MESSAGE value="fixed issues removes correct dices problem is that if you roll 5 5 5 and select them singley you'll recieve 150 points and not 500" />
     <MESSAGE value="minimum and max points introduced" />
     <MESSAGE value="next player replaced with the name of the next player" />
-    <option name="LAST_COMMIT_MESSAGE" value="next player replaced with the name of the next player" />
+    <MESSAGE value="next player works now ... message is now callled msg" />
+    <option name="LAST_COMMIT_MESSAGE" value="next player works now ... message is now callled msg" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
