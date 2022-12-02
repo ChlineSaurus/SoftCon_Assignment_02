@@ -40,6 +40,5 @@ public class Tutto implements TurnState{
                 aTurn.setCurrentState(new CurrentlyPlaying(aTurn));
             }
         }
-        //else throw error
     }
 }

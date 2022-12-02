@@ -48,12 +48,13 @@ public class DiceTower {
     private ArrayList<Dice> createTemporaryTakenDices(ArrayList<DiceFace> dicesToRemove){
         ArrayList<Dice> temporaryTakenDices = new ArrayList<>();
         for(DiceFace diceToRemove: dicesToRemove) {
-
             for(Dice aNotTakeDice: notTakenDices) {
+                if (temporaryTakenDices.contains(aNotTakeDice)) {
+                    continue;
+                }
                 if (aNotTakeDice.getFaceValue().equals(diceToRemove)) {
                     temporaryTakenDices.add(aNotTakeDice);
                     break;
-
                 }
             }
         }
@@ -66,13 +67,7 @@ public class DiceTower {
 
         for (Dice aDice:temporaryTakenDices){
             takenDices.add(aDice);
-            for (Dice notTakenDice:notTakenDices){
-                if (notTakenDice.getFaceValue()==aDice.getFaceValue()){
-                    notTakenDices.remove(notTakenDice);
-                    break;
-                }
-            }
-
+            notTakenDices.remove(aDice);
         }
     }
 

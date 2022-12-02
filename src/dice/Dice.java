@@ -1,13 +1,13 @@
 package dice;
 
-import java.util.concurrent.ThreadLocalRandom;
+import java.util.Random;
 
 public class Dice {
-    static final DiceFace[] FaceValues = DiceFace.values();
+    final DiceFace[] FaceValues = DiceFace.values();
     private DiceFace currentFaceValue;
-
+    private final Random aRandom = new Random();
     public DiceFace roll(){
-        int randomIndex = ThreadLocalRandom.current().nextInt(FaceValues.length);
+        int randomIndex = aRandom.nextInt(FaceValues.length);
         currentFaceValue = FaceValues[randomIndex];
         return currentFaceValue;
     }
