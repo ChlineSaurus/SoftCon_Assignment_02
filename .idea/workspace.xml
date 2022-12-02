@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="minimal changes">
+    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="straight works now">
+      <change afterPath="$PROJECT_DIR$/Test/cards/BonusPointsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/cards/DeckTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/dice/ValidateUserSelectionStraightTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/dice/ValidateUserSelectionStraightTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Display.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dice/diceSelectionValidator/DiceSelectionValidatorStraight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/diceSelectionValidator/DiceSelectionValidatorStraight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/players/PlayerManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/players/PlayerManagerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +82,7 @@
       <recent name="dice.userDiceSelectionValidation" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ValidateUserSelectionStraightTest.testMultipleInValidDices">
+  <component name="RunManager" selected="JUnit.Test in SoftCon_Assignment_02">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="SoftCon_Assignment_02" />
@@ -90,17 +90,49 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DiceTowerTest.checklengthofTaken" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BonusPointsTest.addPlusPoints" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftCon_Assignment_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dice.*" />
+          <option name="PATTERN" value="cards.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="dice" />
-      <option name="MAIN_CLASS_NAME" value="dice.DiceTowerTest" />
-      <option name="METHOD_NAME" value="checklengthofTaken" />
+      <option name="PACKAGE_NAME" value="cards" />
+      <option name="MAIN_CLASS_NAME" value="cards.BonusPointsTest" />
+      <option name="METHOD_NAME" value="addPlusPoints" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeckTest.draw57cards" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SoftCon_Assignment_02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cards.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cards" />
+      <option name="MAIN_CLASS_NAME" value="cards.DeckTest" />
+      <option name="METHOD_NAME" value="draw57cards" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayerManagerTest.deductionPointsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SoftCon_Assignment_02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="players.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="players" />
+      <option name="MAIN_CLASS_NAME" value="players.PlayerManagerTest" />
+      <option name="METHOD_NAME" value="deductionPointsTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -117,52 +149,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ValidateUserSelectionStraightTest.testInValidDices" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SoftCon_Assignment_02" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dice" />
-      <option name="MAIN_CLASS_NAME" value="dice.ValidateUserSelectionStraightTest" />
-      <option name="METHOD_NAME" value="testInValidDices" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ValidateUserSelectionStraightTest.testMultipleInValidDices" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SoftCon_Assignment_02" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dice" />
-      <option name="MAIN_CLASS_NAME" value="dice.ValidateUserSelectionStraightTest" />
-      <option name="METHOD_NAME" value="testMultipleInValidDices" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.ValidateUserSelectionStraightTest.testInValidDices" />
-      <item itemvalue="JUnit.ValidateUserSelectionStraightTest.testMultipleInValidDices" />
-      <item itemvalue="JUnit.DiceTowerTest.checklengthofTaken" />
+      <item itemvalue="JUnit.BonusPointsTest.addPlusPoints" />
+      <item itemvalue="JUnit.DeckTest.draw57cards" />
+      <item itemvalue="JUnit.PlayerManagerTest.deductionPointsTest" />
       <item itemvalue="JUnit.Test in SoftCon_Assignment_02" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ValidateUserSelectionStraightTest.testMultipleInValidDices" />
-        <item itemvalue="JUnit.ValidateUserSelectionStraightTest.testInValidDices" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.Test in SoftCon_Assignment_02" />
-        <item itemvalue="JUnit.DiceTowerTest.checklengthofTaken" />
+        <item itemvalue="JUnit.BonusPointsTest.addPlusPoints" />
+        <item itemvalue="JUnit.DeckTest.draw57cards" />
+        <item itemvalue="JUnit.PlayerManagerTest.deductionPointsTest" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -198,14 +198,7 @@
       <workItem from="1669493988940" duration="4060000" />
       <workItem from="1669822402528" duration="6513000" />
       <workItem from="1669967769785" duration="1209000" />
-      <workItem from="1669973355747" duration="2354000" />
-    </task>
-    <task id="LOCAL-00006" summary="hardcoded tutorequirements&#10;meaning that it checks the toto requirements if it'isnt a straight">
-      <created>1668716214478</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1668716214478</updated>
+      <workItem from="1669973355747" duration="8401000" />
     </task>
     <task id="LOCAL-00007" summary="TutoCondition implemented for straight">
       <created>1668722148960</created>
@@ -543,7 +536,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669968816169</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="straight works now">
+      <created>1669975780093</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1669975780094</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -573,7 +573,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Singleton PlayerManager" />
     <MESSAGE value="get dicetowers to work" />
     <MESSAGE value="@Elias bonus sollte jetzt funktionieren" />
     <MESSAGE value="adding funciton to card" />
@@ -598,7 +597,8 @@
     <MESSAGE value="next player replaced with the name of the next player" />
     <MESSAGE value="next player works now ... message is now callled msg" />
     <MESSAGE value="minimal changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="minimal changes" />
+    <MESSAGE value="straight works now" />
+    <option name="LAST_COMMIT_MESSAGE" value="straight works now" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -627,9 +627,6 @@
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$NotNullNonStraightTest.ic" NAME="NotNullNonStraightTest Coverage Results" MODIFIED="1669747295586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dice.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$MustTakeAllValidDiceTest.ic" NAME="MustTakeAllValidDiceTest Coverage Results" MODIFIED="1669745871589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>dice.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$PlayerManagerTest.ic" NAME="PlayerManagerTest Coverage Results" MODIFIED="1669802157358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>players.*</FILTER>
     </SUITE>
@@ -638,6 +635,12 @@
     </SUITE>
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$DiceTowerTest_removeDiceTest.ic" NAME="DiceTowerTest.removeDiceTest Coverage Results" MODIFIED="1669743724412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$MustTakeAllValidDiceTest.ic" NAME="MustTakeAllValidDiceTest Coverage Results" MODIFIED="1669745871589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>dice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$PlayerManagerTest_deductionPointsTest.ic" NAME="PlayerManagerTest.deductionPointsTest Coverage Results" MODIFIED="1669982353136" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>players.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$ValidateUserSelectionStraightTest.ic" NAME="ValidateUserSelectionStraightTest Coverage Results" MODIFIED="1669747189655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dice.*</FILTER>
@@ -654,6 +657,6 @@
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$ValidateUserSelectionNonStraightTest.ic" NAME="ValidateUserSelectionNonStraightTest Coverage Results" MODIFIED="1669745751052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dice.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$Test_in_SoftCon_Assignment_02.ic" NAME="Test in SoftCon_Assignment_02 Coverage Results" MODIFIED="1669973387800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$Test_in_SoftCon_Assignment_02.ic" NAME="Test in SoftCon_Assignment_02 Coverage Results" MODIFIED="1669990732387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
