@@ -26,6 +26,12 @@ public class Deck
         for(int i=0;i<5;i++){
             Fireworks fireworks = new Fireworks();
             cards.add(fireworks);
+            Straight straight = new Straight();
+            cards.add(straight);
+            PlusMinus plusminus = new PlusMinus();
+            cards.add(plusminus);
+            X2 x2= new X2();
+            cards.add(x2);
         }
 
         for(int i=0;i<10;i++)
@@ -33,22 +39,6 @@ public class Deck
             Stop stop = new Stop();
             cards.add(stop);
         }
-
-        for(int i=0;i<5;i++){
-            Straight straight = new Straight();
-            cards.add(straight);
-        }
-
-        for(int i=0;i<5;i++){
-            PlusMinus plusminus = new PlusMinus();
-            cards.add(plusminus);
-        }
-
-        for(int i=0;i<5;i++){
-            X2 x2= new X2();
-            cards.add(x2);
-            }
-
 
         int bonusPoints=200;
         for(int i=0;i<5;i++){
