@@ -28,15 +28,9 @@ public class DiceSelectionValidatorStraight implements DiceSelectionValidator {
         for (Dice chosenDice : chosenDiceToKeep) {
             DiceFace diceFace = chosenDice.getFaceValue();
             if (chosenDiceMap.containsKey(diceFace)) {
-                chosenDiceMap.put(diceFace, chosenDiceMap.get(diceFace)+1);
+                return true;
             } else {
                 chosenDiceMap.put(diceFace, 1);
-            }
-        }
-        for (Map.Entry<DiceFace, Integer> entry : chosenDiceMap.entrySet()) {
-            Integer occurences = entry.getValue();
-            if (occurences != 1) {
-                return true;
             }
         }
         return false;

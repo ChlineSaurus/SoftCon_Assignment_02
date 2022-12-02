@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="straight works now">
-      <change afterPath="$PROJECT_DIR$/Test/cards/BonusPointsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/cards/DeckTest.java" afterDir="false" />
+    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="adding tests branch coverage is only 44%">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/players/PlayerManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/players/PlayerManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Turn/State/CurrentlyPlaying.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn/State/CurrentlyPlaying.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dice/diceSelectionValidator/DiceSelectionValidatorStraight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/diceSelectionValidator/DiceSelectionValidatorStraight.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,14 +197,7 @@
       <workItem from="1669493988940" duration="4060000" />
       <workItem from="1669822402528" duration="6513000" />
       <workItem from="1669967769785" duration="1209000" />
-      <workItem from="1669973355747" duration="8401000" />
-    </task>
-    <task id="LOCAL-00007" summary="TutoCondition implemented for straight">
-      <created>1668722148960</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1668722148960</updated>
+      <workItem from="1669973355747" duration="9703000" />
     </task>
     <task id="LOCAL-00008" summary="skipTurn for skip card in AbstactCard... &#10;still needs to be implemented in constructer of AbstractCard">
       <created>1668807235482</created>
@@ -543,7 +535,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669975780094</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="adding tests branch coverage is only 44%">
+      <created>1669991445049</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1669991445049</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -573,7 +572,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="get dicetowers to work" />
     <MESSAGE value="@Elias bonus sollte jetzt funktionieren" />
     <MESSAGE value="adding funciton to card" />
     <MESSAGE value="make sure players aren't leaked" />
@@ -598,7 +596,8 @@
     <MESSAGE value="next player works now ... message is now callled msg" />
     <MESSAGE value="minimal changes" />
     <MESSAGE value="straight works now" />
-    <option name="LAST_COMMIT_MESSAGE" value="straight works now" />
+    <MESSAGE value="adding tests branch coverage is only 44%" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding tests branch coverage is only 44%" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

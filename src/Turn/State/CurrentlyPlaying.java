@@ -63,7 +63,7 @@ public class CurrentlyPlaying implements TurnState{
                         throw new IllegalUserInputExeption("You can't exit, you must take at least one Dice");
                     } else if (aTurn.turnCard.getClass().equals(Fireworks.class) && aTurn.validDiceExist()) {
                         throw new IllegalUserInputExeption("Your Card is a Firework and you" +
-                                " must take all Dice");
+                                " must take all valid Dice");
                     } else {
                         break;
                     }
