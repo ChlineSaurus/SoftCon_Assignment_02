@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="next player works now ... message is now callled msg">
-      <change beforePath="$PROJECT_DIR$/src/Enums/Msg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Enums/Msg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SetUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SetUp.java" afterDir="false" />
+    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="minimal changes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/dice/ValidateUserSelectionStraightTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/dice/ValidateUserSelectionStraightTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Display.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dice/diceSelectionValidator/DiceSelectionValidatorStraight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/diceSelectionValidator/DiceSelectionValidatorStraight.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,25 +82,10 @@
       <recent name="dice.userDiceSelectionValidation" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.ValidateUserSelectionStraightTest.testMultipleInValidDices">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="SoftCon_Assignment_02" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DiceTowerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SoftCon_Assignment_02" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dice" />
-      <option name="MAIN_CLASS_NAME" value="dice.DiceTowerTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -130,7 +117,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="diceSelectionValidatorFireworkTest.testSingleValidDices" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ValidateUserSelectionStraightTest.testInValidDices" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftCon_Assignment_02" />
       <extension name="coverage">
         <pattern>
@@ -139,8 +126,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="dice" />
-      <option name="MAIN_CLASS_NAME" value="dice.diceSelectionValidatorFireworkTest" />
-      <option name="METHOD_NAME" value="testSingleValidDices" />
+      <option name="MAIN_CLASS_NAME" value="dice.ValidateUserSelectionStraightTest" />
+      <option name="METHOD_NAME" value="testInValidDices" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ValidateUserSelectionStraightTest.testMultipleInValidDices" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SoftCon_Assignment_02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dice" />
+      <option name="MAIN_CLASS_NAME" value="dice.ValidateUserSelectionStraightTest" />
+      <option name="METHOD_NAME" value="testMultipleInValidDices" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -148,18 +151,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.diceSelectionValidatorFireworkTest.testSingleValidDices" />
-      <item itemvalue="JUnit.DiceTowerTest" />
+      <item itemvalue="JUnit.ValidateUserSelectionStraightTest.testInValidDices" />
+      <item itemvalue="JUnit.ValidateUserSelectionStraightTest.testMultipleInValidDices" />
       <item itemvalue="JUnit.DiceTowerTest.checklengthofTaken" />
       <item itemvalue="JUnit.Test in SoftCon_Assignment_02" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ValidateUserSelectionStraightTest.testMultipleInValidDices" />
+        <item itemvalue="JUnit.ValidateUserSelectionStraightTest.testInValidDices" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.Test in SoftCon_Assignment_02" />
         <item itemvalue="JUnit.DiceTowerTest.checklengthofTaken" />
-        <item itemvalue="JUnit.diceSelectionValidatorFireworkTest.testSingleValidDices" />
-        <item itemvalue="JUnit.DiceTowerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -194,14 +197,8 @@
       <workItem from="1669412958477" duration="5604000" />
       <workItem from="1669493988940" duration="4060000" />
       <workItem from="1669822402528" duration="6513000" />
-      <workItem from="1669967769785" duration="1023000" />
-    </task>
-    <task id="LOCAL-00005" summary="trying to implement interfaces&#10;Deck is currently not good &#10;still needs work to be done&#10;why can't we jjust use one deck">
-      <created>1668702382419</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1668702382419</updated>
+      <workItem from="1669967769785" duration="1209000" />
+      <workItem from="1669973355747" duration="2354000" />
     </task>
     <task id="LOCAL-00006" summary="hardcoded tutorequirements&#10;meaning that it checks the toto requirements if it'isnt a straight">
       <created>1668716214478</created>
@@ -539,7 +536,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669968531404</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="minimal changes">
+      <created>1669968816169</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1669968816169</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -569,7 +573,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="trying to implement the the three folders into to dicetower &#10;namely CalculateRollPoints&#10;Notnullroll&#10;ValidateUserSelection works but needs to be imbed to dicetower" />
     <MESSAGE value="Singleton PlayerManager" />
     <MESSAGE value="get dicetowers to work" />
     <MESSAGE value="@Elias bonus sollte jetzt funktionieren" />
@@ -594,7 +597,8 @@
     <MESSAGE value="minimum and max points introduced" />
     <MESSAGE value="next player replaced with the name of the next player" />
     <MESSAGE value="next player works now ... message is now callled msg" />
-    <option name="LAST_COMMIT_MESSAGE" value="next player works now ... message is now callled msg" />
+    <MESSAGE value="minimal changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="minimal changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -650,6 +654,6 @@
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$ValidateUserSelectionNonStraightTest.ic" NAME="ValidateUserSelectionNonStraightTest Coverage Results" MODIFIED="1669745751052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dice.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$Test_in_SoftCon_Assignment_02.ic" NAME="Test in SoftCon_Assignment_02 Coverage Results" MODIFIED="1669925611032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$Test_in_SoftCon_Assignment_02.ic" NAME="Test in SoftCon_Assignment_02 Coverage Results" MODIFIED="1669973387800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>

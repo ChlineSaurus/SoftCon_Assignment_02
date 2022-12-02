@@ -85,7 +85,7 @@ public class Display {
         try {
             Thread.sleep(50);
         } catch (InterruptedException e) {
-            System.out.println("Huston, we have a problem");
+            System.out.println("Houston, we have a problem");
         }
     }
 

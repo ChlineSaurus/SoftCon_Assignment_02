@@ -52,4 +52,14 @@ public class ValidateUserSelectionStraightTest {
         Assertions.assertFalse(diceSelectionValidator.isUserSelectionValid(chosenDiceToKeep,rolledDices,takenDices));
 
     }
+    @Test
+    public void testMultipleInValidDices(){
+        Integer [] chosenDice={1,1};
+        Integer [] rolledDice={1,1,5,2};
+        Integer [] takenDice={5,3};
+        List<Dice> chosenDiceToKeep=diceListSetUp(chosenDice);
+        List<Dice> rolledDices=diceListSetUp(rolledDice);
+        List<Dice> takenDices=diceListSetUp(takenDice);
+        Assertions.assertFalse(diceSelectionValidator.isUserSelectionValid(chosenDiceToKeep,rolledDices,takenDices));
+    }
 }
