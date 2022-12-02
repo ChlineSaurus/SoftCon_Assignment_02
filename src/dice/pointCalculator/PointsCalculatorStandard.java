@@ -58,7 +58,7 @@ public class PointsCalculatorStandard implements PointCalculator {
 
 
     @Override
-    public boolean validateDice(List<Dice> notTakenDices, List<Dice> TakenDices)
+    public boolean notNullRoll(List<Dice> notTakenDices, List<Dice> TakenDices)
     {   Map<Integer,Integer> diceCounter = new HashMap<Integer, Integer>();
         for (Dice dice: notTakenDices){
             Integer faceValue=dice.getFaceValue().integerValue;

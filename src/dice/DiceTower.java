@@ -1,6 +1,6 @@
 package dice;
 
-import Enums.Messages;
+import Enums.Msg;
 import dice.diceSelectionValidator.DiceSelectionValidator;
 import dice.pointCalculator.PointCalculator;
 import exceptions.IllegalUserInputExeption;
@@ -78,23 +78,23 @@ public class DiceTower {
 
 
     public boolean notNullRoll(){
-        return pointCalculator.validateDice(notTakenDices, takenDices);
+        return pointCalculator.notNullRoll(notTakenDices, takenDices);
     }
 
     public int removeDice(ArrayList<DiceFace> dicesToRemove) throws IllegalUserInputExeption {
         assert notTakenDices.size()+takenDices.size()==6;
         if (dicesToRemove.size() == 0) {
-            throw new IllegalUserInputExeption(Messages.noDiceTakenException.message);
+            throw new IllegalUserInputExeption(Msg.noDiceTakenException.message);
         }
         //one has to check if the taken dice are valid or can the user make mistakes
         if (dicesToRemove.size() > notTakenDices.size()) {
-            throw new IllegalUserInputExeption(Messages.toManyDiceTakenException.message);
+            throw new IllegalUserInputExeption(Msg.toManyDiceTakenException.message);
         }
         ArrayList<Dice> temporaryTakenDices = createTemporaryTakenDices(dicesToRemove);
 
         if (temporaryTakenDices.size() < dicesToRemove.size()) {
 
-            throw new IllegalUserInputExeption(Messages.notAllowedNumberException.message);
+            throw new IllegalUserInputExeption(Msg.notAllowedNumberException.message);
         }
 
         if (!diceSelectionValidator.isUserSelectionValid(temporaryTakenDices,notTakenDices,takenDices)){

@@ -1,6 +1,6 @@
 package Enums;
 
-public enum Messages {
+public enum Msg {
     //Setup Enums.Messages
     setUpInstruction(String.format("You may play with %2d to %2d Players: Please enter a name if you want to add a " +
             "Player. If you want to start press Enter!", GameConstants.minAllowedPlayers.definedConstant,
@@ -27,7 +27,7 @@ public enum Messages {
     // Game Interaction Messages
     tuttoAndCloverleafOrFireworks("You have a tutto but you must go on.");
     public final String message;
-    Messages(String message) {
+    Msg(String message) {
         this.message = message;
     }
 

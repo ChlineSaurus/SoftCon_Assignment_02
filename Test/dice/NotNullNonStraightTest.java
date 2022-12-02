@@ -41,7 +41,7 @@ public class NotNullNonStraightTest {
         Integer[] notTakenArray={2,2,2,4};
         List<Dice> takenDice=DiceListSetUp(takenDiceArray);
         List<Dice> notTakenDice=DiceListSetUp(notTakenArray);
-        Assertions.assertTrue(NonStraightValidater.validateDice(notTakenDice,takenDice));
+        Assertions.assertTrue(NonStraightValidater.notNullRoll(notTakenDice,takenDice));
     }
 
     @Test
@@ -50,7 +50,7 @@ public class NotNullNonStraightTest {
         Integer[] notTakenArray={2,2,3,4,1};
         List<Dice> takenDice=DiceListSetUp(takenArray);
         List<Dice> notTakenDice=DiceListSetUp(notTakenArray);
-        Assertions.assertTrue(NonStraightValidater.validateDice(notTakenDice,takenDice));
+        Assertions.assertTrue(NonStraightValidater.notNullRoll(notTakenDice,takenDice));
     }
     @Test
     public void TestIllegalRoll1(){
@@ -59,7 +59,7 @@ public class NotNullNonStraightTest {
         Integer[] notTakenArray={2,3};
         List<Dice> takenDice=DiceListSetUp(takenDiceArray);
         List<Dice> notTakenDice=DiceListSetUp(notTakenArray);
-        Assertions.assertFalse(NonStraightValidater.validateDice(notTakenDice,takenDice));
+        Assertions.assertFalse(NonStraightValidater.notNullRoll(notTakenDice,takenDice));
 
     }
     @Test
@@ -69,7 +69,7 @@ public class NotNullNonStraightTest {
         Integer[] notTakenArray={2,2,4};
         List<Dice> takenDice=DiceListSetUp(takenDiceArray);
         List<Dice> notTakenDice=DiceListSetUp(notTakenArray);
-        Assertions.assertFalse(NonStraightValidater.validateDice(notTakenDice,takenDice));
+        Assertions.assertFalse(NonStraightValidater.notNullRoll(notTakenDice,takenDice));
 
     }
 

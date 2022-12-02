@@ -11,7 +11,7 @@ public class PointCalculatorStraight implements PointCalculator {
         return 0;
     }
     @Override
-    public boolean validateDice(List<Dice> notTakenDices, List<Dice> TakenDices) {
+    public boolean notNullRoll(List<Dice> notTakenDices, List<Dice> TakenDices) {
 
         for (Dice notTakenDice: notTakenDices ){
             int faceValue = notTakenDice.getFaceValue().integerValue;

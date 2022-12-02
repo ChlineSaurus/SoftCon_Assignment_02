@@ -1,7 +1,7 @@
 package Input;
 
 import exceptions.IllegalUserInputExeption;
-import Enums.Messages;
+import Enums.Msg;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -20,7 +20,7 @@ public class Input {
     public static Character takeCharInput() throws IllegalUserInputExeption {
         String input = readInput().toUpperCase();
         if(input.length() != 1) {
-            throw new IllegalUserInputExeption(Messages.notACharException.message);
+            throw new IllegalUserInputExeption(Msg.notACharException.message);
         }
         return input.charAt(0);
     }
@@ -35,7 +35,7 @@ public class Input {
                 returnList.add(Integer.parseInt(Character.toString(input.charAt(i))));
             }
         } catch (NumberFormatException e) {
-            throw new IllegalUserInputExeption(Messages.illegalCharException.message);
+            throw new IllegalUserInputExeption(Msg.illegalCharException.message);
         }
         return returnList;
     }
@@ -46,7 +46,7 @@ public class Input {
         try {
             returnValue = Integer.parseInt(input);
         } catch (NumberFormatException e) {
-            throw new IllegalUserInputExeption(Messages.notANumberException.message);
+            throw new IllegalUserInputExeption(Msg.notANumberException.message);
         }
         return returnValue;
     }

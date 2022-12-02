@@ -131,7 +131,7 @@ public class PlayerManager {
         exit(0);
     }
     public String getNextPlayersName(){
-        int nextPlayersIndex=(currentPlayerIndex+1)%(players.size()-1);
+        int nextPlayersIndex=(currentPlayerIndex+1)%(players.size());
         return players.get(nextPlayersIndex).name;
     }
 }

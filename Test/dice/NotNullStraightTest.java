@@ -40,7 +40,7 @@ public class NotNullStraightTest {
         Integer[] takenDiceArray={1,5};
         List<Dice> takenDice=DiceListSetUp(takenDiceArray);
         List<Dice> notTakenDice=DiceListSetUp(notTakenArray);
-        Assertions.assertTrue(StraightValidater.validateDice(notTakenDice,takenDice));
+        Assertions.assertTrue(StraightValidater.notNullRoll(notTakenDice,takenDice));
     }
     @Test
     public void testLegalRoll2(){
@@ -48,7 +48,7 @@ public class NotNullStraightTest {
         Integer[] takenDiceArray={1,2,5};
         List<Dice> takenDice=DiceListSetUp(takenDiceArray);
         List<Dice> notTakenDice=DiceListSetUp(notTakenArray);
-        Assertions.assertTrue(StraightValidater.validateDice(notTakenDice,takenDice));
+        Assertions.assertTrue(StraightValidater.notNullRoll(notTakenDice,takenDice));
     }
     @Test
     public void testIllegalRoll1(){
@@ -56,6 +56,6 @@ public class NotNullStraightTest {
         Integer[] takenDiceArray={3,2,5};
         List<Dice> takenDice=DiceListSetUp(takenDiceArray);
         List<Dice> notTakenDice=DiceListSetUp(notTakenArray);
-        Assertions.assertFalse(StraightValidater.validateDice(notTakenDice,takenDice));
+        Assertions.assertFalse(StraightValidater.notNullRoll(notTakenDice,takenDice));
     }
 }

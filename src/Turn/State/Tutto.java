@@ -1,6 +1,6 @@
 package Turn.State;
 
-import Enums.Messages;
+import Enums.Msg;
 import Input.TuttoInput;
 import Turn.Turn;
 import UI.Display;
@@ -17,10 +17,10 @@ public class Tutto implements TurnState{
         aTurn.temporaryScore = aTurn.turnCard.tuttoAchieved(aTurn.temporaryScore);
         aTurn.pointsToDeduct += aTurn.turnCard.getDeductPoints();
         if(aTurn.turnCard.haveToContinueRolling()){
-            Display.displayMessage(Messages.tuttoAndCloverleafOrFireworks.message);
+            Display.displayMessage(Msg.tuttoAndCloverleafOrFireworks.message);
             aTurn.setCurrentState(new CurrentlyPlaying(aTurn));
         } else {
-            Display.displayMessage(Messages.stopOrContinueQuestion.message);
+            Display.displayMessage(Msg.stopOrContinueQuestion.message);
             ArrayList<Character> allowedAction = new ArrayList<>();
             allowedAction.add('S');
             allowedAction.add('C');
