@@ -154,8 +154,44 @@ public class DiceTowerTest {
         Assertions.assertTrue(diceTower.madeTutto());
 
         }
-
-
+        @Test
+        public void removeIllegaldice ()throws IllegalUserInputException{
+        diceTower.setStrategy(new PointsCalculatorStandard(), new DiceSelectionValidatorStandard(), new NotNullRollStraight());
+        ArrayList<DiceFace> dicesToBeRemoved=new ArrayList<>();
+        boolean isCaught=false;
+        try {diceTower.removeDice(dicesToBeRemoved);}
+        catch (IllegalUserInputException e){
+            isCaught=true;
+        }
+        assert isCaught;
 
     }
+    @Test
+    public void removeIllegaldice2 ()throws Exception{
+        diceTower.setStrategy(new PointsCalculatorStandard(), new DiceSelectionValidatorStandard(), new NotNullRollStraight());
+        ArrayList<DiceFace> dicesToBeRemoved=new ArrayList<>();
+        dicesToBeRemoved.add(DiceFace.One);
+        dicesToBeRemoved.add(DiceFace.One);
+        dicesToBeRemoved.add(DiceFace.Five);
+        Field notTakenDicesField=diceTower.getClass().getDeclaredField("notTakenDices");
+        Integer []notTakenDiceArray ={5,1};
+        ArrayList<Dice> notTakenDices=DiceListSetUp(notTakenDiceArray);
+        notTakenDicesField.setAccessible(true);
+        notTakenDicesField.set(diceTower,notTakenDices);
+        Integer []TakenDiceArray={1,1,5,1};
+        ArrayList<Dice> takenDices=DiceListSetUp(TakenDiceArray);
+        Field takenDicesField=diceTower.getClass().getDeclaredField("takenDices");
+        takenDicesField.setAccessible(true);
+        takenDicesField.set(diceTower,takenDices);
+
+        boolean isCaught=false;
+        try {diceTower.removeDice(dicesToBeRemoved);}
+        catch (IllegalUserInputException e){
+            isCaught=true;
+        }
+        assert isCaught;
+
+    }
+
+}
 

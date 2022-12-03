@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="Typo IllegalUserInputException">
+    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="resturcturing input">
+      <change afterPath="$PROJECT_DIR$/Test/turn/newTurn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_11_22,_21_10_[Changes]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/dice/DiceTowerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/dice/DiceTowerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/input/TuttoInputTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/input/TuttoInputTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/players/PlayerManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/players/PlayerManagerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,16 +27,19 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.jdks/openjdk-19.0.1/lib/src.zip!/java.base/java/util/HashMap.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -55,8 +64,8 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/super161/IdeaProjects/SoftCon_Assignment_02/Test/Enums&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/danielmaksimovic/OneDrive - Universität Zürich UZH/Studium/HS22/Software Construction I/Java/SoftCon_Assignment_02/src&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/chris/OneDrive/Desktop/SoftCon_Assignment_02/src/dice/userDiceSelectionValidation&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/chris/Downloads/SoftCon_Assignment_02-master (4)&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -76,11 +85,10 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="Enums" />
       <recent name="dice.userDiceSelectionValidation" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Test in SoftCon_Assignment_02">
+  <component name="RunManager" selected="JUnit.DiceTowerTest.removeIllegaldice2">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="SoftCon_Assignment_02" />
@@ -88,7 +96,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AbstractCardTest.userTriesToEndTurn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CloverTest.userTriesToEndTurn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftCon_Assignment_02" />
       <extension name="coverage">
         <pattern>
@@ -97,70 +105,75 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="cards" />
-      <option name="MAIN_CLASS_NAME" value="cards.AbstractCardTest" />
+      <option name="MAIN_CLASS_NAME" value="cards.CloverTest" />
       <option name="METHOD_NAME" value="userTriesToEndTurn" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BonusPointsTest.addPlusPoints" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DiceTowerTest.removeIllegaldice2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftCon_Assignment_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cards.*" />
+          <option name="PATTERN" value="dice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cards" />
-      <option name="MAIN_CLASS_NAME" value="cards.BonusPointsTest" />
-      <option name="METHOD_NAME" value="addPlusPoints" />
+      <option name="PACKAGE_NAME" value="dice" />
+      <option name="MAIN_CLASS_NAME" value="dice.DiceTowerTest" />
+      <option name="METHOD_NAME" value="removeIllegaldice2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeckTest.draw57cards" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlayerManagerTest.deductionPointsNormal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftCon_Assignment_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cards.*" />
+          <option name="PATTERN" value="players.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cards" />
-      <option name="MAIN_CLASS_NAME" value="cards.DeckTest" />
-      <option name="METHOD_NAME" value="draw57cards" />
+      <option name="PACKAGE_NAME" value="players" />
+      <option name="MAIN_CLASS_NAME" value="players.PlayerManagerTest" />
+      <option name="METHOD_NAME" value="deductionPointsNormal" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test in SoftCon_Assignment_02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlayerManagerTest.deductionPointsTwoLeadingPlayer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftCon_Assignment_02" />
-      <extension name="coverage" sample_coverage="false" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/Test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="players.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="players" />
+      <option name="MAIN_CLASS_NAME" value="players.PlayerManagerTest" />
+      <option name="METHOD_NAME" value="deductionPointsTwoLeadingPlayer" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.AbstractCardTest.userTriesToEndTurn" />
-      <item itemvalue="JUnit.BonusPointsTest.addPlusPoints" />
-      <item itemvalue="JUnit.DeckTest.draw57cards" />
-      <item itemvalue="JUnit.Test in SoftCon_Assignment_02" />
+      <item itemvalue="JUnit.DiceTowerTest.removeIllegaldice2" />
+      <item itemvalue="JUnit.PlayerManagerTest.deductionPointsNormal" />
+      <item itemvalue="JUnit.PlayerManagerTest.deductionPointsTwoLeadingPlayer" />
+      <item itemvalue="JUnit.CloverTest.userTriesToEndTurn" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Test in SoftCon_Assignment_02" />
+        <item itemvalue="JUnit.DiceTowerTest.removeIllegaldice2" />
+        <item itemvalue="JUnit.PlayerManagerTest.deductionPointsTwoLeadingPlayer" />
+        <item itemvalue="JUnit.PlayerManagerTest.deductionPointsNormal" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.AbstractCardTest.userTriesToEndTurn" />
-        <item itemvalue="JUnit.BonusPointsTest.addPlusPoints" />
-        <item itemvalue="JUnit.DeckTest.draw57cards" />
+        <item itemvalue="JUnit.CloverTest.userTriesToEndTurn" />
       </list>
     </recent_temporary>
   </component>
@@ -197,41 +210,9 @@
       <workItem from="1669822402528" duration="6513000" />
       <workItem from="1669967769785" duration="1209000" />
       <workItem from="1669973355747" duration="9703000" />
-    </task>
-    <task id="LOCAL-00011" summary="running test works&#10;had to comment out wrong areas">
-      <created>1668867411686</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1668867411686</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Mit Fehlsern">
-      <created>1668956883378</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1668956883378</updated>
-    </task>
-    <task id="LOCAL-00013" summary="some changes">
-      <created>1669219216099</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1669219216099</updated>
-    </task>
-    <task id="LOCAL-00014" summary="validation impletemd with stratergy still need to change it to depandcy injection problematic aspect one needs to if it is a straight card one discover this from the card">
-      <created>1669240589496</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1669240589496</updated>
-    </task>
-    <task id="LOCAL-00015" summary="validation impletemd with stratergy still need to change it to depandcy injection problematic aspect one needs to if it is a straight card one discover this from the card">
-      <created>1669241453906</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1669241453906</updated>
+      <workItem from="1670084763134" duration="3934000" />
+      <workItem from="1670089377026" duration="6209000" />
+      <workItem from="1670099182826" duration="726000" />
     </task>
     <task id="LOCAL-00016" summary="fixed Boolean boolean mistake">
       <created>1669241896906</created>
@@ -527,21 +508,56 @@
       <option name="project" value="LOCAL" />
       <updated>1670069383804</updated>
     </task>
-    <task id="LOCAL-00058" summary="description Bonus">
-      <created>1670097742471</created>
+    <task id="LOCAL-00058" summary="plus minus work correctly now&#10;new interface was necessary to avoid code duplication">
+      <created>1670083874881</created>
       <option name="number" value="00058" />
       <option name="presentableId" value="LOCAL-00058" />
       <option name="project" value="LOCAL" />
-      <updated>1670097742472</updated>
+      <updated>1670083874881</updated>
     </task>
-    <task id="LOCAL-00059" summary="Typo IllegalUserInputException">
-      <created>1670098545965</created>
+    <task id="LOCAL-00059" summary="bonusCard Testing stratred">
+      <created>1670085537709</created>
       <option name="number" value="00059" />
       <option name="presentableId" value="LOCAL-00059" />
       <option name="project" value="LOCAL" />
-      <updated>1670098545965</updated>
+      <updated>1670085537709</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="get firework class removed">
+      <created>1670092322411</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1670092322412</updated>
+    </task>
+    <task id="LOCAL-00061" summary="working version corrected recent mistake">
+      <created>1670095046057</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1670095046057</updated>
+    </task>
+    <task id="LOCAL-00062" summary="fixed it removed that wird stuff">
+      <created>1670096171462</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1670096171462</updated>
+    </task>
+    <task id="LOCAL-00063" summary="new dicetower tests">
+      <created>1670096453266</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1670096453266</updated>
+    </task>
+    <task id="LOCAL-00064" summary="adding tests to card&#10;clover">
+      <created>1670096994538</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1670096994538</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -571,11 +587,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="making DiceTower setable" />
-    <MESSAGE value="adding functions to the card" />
-    <MESSAGE value="PlayerManager now has a deck" />
-    <MESSAGE value="addBonus" />
-    <MESSAGE value="comments" />
     <MESSAGE value="creating test" />
     <MESSAGE value="adding further tests" />
     <MESSAGE value="Better Names" />
@@ -594,13 +605,28 @@
     <MESSAGE value="straight works now" />
     <MESSAGE value="adding tests branch coverage is only 44%" />
     <MESSAGE value="AbstractCardTest" />
-    <MESSAGE value="description Bonus" />
-    <MESSAGE value="Typo IllegalUserInputException" />
-    <option name="LAST_COMMIT_MESSAGE" value="Typo IllegalUserInputException" />
+    <MESSAGE value="plus minus work correctly now&#10;new interface was necessary to avoid code duplication" />
+    <MESSAGE value="bonusCard Testing stratred" />
+    <MESSAGE value="get firework class removed" />
+    <MESSAGE value="working version corrected recent mistake" />
+    <MESSAGE value="fixed it removed that wird stuff" />
+    <MESSAGE value="new dicetower tests" />
+    <MESSAGE value="adding tests to card&#10;clover" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding tests to card&#10;clover" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/players/PlayerManager.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/players/PlayerManager.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="18" />
@@ -609,49 +635,49 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$NotNullStraightTest.ic" NAME="NotNullStraightTest Coverage Results" MODIFIED="1669745840191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$DiceTest.ic" NAME="DiceTest Coverage Results" MODIFIED="1669561512570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>dice.notNullRoll.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$NotNullNonStraightTest.ic" NAME="NotNullNonStraightTest Coverage Results" MODIFIED="1669747295586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dice.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$PlayerManagerTest.ic" NAME="PlayerManagerTest Coverage Results" MODIFIED="1669802157358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>players.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$DiceTest.ic" NAME="DiceTest Coverage Results" MODIFIED="1669561512570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>dice.notNullRoll.*</FILTER>
+    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$NotNullStraightTest.ic" NAME="NotNullStraightTest Coverage Results" MODIFIED="1669745840191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>dice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$DiceTowerTest_removeDiceTest.ic" NAME="DiceTowerTest.removeDiceTest Coverage Results" MODIFIED="1669743724412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>dice.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$MustTakeAllValidDiceTest.ic" NAME="MustTakeAllValidDiceTest Coverage Results" MODIFIED="1669745871589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dice.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$Test_in_SoftCon_Assignment_02.ic" NAME="Test in SoftCon_Assignment_02 Coverage Results" MODIFIED="1670069437094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$PlayerManagerTest_deductionPointsTest.ic" NAME="PlayerManagerTest.deductionPointsTest Coverage Results" MODIFIED="1669982353136" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>players.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$AbstractCardTest_getDescription.ic" NAME="AbstractCardTest.getDescription Coverage Results" MODIFIED="1670069160296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>cards.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$BonusCardTest_userTriesToEndTurn.ic" NAME="BonusCardTest.userTriesToEndTurn Coverage Results" MODIFIED="1670085561914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>cards.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$ValidateUserSelectionStraightTest.ic" NAME="ValidateUserSelectionStraightTest Coverage Results" MODIFIED="1669747189655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>dice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$Main.ic" NAME="Main Coverage Results" MODIFIED="1670059885504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$DiceTowerTest.ic" NAME="DiceTowerTest Coverage Results" MODIFIED="1669755576670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>dice.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$PlayerTest.ic" NAME="PlayerTest Coverage Results" MODIFIED="1669757440080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>players.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$DiceRepresentationTest_testRepresent6.ic" NAME="DiceRepresentationTest.testRepresent6 Coverage Results" MODIFIED="1669302462013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>UI.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$ValidateUserSelectionStraightTest.ic" NAME="ValidateUserSelectionStraightTest Coverage Results" MODIFIED="1669747189655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>dice.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$ValidateUserSelectionNonStraightTest.ic" NAME="ValidateUserSelectionNonStraightTest Coverage Results" MODIFIED="1669745751052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dice.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$PlayerManagerTest_deductionPointsTest.ic" NAME="PlayerManagerTest.deductionPointsTest Coverage Results" MODIFIED="1669982353136" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>players.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$Main.ic" NAME="Main Coverage Results" MODIFIED="1670100125974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$NotNullNonStraightTest.ic" NAME="NotNullNonStraightTest Coverage Results" MODIFIED="1669747295586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>dice.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$AbstractCardTest_getDescription.ic" NAME="AbstractCardTest.getDescription Coverage Results" MODIFIED="1670069160296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>cards.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$AbstractCardTest_userTriesToEndTurn.ic" NAME="AbstractCardTest.userTriesToEndTurn Coverage Results" MODIFIED="1670070300426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>cards.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$DiceTowerTest.ic" NAME="DiceTowerTest Coverage Results" MODIFIED="1669755576670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>dice.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$DiceTowerTest_removeDiceTest.ic" NAME="DiceTowerTest.removeDiceTest Coverage Results" MODIFIED="1669743724412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>dice.*</FILTER>
-    </SUITE>
+    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$Test_in_SoftCon_Assignment_02.ic" NAME="Test in SoftCon_Assignment_02 Coverage Results" MODIFIED="1670086353846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
