@@ -12,6 +12,7 @@ import exceptions.IllegalUserInputExeption;
 public abstract class AbstractCard {
 
     protected String name;
+
     protected String description;
     protected boolean endTurn;
     protected boolean immunity;
