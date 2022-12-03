@@ -10,7 +10,7 @@ import static java.lang.System.exit;
 
 public class Cloverleaf extends AbstractCard {
 
-
+    //schauen!!!
     public Cloverleaf(){
         bonusPoints= GameConstants.maxAllowedPoints.definedConstant;
         name="Cloverleaf";

@@ -80,8 +80,6 @@ public abstract class AbstractCard {
         return description;
     }
 
-    //what needs to be done:
-    //
     public boolean isEndTurn(){
         return endTurn;
     }
