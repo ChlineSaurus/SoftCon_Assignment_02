@@ -95,7 +95,7 @@ public class DiceTower {
         }
 
         if (!diceSelectionValidator.isUserSelectionValid(temporaryTakenDices,notTakenDices,takenDices)){
-            throw new IllegalUserInputExeption("Make sure that only take valid dice");
+            throw new IllegalUserInputExeption("Make sure that only take valid dice, read the description to see if any special rules apply: ");
         }
         else {
             diceTakenSinceRoll = true;

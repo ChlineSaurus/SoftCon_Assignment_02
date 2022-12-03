@@ -15,6 +15,7 @@ public class PlayerManagerTest {
     ArrayList<Player> players=createPlayerArrayList(player1, player2, player3);
     PlayerManager playerManager = PlayerManager.getInstance(players,3000);
 
+
     public ArrayList<Player> createPlayerArrayList(Player player1, Player player2, Player player3) {
         ArrayList<Player> players=new ArrayList<>();
         players.add(player1);

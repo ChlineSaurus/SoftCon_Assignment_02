@@ -13,8 +13,9 @@ public enum Msg {
 
     pointInputOutOfBounds("The minimum necessary points are "
             + GameConstants.minAllowedPoints.definedConstant + " the maximum are " +GameConstants.maxAllowedPoints.definedConstant),
+    takeAtLeastOneValidDice("You can't exit, you must take at least one Dice"),
 
-
+    explainHowToTakeDice("Please enter the dice you want to take, example: if you want take a one and five enter '15' or'51'"),
     //Input Exceptions
     illegalCharException("You input contained other symbols than numbers, spaces and commas. Please give a valid Input"),
     notANumberException("You input contained other symbols than numbers. Please give a valid Input"),
@@ -22,6 +23,9 @@ public enum Msg {
     notAllowedCommandException("Your gave a Character as Input for which no command exists. Please give a valid Input"),
     notAllowedNumberException("Your input contained numbers that are not on a six faced Dice. Please give a valid Input."),
     noDiceTakenException("Your input had length zero. Please give a valid Input."),
+    invalidDicesSelected("The dices you selected aren't valid\" +\n" +
+            " \" make sure to read the cards description to know which dices you have to select\")"),
+    nullRoll("You rolled a Null :( "),
 
     toManyDiceTakenException("Your wanted to take more dices than you are currently not taken. Please give a valid Input."),
     notExistingDiceTakenException("You wanted to take a dice, that doesn't exist. Please give a valid Input"),

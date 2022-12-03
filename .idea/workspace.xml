@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="plus minus work correctly now&#10;new interface was necessary to avoid code duplication">
-      <change afterPath="$PROJECT_DIR$/Test/cards/BonusCardTest.java" afterDir="false" />
+    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="bonusCard Testing stratred">
+      <change afterPath="$PROJECT_DIR$/Test/input/TuttoInputTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoftCon_Assignment_02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SoftCon_Assignment_02.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/cards/AbstractCardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/cards/AbstractCardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/players/PlayerManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/players/PlayerManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Enums/Msg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Enums/Msg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Input/TuttoInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Input/TuttoInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Turn/State/CurrentlyPlaying.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn/State/CurrentlyPlaying.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cards/cards/cardtypes/Fireworks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/cardtypes/Fireworks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dice/DiceTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/DiceTower.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,58 +91,10 @@
       <recent name="dice.userDiceSelectionValidation" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BonusCardTest.userTriesToEndTurn">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="SoftCon_Assignment_02" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AbstractCardTest.setBonusSystemStandard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SoftCon_Assignment_02" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cards.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cards" />
-      <option name="MAIN_CLASS_NAME" value="cards.AbstractCardTest" />
-      <option name="METHOD_NAME" value="setBonusSystemStandard" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AbstractCardTest.userTriesToEndTurn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SoftCon_Assignment_02" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cards.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cards" />
-      <option name="MAIN_CLASS_NAME" value="cards.AbstractCardTest" />
-      <option name="METHOD_NAME" value="userTriesToEndTurn" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BonusCardTest.tuttoAchieved" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SoftCon_Assignment_02" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cards.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cards" />
-      <option name="MAIN_CLASS_NAME" value="cards.BonusCardTest" />
-      <option name="METHOD_NAME" value="tuttoAchieved" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -156,20 +115,62 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PlayerManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SoftCon_Assignment_02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="players.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="players" />
+      <option name="MAIN_CLASS_NAME" value="players.PlayerManagerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayerManagerTest.displayFunctions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SoftCon_Assignment_02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="players.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="players" />
+      <option name="MAIN_CLASS_NAME" value="players.PlayerManagerTest" />
+      <option name="METHOD_NAME" value="displayFunctions" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test in SoftCon_Assignment_02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SoftCon_Assignment_02" />
+      <extension name="coverage" sample_coverage="false" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/Test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.AbstractCardTest.setBonusSystemStandard" />
-      <item itemvalue="JUnit.BonusCardTest.tuttoAchieved" />
+      <item itemvalue="JUnit.PlayerManagerTest" />
+      <item itemvalue="JUnit.PlayerManagerTest.displayFunctions" />
       <item itemvalue="JUnit.BonusCardTest.userTriesToEndTurn" />
-      <item itemvalue="JUnit.AbstractCardTest.userTriesToEndTurn" />
+      <item itemvalue="JUnit.Test in SoftCon_Assignment_02" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BonusCardTest.userTriesToEndTurn" />
-        <item itemvalue="JUnit.BonusCardTest.tuttoAchieved" />
-        <item itemvalue="JUnit.AbstractCardTest.setBonusSystemStandard" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.AbstractCardTest.userTriesToEndTurn" />
+        <item itemvalue="JUnit.PlayerManagerTest.displayFunctions" />
+        <item itemvalue="JUnit.PlayerManagerTest" />
+        <item itemvalue="JUnit.Test in SoftCon_Assignment_02" />
+        <item itemvalue="JUnit.BonusCardTest.userTriesToEndTurn" />
       </list>
     </recent_temporary>
   </component>
@@ -206,14 +207,8 @@
       <workItem from="1669822402528" duration="6513000" />
       <workItem from="1669967769785" duration="1209000" />
       <workItem from="1669973355747" duration="9703000" />
-      <workItem from="1670084763134" duration="748000" />
-    </task>
-    <task id="LOCAL-00010" summary="running test works&#10;had to comment out wrong areas">
-      <created>1668866678503</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1668866678503</updated>
+      <workItem from="1670084763134" duration="3934000" />
+      <workItem from="1670089377026" duration="2705000" />
     </task>
     <task id="LOCAL-00011" summary="running test works&#10;had to comment out wrong areas">
       <created>1668867411686</created>
@@ -551,7 +546,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670083874881</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="bonusCard Testing stratred">
+      <created>1670085537709</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1670085537709</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -581,7 +583,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="make sure players aren't leaked" />
     <MESSAGE value="making DiceTower setable" />
     <MESSAGE value="adding functions to the card" />
     <MESSAGE value="PlayerManager now has a deck" />
@@ -606,19 +607,20 @@
     <MESSAGE value="adding tests branch coverage is only 44%" />
     <MESSAGE value="AbstractCardTest" />
     <MESSAGE value="plus minus work correctly now&#10;new interface was necessary to avoid code duplication" />
-    <option name="LAST_COMMIT_MESSAGE" value="plus minus work correctly now&#10;new interface was necessary to avoid code duplication" />
+    <MESSAGE value="bonusCard Testing stratred" />
+    <option name="LAST_COMMIT_MESSAGE" value="bonusCard Testing stratred" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/players/PlayerManager.java</url>
-          <line>60</line>
+          <line>58</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/players/PlayerManager.java</url>
-          <line>50</line>
+          <line>48</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
@@ -653,6 +655,9 @@
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$AbstractCardTest_getDescription.ic" NAME="AbstractCardTest.getDescription Coverage Results" MODIFIED="1670069160296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>cards.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$BonusCardTest_userTriesToEndTurn.ic" NAME="BonusCardTest.userTriesToEndTurn Coverage Results" MODIFIED="1670085561914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>cards.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$ValidateUserSelectionStraightTest.ic" NAME="ValidateUserSelectionStraightTest Coverage Results" MODIFIED="1669747189655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dice.*</FILTER>
     </SUITE>
@@ -669,6 +674,6 @@
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$ValidateUserSelectionNonStraightTest.ic" NAME="ValidateUserSelectionNonStraightTest Coverage Results" MODIFIED="1669745751052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dice.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$Test_in_SoftCon_Assignment_02.ic" NAME="Test in SoftCon_Assignment_02 Coverage Results" MODIFIED="1670073590069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$Test_in_SoftCon_Assignment_02.ic" NAME="Test in SoftCon_Assignment_02 Coverage Results" MODIFIED="1670086353846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>

@@ -1,8 +1,8 @@
 package Turn.State;
 
+import Enums.Msg;
 import Input.TuttoInput;
 import Turn.Turn;
-import cards.cards.cardtypes.Fireworks;
 import dice.DiceFace;
 import exceptions.IllegalUserInputExeption;
 
@@ -29,7 +29,7 @@ public class CurrentlyPlaying implements TurnState{
         while(true) {
             aTurn.rollNotTakenDices();
             if (!aTurn.validDiceExist()) {
-                aTurn.displayTurn("You rolled a Null");
+                aTurn.displayTurn(Msg.nullRoll.message);
                 if (!aTurn.turnCard.isImmunity()) {
                     aTurn.temporaryScore = 0;
                     aTurn.pointsToDeduct = 0;
@@ -52,17 +52,16 @@ public class CurrentlyPlaying implements TurnState{
         }
     }
     private void takeDice() {
-        String message = "Please enter the dice you want to take";
+        String message = Msg.explainHowToTakeDice.message;
         while (true) {
             aTurn.displayTurn(message);
             try {
                 ArrayList<DiceFace> diceToRemove = TuttoInput.takeDiceListInput();
                 if (diceToRemove.size() == 0) {
                     if (!aTurn.isDiceTakenSinceRoll()) {
-                        throw new IllegalUserInputExeption("You can't exit, you must take at least one Dice");
-                    } else if (aTurn.turnCard.getClass().equals(Fireworks.class) && aTurn.validDiceExist()) {
-                        throw new IllegalUserInputExeption("Your Card is a Firework and you" +
-                                " must take all valid Dice");
+                        throw new IllegalUserInputExeption(Msg.takeAtLeastOneValidDice.message);
+                    } else if ( !aTurn.validDiceExist()) {
+                        throw new IllegalUserInputExeption(Msg.invalidDicesSelected.message);
                     } else {
                         break;
                     }

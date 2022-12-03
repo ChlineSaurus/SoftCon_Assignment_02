@@ -7,6 +7,7 @@ import exceptions.IllegalUserInputExeption;
 import java.util.ArrayList;
 
 public class TuttoInput extends Input{
+
     public static ArrayList<DiceFace> takeDiceListInput() throws IllegalUserInputExeption {
         ArrayList<Integer> input = Input.takeIntegerListInput();
         ArrayList<DiceFace> returnList = new ArrayList<DiceFace>();
