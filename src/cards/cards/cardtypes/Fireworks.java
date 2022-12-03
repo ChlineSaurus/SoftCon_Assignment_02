@@ -36,10 +36,7 @@ public class Fireworks extends AbstractCard {
         throw new IllegalUserInputExeption("Your Card is a Firework, you are not allowed to stop. Press 'r'" +
                 "to continue.");
     }
-    @Override
-    public boolean mustTakeAllValidDices(){
-        return true;
-    }
+
 
 
 
