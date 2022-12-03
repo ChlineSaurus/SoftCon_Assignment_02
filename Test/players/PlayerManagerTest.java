@@ -38,9 +38,6 @@ public class PlayerManagerTest {
         Field f2 = playerManager.getClass().getDeclaredField("currentPlayerIndex");
         f2.setAccessible(true);
         f2.set(playerManager, 0);
-
-
-
     }
     @Test
     public void singeltonTest () throws Exception {
@@ -100,6 +97,17 @@ public class PlayerManagerTest {
     }
 
     @Test
+    public void nextPlayerName() throws Exception{
+        cleanUpSingelton();
+        PlayerManager playerManager = PlayerManager.getInstance();
+        Assertions.assertEquals("Hermine", playerManager.getNextPlayersName());
+        playerManager.nextPlayersTurn(0);
+        Assertions.assertEquals("Ron", playerManager.getNextPlayersName());
+        playerManager.nextPlayersTurn(0);
+        Assertions.assertEquals("Harry", playerManager.getNextPlayersName());
+    }
+
+    @Test
     public void displayFunctions() throws Exception{
         cleanUpSingelton();
         PlayerManager playerManager = PlayerManager.getInstance();
@@ -113,5 +121,13 @@ public class PlayerManagerTest {
         Assertions.assertEquals(100, playersScore.get(0));
         Assertions.assertEquals(500, playersScore.get(1));
         Assertions.assertEquals(0, playersScore.get(2));
+    }
+
+    public void nextPlayerTurn() throws Exception{
+        cleanUpSingelton();
+        PlayerManager playerManager = PlayerManager.getInstance();
+        playerManager.nextPlayersTurn(500);
+        Assertions.assertEquals("Hermine", playerManager.currentPlayerName());
+        Assertions.assertEquals(500, player1.getScore());
     }
 }

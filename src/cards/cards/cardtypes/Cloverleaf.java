@@ -31,7 +31,7 @@ public class Cloverleaf extends AbstractCard {
         }
         if (isBonusConditionAchieved()) {
             PlayerManager playerManager=PlayerManager.getInstance();
-            String winnerName=playerManager.getCurrentPlayersName();
+            String winnerName=playerManager.currentPlayerName();
             UI.Display.declareWinner(winnerName);
             exit (0);
 
