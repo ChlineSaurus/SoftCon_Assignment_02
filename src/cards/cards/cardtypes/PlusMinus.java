@@ -19,9 +19,9 @@ public class PlusMinus extends AbstractCard {
         requiredForBonus=TuttoRequired.One;
     }
 
-    @Override
+    /*@Override
     public int tuttoAchieved(int currentPoints) {
         super.tuttoAchieved(currentPoints);
         return 1000;
-    }
+    }*/
 }
