@@ -1,9 +1,7 @@
 package players;
 
 import Enums.GameConstants;
-import exceptions.IllegalUserInputExeption;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -25,14 +23,14 @@ public class PlayerManager {
         return uniqueInstance;
     }
 
-    public static synchronized PlayerManager getInstance(ArrayList<Player> players,int necessaryPoints) throws IOException, IllegalUserInputExeption {
+    public static synchronized PlayerManager getInstance(ArrayList<Player> players,int necessaryPoints) {
         if(uniqueInstance==null){
             uniqueInstance = new PlayerManager(players, necessaryPoints);
         }
         return uniqueInstance;
     }
 
-    private PlayerManager(ArrayList<Player> players, int necessaryPoints) throws IOException, IllegalUserInputExeption {
+    private PlayerManager(ArrayList<Player> players, int necessaryPoints) {
         assert necessaryPoints > 0;
         this.necessaryPoints = necessaryPoints;
         assert players.size() >= GameConstants.minAllowedPlayers.definedConstant &&
