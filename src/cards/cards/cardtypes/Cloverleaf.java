@@ -10,7 +10,6 @@ import static java.lang.System.exit;
 
 public class Cloverleaf extends AbstractCard {
 
-    //schauen!!!
     public Cloverleaf(){
         bonusPoints= GameConstants.maxAllowedPoints.definedConstant;
         name="Cloverleaf";
@@ -24,10 +23,11 @@ public class Cloverleaf extends AbstractCard {
     @Override
     public int tuttoAchieved(int currentPoints){
         if (!isPointConditionAchieved()){
+            System.out.println(requiredForPoints);
             requiredForPoints=TuttoRequired.getEnum((requiredForPoints.integerValue)-1);
         }
         if (!isBonusConditionAchieved()){
-            requiredForBonus=TuttoRequired.getEnum(requiredForBonus.integerValue-1);
+            requiredForBonus=TuttoRequired.getEnum((requiredForBonus.integerValue)-1);
         }
         if (isBonusConditionAchieved()) {
             PlayerManager playerManager=PlayerManager.getInstance();
@@ -40,7 +40,7 @@ public class Cloverleaf extends AbstractCard {
     }
 
     @Override
-    public boolean haveToContinueRolling(){
+    public boolean haveToContinueRolling() {
         return true;
     }
 }

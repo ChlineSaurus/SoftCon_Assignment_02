@@ -24,6 +24,7 @@ public class Turn {
         aDiceTower = new DiceTower();
         temporaryScore = 0;
         pointsToDeduct = 0;
+        draw();
     }
 
     public void newTurn() {
@@ -32,6 +33,7 @@ public class Turn {
         playerManager.nextPlayersTurn(temporaryScore);
         temporaryScore = 0;
         pointsToDeduct = 0;
+        draw();
         setCurrentState(new StartPlayerTurn(this));
     }
 
@@ -75,5 +77,9 @@ public class Turn {
 
     public boolean isDiceTakenSinceRoll(){
         return aDiceTower.diceTakenSinceRoll();
+    }
+
+    public void newRoll(){
+        aDiceTower.newTurn();
     }
 }

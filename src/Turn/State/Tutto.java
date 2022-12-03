@@ -18,6 +18,7 @@ public class Tutto implements TurnState{
         aTurn.pointsToDeduct += aTurn.turnCard.getDeductPoints();
         if(aTurn.turnCard.haveToContinueRolling()){
             Display.displayMessage(Msg.tuttoAndCloverleafOrFireworks.message);
+            aTurn.newRoll();
             aTurn.setCurrentState(new CurrentlyPlaying(aTurn));
         } else {
             Display.displayMessage(Msg.stopOrContinueQuestion.message);
@@ -37,6 +38,7 @@ public class Tutto implements TurnState{
                 aTurn.setCurrentState(new EndTurn(aTurn));
             }
             else if(action.equals('C')){
+                aTurn.draw();
                 aTurn.setCurrentState(new CurrentlyPlaying(aTurn));
             }
         }

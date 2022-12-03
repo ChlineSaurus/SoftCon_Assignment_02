@@ -17,7 +17,6 @@ public class CurrentlyPlaying implements TurnState{
     }
     @Override
     public void next() {
-        aTurn.draw();
         if(aTurn.turnCard.isEndTurn()) {
             aTurn.temporaryScore = 0;
             aTurn.setCurrentState(new EndTurn(aTurn));
