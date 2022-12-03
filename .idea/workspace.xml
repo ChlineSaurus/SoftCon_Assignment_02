@@ -84,7 +84,7 @@
       <recent name="dice.userDiceSelectionValidation" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DiceTowerTest.TestnewTurn">
+  <component name="RunManager" selected="JUnit.DiceTowerTest.madeTutto">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="SoftCon_Assignment_02" />
@@ -103,6 +103,22 @@
       <option name="PACKAGE_NAME" value="dice" />
       <option name="MAIN_CLASS_NAME" value="dice.DiceTowerTest" />
       <option name="METHOD_NAME" value="TestnewTurn" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiceTowerTest.madeTutto" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SoftCon_Assignment_02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dice" />
+      <option name="MAIN_CLASS_NAME" value="dice.DiceTowerTest" />
+      <option name="METHOD_NAME" value="madeTutto" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -139,31 +155,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test in SoftCon_Assignment_02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SoftCon_Assignment_02" />
-      <extension name="coverage" sample_coverage="false" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/Test" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.DiceTowerTest.TestnewTurn" />
+      <item itemvalue="JUnit.DiceTowerTest.madeTutto" />
       <item itemvalue="JUnit.PlayerManagerTest" />
       <item itemvalue="JUnit.PlayerManagerTest.displayFunctions" />
-      <item itemvalue="JUnit.Test in SoftCon_Assignment_02" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DiceTowerTest.madeTutto" />
         <item itemvalue="JUnit.DiceTowerTest.TestnewTurn" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.PlayerManagerTest.displayFunctions" />
         <item itemvalue="JUnit.PlayerManagerTest" />
-        <item itemvalue="JUnit.Test in SoftCon_Assignment_02" />
       </list>
     </recent_temporary>
   </component>

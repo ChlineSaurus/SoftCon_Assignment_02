@@ -145,8 +145,16 @@ public class DiceTowerTest {
         }
         @Test
         public void madeTutto() throws Exception{
+        diceTower.setStrategy(new PointsCalculatorStandard(), new DiceSelectionValidatorStandard(), new NotNullRollStraight());
+        diceTower.newTurn();
+        Field f=diceTower.getClass().getDeclaredField("notTakenDices");
+        f.setAccessible(true);
+        ArrayList<Dice> dices=new ArrayList<>();
+        f.set(diceTower,dices);
+        Assertions.assertTrue(diceTower.madeTutto());
 
         }
+
 
 
     }
