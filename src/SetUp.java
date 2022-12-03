@@ -48,22 +48,4 @@ public class SetUp {
         }
         PlayerManager.getInstance(players,necessaryPoints);
     }
-    private int necessaryPointsToWin() throws Exception{
-        int necessaryPoints;
-            while (true) {
-            System.out.println(Msg.necessaryPointsQuestion.message);
-            try {
-                //make sure that is within in the limit the input and lower level
-                necessaryPoints = Input.takeIntegerInput();
-                if (necessaryPoints<GameConstants.minAllowedPoints.definedConstant || necessaryPoints>GameConstants.maxAllowedPoints.definedConstant){
-                    throw new IllegalUserInputExeption(Msg.pointInputOutOfBounds.message);
-                }
-                break;
-            }
-            catch (IllegalUserInputExeption e) {
-                System.out.println(e.getMessage());
-            }
-        }
-        return necessaryPoints;
-    }
 }

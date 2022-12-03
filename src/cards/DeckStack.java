@@ -2,13 +2,12 @@ package cards;
 
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Iterator;
 
 
 public class DeckStack implements Iterable<AbstractCard>
 {
-    private final List<AbstractCard> aCards;
+    private final ArrayList<AbstractCard> aCards;
     public DeckStack(){
         aCards = new ArrayList<>();
     }

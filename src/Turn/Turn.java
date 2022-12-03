@@ -12,16 +12,16 @@ import players.PlayerManager;
 import java.util.ArrayList;
 
 public class Turn {
-    private final DiceTower aDiceTower;
-    private Deck aDeck;
+    private final DiceTower diceTower;
+    private Deck deck;
     public AbstractCard turnCard;
     public int temporaryScore;
     public int pointsToDeduct;
     private TurnState currentState = new StartPlayerTurn(this);
 
     public Turn () {
-        aDeck = new Deck();
-        aDiceTower = new DiceTower();
+        deck = new Deck();
+        diceTower = new DiceTower();
         temporaryScore = 0;
         pointsToDeduct = 0;
         draw();
@@ -38,12 +38,12 @@ public class Turn {
     }
 
     public void draw() {
-        if (aDeck.isEmpty()) {
-            aDeck = new Deck();
+        if (deck.isEmpty()) {
+            deck = new Deck();
         }
-        turnCard = aDeck.draw();
-        aDiceTower.newTurn();
-        turnCard.injectStrategyToTower(aDiceTower);
+        turnCard = deck.draw();
+        diceTower.newTurn();
+        turnCard.injectStrategyToTower(diceTower);
     }
 
     public void setCurrentState(TurnState currentState) {
@@ -54,29 +54,29 @@ public class Turn {
     }
     public void displayTurn(String message) {
         PlayerManager thePlayerManager = PlayerManager.getInstance();
-        UI.Display.displayGameState(aDiceTower.showNotTakenDices(), aDiceTower.showTakenDices(),
+        UI.Display.displayGameState(diceTower.showNotTakenDices(), diceTower.showTakenDices(),
                 thePlayerManager.currentPlayerName(), turnCard.getName(), turnCard.getDescription(),
                 temporaryScore, message);
     }
 
     public boolean validDiceExist() {
-        return aDiceTower.notNullRoll();
+        return diceTower.notNullRoll();
     }
 
     public void rollNotTakenDices() {
-        aDiceTower.rollNotTakenDices();
+        diceTower.rollNotTakenDices();
     }
 
     public int removeDice(ArrayList<DiceFace> dicesToRemove) throws IllegalUserInputExeption{
-        return aDiceTower.removeDice(dicesToRemove);
+        return diceTower.removeDice(dicesToRemove);
     }
 
     public boolean tuttoMade() {
-        return aDiceTower.madeTutto();
+        return diceTower.madeTutto();
     }
 
     public boolean isDiceTakenSinceRoll(){
-        return aDiceTower.diceTakenSinceRoll();
+        return diceTower.diceTakenSinceRoll();
     }
 
     public void newRoll(){

@@ -3,7 +3,7 @@ package dice;
 import java.util.Random;
 
 public class Dice {
-    final DiceFace[] FaceValues = DiceFace.values();
+    public final DiceFace[] FaceValues = DiceFace.values();
     private DiceFace currentFaceValue;
     private final Random aRandom = new Random();
     public DiceFace roll(){

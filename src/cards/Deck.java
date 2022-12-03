@@ -5,12 +5,11 @@ import cards.cards.cardtypes.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 
 public class Deck
 {
     private DeckStack aCards;
-    List<AbstractCard> cards;
+    private ArrayList<AbstractCard> cards;
 
     //Creates a new deck of 56 cards, shuffled.
     public Deck()

@@ -23,4 +23,5 @@ public class BonusCardTest {
         }
         assert noError;
     }
+
 }
