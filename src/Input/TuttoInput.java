@@ -10,10 +10,10 @@ public class TuttoInput extends Input{
 
     public static ArrayList<DiceFace> takeDiceListInput() throws IllegalUserInputException {
         ArrayList<Integer> input = Input.takeIntegerListInput();
-        return validateDiceListInput(input);
+        return transformDiceListInput(input);
 
     }
-    private static ArrayList <DiceFace> validateDiceListInput(ArrayList<Integer> input) throws IllegalUserInputException {
+    private static ArrayList <DiceFace> transformDiceListInput(ArrayList<Integer> input) throws IllegalUserInputException {
         ArrayList<DiceFace> returnList = new ArrayList<DiceFace>();
         for (Integer aInputInteger: input){
             DiceFace aDiceFace = DiceFace.getEnum(aInputInteger);
