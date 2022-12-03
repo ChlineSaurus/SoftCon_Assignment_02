@@ -1,0 +1,303 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"2d7c8c4b-7931-42c0-a061-826b7bfce578\" name=\"Changes\" comment=\"get firework class removed\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/Turn/State/EndTurn.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Turn/State/EndTurn.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/cards/cards/cardtypes/Fireworks.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/cards/cards/cardtypes/Fireworks.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"CodeInsightWorkspaceSettings\">\n    <option name=\"optimizeImportsOnTheFly\" value=\"true\" />\n  </component>\n  <component name=\"CoverageOptionsProvider\">\n    <option name=\"myAddOrReplace\" value=\"0\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Enum\" />\n        <option value=\"JUnit5 Test Class\" />\n        <option value=\"Interface\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n    <option name=\"RESET_MODE\" value=\"HARD\" />\n  </component>\n  <component name=\"HighlightingSettingsPerFile\">\n    <setting file=\"jar://$USER_HOME$/.jdks/openjdk-19.0.1/lib/src.zip!/java.base/java/util/HashMap.java\" root0=\"SKIP_INSPECTION\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2HJWK90zp5F9a6lMyZ6LmDNLaQe\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,\n    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,\n    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,\n    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\n    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,\n    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,\n    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,\n    &quot;last_directory_selection&quot;: &quot;C:/Users/chris/OneDrive/Desktop/SoftCon_Assignment_02/src/dice/userDiceSelectionValidation&quot;,\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/chris/Downloads/SoftCon_Assignment_02-master (2)&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\n    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\n    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src\" />\n    </key>\n    <key name=\"CreateTestDialog.Recents.Supers\">\n      <recent name=\"\" />\n    </key>\n    <key name=\"CreateTestDialog.RecentsKey\">\n      <recent name=\"dice.userDiceSelectionValidation\" />\n    </key>\n  </component>\n  <component name=\"RunManager\" selected=\"Application.Main\">\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"Main\" />\n      <module name=\"SoftCon_Assignment_02\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"BonusCardTest.userTriesToEndTurn\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"SoftCon_Assignment_02\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"cards.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"cards\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"cards.BonusCardTest\" />\n      <option name=\"METHOD_NAME\" value=\"userTriesToEndTurn\" />\n      <option name=\"TEST_OBJECT\" value=\"method\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"PlayerManagerTest\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"SoftCon_Assignment_02\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"players.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"players\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"players.PlayerManagerTest\" />\n      <option name=\"TEST_OBJECT\" value=\"class\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"PlayerManagerTest.displayFunctions\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"SoftCon_Assignment_02\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"players.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"players\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"players.PlayerManagerTest\" />\n      <option name=\"METHOD_NAME\" value=\"displayFunctions\" />\n      <option name=\"TEST_OBJECT\" value=\"method\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"Test in SoftCon_Assignment_02\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"SoftCon_Assignment_02\" />\n      <extension name=\"coverage\" sample_coverage=\"false\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"\" />\n      <option name=\"METHOD_NAME\" value=\"\" />\n      <option name=\"TEST_OBJECT\" value=\"directory\" />\n      <dir value=\"$PROJECT_DIR$/Test\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <list>\n      <item itemvalue=\"Application.Main\" />\n      <item itemvalue=\"JUnit.PlayerManagerTest\" />\n      <item itemvalue=\"JUnit.PlayerManagerTest.displayFunctions\" />\n      <item itemvalue=\"JUnit.BonusCardTest.userTriesToEndTurn\" />\n      <item itemvalue=\"JUnit.Test in SoftCon_Assignment_02\" />\n    </list>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Application.Main\" />\n        <item itemvalue=\"JUnit.PlayerManagerTest.displayFunctions\" />\n        <item itemvalue=\"JUnit.PlayerManagerTest\" />\n        <item itemvalue=\"JUnit.Test in SoftCon_Assignment_02\" />\n        <item itemvalue=\"JUnit.BonusCardTest.userTriesToEndTurn\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"2d7c8c4b-7931-42c0-a061-826b7bfce578\" name=\"Changes\" comment=\"\" />\n      <created>1668003600749</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1668003600749</updated>\n      <workItem from=\"1668003604479\" duration=\"1000\" />\n      <workItem from=\"1668004287395\" duration=\"135000\" />\n      <workItem from=\"1668119469469\" duration=\"156000\" />\n      <workItem from=\"1668119877254\" duration=\"6000\" />\n      <workItem from=\"1668456786595\" duration=\"623000\" />\n      <workItem from=\"1668503331602\" duration=\"1468000\" />\n      <workItem from=\"1668513990886\" duration=\"614000\" />\n      <workItem from=\"1668588064871\" duration=\"2311000\" />\n      <workItem from=\"1668596449577\" duration=\"1525000\" />\n      <workItem from=\"1668599635375\" duration=\"8151000\" />\n      <workItem from=\"1668676448649\" duration=\"1061000\" />\n      <workItem from=\"1668677731173\" duration=\"1718000\" />\n      <workItem from=\"1668698634153\" duration=\"2550000\" />\n      <workItem from=\"1668701408033\" duration=\"22578000\" />\n      <workItem from=\"1669218556148\" duration=\"9739000\" />\n      <workItem from=\"1669277494079\" duration=\"2638000\" />\n      <workItem from=\"1669280574635\" duration=\"4509000\" />\n      <workItem from=\"1669286275898\" duration=\"20090000\" />\n      <workItem from=\"1669323500790\" duration=\"2699000\" />\n      <workItem from=\"1669373652105\" duration=\"16066000\" />\n      <workItem from=\"1669412958477\" duration=\"5604000\" />\n      <workItem from=\"1669493988940\" duration=\"4060000\" />\n      <workItem from=\"1669822402528\" duration=\"6513000\" />\n      <workItem from=\"1669967769785\" duration=\"1209000\" />\n      <workItem from=\"1669973355747\" duration=\"9703000\" />\n      <workItem from=\"1670084763134\" duration=\"3934000\" />\n      <workItem from=\"1670089377026\" duration=\"3587000\" />\n    </task>\n    <task id=\"LOCAL-00012\" summary=\"Mit Fehlsern\">\n      <created>1668956883378</created>\n      <option name=\"number\" value=\"00012\" />\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668956883378</updated>\n    </task>\n    <task id=\"LOCAL-00013\" summary=\"some changes\">\n      <created>1669219216099</created>\n      <option name=\"number\" value=\"00013\" />\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669219216099</updated>\n    </task>\n    <task id=\"LOCAL-00014\" summary=\"validation impletemd with stratergy still need to change it to depandcy injection problematic aspect one needs to if it is a straight card one discover this from the card\">\n      <created>1669240589496</created>\n      <option name=\"number\" value=\"00014\" />\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669240589496</updated>\n    </task>\n    <task id=\"LOCAL-00015\" summary=\"validation impletemd with stratergy still need to change it to depandcy injection problematic aspect one needs to if it is a straight card one discover this from the card\">\n      <created>1669241453906</created>\n      <option name=\"number\" value=\"00015\" />\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669241453906</updated>\n    </task>\n    <task id=\"LOCAL-00016\" summary=\"fixed Boolean boolean mistake\">\n      <created>1669241896906</created>\n      <option name=\"number\" value=\"00016\" />\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669241896906</updated>\n    </task>\n    <task id=\"LOCAL-00017\" summary=\"caluculatepoints classes made... &#10;need to get a way to get the recently taken dice\">\n      <created>1669284089822</created>\n      <option name=\"number\" value=\"00017\" />\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669284089822</updated>\n    </task>\n    <task id=\"LOCAL-00018\" summary=\"adding gameconstants necessary for win\">\n      <created>1669297735345</created>\n      <option name=\"number\" value=\"00018\" />\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669297735345</updated>\n    </task>\n    <task id=\"LOCAL-00019\" summary=\"testing should be working now\">\n      <created>1669302762182</created>\n      <option name=\"number\" value=\"00019\" />\n      <option name=\"presentableId\" value=\"LOCAL-00019\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669302762182</updated>\n    </task>\n    <task id=\"LOCAL-00020\" summary=\"Changing Boolean.FAlSE to false and Boolean to boolean\">\n      <created>1669303988315</created>\n      <option name=\"number\" value=\"00020\" />\n      <option name=\"presentableId\" value=\"LOCAL-00020\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669303988315</updated>\n    </task>\n    <task id=\"LOCAL-00021\" summary=\"metaprogramming &#10;man kann eine IntegerArray zu einer List&lt;Dice&gt; machen\">\n      <created>1669309081611</created>\n      <option name=\"number\" value=\"00021\" />\n      <option name=\"presentableId\" value=\"LOCAL-00021\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669309081611</updated>\n    </task>\n    <task id=\"LOCAL-00022\" summary=\"fixedproblem in metaprogramming\">\n      <created>1669311311636</created>\n      <option name=\"number\" value=\"00022\" />\n      <option name=\"presentableId\" value=\"LOCAL-00022\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669311311637</updated>\n    </task>\n    <task id=\"LOCAL-00023\" summary=\"fixedproblem in metaprogramming\">\n      <created>1669316791303</created>\n      <option name=\"number\" value=\"00023\" />\n      <option name=\"presentableId\" value=\"LOCAL-00023\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669316791303</updated>\n    </task>\n    <task id=\"LOCAL-00024\" summary=\"changing tests\">\n      <created>1669323390402</created>\n      <option name=\"number\" value=\"00024\" />\n      <option name=\"presentableId\" value=\"LOCAL-00024\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669323390402</updated>\n    </task>\n    <task id=\"LOCAL-00025\" summary=\"setup comment\">\n      <created>1669374268959</created>\n      <option name=\"number\" value=\"00025\" />\n      <option name=\"presentableId\" value=\"LOCAL-00025\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669374268959</updated>\n    </task>\n    <task id=\"LOCAL-00026\" summary=\"getarraywithplayermaxpoints necessary for plus/minuscard &#10;I still need to fix cards\">\n      <created>1669382465159</created>\n      <option name=\"number\" value=\"00026\" />\n      <option name=\"presentableId\" value=\"LOCAL-00026\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669382465159</updated>\n    </task>\n    <task id=\"LOCAL-00027\" summary=\"New behavoir that forces user to select valid cards&#10;&#10;restructuring files to make the structuring clearer\">\n      <created>1669394780269</created>\n      <option name=\"number\" value=\"00027\" />\n      <option name=\"presentableId\" value=\"LOCAL-00027\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669394780269</updated>\n    </task>\n    <task id=\"LOCAL-00028\" summary=\"trying to implement the the three folders into to dicetower &#10;namely CalculateRollPoints&#10;Notnullroll&#10;ValidateUserSelection works but needs to be imbed to dicetower\">\n      <created>1669398346188</created>\n      <option name=\"number\" value=\"00028\" />\n      <option name=\"presentableId\" value=\"LOCAL-00028\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669398346188</updated>\n    </task>\n    <task id=\"LOCAL-00029\" summary=\"Singleton PlayerManager\">\n      <created>1669462859271</created>\n      <option name=\"number\" value=\"00029\" />\n      <option name=\"presentableId\" value=\"LOCAL-00029\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669462859271</updated>\n    </task>\n    <task id=\"LOCAL-00030\" summary=\"Singleton PlayerManager\">\n      <created>1669462870768</created>\n      <option name=\"number\" value=\"00030\" />\n      <option name=\"presentableId\" value=\"LOCAL-00030\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669462870768</updated>\n    </task>\n    <task id=\"LOCAL-00031\" summary=\"get dicetowers to work\">\n      <created>1669488401757</created>\n      <option name=\"number\" value=\"00031\" />\n      <option name=\"presentableId\" value=\"LOCAL-00031\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669488401757</updated>\n    </task>\n    <task id=\"LOCAL-00032\" summary=\"@Elias bonus sollte jetzt funktionieren\">\n      <created>1669490432713</created>\n      <option name=\"number\" value=\"00032\" />\n      <option name=\"presentableId\" value=\"LOCAL-00032\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669490432713</updated>\n    </task>\n    <task id=\"LOCAL-00033\" summary=\"adding funciton to card\">\n      <created>1669492406871</created>\n      <option name=\"number\" value=\"00033\" />\n      <option name=\"presentableId\" value=\"LOCAL-00033\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669492406871</updated>\n    </task>\n    <task id=\"LOCAL-00034\" summary=\"make sure players aren't leaked\">\n      <created>1669498478352</created>\n      <option name=\"number\" value=\"00034\" />\n      <option name=\"presentableId\" value=\"LOCAL-00034\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669498478352</updated>\n    </task>\n    <task id=\"LOCAL-00035\" summary=\"making DiceTower setable\">\n      <created>1669548059424</created>\n      <option name=\"number\" value=\"00035\" />\n      <option name=\"presentableId\" value=\"LOCAL-00035\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669548059424</updated>\n    </task>\n    <task id=\"LOCAL-00036\" summary=\"adding functions to the card\">\n      <created>1669551031218</created>\n      <option name=\"number\" value=\"00036\" />\n      <option name=\"presentableId\" value=\"LOCAL-00036\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669551031218</updated>\n    </task>\n    <task id=\"LOCAL-00037\" summary=\"PlayerManager now has a deck\">\n      <created>1669551811550</created>\n      <option name=\"number\" value=\"00037\" />\n      <option name=\"presentableId\" value=\"LOCAL-00037\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669551811550</updated>\n    </task>\n    <task id=\"LOCAL-00038\" summary=\"addBonus\">\n      <created>1669552279650</created>\n      <option name=\"number\" value=\"00038\" />\n      <option name=\"presentableId\" value=\"LOCAL-00038\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669552279650</updated>\n    </task>\n    <task id=\"LOCAL-00039\" summary=\"comments\">\n      <created>1669552504044</created>\n      <option name=\"number\" value=\"00039\" />\n      <option name=\"presentableId\" value=\"LOCAL-00039\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669552504044</updated>\n    </task>\n    <task id=\"LOCAL-00040\" summary=\"creating test\">\n      <created>1669553275840</created>\n      <option name=\"number\" value=\"00040\" />\n      <option name=\"presentableId\" value=\"LOCAL-00040\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669553275840</updated>\n    </task>\n    <task id=\"LOCAL-00041\" summary=\"adding further tests\">\n      <created>1669554332671</created>\n      <option name=\"number\" value=\"00041\" />\n      <option name=\"presentableId\" value=\"LOCAL-00041\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669554332671</updated>\n    </task>\n    <task id=\"LOCAL-00042\" summary=\"Better Names\">\n      <created>1669750740306</created>\n      <option name=\"number\" value=\"00042\" />\n      <option name=\"presentableId\" value=\"LOCAL-00042\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669750740306</updated>\n    </task>\n    <task id=\"LOCAL-00043\" summary=\"problems with testing playermanger &#10;code should still compile\">\n      <created>1669803087957</created>\n      <option name=\"number\" value=\"00043\" />\n      <option name=\"presentableId\" value=\"LOCAL-00043\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669803087957</updated>\n    </task>\n    <task id=\"LOCAL-00044\" summary=\"renaming dicetower variables so that they make sense\">\n      <created>1669829036045</created>\n      <option name=\"number\" value=\"00044\" />\n      <option name=\"presentableId\" value=\"LOCAL-00044\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669829036045</updated>\n    </task>\n    <task id=\"LOCAL-00045\" summary=\"adding comments and description to cards\">\n      <created>1669830058832</created>\n      <option name=\"number\" value=\"00045\" />\n      <option name=\"presentableId\" value=\"LOCAL-00045\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669830058832</updated>\n    </task>\n    <task id=\"LOCAL-00046\" summary=\"renaming tests so that they don't fail\">\n      <created>1669902964843</created>\n      <option name=\"number\" value=\"00046\" />\n      <option name=\"presentableId\" value=\"LOCAL-00046\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669902964843</updated>\n    </task>\n    <task id=\"LOCAL-00047\" summary=\"Changes dicetower so that it works temporary dice\">\n      <created>1669920403027</created>\n      <option name=\"number\" value=\"00047\" />\n      <option name=\"presentableId\" value=\"LOCAL-00047\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669920403027</updated>\n    </task>\n    <task id=\"LOCAL-00048\" summary=\"better now but problem that 7 dice\">\n      <created>1669921271754</created>\n      <option name=\"number\" value=\"00048\" />\n      <option name=\"presentableId\" value=\"LOCAL-00048\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669921271754</updated>\n    </task>\n    <task id=\"LOCAL-00049\" summary=\"fixing 7 dice problem think dices are good to go\">\n      <created>1669922831120</created>\n      <option name=\"number\" value=\"00049\" />\n      <option name=\"presentableId\" value=\"LOCAL-00049\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669922831120</updated>\n    </task>\n    <task id=\"LOCAL-00050\" summary=\"fixed issues removes correct dices problem is that if you roll 5 5 5 and select them singley you'll recieve 150 points and not 500\">\n      <created>1669923372628</created>\n      <option name=\"number\" value=\"00050\" />\n      <option name=\"presentableId\" value=\"LOCAL-00050\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669923372629</updated>\n    </task>\n    <task id=\"LOCAL-00051\" summary=\"minimum and max points introduced\">\n      <created>1669924059201</created>\n      <option name=\"number\" value=\"00051\" />\n      <option name=\"presentableId\" value=\"LOCAL-00051\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669924059201</updated>\n    </task>\n    <task id=\"LOCAL-00052\" summary=\"next player replaced with the name of the next player\">\n      <created>1669930269706</created>\n      <option name=\"number\" value=\"00052\" />\n      <option name=\"presentableId\" value=\"LOCAL-00052\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669930269706</updated>\n    </task>\n    <task id=\"LOCAL-00053\" summary=\"next player works now ... message is now callled msg\">\n      <created>1669968531404</created>\n      <option name=\"number\" value=\"00053\" />\n      <option name=\"presentableId\" value=\"LOCAL-00053\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669968531404</updated>\n    </task>\n    <task id=\"LOCAL-00054\" summary=\"minimal changes\">\n      <created>1669968816169</created>\n      <option name=\"number\" value=\"00054\" />\n      <option name=\"presentableId\" value=\"LOCAL-00054\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669968816169</updated>\n    </task>\n    <task id=\"LOCAL-00055\" summary=\"straight works now\">\n      <created>1669975780093</created>\n      <option name=\"number\" value=\"00055\" />\n      <option name=\"presentableId\" value=\"LOCAL-00055\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669975780094</updated>\n    </task>\n    <task id=\"LOCAL-00056\" summary=\"adding tests branch coverage is only 44%\">\n      <created>1669991445049</created>\n      <option name=\"number\" value=\"00056\" />\n      <option name=\"presentableId\" value=\"LOCAL-00056\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669991445049</updated>\n    </task>\n    <task id=\"LOCAL-00057\" summary=\"AbstractCardTest\">\n      <created>1670069383803</created>\n      <option name=\"number\" value=\"00057\" />\n      <option name=\"presentableId\" value=\"LOCAL-00057\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1670069383804</updated>\n    </task>\n    <task id=\"LOCAL-00058\" summary=\"plus minus work correctly now&#10;new interface was necessary to avoid code duplication\">\n      <created>1670083874881</created>\n      <option name=\"number\" value=\"00058\" />\n      <option name=\"presentableId\" value=\"LOCAL-00058\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1670083874881</updated>\n    </task>\n    <task id=\"LOCAL-00059\" summary=\"bonusCard Testing stratred\">\n      <created>1670085537709</created>\n      <option name=\"number\" value=\"00059\" />\n      <option name=\"presentableId\" value=\"LOCAL-00059\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1670085537709</updated>\n    </task>\n    <task id=\"LOCAL-00060\" summary=\"get firework class removed\">\n      <created>1670092322411</created>\n      <option name=\"number\" value=\"00060\" />\n      <option name=\"presentableId\" value=\"LOCAL-00060\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1670092322412</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"61\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State>\n              <option name=\"FILTERS\">\n                <map>\n                  <entry key=\"branch\">\n                    <value>\n                      <list>\n                        <option value=\"origin/master\" />\n                      </list>\n                    </value>\n                  </entry>\n                </map>\n              </option>\n            </State>\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"adding functions to the card\" />\n    <MESSAGE value=\"PlayerManager now has a deck\" />\n    <MESSAGE value=\"addBonus\" />\n    <MESSAGE value=\"comments\" />\n    <MESSAGE value=\"creating test\" />\n    <MESSAGE value=\"adding further tests\" />\n    <MESSAGE value=\"Better Names\" />\n    <MESSAGE value=\"problems with testing playermanger &#10;code should still compile\" />\n    <MESSAGE value=\"renaming dicetower variables so that they make sense\" />\n    <MESSAGE value=\"adding comments and description to cards\" />\n    <MESSAGE value=\"renaming tests so that they don't fail\" />\n    <MESSAGE value=\"Changes dicetower so that it works temporary dice\" />\n    <MESSAGE value=\"better now but problem that 7 dice\" />\n    <MESSAGE value=\"fixing 7 dice problem think dices are good to go\" />\n    <MESSAGE value=\"fixed issues removes correct dices problem is that if you roll 5 5 5 and select them singley you'll recieve 150 points and not 500\" />\n    <MESSAGE value=\"minimum and max points introduced\" />\n    <MESSAGE value=\"next player replaced with the name of the next player\" />\n    <MESSAGE value=\"next player works now ... message is now callled msg\" />\n    <MESSAGE value=\"minimal changes\" />\n    <MESSAGE value=\"straight works now\" />\n    <MESSAGE value=\"adding tests branch coverage is only 44%\" />\n    <MESSAGE value=\"AbstractCardTest\" />\n    <MESSAGE value=\"plus minus work correctly now&#10;new interface was necessary to avoid code duplication\" />\n    <MESSAGE value=\"bonusCard Testing stratred\" />\n    <MESSAGE value=\"get firework class removed\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"get firework class removed\" />\n  </component>\n  <component name=\"XDebuggerManager\">\n    <breakpoint-manager>\n      <breakpoints>\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\n          <url>file://$PROJECT_DIR$/src/players/PlayerManager.java</url>\n          <line>58</line>\n          <option name=\"timeStamp\" value=\"9\" />\n        </line-breakpoint>\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\n          <url>file://$PROJECT_DIR$/src/players/PlayerManager.java</url>\n          <line>48</line>\n          <option name=\"timeStamp\" value=\"12\" />\n        </line-breakpoint>\n        <breakpoint enabled=\"true\" type=\"java-exception\">\n          <properties class=\"java.lang.NullPointerException\" package=\"java.lang\" />\n          <option name=\"timeStamp\" value=\"18\" />\n        </breakpoint>\n      </breakpoints>\n    </breakpoint-manager>\n  </component>\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\n    <SUITE FILE_PATH=\"coverage/SoftCon_Assignment_02$DiceTest.ic\" NAME=\"DiceTest Coverage Results\" MODIFIED=\"1669561512570\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\">\n      <FILTER>dice.notNullRoll.*</FILTER>\n    </SUITE>\n    <SUITE FILE_PATH=\"coverage/SoftCon_Assignment_02$NotNullNonStraightTest.ic\" NAME=\"NotNullNonStraightTest Coverage Results\" MODIFIED=\"1669747295586\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\">\n      <FILTER>dice.*</FILTER>\n    </SUITE>\n    <SUITE FILE_PATH=\"coverage/SoftCon_Assignment_02$PlayerManagerTest.ic\" NAME=\"PlayerManagerTest Coverage Results\" MODIFIED=\"1669802157358\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\">\n      <FILTER>players.*</FILTER>\n    </SUITE>\n    <SUITE FILE_PATH=\"coverage/SoftCon_Assignment_02$NotNullStraightTest.ic\" NAME=\"NotNullStraightTest Coverage Results\" MODIFIED=\"1669745840191\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\">\n      <FILTER>dice.*</FILTER>\n    </SUITE>\n    <SUITE FILE_PATH=\"coverage/SoftCon_Assignment_02$DiceTowerTest_removeDiceTest.ic\" NAME=\"DiceTowerTest.removeDiceTest Coverage Results\" MODIFIED=\"1669743724412\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\">\n      <FILTER>dice.*</FILTER>\n    </SUITE>\n    <SUITE FILE_PATH=\"coverage/SoftCon_Assignment_02$MustTakeAllValidDiceTest.ic\" NAME=\"MustTakeAllValidDiceTest Coverage Results\" MODIFIED=\"1669745871589\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\">\n      <FILTER>dice.*</FILTER>\n    </SUITE>\n    <SUITE FILE_PATH=\"coverage/SoftCon_Assignment_02$PlayerManagerTest_deductionPointsTest.ic\" NAME=\"PlayerManagerTest.deductionPointsTest Coverage Results\" MODIFIED=\"1669982353136\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\">\n      <FILTER>players.*</FILTER>\n    </SUITE>\n    <SUITE FILE_PATH=\"coverage/SoftCon_Assignment_02$AbstractCardTest_getDescription.ic\" NAME=\"AbstractCardTest.getDescription Coverage Results\" MODIFIED=\"1670069160296\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\">\n      <FILTER>cards.*</FILTER>\n    </SUITE>\n    <SUITE FILE_PATH=\"coverage/SoftCon_Assignment_02$BonusCardTest_userTriesToEndTurn.ic\" NAME=\"BonusCardTest.userTriesToEndTurn Coverage Results\" MODIFIED=\"1670085561914\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\">\n      <FILTER>cards.*</FILTER>\n    </SUITE>\n    <SUITE FILE_PATH=\"coverage/SoftCon_Assignment_02$ValidateUserSelectionStraightTest.ic\" NAME=\"ValidateUserSelectionStraightTest Coverage Results\" MODIFIED=\"1669747189655\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\">\n      <FILTER>dice.*</FILTER>\n    </SUITE>\n    <SUITE FILE_PATH=\"coverage/SoftCon_Assignment_02$Main.ic\" NAME=\"Main Coverage Results\" MODIFIED=\"1670059885504\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" />\n    <SUITE FILE_PATH=\"coverage/SoftCon_Assignment_02$DiceTowerTest.ic\" NAME=\"DiceTowerTest Coverage Results\" MODIFIED=\"1669755576670\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\">\n      <FILTER>dice.*</FILTER>\n    </SUITE>\n    <SUITE FILE_PATH=\"coverage/SoftCon_Assignment_02$PlayerTest.ic\" NAME=\"PlayerTest Coverage Results\" MODIFIED=\"1669757440080\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\">\n      <FILTER>players.*</FILTER>\n    </SUITE>\n    <SUITE FILE_PATH=\"coverage/SoftCon_Assignment_02$DiceRepresentationTest_testRepresent6.ic\" NAME=\"DiceRepresentationTest.testRepresent6 Coverage Results\" MODIFIED=\"1669302462013\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\">\n      <FILTER>UI.*</FILTER>\n    </SUITE>\n    <SUITE FILE_PATH=\"coverage/SoftCon_Assignment_02$ValidateUserSelectionNonStraightTest.ic\" NAME=\"ValidateUserSelectionNonStraightTest Coverage Results\" MODIFIED=\"1669745751052\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\">\n      <FILTER>dice.*</FILTER>\n    </SUITE>\n    <SUITE FILE_PATH=\"coverage/SoftCon_Assignment_02$Test_in_SoftCon_Assignment_02.ic\" NAME=\"Test in SoftCon_Assignment_02 Coverage Results\" MODIFIED=\"1670086353846\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"true\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 6b7259e2ad5361aa44ddae5c60eca5e010c141b8)
++++ b/.idea/workspace.xml	(date 1670095979954)
+@@ -4,10 +4,8 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="get firework class removed">
++    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="plus minus work correctly now&#10;new interface was necessary to avoid code duplication">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Turn/State/EndTurn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn/State/EndTurn.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/cards/cards/cardtypes/Fireworks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/cardtypes/Fireworks.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -33,9 +31,6 @@
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+     <option name="RESET_MODE" value="HARD" />
+-  </component>
+-  <component name="HighlightingSettingsPerFile">
+-    <setting file="jar://$USER_HOME$/.jdks/openjdk-19.0.1/lib/src.zip!/java.base/java/util/HashMap.java" root0="SKIP_INSPECTION" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+@@ -84,7 +79,7 @@
+       <recent name="dice.userDiceSelectionValidation" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="Application.Main">
++  <component name="RunManager" selected="JUnit.PlayerManagerTest">
+     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="Main" />
+       <module name="SoftCon_Assignment_02" />
+@@ -92,7 +87,7 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="BonusCardTest.userTriesToEndTurn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++    <configuration name="AbstractCardTest.setBonusSystemStandard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="SoftCon_Assignment_02" />
+       <extension name="coverage">
+         <pattern>
+@@ -101,51 +96,56 @@
+         </pattern>
+       </extension>
+       <option name="PACKAGE_NAME" value="cards" />
+-      <option name="MAIN_CLASS_NAME" value="cards.BonusCardTest" />
+-      <option name="METHOD_NAME" value="userTriesToEndTurn" />
++      <option name="MAIN_CLASS_NAME" value="cards.AbstractCardTest" />
++      <option name="METHOD_NAME" value="setBonusSystemStandard" />
+       <option name="TEST_OBJECT" value="method" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="PlayerManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++    <configuration name="BonusCardTest.tuttoAchieved" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="SoftCon_Assignment_02" />
+       <extension name="coverage">
+         <pattern>
+-          <option name="PATTERN" value="players.*" />
++          <option name="PATTERN" value="cards.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+-      <option name="PACKAGE_NAME" value="players" />
+-      <option name="MAIN_CLASS_NAME" value="players.PlayerManagerTest" />
+-      <option name="TEST_OBJECT" value="class" />
++      <option name="PACKAGE_NAME" value="cards" />
++      <option name="MAIN_CLASS_NAME" value="cards.BonusCardTest" />
++      <option name="METHOD_NAME" value="tuttoAchieved" />
++      <option name="TEST_OBJECT" value="method" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="PlayerManagerTest.displayFunctions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++    <configuration name="BonusCardTest.userTriesToEndTurn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="SoftCon_Assignment_02" />
+       <extension name="coverage">
+         <pattern>
+-          <option name="PATTERN" value="players.*" />
++          <option name="PATTERN" value="cards.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+-      <option name="PACKAGE_NAME" value="players" />
+-      <option name="MAIN_CLASS_NAME" value="players.PlayerManagerTest" />
+-      <option name="METHOD_NAME" value="displayFunctions" />
++      <option name="PACKAGE_NAME" value="cards" />
++      <option name="MAIN_CLASS_NAME" value="cards.BonusCardTest" />
++      <option name="METHOD_NAME" value="userTriesToEndTurn" />
+       <option name="TEST_OBJECT" value="method" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="Test in SoftCon_Assignment_02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++    <configuration name="PlayerManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="SoftCon_Assignment_02" />
+-      <extension name="coverage" sample_coverage="false" />
+-      <option name="MAIN_CLASS_NAME" value="" />
+-      <option name="METHOD_NAME" value="" />
+-      <option name="TEST_OBJECT" value="directory" />
+-      <dir value="$PROJECT_DIR$/Test" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="players.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <option name="PACKAGE_NAME" value="players" />
++      <option name="MAIN_CLASS_NAME" value="players.PlayerManagerTest" />
++      <option name="TEST_OBJECT" value="class" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+@@ -153,17 +153,17 @@
+     <list>
+       <item itemvalue="Application.Main" />
+       <item itemvalue="JUnit.PlayerManagerTest" />
+-      <item itemvalue="JUnit.PlayerManagerTest.displayFunctions" />
++      <item itemvalue="JUnit.AbstractCardTest.setBonusSystemStandard" />
++      <item itemvalue="JUnit.BonusCardTest.tuttoAchieved" />
+       <item itemvalue="JUnit.BonusCardTest.userTriesToEndTurn" />
+-      <item itemvalue="JUnit.Test in SoftCon_Assignment_02" />
+     </list>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="Application.Main" />
+-        <item itemvalue="JUnit.PlayerManagerTest.displayFunctions" />
+         <item itemvalue="JUnit.PlayerManagerTest" />
+-        <item itemvalue="JUnit.Test in SoftCon_Assignment_02" />
+         <item itemvalue="JUnit.BonusCardTest.userTriesToEndTurn" />
++        <item itemvalue="JUnit.BonusCardTest.tuttoAchieved" />
++        <item itemvalue="JUnit.AbstractCardTest.setBonusSystemStandard" />
++        <item itemvalue="Application.Main" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -200,8 +200,21 @@
+       <workItem from="1669822402528" duration="6513000" />
+       <workItem from="1669967769785" duration="1209000" />
+       <workItem from="1669973355747" duration="9703000" />
+-      <workItem from="1670084763134" duration="3934000" />
+-      <workItem from="1670089377026" duration="3587000" />
++      <workItem from="1670084763134" duration="748000" />
++    </task>
++    <task id="LOCAL-00010" summary="running test works&#10;had to comment out wrong areas">
++      <created>1668866678503</created>
++      <option name="number" value="00010" />
++      <option name="presentableId" value="LOCAL-00010" />
++      <option name="project" value="LOCAL" />
++      <updated>1668866678503</updated>
++    </task>
++    <task id="LOCAL-00011" summary="running test works&#10;had to comment out wrong areas">
++      <created>1668867411686</created>
++      <option name="number" value="00011" />
++      <option name="presentableId" value="LOCAL-00011" />
++      <option name="project" value="LOCAL" />
++      <updated>1668867411686</updated>
+     </task>
+     <task id="LOCAL-00012" summary="Mit Fehlsern">
+       <created>1668956883378</created>
+@@ -532,21 +545,7 @@
+       <option name="project" value="LOCAL" />
+       <updated>1670083874881</updated>
+     </task>
+-    <task id="LOCAL-00059" summary="bonusCard Testing stratred">
+-      <created>1670085537709</created>
+-      <option name="number" value="00059" />
+-      <option name="presentableId" value="LOCAL-00059" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1670085537709</updated>
+-    </task>
+-    <task id="LOCAL-00060" summary="get firework class removed">
+-      <created>1670092322411</created>
+-      <option name="number" value="00060" />
+-      <option name="presentableId" value="LOCAL-00060" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1670092322412</updated>
+-    </task>
+-    <option name="localTasksCounter" value="61" />
++    <option name="localTasksCounter" value="59" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -576,6 +575,8 @@
+     </option>
+   </component>
+   <component name="VcsManagerConfiguration">
++    <MESSAGE value="make sure players aren't leaked" />
++    <MESSAGE value="making DiceTower setable" />
+     <MESSAGE value="adding functions to the card" />
+     <MESSAGE value="PlayerManager now has a deck" />
+     <MESSAGE value="addBonus" />
+@@ -599,21 +600,19 @@
+     <MESSAGE value="adding tests branch coverage is only 44%" />
+     <MESSAGE value="AbstractCardTest" />
+     <MESSAGE value="plus minus work correctly now&#10;new interface was necessary to avoid code duplication" />
+-    <MESSAGE value="bonusCard Testing stratred" />
+-    <MESSAGE value="get firework class removed" />
+-    <option name="LAST_COMMIT_MESSAGE" value="get firework class removed" />
++    <option name="LAST_COMMIT_MESSAGE" value="plus minus work correctly now&#10;new interface was necessary to avoid code duplication" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
+       <breakpoints>
+         <line-breakpoint enabled="true" type="java-line">
+           <url>file://$PROJECT_DIR$/src/players/PlayerManager.java</url>
+-          <line>58</line>
++          <line>60</line>
+           <option name="timeStamp" value="9" />
+         </line-breakpoint>
+         <line-breakpoint enabled="true" type="java-line">
+           <url>file://$PROJECT_DIR$/src/players/PlayerManager.java</url>
+-          <line>48</line>
++          <line>50</line>
+           <option name="timeStamp" value="12" />
+         </line-breakpoint>
+         <breakpoint enabled="true" type="java-exception">
+@@ -624,49 +623,50 @@
+     </breakpoint-manager>
+   </component>
+   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$DiceTest.ic" NAME="DiceTest Coverage Results" MODIFIED="1669561512570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+-      <FILTER>dice.notNullRoll.*</FILTER>
++    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$NotNullStraightTest.ic" NAME="NotNullStraightTest Coverage Results" MODIFIED="1669745840191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
++      <FILTER>dice.*</FILTER>
+     </SUITE>
+-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$NotNullNonStraightTest.ic" NAME="NotNullNonStraightTest Coverage Results" MODIFIED="1669747295586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
++    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$DiceTowerTest.ic" NAME="DiceTowerTest Coverage Results" MODIFIED="1669755576670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+       <FILTER>dice.*</FILTER>
+     </SUITE>
+-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$PlayerManagerTest.ic" NAME="PlayerManagerTest Coverage Results" MODIFIED="1669802157358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
++    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$PlayerTest.ic" NAME="PlayerTest Coverage Results" MODIFIED="1669757440080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+       <FILTER>players.*</FILTER>
+     </SUITE>
+-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$NotNullStraightTest.ic" NAME="NotNullStraightTest Coverage Results" MODIFIED="1669745840191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
++    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$MustTakeAllValidDiceTest.ic" NAME="MustTakeAllValidDiceTest Coverage Results" MODIFIED="1669553423459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+       <FILTER>dice.*</FILTER>
+     </SUITE>
+-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$DiceTowerTest_removeDiceTest.ic" NAME="DiceTowerTest.removeDiceTest Coverage Results" MODIFIED="1669743724412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
++    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$ValidateUserSelectionStraightTest_testMultipleInValidDices.ic" NAME="ValidateUserSelectionStraightTest.testMultipleInValidDices Coverage Results" MODIFIED="1669996137851" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+       <FILTER>dice.*</FILTER>
+     </SUITE>
+-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$MustTakeAllValidDiceTest.ic" NAME="MustTakeAllValidDiceTest Coverage Results" MODIFIED="1669745871589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
++    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$NotNullNonStraightTest.ic" NAME="NotNullNonStraightTest Coverage Results" MODIFIED="1669747295586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+       <FILTER>dice.*</FILTER>
+     </SUITE>
+-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$PlayerManagerTest_deductionPointsTest.ic" NAME="PlayerManagerTest.deductionPointsTest Coverage Results" MODIFIED="1669982353136" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+-      <FILTER>players.*</FILTER>
++    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$DiceTest.ic" NAME="DiceTest Coverage Results" MODIFIED="1669561512570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
++      <FILTER>dice.notNullRoll.*</FILTER>
+     </SUITE>
+-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$AbstractCardTest_getDescription.ic" NAME="AbstractCardTest.getDescription Coverage Results" MODIFIED="1670069160296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+-      <FILTER>cards.*</FILTER>
+-    </SUITE>
+-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$BonusCardTest_userTriesToEndTurn.ic" NAME="BonusCardTest.userTriesToEndTurn Coverage Results" MODIFIED="1670085561914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+-      <FILTER>cards.*</FILTER>
+-    </SUITE>
++    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$Main.ic" NAME="Main Coverage Results" MODIFIED="1670054801262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
++    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$Test_in_SoftCon_Assignment_02.ic" NAME="Test in SoftCon_Assignment_02 Coverage Results" MODIFIED="1670079746321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
+     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$ValidateUserSelectionStraightTest.ic" NAME="ValidateUserSelectionStraightTest Coverage Results" MODIFIED="1669747189655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+       <FILTER>dice.*</FILTER>
+     </SUITE>
+-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$Main.ic" NAME="Main Coverage Results" MODIFIED="1670059885504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$DiceTowerTest.ic" NAME="DiceTowerTest Coverage Results" MODIFIED="1669755576670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+-      <FILTER>dice.*</FILTER>
+-    </SUITE>
+-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$PlayerTest.ic" NAME="PlayerTest Coverage Results" MODIFIED="1669757440080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
++    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$PlayerManagerTest_deductionPointsTest.ic" NAME="PlayerManagerTest.deductionPointsTest Coverage Results" MODIFIED="1669982353136" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+       <FILTER>players.*</FILTER>
+     </SUITE>
++    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$DiceTowerTest_removeDiceTest.ic" NAME="DiceTowerTest.removeDiceTest Coverage Results" MODIFIED="1669743724412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
++      <FILTER>dice.*</FILTER>
++    </SUITE>
+     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$DiceRepresentationTest_testRepresent6.ic" NAME="DiceRepresentationTest.testRepresent6 Coverage Results" MODIFIED="1669302462013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+       <FILTER>UI.*</FILTER>
+     </SUITE>
+-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$ValidateUserSelectionNonStraightTest.ic" NAME="ValidateUserSelectionNonStraightTest Coverage Results" MODIFIED="1669745751052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
++    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$PlayerManagerTest.ic" NAME="PlayerManagerTest Coverage Results" MODIFIED="1669802157358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
++      <FILTER>players.*</FILTER>
++    </SUITE>
++    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$players_in_SoftCon_Assignment_02.ic" NAME="players in SoftCon_Assignment_02 Coverage Results" MODIFIED="1670086175433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
++    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$ValidateUserSelectionNonStraightTest.ic" NAME="ValidateUserSelectionNonStraightTest Coverage Results" MODIFIED="1669553943725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+       <FILTER>dice.*</FILTER>
+     </SUITE>
+-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$Test_in_SoftCon_Assignment_02.ic" NAME="Test in SoftCon_Assignment_02 Coverage Results" MODIFIED="1670086353846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
++    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$AbstractCardTest_getDescription.ic" NAME="AbstractCardTest.getDescription Coverage Results" MODIFIED="1670069160296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
++      <FILTER>cards.*</FILTER>
++    </SUITE>
+   </component>
+ </project>
+\ No newline at end of file
