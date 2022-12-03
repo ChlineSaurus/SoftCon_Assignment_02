@@ -1,5 +1,6 @@
 package turn;
 
+import Turn.State.CurrentlyPlaying;
 import Turn.State.EndTurn;
 import Turn.State.TurnState;
 import Turn.Turn;
@@ -56,8 +57,12 @@ public class newTurn {
             Turn bTurn= new Turn();
             EndTurn endTurn=new EndTurn(bTurn);
             assert state.getClass().equals(endTurn.getClass());
+        }
 
-
+        @Test
+        public void CurrentlyPlayingInputValidation() throws Exception{
+            Turn aTurn=new Turn();
+            TurnState turnState=new CurrentlyPlaying(aTurn);
 
 
         }

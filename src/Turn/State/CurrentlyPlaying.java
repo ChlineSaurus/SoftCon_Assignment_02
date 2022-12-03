@@ -24,17 +24,22 @@ public class CurrentlyPlaying implements TurnState{
         }
         TurnFlow();
     }
+    private void nullRollAction(){
+        if (!aTurn.validDiceExist()) {
+            aTurn.displayTurn(Msg.nullRoll.message);
+            if (!aTurn.turnCard.isImmunity()) {
+                aTurn.temporaryScore = 0;
+                aTurn.pointsToDeduct = 0;
+            }
+            aTurn.setCurrentState(new EndTurn(aTurn));
+        }
+    }
 
     private void TurnFlow() {
         while(true) {
             aTurn.rollNotTakenDices();
             if (!aTurn.validDiceExist()) {
-                aTurn.displayTurn(Msg.nullRoll.message);
-                if (!aTurn.turnCard.isImmunity()) {
-                    aTurn.temporaryScore = 0;
-                    aTurn.pointsToDeduct = 0;
-                }
-                aTurn.setCurrentState(new EndTurn(aTurn));
+                nullRollAction();
                 break;
             } else {
                 takeDice();
@@ -51,20 +56,25 @@ public class CurrentlyPlaying implements TurnState{
             }
         }
     }
+
+    private boolean diceRemovalAttempt(ArrayList<DiceFace> diceToRemove) throws IllegalUserInputException{
+
+        if (!aTurn.isDiceTakenSinceRoll()) {
+            throw new IllegalUserInputException(Msg.takeAtLeastOneValidDice.message);
+        } else if ( !aTurn.validDiceExist()) {
+            throw new IllegalUserInputException(Msg.invalidDicesSelected.message);
+        } else {
+            return true;
+        }
+    }
     private void takeDice() {
         String message = Msg.explainHowToTakeDice.message;
         while (true) {
             aTurn.displayTurn(message);
             try {
                 ArrayList<DiceFace> diceToRemove = TuttoInput.takeDiceListInput();
-                if (diceToRemove.size() == 0) {
-                    if (!aTurn.isDiceTakenSinceRoll()) {
-                        throw new IllegalUserInputException(Msg.takeAtLeastOneValidDice.message);
-                    } else if ( !aTurn.validDiceExist()) {
-                        throw new IllegalUserInputException(Msg.invalidDicesSelected.message);
-                    } else {
-                        break;
-                    }
+                if (diceToRemove.size()==0 &&diceRemovalAttempt(diceToRemove)){
+                    break;
                 }
                 aTurn.temporaryScore += aTurn.removeDice(diceToRemove);
                 if (aTurn.validDiceExist()){
