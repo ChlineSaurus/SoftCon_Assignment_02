@@ -30,6 +30,7 @@ public class diceSelectionValidatorFireworkTest {
             diceList.add(aDice);
 
         }
+
         return diceList;
     }
 

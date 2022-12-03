@@ -20,6 +20,7 @@ public class PlayerManagerTest {
         return players;
     }
 
+
     @Test
     public void singeltonTest () throws Exception {
         PlayerManager playerManager =PlayerManager.getInstance(players,6000);
@@ -47,4 +48,9 @@ public class PlayerManagerTest {
 
 
     }
+    /*@ParameterizedTest
+    @ValueSource(ints = {900})
+    public void*/
+
+
 }

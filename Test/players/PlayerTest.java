@@ -16,4 +16,5 @@ public class PlayerTest {
         Player player2=new Player("testplayer");
         Assertions.assertEquals(0,aPlayer.compareTo(player2));
     }
+
 }
