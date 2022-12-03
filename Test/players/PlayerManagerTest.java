@@ -8,9 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PlayerManagerTest {
-
-    Player player1 = new Player("Hermine");
-    Player player2 = new Player("Harry");
+    Player player1 = new Player("Harry");
+    Player player2 = new Player("Hermine");
     Player player3 = new Player("Ron");
     ArrayList<Player> players=createPlayerArrayList(player1, player2, player3);
     PlayerManager playerManager = PlayerManager.getInstance(players,3000);
@@ -30,12 +29,17 @@ public class PlayerManagerTest {
             f.setAccessible(true);
             f.set(aPlayer, 0);
         }
+        Field f3 = playerManager.getClass().getDeclaredField("players");
+        f3.setAccessible(true);
+        f3.set(playerManager, players);
         Field f1 = playerManager.getClass().getDeclaredField("currentPlayer");
         f1.setAccessible(true);
-        f1.set(playerManager, player2);
+        f1.set(playerManager, player1);
         Field f2 = playerManager.getClass().getDeclaredField("currentPlayerIndex");
         f2.setAccessible(true);
         f2.set(playerManager, 0);
+
+
 
     }
     @Test
@@ -57,7 +61,7 @@ public class PlayerManagerTest {
         playerManager.deductLeadingPlayersPoints(1000);
         Assertions.assertEquals(500, player1.getScore());
         Assertions.assertEquals(1000, player2.getScore());
-        Assertions.assertEquals(0, player1.getScore());
+        Assertions.assertEquals(0, player3.getScore());
     }
     @Test
     public void deductionPointsSelfLeadingPlayer() throws Exception{
@@ -81,13 +85,9 @@ public class PlayerManagerTest {
         PlayerManager playerManager =PlayerManager.getInstance();
         player1.updateScore(-100);
         playerManager.deductLeadingPlayersPoints(1000);
-        int decutionCounter=0;
-        for (Player player:players){
-            if (player.getScore()==-1000){
-                decutionCounter++;
-            }
-        }
-        Assertions.assertEquals(2,decutionCounter);
+        Assertions.assertEquals(-100,player1.getScore());
+        Assertions.assertEquals(-1000,player2.getScore());
+        Assertions.assertEquals(-1000,player3.getScore());
     }
 
     @Test
@@ -110,8 +110,8 @@ public class PlayerManagerTest {
         Assertions.assertEquals("Harry", playersName.get(0));
         Assertions.assertEquals("Hermine", playersName.get(1));
         Assertions.assertEquals("Ron", playersName.get(2));
-        Assertions.assertEquals(500, playersScore.get(0));
-        Assertions.assertEquals(100, playersScore.get(1));
+        Assertions.assertEquals(100, playersScore.get(0));
+        Assertions.assertEquals(500, playersScore.get(1));
         Assertions.assertEquals(0, playersScore.get(2));
     }
 }

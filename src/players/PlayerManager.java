@@ -59,10 +59,6 @@ public class PlayerManager {
         currentPlayer = players.get(currentPlayerIndex);
     }
 
-    public void addPlayer(Player player){
-        uniqueInstance.players.add(player);
-    }
-
     private boolean currentPlayerIsPointLeader(){
         int currentPlayersScore=currentPlayer.getScore();
         for (Player aPlayer:players){
@@ -72,8 +68,8 @@ public class PlayerManager {
         }
         return true;
     }
-    private int getMaxScore(Player currentPlayer){
-        int maxScore=-100000;
+    private int getMaxScore(){
+        int maxScore= currentPlayer.getScore();
         for (Player aPlayer:players){
             if (aPlayer.getScore()>maxScore){
                 maxScore= aPlayer.getScore();
@@ -84,7 +80,7 @@ public class PlayerManager {
     }
     private List<Player> getPlayersWithMaxScore(){
         assert !currentPlayerIsPointLeader();
-        int maxScore=getMaxScore(currentPlayer);
+        int maxScore=getMaxScore();
         List<Player> playersWithMaxScore=new ArrayList<Player>();
 
         for (Player aPlayer:players){
