@@ -80,6 +80,6 @@ public class Turn {
     }
 
     public void newRoll(){
-        aDiceTower.newTurn();
+        diceTower.newTurn();
     }
 }
