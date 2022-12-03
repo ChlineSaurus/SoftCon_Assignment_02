@@ -1,8 +1,11 @@
 package players;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
@@ -131,6 +134,13 @@ public class PlayerManagerTest {
         Assertions.assertEquals("Hermine", playerManager.currentPlayerName());
         Assertions.assertEquals(500, player1.getScore());
     }
+    private final PrintStream standardOut = System.out;
+    private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
+
+    @BeforeEach
+    public void setUp() {
+        System.setOut(new PrintStream(outputStreamCaptor));
+    }
 
     public void nextPlayerTurnWinner() throws Exception{
         cleanUpSingelton();
@@ -141,6 +151,7 @@ public class PlayerManagerTest {
         playerManger.nextPlayersTurn(4);
         playerManger.nextPlayersTurn(3);
         playerManger.nextPlayersTurn(3);
+        Assertions.assertEquals("\"Harry has won the Game! Congratulations!\", RED + Winner + COLOR_RESET", outputStreamCaptor.toString());
 
     }
 
