@@ -1,6 +1,6 @@
 package Input;
 
-import exceptions.IllegalUserInputExeption;
+import exceptions.IllegalUserInputException;
 import Enums.Msg;
 
 import java.util.ArrayList;
@@ -17,15 +17,15 @@ public class Input {
         return readInput();
     }
 
-    public static Character takeCharInput() throws IllegalUserInputExeption {
+    public static Character takeCharInput() throws IllegalUserInputException {
         String input = readInput().toUpperCase();
         if(input.length() != 1) {
-            throw new IllegalUserInputExeption(Msg.notACharException.message);
+            throw new IllegalUserInputException(Msg.notACharException.message);
         }
         return input.charAt(0);
     }
 
-    public static ArrayList<Integer> takeIntegerListInput() throws IllegalUserInputExeption{
+    public static ArrayList<Integer> takeIntegerListInput() throws IllegalUserInputException {
         String input = readInput();
         input = input.replaceAll("\\s", "");
         input = input.replaceAll(",", "");
@@ -35,18 +35,18 @@ public class Input {
                 returnList.add(Integer.parseInt(Character.toString(input.charAt(i))));
             }
         } catch (NumberFormatException e) {
-            throw new IllegalUserInputExeption(Msg.illegalCharException.message);
+            throw new IllegalUserInputException(Msg.illegalCharException.message);
         }
         return returnList;
     }
 
-    public static Integer takeIntegerInput() throws IllegalUserInputExeption{
+    public static Integer takeIntegerInput() throws IllegalUserInputException {
         String input = readInput();
         int returnValue;
         try {
             returnValue = Integer.parseInt(input);
         } catch (NumberFormatException e) {
-            throw new IllegalUserInputExeption(Msg.notANumberException.message);
+            throw new IllegalUserInputException(Msg.notANumberException.message);
         }
         return returnValue;
     }

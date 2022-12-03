@@ -7,7 +7,7 @@ import dice.DiceTower;
 import dice.notNullRoll.NotNullRollStandard;
 import dice.pointCalculator.PointsCalculatorStandard;
 import dice.diceSelectionValidator.DiceSelectionValidatorFirework;
-import exceptions.IllegalUserInputExeption;
+import exceptions.IllegalUserInputException;
 
 public class Fireworks extends AbstractCard {
 
@@ -32,8 +32,8 @@ public class Fireworks extends AbstractCard {
         aDiceTower.setStrategy(new PointsCalculatorStandard(), new DiceSelectionValidatorFirework(), new NotNullRollStandard());
     }
     @Override
-    public void userTriesToEndTurn() throws IllegalUserInputExeption {
-        throw new IllegalUserInputExeption("Your Card is a Firework, you are not allowed to stop. Press 'r'" +
+    public void userTriesToEndTurn() throws IllegalUserInputException {
+        throw new IllegalUserInputException("Your Card is a Firework, you are not allowed to stop. Press 'r'" +
                 "to continue.");
     }
 

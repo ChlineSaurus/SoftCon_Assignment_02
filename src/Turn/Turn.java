@@ -6,7 +6,7 @@ import cards.AbstractCard;
 import cards.Deck;
 import dice.DiceFace;
 import dice.DiceTower;
-import exceptions.IllegalUserInputExeption;
+import exceptions.IllegalUserInputException;
 import players.PlayerManager;
 
 import java.util.ArrayList;
@@ -49,7 +49,7 @@ public class Turn {
     public void setCurrentState(TurnState currentState) {
         this.currentState = currentState;
     }
-    public void execute() throws IllegalUserInputExeption {
+    public void execute() throws IllegalUserInputException {
         currentState.next();
     }
     public void displayTurn(String message) {
@@ -67,7 +67,7 @@ public class Turn {
         diceTower.rollNotTakenDices();
     }
 
-    public int removeDice(ArrayList<DiceFace> dicesToRemove) throws IllegalUserInputExeption{
+    public int removeDice(ArrayList<DiceFace> dicesToRemove) throws IllegalUserInputException {
         return diceTower.removeDice(dicesToRemove);
     }
 

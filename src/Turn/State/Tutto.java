@@ -4,7 +4,7 @@ import Enums.Msg;
 import Input.TuttoInput;
 import Turn.Turn;
 import UI.Display;
-import exceptions.IllegalUserInputExeption;
+import exceptions.IllegalUserInputException;
 
 import java.util.ArrayList;
 
@@ -30,7 +30,7 @@ public class Tutto implements TurnState{
                 try{
                     action = TuttoInput.takeRestrictedCharInput(allowedAction);
                     break;
-                } catch (IllegalUserInputExeption e) {
+                } catch (IllegalUserInputException e) {
                     Display.displayMessage(e.getMessage());
                 }
             }

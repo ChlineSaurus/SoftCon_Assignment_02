@@ -4,7 +4,7 @@ import Enums.Msg;
 import Input.TuttoInput;
 import Turn.Turn;
 import dice.DiceFace;
-import exceptions.IllegalUserInputExeption;
+import exceptions.IllegalUserInputException;
 
 import java.util.ArrayList;
 
@@ -59,9 +59,9 @@ public class CurrentlyPlaying implements TurnState{
                 ArrayList<DiceFace> diceToRemove = TuttoInput.takeDiceListInput();
                 if (diceToRemove.size() == 0) {
                     if (!aTurn.isDiceTakenSinceRoll()) {
-                        throw new IllegalUserInputExeption(Msg.takeAtLeastOneValidDice.message);
+                        throw new IllegalUserInputException(Msg.takeAtLeastOneValidDice.message);
                     } else if ( !aTurn.validDiceExist()) {
-                        throw new IllegalUserInputExeption(Msg.invalidDicesSelected.message);
+                        throw new IllegalUserInputException(Msg.invalidDicesSelected.message);
                     } else {
                         break;
                     }
@@ -72,7 +72,7 @@ public class CurrentlyPlaying implements TurnState{
                 } else {
                     break;
                 }
-            } catch (IllegalUserInputExeption e) {
+            } catch (IllegalUserInputException e) {
                 message = e.getMessage();
             }
         }
@@ -91,7 +91,7 @@ public class CurrentlyPlaying implements TurnState{
                     aTurn.turnCard.userTriesToEndTurn();
                 }
                 break;
-            } catch (IllegalUserInputExeption e) {
+            } catch (IllegalUserInputException e) {
                 aTurn.displayTurn(e.getMessage());
             }
         }

@@ -3,7 +3,7 @@ package Turn.State;
 import Input.TuttoInput;
 import Turn.Turn;
 import UI.Display;
-import exceptions.IllegalUserInputExeption;
+import exceptions.IllegalUserInputException;
 
 import java.util.ArrayList;
 
@@ -19,13 +19,13 @@ public class StartPlayerTurn implements TurnState {
                 DisplayOrRoll();
                 aTurn.setCurrentState(new CurrentlyPlaying(aTurn));
                 break;
-            } catch (IllegalUserInputExeption e) {
+            } catch (IllegalUserInputException e) {
                 UI.Display.displayMessage(e.getMessage());
             }
         }
     }
 
-    private void DisplayOrRoll() throws IllegalUserInputExeption {
+    private void DisplayOrRoll() throws IllegalUserInputException {
         Character nextAction = null;
         ArrayList<Character> possibleNextAction = new ArrayList<>();
         possibleNextAction.add('R');
@@ -36,7 +36,7 @@ public class StartPlayerTurn implements TurnState {
             try {
                 nextAction = TuttoInput.takeRestrictedCharInput(possibleNextAction);
                 validInput = true;
-            } catch (IllegalUserInputExeption e) {
+            } catch (IllegalUserInputException e) {
                 UI.Display.displayMessage(e.getMessage());
             }
         }

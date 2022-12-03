@@ -7,7 +7,7 @@ import dice.DiceTower;
 import dice.notNullRoll.NotNullRollStandard;
 import dice.pointCalculator.PointsCalculatorStandard;
 import dice.diceSelectionValidator.DiceSelectionValidatorStandard;
-import exceptions.IllegalUserInputExeption;
+import exceptions.IllegalUserInputException;
 
 public abstract class AbstractCard {
 
@@ -53,9 +53,9 @@ public abstract class AbstractCard {
         }
         return currentPoints;
     }
-    public void userTriesToEndTurn() throws IllegalUserInputExeption {
+    public void userTriesToEndTurn() throws IllegalUserInputException {
         if (requiredForPoints!=TuttoRequired.Zero){
-            throw new IllegalUserInputExeption("If you end your turn now, you'll recieve zeropoints, roll again!, type 'r'");
+            throw new IllegalUserInputException("If you end your turn now, you'll recieve zeropoints, roll again!, type 'r'");
         }
     }
     protected boolean isBonusConditionAchieved(){

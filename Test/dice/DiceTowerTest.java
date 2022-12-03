@@ -5,7 +5,7 @@ import dice.diceSelectionValidator.DiceSelectionValidatorStandard;
 import dice.notNullRoll.NotNullRollStandard;
 import dice.notNullRoll.NotNullRollStraight;
 import dice.pointCalculator.PointsCalculatorStandard;
-import exceptions.IllegalUserInputExeption;
+import exceptions.IllegalUserInputException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -59,7 +59,7 @@ public class DiceTowerTest {
         f2.set(diceTower,customdice1);
         boolean thrown=false;
         try{diceTower.removeDice(diceFaces);}
-        catch (IllegalUserInputExeption e){
+        catch (IllegalUserInputException e){
             thrown=true;
         }
         assert thrown;
