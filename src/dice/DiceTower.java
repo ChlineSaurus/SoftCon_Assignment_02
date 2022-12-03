@@ -4,7 +4,7 @@ import Enums.Msg;
 import dice.diceSelectionValidator.DiceSelectionValidator;
 import dice.notNullRoll.NotNullRoll;
 import dice.pointCalculator.PointCalculator;
-import exceptions.IllegalUserInputExeption;
+import exceptions.IllegalUserInputException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -78,24 +78,24 @@ public class DiceTower {
         return notNullRollValidator.notNullRoll(notTakenDices, takenDices);
     }
 
-    public int removeDice(ArrayList<DiceFace> dicesToRemove) throws IllegalUserInputExeption {
+    public int removeDice(ArrayList<DiceFace> dicesToRemove) throws IllegalUserInputException {
         assert notTakenDices.size()+takenDices.size()==6;
         if (dicesToRemove.size() == 0) {
-            throw new IllegalUserInputExeption(Msg.noDiceTakenException.message);
+            throw new IllegalUserInputException(Msg.noDiceTakenException.message);
         }
         //one has to check if the taken dice are valid or can the user make mistakes
         if (dicesToRemove.size() > notTakenDices.size()) {
-            throw new IllegalUserInputExeption(Msg.toManyDiceTakenException.message);
+            throw new IllegalUserInputException(Msg.toManyDiceTakenException.message);
         }
         ArrayList<Dice> temporaryTakenDices = createTemporaryTakenDices(dicesToRemove);
 
         if (temporaryTakenDices.size() < dicesToRemove.size()) {
 
-            throw new IllegalUserInputExeption(Msg.notAllowedNumberException.message);
+            throw new IllegalUserInputException(Msg.notAllowedNumberException.message);
         }
 
         if (!diceSelectionValidator.isUserSelectionValid(temporaryTakenDices,notTakenDices,takenDices)){
-            throw new IllegalUserInputExeption("Make sure that only take valid dice, read the description to see if any special rules apply: ");
+            throw new IllegalUserInputException("Make sure that only take valid dice, read the description to see if any special rules apply: ");
         }
         else {
             diceTakenSinceRoll = true;

@@ -2,7 +2,7 @@ package cards;
 
 import cards.cards.cardtypes.Cloverleaf;
 
-import exceptions.IllegalUserInputExeption;
+import exceptions.IllegalUserInputException;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Field;
@@ -52,13 +52,13 @@ public class CloverTest {
         System.out.println("hear");
     }
     @Test
-    public void userTriesToEndTurn() throws IllegalUserInputExeption {
+    public void userTriesToEndTurn() throws IllegalUserInputException {
         AbstractCard clover=new Cloverleaf();
         boolean noError=true;
         try {
             clover.userTriesToEndTurn();
         }
-        catch (IllegalUserInputExeption e){
+        catch (IllegalUserInputException e){
             noError=false;
         }
         assert !noError;

@@ -3,7 +3,7 @@ package cards;
 import cards.cards.cardInterfaces.bonusSystemInterface.PlusPoints;
 import cards.cards.cardInterfaces.bonusSystemInterface.TimesX2Points;
 import cards.cards.cardtypes.Fireworks;
-import exceptions.IllegalUserInputExeption;
+import exceptions.IllegalUserInputException;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
@@ -45,7 +45,7 @@ class AbstractCardTest {
 
     @Test
     void userTriesToEndTurn() {
-        assertThrows(IllegalUserInputExeption.class,
+        assertThrows(IllegalUserInputException.class,
                 () -> {
                     fireworks.userTriesToEndTurn();
                 });

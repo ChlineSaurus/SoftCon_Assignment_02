@@ -1,7 +1,7 @@
 package cards;
 
 import cards.cards.cardtypes.Bonus;
-import exceptions.IllegalUserInputExeption;
+import exceptions.IllegalUserInputException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -13,12 +13,12 @@ public class BonusCardTest {
         Assertions.assertEquals(bonusCard.tuttoAchieved(0),400);
     }
     @Test
-    public void userTriesToEndTurn() throws IllegalUserInputExeption {
+    public void userTriesToEndTurn() throws IllegalUserInputException {
         boolean noError=true;
         try {
             bonusCard.userTriesToEndTurn();
         }
-        catch (IllegalUserInputExeption e){
+        catch (IllegalUserInputException e){
             noError=false;
         }
         assert noError;

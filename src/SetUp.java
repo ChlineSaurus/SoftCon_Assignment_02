@@ -5,11 +5,12 @@ import exceptions.IllegalUserInputExeption;
 import players.Player;
 import players.PlayerManager;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class SetUp {
 
-    static void setUpGame() {
+    static void setUpGame() throws IOException, IllegalUserInputExeption {
         int necessaryPoints;
         while (true) {
             System.out.println(Msg.necessaryPointsQuestion.message);
