@@ -53,11 +53,11 @@ public class PlayerManagerTest {
     public void deductionPointsNormal() throws Exception{
         cleanUpSingelton();
         PlayerManager playerManager =PlayerManager.getInstance();
-        player1.updateScore(500);
-        player2.updateScore(2000);
+        player1.updateScore(3500);//Hermine
+        player2.updateScore(2000);//Harry
         playerManager.deductLeadingPlayersPoints(1000);
         Assertions.assertEquals(500, player1.getScore());
-        Assertions.assertEquals(1000, player2.getScore());
+        Assertions.assertEquals(2000, player2.getScore());
         Assertions.assertEquals(0, player3.getScore());
     }
     @Test
@@ -72,7 +72,7 @@ public class PlayerManagerTest {
                 decutionCounter++;
             }
         }
-        Assertions.assertEquals(100, player1.getScore());
+        Assertions.assertEquals(-900, player1.getScore());
         Assertions.assertEquals(0,decutionCounter);
     }
 
