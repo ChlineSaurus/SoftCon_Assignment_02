@@ -53,10 +53,10 @@ public class PlayerManagerTest {
     public void deductionPointsNormal() throws Exception{
         cleanUpSingelton();
         PlayerManager playerManager =PlayerManager.getInstance();
-        player1.updateScore(3500);//Hermine
-        player2.updateScore(2000);//Harry
+        player1.updateScore(3500);
+        player2.updateScore(2000);
         playerManager.deductLeadingPlayersPoints(1000);
-        Assertions.assertEquals(500, player1.getScore());
+        Assertions.assertEquals(3500, player1.getScore());
         Assertions.assertEquals(2000, player2.getScore());
         Assertions.assertEquals(0, player3.getScore());
     }
@@ -72,7 +72,7 @@ public class PlayerManagerTest {
                 decutionCounter++;
             }
         }
-        Assertions.assertEquals(-900, player1.getScore());
+        Assertions.assertEquals(100, player1.getScore());
         Assertions.assertEquals(0,decutionCounter);
     }
 
@@ -123,6 +123,7 @@ public class PlayerManagerTest {
         Assertions.assertEquals(0, playersScore.get(2));
     }
 
+    @Test
     public void nextPlayerTurn() throws Exception{
         cleanUpSingelton();
         PlayerManager playerManager = PlayerManager.getInstance();
@@ -130,4 +131,17 @@ public class PlayerManagerTest {
         Assertions.assertEquals("Hermine", playerManager.currentPlayerName());
         Assertions.assertEquals(500, player1.getScore());
     }
+
+    public void nextPlayerTurnWinner() throws Exception{
+        cleanUpSingelton();
+        PlayerManager playerManger= PlayerManager.getInstance();
+        Field aPlayerMangerField=playerManger.getClass().getDeclaredField("necessaryPoints");
+        aPlayerMangerField.setAccessible(true);
+        aPlayerMangerField.set(playerManger,1);
+        playerManger.nextPlayersTurn(4);
+        playerManger.nextPlayersTurn(3);
+        playerManger.nextPlayersTurn(3);
+
+    }
+
 }

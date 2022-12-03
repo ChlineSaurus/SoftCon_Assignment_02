@@ -192,6 +192,10 @@ public class DiceTowerTest {
         assert isCaught;
 
     }
+    @Test
+    public void testnotTakenSinceTurn(){
+        assert !diceTower.diceTakenSinceRoll();
+    }
 
 }
 
