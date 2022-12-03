@@ -4,7 +4,8 @@ package cards.cards.cardtypes;
 import cards.AbstractCard;
 import cards.TuttoRequired;
 import dice.DiceTower;
-import dice.pointCalculator.PointCalculatorStraight;
+import dice.notNullRoll.NotNullRollStraight;
+import dice.pointCalculator.PointCalculatorNoPointsForRoll;
 import dice.diceSelectionValidator.DiceSelectionValidatorStraight;
 
 public class Straight extends AbstractCard {
@@ -25,6 +26,6 @@ public class Straight extends AbstractCard {
 
     @Override
     public void injectStrategyToTower(DiceTower aDiceTower) {
-       aDiceTower.setStrategy(new PointCalculatorStraight(), new DiceSelectionValidatorStraight());
+       aDiceTower.setStrategy(new PointCalculatorNoPointsForRoll(), new DiceSelectionValidatorStraight(), new NotNullRollStraight());
     }
 }

@@ -4,6 +4,7 @@ package cards.cards.cardtypes;
 import cards.AbstractCard;
 import cards.TuttoRequired;
 import dice.DiceTower;
+import dice.notNullRoll.NotNullRollStandard;
 import dice.pointCalculator.PointsCalculatorStandard;
 import dice.diceSelectionValidator.DiceSelectionValidatorFirework;
 import exceptions.IllegalUserInputExeption;
@@ -28,7 +29,7 @@ public class Fireworks extends AbstractCard {
     }
     @Override
     public void injectStrategyToTower(DiceTower aDiceTower) {
-        aDiceTower.setStrategy(new PointsCalculatorStandard(), new DiceSelectionValidatorFirework());
+        aDiceTower.setStrategy(new PointsCalculatorStandard(), new DiceSelectionValidatorFirework(), new NotNullRollStandard());
     }
     @Override
     public void userTriesToEndTurn() throws IllegalUserInputExeption {

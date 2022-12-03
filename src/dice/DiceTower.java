@@ -2,6 +2,7 @@ package dice;
 
 import Enums.Msg;
 import dice.diceSelectionValidator.DiceSelectionValidator;
+import dice.notNullRoll.NotNullRoll;
 import dice.pointCalculator.PointCalculator;
 import exceptions.IllegalUserInputExeption;
 
@@ -15,9 +16,9 @@ public class DiceTower {
     //the dices the user selects
     private boolean diceTakenSinceRoll;
 
-    protected PointCalculator pointCalculator;
-
-    protected DiceSelectionValidator diceSelectionValidator;
+    private PointCalculator pointCalculator;
+    private NotNullRoll notNullRollValidator;
+    private DiceSelectionValidator diceSelectionValidator;
     public DiceTower(){
         notTakenDices = new ArrayList<Dice>();
         for(int i = 0; i < 6; i++) {
@@ -28,8 +29,9 @@ public class DiceTower {
 
     }
 
-    public void setStrategy(PointCalculator pPointStrategy, DiceSelectionValidator pValidationStrategy){
+    public void setStrategy(PointCalculator pPointStrategy, DiceSelectionValidator pValidationStrategy,NotNullRoll pNotNullRollValidator){
         pointCalculator = pPointStrategy;
+        notNullRollValidator=pNotNullRollValidator;
         diceSelectionValidator = pValidationStrategy;
     }
 
@@ -73,7 +75,7 @@ public class DiceTower {
 
 
     public boolean notNullRoll(){
-        return pointCalculator.notNullRoll(notTakenDices, takenDices);
+        return notNullRollValidator.notNullRoll(notTakenDices, takenDices);
     }
 
     public int removeDice(ArrayList<DiceFace> dicesToRemove) throws IllegalUserInputExeption {

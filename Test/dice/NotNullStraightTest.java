@@ -1,8 +1,8 @@
 package dice;
 
 
-import dice.pointCalculator.PointCalculator;
-import dice.pointCalculator.PointCalculatorStraight;
+import dice.notNullRoll.NotNullRoll;
+import dice.notNullRoll.NotNullRollStraight;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NotNullStraightTest {
-    PointCalculator StraightValidater=new PointCalculatorStraight();
+    NotNullRoll notNullRollStraight=new NotNullRollStraight();
 
     public List<Dice> DiceListSetUp(Integer[] customDiceValueArray){
         List<Dice> diceList=new ArrayList<>();
@@ -40,7 +40,7 @@ public class NotNullStraightTest {
         Integer[] takenDiceArray={1,5};
         List<Dice> takenDice=DiceListSetUp(takenDiceArray);
         List<Dice> notTakenDice=DiceListSetUp(notTakenArray);
-        Assertions.assertTrue(StraightValidater.notNullRoll(notTakenDice,takenDice));
+        Assertions.assertTrue(notNullRollStraight.notNullRoll(notTakenDice,takenDice));
     }
     @Test
     public void testLegalRoll2(){
@@ -48,7 +48,7 @@ public class NotNullStraightTest {
         Integer[] takenDiceArray={1,2,5};
         List<Dice> takenDice=DiceListSetUp(takenDiceArray);
         List<Dice> notTakenDice=DiceListSetUp(notTakenArray);
-        Assertions.assertTrue(StraightValidater.notNullRoll(notTakenDice,takenDice));
+        Assertions.assertTrue(notNullRollStraight.notNullRoll(notTakenDice,takenDice));
     }
     @Test
     public void testIllegalRoll1(){
@@ -56,6 +56,6 @@ public class NotNullStraightTest {
         Integer[] takenDiceArray={3,2,5};
         List<Dice> takenDice=DiceListSetUp(takenDiceArray);
         List<Dice> notTakenDice=DiceListSetUp(notTakenArray);
-        Assertions.assertFalse(StraightValidater.notNullRoll(notTakenDice,takenDice));
+        Assertions.assertFalse(notNullRollStraight.notNullRoll(notTakenDice,takenDice));
     }
 }

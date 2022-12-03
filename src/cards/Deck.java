@@ -49,6 +49,7 @@ public class Deck
             }
             bonusPoints+=100;
         }
+
         shuffle();
         aCards=new DeckStack(cards);
     }
