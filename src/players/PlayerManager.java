@@ -134,4 +134,7 @@ public class PlayerManager {
         int nextPlayersIndex=(currentPlayerIndex+1)%(players.size());
         return players.get(nextPlayersIndex).name;
     }
+    public String getCurrentPlayersName(){
+        return players.get(currentPlayerIndex).name;
+    }
 }

@@ -56,10 +56,10 @@ public abstract class AbstractCard {
             throw new IllegalUserInputExeption("If you end your turn now, you'll recieve zeropoints, roll again!, type 'r'");
         }
     }
-    private boolean isBonusConditionAchieved(){
+    protected boolean isBonusConditionAchieved(){
         return this.requiredForBonus==TuttoRequired.Zero;
     }
-    private boolean isPointConditionAchieved(){
+    protected boolean isPointConditionAchieved(){
         return this.requiredForPoints==TuttoRequired.Zero;
     }
     public boolean haveToContinueRolling(){

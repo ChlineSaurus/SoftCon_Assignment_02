@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="adding tests branch coverage is only 44%">
+    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="shortening code">
+      <change afterPath="$PROJECT_DIR$/Test/cards/CloverTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_11_22,_09_46_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_11_22__09_46__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Turn/State/CurrentlyPlaying.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn/State/CurrentlyPlaying.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dice/diceSelectionValidator/DiceSelectionValidatorStraight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dice/diceSelectionValidator/DiceSelectionValidatorStraight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Turn/State/EndTurn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Turn/State/EndTurn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Display.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cards/AbstractCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/AbstractCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cards/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cards/cards/cardtypes/Cloverleaf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/cardtypes/Cloverleaf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/players/PlayerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/players/PlayerManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,32 +51,32 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/chris/OneDrive/Desktop/SoftCon_Assignment_02/src/dice/userDiceSelectionValidation&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/danielmaksimovic/OneDrive - Universität Zürich UZH/Studium/HS22/Software Construction I/Java/SoftCon_Assignment_02/src&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "jdk.selected.JAVA_MODULE": "19",
+    "last_directory_selection": "C:/Users/chris/OneDrive/Desktop/SoftCon_Assignment_02/src/dice/userDiceSelectionValidation",
+    "last_opened_file_path": "C:/Users/chris/Downloads/SoftCon_Assignment_02-master (1)",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
@@ -81,7 +88,7 @@
       <recent name="dice.userDiceSelectionValidation" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Test in SoftCon_Assignment_02">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="SoftCon_Assignment_02" />
@@ -105,6 +112,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CloverTest.achievingTuttoTwice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SoftCon_Assignment_02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cards.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cards" />
+      <option name="MAIN_CLASS_NAME" value="cards.CloverTest" />
+      <option name="METHOD_NAME" value="achievingTuttoTwice" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DeckTest.draw57cards" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftCon_Assignment_02" />
       <extension name="coverage">
@@ -116,22 +139,6 @@
       <option name="PACKAGE_NAME" value="cards" />
       <option name="MAIN_CLASS_NAME" value="cards.DeckTest" />
       <option name="METHOD_NAME" value="draw57cards" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlayerManagerTest.deductionPointsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SoftCon_Assignment_02" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="players.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="players" />
-      <option name="MAIN_CLASS_NAME" value="players.PlayerManagerTest" />
-      <option name="METHOD_NAME" value="deductionPointsTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -151,17 +158,17 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.BonusPointsTest.addPlusPoints" />
+      <item itemvalue="JUnit.CloverTest.achievingTuttoTwice" />
       <item itemvalue="JUnit.DeckTest.draw57cards" />
-      <item itemvalue="JUnit.PlayerManagerTest.deductionPointsTest" />
       <item itemvalue="JUnit.Test in SoftCon_Assignment_02" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.CloverTest.achievingTuttoTwice" />
         <item itemvalue="JUnit.Test in SoftCon_Assignment_02" />
         <item itemvalue="JUnit.BonusPointsTest.addPlusPoints" />
         <item itemvalue="JUnit.DeckTest.draw57cards" />
-        <item itemvalue="JUnit.PlayerManagerTest.deductionPointsTest" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -197,14 +204,7 @@
       <workItem from="1669493988940" duration="4060000" />
       <workItem from="1669822402528" duration="6513000" />
       <workItem from="1669967769785" duration="1209000" />
-      <workItem from="1669973355747" duration="9703000" />
-    </task>
-    <task id="LOCAL-00008" summary="skipTurn for skip card in AbstactCard... &#10;still needs to be implemented in constructer of AbstractCard">
-      <created>1668807235482</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1668807235482</updated>
+      <workItem from="1669973355747" duration="20982000" />
     </task>
     <task id="LOCAL-00009" summary="restrucutirn project">
       <created>1668855010835</created>
@@ -542,7 +542,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669991445049</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="shortening code">
+      <created>1669996311707</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1669996311707</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -572,7 +579,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="@Elias bonus sollte jetzt funktionieren" />
     <MESSAGE value="adding funciton to card" />
     <MESSAGE value="make sure players aren't leaked" />
     <MESSAGE value="making DiceTower setable" />
@@ -597,7 +603,8 @@
     <MESSAGE value="minimal changes" />
     <MESSAGE value="straight works now" />
     <MESSAGE value="adding tests branch coverage is only 44%" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding tests branch coverage is only 44%" />
+    <MESSAGE value="shortening code" />
+    <option name="LAST_COMMIT_MESSAGE" value="shortening code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -656,6 +663,6 @@
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$ValidateUserSelectionNonStraightTest.ic" NAME="ValidateUserSelectionNonStraightTest Coverage Results" MODIFIED="1669745751052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dice.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$Test_in_SoftCon_Assignment_02.ic" NAME="Test in SoftCon_Assignment_02 Coverage Results" MODIFIED="1669990732387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$Test_in_SoftCon_Assignment_02.ic" NAME="Test in SoftCon_Assignment_02 Coverage Results" MODIFIED="1670061827041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>

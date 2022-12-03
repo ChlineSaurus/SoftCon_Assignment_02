@@ -23,7 +23,7 @@ public class Deck
         Cloverleaf cloverleaf = new Cloverleaf();
         cards.add(cloverleaf);
 
-        for(int i=0;i<5;i++){
+        /*for(int i=0;i<5;i++){
             Fireworks fireworks = new Fireworks();
             cards.add(fireworks);
             Straight straight = new Straight();
@@ -48,7 +48,7 @@ public class Deck
                 cards.add(bonusCard);
             }
             bonusPoints+=100;
-        }
+        }*/
         shuffle();
         aCards=new DeckStack(cards);
     }

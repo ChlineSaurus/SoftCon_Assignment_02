@@ -4,6 +4,9 @@ package cards.cards.cardtypes;
 import Enums.GameConstants;
 import cards.AbstractCard;
 import cards.TuttoRequired;
+import players.PlayerManager;
+
+import static java.lang.System.exit;
 
 public class Cloverleaf extends AbstractCard {
 
@@ -17,6 +20,23 @@ public class Cloverleaf extends AbstractCard {
                 - no matter whats the score""";
         requiredForPoints= TuttoRequired.Two;
         requiredForBonus=TuttoRequired.Two;
+    }
+    @Override
+    public int tuttoAchieved(int currentPoints){
+        if (!isPointConditionAchieved()){
+            requiredForPoints=TuttoRequired.getEnum((requiredForPoints.integerValue)-1);
+        }
+        if (!isBonusConditionAchieved()){
+            requiredForBonus=TuttoRequired.getEnum(requiredForBonus.integerValue-1);
+        }
+        if (isBonusConditionAchieved()) {
+            PlayerManager playerManager=PlayerManager.getInstance();
+            String winnerName=playerManager.getCurrentPlayersName();
+            UI.Display.declareWinner(winnerName);
+            exit (0);
+
+        }
+        return currentPoints;
     }
 
     @Override

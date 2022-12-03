@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static java.lang.System.exit;
+
 public class Display {
     private static final String COLOR_RESET = "\u001B[0m";
     private static final String RED = "\u001B[31m";
@@ -79,6 +81,7 @@ public class Display {
         displayScores();
         System.out.printf("%s has won the Game! Congratulations!", RED + Winner + COLOR_RESET);
         waiting();
+        exit(0);
     }
 
     private static void waiting() {
