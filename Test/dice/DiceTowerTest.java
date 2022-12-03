@@ -3,6 +3,7 @@ package dice;
 import dice.diceSelectionValidator.DiceSelectionValidatorFirework;
 import dice.diceSelectionValidator.DiceSelectionValidatorStandard;
 import dice.notNullRoll.NotNullRollStandard;
+import dice.notNullRoll.NotNullRollStraight;
 import dice.pointCalculator.PointsCalculatorStandard;
 import exceptions.IllegalUserInputExeption;
 import org.junit.jupiter.api.Assertions;
@@ -131,6 +132,20 @@ public class DiceTowerTest {
             int actual=diceTower.showNotTakenDices().size()+diceTower.showTakenDices().size();
 
             Assertions.assertEquals(6,actual);
+        }
+        @Test
+        public void TestnewTurn() throws Exception{
+        diceTower.setStrategy(new PointsCalculatorStandard(), new DiceSelectionValidatorStandard(), new NotNullRollStraight());
+        diceTower.newTurn();
+        Field f=diceTower.getClass().getDeclaredField("takenDices");
+        f.setAccessible(true);
+        ArrayList<Dice> dices= (ArrayList<Dice>) f.get(diceTower);
+        assert dices.size()==0;
+
+        }
+        @Test
+        public void madeTutto() throws Exception{
+
         }
 
 

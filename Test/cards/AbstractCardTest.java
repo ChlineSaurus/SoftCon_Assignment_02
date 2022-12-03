@@ -5,8 +5,6 @@ import cards.cards.cardInterfaces.bonusSystemInterface.TimesX2Points;
 import cards.cards.cardtypes.Fireworks;
 import exceptions.IllegalUserInputExeption;
 import org.junit.jupiter.api.Test;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -21,17 +19,7 @@ class AbstractCardTest {
     private final PrintStream originalOut = System.out;
     private final PrintStream originalErr = System.err;
 
-    @BeforeClass
-    public void setUpStreams() {
-        System.setOut(new PrintStream(outContent));
-        System.setErr(new PrintStream(errContent));
-    }
 
-    @AfterClass
-    public void restoreStreams() {
-        System.setOut(originalOut);
-        System.setErr(originalErr);
-    }
 
 
     @Test
