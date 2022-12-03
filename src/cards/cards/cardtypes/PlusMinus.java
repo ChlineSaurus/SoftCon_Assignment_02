@@ -3,6 +3,10 @@ package cards.cards.cardtypes;
 
 import cards.AbstractCard;
 import cards.TuttoRequired;
+import dice.DiceTower;
+import dice.diceSelectionValidator.DiceSelectionValidatorStandard;
+import dice.notNullRoll.NotNullRollStandard;
+import dice.pointCalculator.PointCalculatorNoPointsForRoll;
 
 public class PlusMinus extends AbstractCard {
 
@@ -18,10 +22,9 @@ public class PlusMinus extends AbstractCard {
         requiredForPoints= TuttoRequired.One;
         requiredForBonus=TuttoRequired.One;
     }
+    @Override
+    public void injectStrategyToTower(DiceTower aDiceTower){
+        aDiceTower.setStrategy(new PointCalculatorNoPointsForRoll(),new DiceSelectionValidatorStandard(), new NotNullRollStandard());
+    }
 
-    /*@Override
-    public int tuttoAchieved(int currentPoints) {
-        super.tuttoAchieved(currentPoints);
-        return 1000;
-    }*/
 }

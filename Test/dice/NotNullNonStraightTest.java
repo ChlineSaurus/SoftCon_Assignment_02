@@ -1,7 +1,7 @@
 package dice;
 
-import dice.pointCalculator.PointCalculator;
-import dice.pointCalculator.PointsCalculatorStandard;
+import dice.notNullRoll.NotNullRoll;
+import dice.notNullRoll.NotNullRollStandard;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NotNullNonStraightTest {
-    PointCalculator NonStraightValidater=new PointsCalculatorStandard();
+    NotNullRoll notNullRoll=new NotNullRollStandard();
 
 
     public List<Dice> DiceListSetUp(Integer[] customDiceValueArray){
@@ -41,7 +41,7 @@ public class NotNullNonStraightTest {
         Integer[] notTakenArray={2,2,2,4};
         List<Dice> takenDice=DiceListSetUp(takenDiceArray);
         List<Dice> notTakenDice=DiceListSetUp(notTakenArray);
-        Assertions.assertTrue(NonStraightValidater.notNullRoll(notTakenDice,takenDice));
+        Assertions.assertTrue(notNullRoll.notNullRoll(notTakenDice,takenDice));
     }
 
     @Test
@@ -50,7 +50,7 @@ public class NotNullNonStraightTest {
         Integer[] notTakenArray={2,2,3,4,1};
         List<Dice> takenDice=DiceListSetUp(takenArray);
         List<Dice> notTakenDice=DiceListSetUp(notTakenArray);
-        Assertions.assertTrue(NonStraightValidater.notNullRoll(notTakenDice,takenDice));
+        Assertions.assertTrue(notNullRoll.notNullRoll(notTakenDice,takenDice));
     }
     @Test
     public void TestIllegalRoll1(){
@@ -59,7 +59,7 @@ public class NotNullNonStraightTest {
         Integer[] notTakenArray={2,3};
         List<Dice> takenDice=DiceListSetUp(takenDiceArray);
         List<Dice> notTakenDice=DiceListSetUp(notTakenArray);
-        Assertions.assertFalse(NonStraightValidater.notNullRoll(notTakenDice,takenDice));
+        Assertions.assertFalse(notNullRoll.notNullRoll(notTakenDice,takenDice));
 
     }
     @Test
@@ -69,7 +69,7 @@ public class NotNullNonStraightTest {
         Integer[] notTakenArray={2,2,4};
         List<Dice> takenDice=DiceListSetUp(takenDiceArray);
         List<Dice> notTakenDice=DiceListSetUp(notTakenArray);
-        Assertions.assertFalse(NonStraightValidater.notNullRoll(notTakenDice,takenDice));
+        Assertions.assertFalse(notNullRoll.notNullRoll(notTakenDice,takenDice));
 
     }
 

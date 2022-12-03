@@ -23,9 +23,9 @@ public class DiceSelectionValidatorStraight implements DiceSelectionValidator {
         return true;
     }
 
-    private boolean checkIfDuplicates(List<Dice> chosenDiceToKeep) {
+    private boolean checkIfDuplicates(List<Dice> chosenDicesToKeep) {
         Map<DiceFace, Integer> chosenDiceMap = new HashMap<>();
-        for (Dice chosenDice : chosenDiceToKeep) {
+        for (Dice chosenDice : chosenDicesToKeep) {
             DiceFace diceFace = chosenDice.getFaceValue();
             if (chosenDiceMap.containsKey(diceFace)) {
                 return true;

@@ -2,6 +2,7 @@ package dice;
 
 import dice.diceSelectionValidator.DiceSelectionValidatorFirework;
 import dice.diceSelectionValidator.DiceSelectionValidatorStandard;
+import dice.notNullRoll.NotNullRollStandard;
 import dice.pointCalculator.PointsCalculatorStandard;
 import exceptions.IllegalUserInputExeption;
 import org.junit.jupiter.api.Assertions;
@@ -39,7 +40,7 @@ public class DiceTowerTest {
     @Test()
     public void removeDiceTestInvalid() throws Exception{
 
-        diceTower.setStrategy(new PointsCalculatorStandard(),new DiceSelectionValidatorStandard());
+        diceTower.setStrategy(new PointsCalculatorStandard(),new DiceSelectionValidatorStandard(),new NotNullRollStandard());
         Integer [] array1={3,3,3};
         List<Dice> customdice1=DiceListSetUp(array1);
         Integer [] array2={1,2,3};
@@ -64,7 +65,7 @@ public class DiceTowerTest {
     }
     @Test
     public void removeDiceTestValid() throws Exception{
-        diceTower.setStrategy(new PointsCalculatorStandard(),new DiceSelectionValidatorStandard());
+        diceTower.setStrategy(new PointsCalculatorStandard(),new DiceSelectionValidatorStandard(),new NotNullRollStandard());
         Integer [] array1={3,3,3};
         List<Dice> customdice1=DiceListSetUp(array1);
         Integer [] array2={1,2,3};
@@ -86,7 +87,7 @@ public class DiceTowerTest {
         @Test
         public void diceListToValueTest() throws Exception{
 
-            diceTower.setStrategy(new PointsCalculatorStandard(),new DiceSelectionValidatorFirework());
+            diceTower.setStrategy(new PointsCalculatorStandard(),new DiceSelectionValidatorFirework(),new NotNullRollStandard());
             Integer [] diceArray={2,4,6};
             ArrayList<Dice> expected=DiceListSetUp(diceArray);
             ArrayList<DiceFace> diceFaces=new ArrayList<>();
@@ -109,7 +110,7 @@ public class DiceTowerTest {
         }
         @Test
         public void checklengthofTaken() throws Exception{
-            diceTower.setStrategy(new PointsCalculatorStandard(),new DiceSelectionValidatorStandard());
+            diceTower.setStrategy(new PointsCalculatorStandard(),new DiceSelectionValidatorStandard(),new NotNullRollStandard());
             Integer [] array1={1,3,3};
             List<Dice> customdice1=DiceListSetUp(array1);
             Integer [] array2={3,3,3};
