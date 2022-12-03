@@ -1,16 +1,15 @@
 import Enums.GameConstants;
 import Enums.Msg;
 import Input.Input;
-import exceptions.IllegalUserInputExeption;
+import exceptions.IllegalUserInputException;
 import players.Player;
 import players.PlayerManager;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class SetUp {
 
-    static void setUpGame() throws IOException, IllegalUserInputExeption {
+    static void setUpGame() {
         int necessaryPoints;
         while (true) {
             System.out.println(Msg.necessaryPointsQuestion.message);
@@ -18,11 +17,11 @@ public class SetUp {
                 //make sure that is within in the limit the input and lower level
                 necessaryPoints = Input.takeIntegerInput();
                 if (necessaryPoints<GameConstants.minAllowedPoints.definedConstant || necessaryPoints>GameConstants.maxAllowedPoints.definedConstant){
-                throw new IllegalUserInputExeption(Msg.pointInputOutOfBounds.message);
+                throw new IllegalUserInputException(Msg.pointInputOutOfBounds.message);
                 }
                 break;
             }
-            catch (IllegalUserInputExeption e) {
+            catch (IllegalUserInputException e) {
                 System.out.println(e.getMessage());
             }
 
