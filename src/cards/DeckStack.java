@@ -2,10 +2,9 @@ package cards;
 
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 
-public class DeckStack implements Iterable<AbstractCard>
+public class DeckStack
 {
     private final ArrayList<AbstractCard> aCards;
     public DeckStack(){
@@ -22,10 +21,6 @@ public class DeckStack implements Iterable<AbstractCard>
 
     public boolean isEmpty(){
         return aCards.size()==0;
-    }
-
-    public Iterator<AbstractCard> iterator(){
-        return aCards.iterator();
     }
 
     public AbstractCard pop(){

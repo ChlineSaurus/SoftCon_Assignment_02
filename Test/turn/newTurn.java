@@ -1,5 +1,8 @@
 package turn;
 
+import Turn.State.EndTurn;
+import Turn.State.TurnState;
+import Turn.Turn;
 import org.junit.jupiter.api.Test;
 import players.Player;
 import players.PlayerManager;
@@ -38,9 +41,24 @@ public class newTurn {
             f2.set(playerManager, 0);
 
         }
+        /*
+        boolean result = object1.getClass().equals( object2.getClass());
+        * ;
+        ArrayList<Dice> dices= (ArrayList<Dice>) f.get(diceTower);*/
 
         @Test
-        public void newTurnTest(){
+        public void setTurnTest() throws Exception{
+            Turn aTurn=new Turn();
+            aTurn.setCurrentState(new EndTurn(aTurn));
+            Field aTurnFields=aTurn.getClass().getDeclaredField("currentState");
+            aTurnFields.setAccessible(true);
+            TurnState state=(TurnState) aTurnFields.get(aTurn);
+            Turn bTurn= new Turn();
+            EndTurn endTurn=new EndTurn(bTurn);
+            assert state.getClass().equals(endTurn.getClass());
+
+
+
 
         }
 
