@@ -12,7 +12,6 @@ public class CurrentlyPlaying implements TurnState{
     Turn aTurn;
 
     public CurrentlyPlaying(Turn pTurn){
-        assert pTurn!=null;
         this.aTurn = pTurn;
     }
     @Override
