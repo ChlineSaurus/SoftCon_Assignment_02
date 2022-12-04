@@ -4,11 +4,13 @@ import Turn.State.CurrentlyPlaying;
 import Turn.State.EndTurn;
 import Turn.State.TurnState;
 import Turn.Turn;
+import dice.DiceFace;
 import org.junit.jupiter.api.Test;
 import players.Player;
 import players.PlayerManager;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 public class newTurn {
@@ -63,6 +65,10 @@ public class newTurn {
         public void CurrentlyPlayingInputValidation() throws Exception{
             Turn aTurn=new Turn();
             TurnState turnState=new CurrentlyPlaying(aTurn);
+            Method specialTurnStateMethod=turnState.getClass().getMethod("diceRemovalAttempt", ArrayList.class);
+            specialTurnStateMethod.setAccessible(true);
+            ArrayList<DiceFace> diceFaces=new ArrayList<>();
+            specialTurnStateMethod.invoke(turnState,diceFaces);
 
 
         }
