@@ -64,7 +64,7 @@ public class newTurn {
         @Test
         public void CurrentlyPlayingInputValidation() throws Exception{
             Turn aTurn=new Turn();
-            TurnState turnState=new CurrentlyPlaying(aTurn);
+            CurrentlyPlaying turnState=new CurrentlyPlaying(aTurn);
             Method specialTurnStateMethod=turnState.getClass().getMethod("diceRemovalAttempt", ArrayList.class);
             specialTurnStateMethod.setAccessible(true);
             ArrayList<DiceFace> diceFaces=new ArrayList<>();

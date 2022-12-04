@@ -47,4 +47,5 @@ public class SetUp {
         }
         PlayerManager.getInstance(players,necessaryPoints);
     }
+
 }
