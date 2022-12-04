@@ -2,7 +2,7 @@ package dice;
 
 import dice.pointCalculator.PointCalculator;
 import dice.pointCalculator.PointCalculatorNoPointsForRoll;
-import dice.pointCalculator.PointsCalculatorStandard;
+import dice.pointCalculator.PointCalculatorStandard;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -15,7 +15,7 @@ public class CalucaltePointsTest {
     public void threeOnes(){
         Integer []array={1,1,1,5};
         List<Dice> dices=diceSelectionValidatorFireworkTest1.diceListSetUp(array);
-        PointCalculator calucaltePointsStandard=new PointsCalculatorStandard();
+        PointCalculator calucaltePointsStandard=new PointCalculatorStandard();
         Assertions.assertEquals(1050,calucaltePointsStandard.calculatePoints(dices));
 
     }
@@ -24,7 +24,7 @@ public class CalucaltePointsTest {
     public void noPointDie(){
         Integer []array={1,1,1,5,3};
         List<Dice> dices=diceSelectionValidatorFireworkTest1.diceListSetUp(array);
-        PointCalculator calucaltePointsStandard=new PointsCalculatorStandard();
+        PointCalculator calucaltePointsStandard=new PointCalculatorStandard();
         Assertions.assertEquals(1050,calucaltePointsStandard.calculatePoints(dices));
     }
     @Test
