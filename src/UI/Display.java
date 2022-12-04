@@ -83,6 +83,7 @@ public class Display {
     }
 
     private static void waiting() {
+        //needs to be increased if you play on a terminal and not in an IDE
         try {
             Thread.sleep(50);
         } catch (InterruptedException e) {

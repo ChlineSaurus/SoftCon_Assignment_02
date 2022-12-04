@@ -5,6 +5,7 @@ import Turn.State.EndTurn;
 import Turn.State.TurnState;
 import Turn.Turn;
 import cards.cards.cardtypes.Fireworks;
+import cards.cards.cardtypes.Stop;
 import cards.cards.cardtypes.X2;
 import dice.DiceFace;
 import exceptions.IllegalUserInputException;
@@ -91,5 +92,20 @@ public class CurrentlyPlayingTest {
         TurnState state=(TurnState) aTurnFields.get(aTurn);
         Assertions.assertEquals(EndTurn.class, state.getClass());
         Assertions.assertEquals(100, aTurn.temporaryScore);
+    }
+
+    @Test
+    public void StopCard() throws Exception {
+        setUpSingelton.cleanUpSingelton();
+        aTurn.setCurrentState(new CurrentlyPlaying(aTurn));
+        CurrentlyPlaying turnState = new CurrentlyPlaying(aTurn);
+        aTurn.temporaryScore = 100;
+        aTurn.turnCard = new Stop();
+        aTurn.execute();
+        Field aTurnFields=aTurn.getClass().getDeclaredField("currentState");
+        aTurnFields.setAccessible(true);
+        TurnState state=(TurnState) aTurnFields.get(aTurn);
+        Assertions.assertEquals(EndTurn.class, state.getClass());
+        Assertions.assertEquals(0, aTurn.temporaryScore);
     }
 }

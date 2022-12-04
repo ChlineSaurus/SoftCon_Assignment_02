@@ -74,6 +74,5 @@ public class diceSelectionValidatorFireworkTest {
         List<Dice> takenDices=diceListSetUp(takenDice);
         boolean temp=mustSelectAllValidDice.isUserSelectionValid(chosenDiceToKeep,rolledDices,takenDices);
         Assertions.assertTrue(mustSelectAllValidDice.isUserSelectionValid(chosenDiceToKeep,rolledDices,takenDices));
-
     }
 }
