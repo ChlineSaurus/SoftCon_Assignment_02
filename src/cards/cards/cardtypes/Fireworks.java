@@ -21,7 +21,8 @@ public class Fireworks extends AbstractCard {
                 all valid single dice and triplets. If you accomplish a 'Tutto' you have to continue without revealing
                 revealing a new card. Your turn ends only when you roll a null. However, you score all points you have
                 rolled so far.
-                """;
+                
+                """ +  "\u001B[35m" + "Please make sure to take ALL valid dice at once, otherways the game won't allow it." + "\u001B[0m";
         requiredForPoints= TuttoRequired.Zero;
         requiredForBonus=TuttoRequired.Zero;
 
@@ -37,7 +38,8 @@ public class Fireworks extends AbstractCard {
                 "to continue.");
     }
 
-
-
-
+    @Override
+    public boolean haveToContinueRolling(){
+        return true;
+    }
 }

@@ -49,7 +49,7 @@ public class Turn {
     public void setCurrentState(TurnState currentState) {
         this.currentState = currentState;
     }
-    public void execute() throws IllegalUserInputException {
+    public void execute() {
         currentState.next();
     }
     public void displayTurn(String message) {
