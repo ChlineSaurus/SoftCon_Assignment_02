@@ -1,5 +1,7 @@
-package dice;
+package dice.PointCalculator;
 
+import dice.Dice;
+import dice.diceSelectionValidator.diceSelectionValidatorFireworkTest;
 import dice.pointCalculator.PointCalculator;
 import dice.pointCalculator.PointCalculatorNoPointsForRoll;
 import dice.pointCalculator.PointCalculatorStandard;

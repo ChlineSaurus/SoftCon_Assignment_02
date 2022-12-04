@@ -1,4 +1,4 @@
-package turn;
+package turn.states;
 
 import Turn.State.CurrentlyPlaying;
 import Turn.State.EndTurn;
@@ -12,6 +12,8 @@ import exceptions.IllegalUserInputException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import players.PlayerManager;
+import turn.DiceSetUp;
+import turn.SetUpSingelton;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;

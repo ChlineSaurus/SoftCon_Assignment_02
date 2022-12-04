@@ -1,5 +1,6 @@
-package cards;
+package cards.cardTypes;
 
+import cards.AbstractCard;
 import cards.cards.cardtypes.PlusMinus;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

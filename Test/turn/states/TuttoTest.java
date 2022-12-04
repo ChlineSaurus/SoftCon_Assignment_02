@@ -1,4 +1,4 @@
-package turn;
+package turn.states;
 
 import Turn.State.CurrentlyPlaying;
 import Turn.State.TurnState;
@@ -8,6 +8,7 @@ import cards.cards.cardtypes.Fireworks;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import players.PlayerManager;
+import turn.SetUpSingelton;
 
 import java.lang.reflect.Field;
 

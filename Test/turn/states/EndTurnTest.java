@@ -1,4 +1,4 @@
-package turn;
+package turn.states;
 
 import Turn.State.EndTurn;
 import Turn.State.StartPlayerTurn;
@@ -7,6 +7,7 @@ import Turn.Turn;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import players.PlayerManager;
+import turn.SetUpSingelton;
 
 import java.lang.reflect.Field;
 

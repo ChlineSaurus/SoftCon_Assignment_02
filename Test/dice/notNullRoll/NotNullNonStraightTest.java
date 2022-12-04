@@ -1,8 +1,7 @@
-package dice;
+package dice.notNullRoll;
 
-
-import dice.notNullRoll.NotNullRoll;
-import dice.notNullRoll.NotNullRollStraight;
+import dice.Dice;
+import dice.DiceFace;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -10,11 +9,12 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NotNullStraightTest {
-    NotNullRoll notNullRollStraight=new NotNullRollStraight();
+public class NotNullNonStraightTest {
+    NotNullRoll notNullRoll=new NotNullRollStandard();
+
 
     public List<Dice> DiceListSetUp(Integer[] customDiceValueArray){
-        List<Dice> diceList=new ArrayList<>();
+        List<Dice> diceList=new ArrayList<Dice>();
         for (Integer integer : customDiceValueArray) {
             Dice aDice = new Dice();
             Field[] aDiceFields = aDice.getClass().getDeclaredFields();
@@ -34,28 +34,44 @@ public class NotNullStraightTest {
         return diceList;
     }
 
+
     @Test
     public void testLegalRoll1(){
-        Integer[] notTakenArray={2,2,2,4};
         Integer[] takenDiceArray={1,5};
+        Integer[] notTakenArray={2,2,2,4};
         List<Dice> takenDice=DiceListSetUp(takenDiceArray);
         List<Dice> notTakenDice=DiceListSetUp(notTakenArray);
-        Assertions.assertTrue(notNullRollStraight.notNullRoll(notTakenDice,takenDice));
+        Assertions.assertTrue(notNullRoll.notNullRoll(notTakenDice,takenDice));
     }
+
     @Test
     public void testLegalRoll2(){
-        Integer[] notTakenArray={3,3,3};
-        Integer[] takenDiceArray={1,2,5};
-        List<Dice> takenDice=DiceListSetUp(takenDiceArray);
+        Integer[] takenArray={1};
+        Integer[] notTakenArray={2,2,3,5,1};
+        List<Dice> takenDice=DiceListSetUp(takenArray);
         List<Dice> notTakenDice=DiceListSetUp(notTakenArray);
-        Assertions.assertTrue(notNullRollStraight.notNullRoll(notTakenDice,takenDice));
+        Assertions.assertTrue(notNullRoll.notNullRoll(notTakenDice,takenDice));
     }
     @Test
-    public void testIllegalRoll1(){
-        Integer[] notTakenArray={3,3,2};
-        Integer[] takenDiceArray={3,2,5};
+    public void TestIllegalRoll1(){
+
+        Integer[] takenDiceArray={1,5,1,1};
+        Integer[] notTakenArray={2,3};
         List<Dice> takenDice=DiceListSetUp(takenDiceArray);
         List<Dice> notTakenDice=DiceListSetUp(notTakenArray);
-        Assertions.assertFalse(notNullRollStraight.notNullRoll(notTakenDice,takenDice));
+        Assertions.assertFalse(notNullRoll.notNullRoll(notTakenDice,takenDice));
+
     }
+    @Test
+    public void TestIllegalRoll2(){
+
+        Integer[] takenDiceArray={1,5,1};
+        Integer[] notTakenArray={2,2,4};
+        List<Dice> takenDice=DiceListSetUp(takenDiceArray);
+        List<Dice> notTakenDice=DiceListSetUp(notTakenArray);
+        Assertions.assertFalse(notNullRoll.notNullRoll(notTakenDice,takenDice));
+
+    }
+
+
 }

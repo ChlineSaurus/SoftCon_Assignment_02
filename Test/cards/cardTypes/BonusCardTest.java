@@ -1,5 +1,6 @@
-package cards;
+package cards.cardTypes;
 
+import cards.AbstractCard;
 import cards.cards.cardtypes.Bonus;
 import exceptions.IllegalUserInputException;
 import org.junit.jupiter.api.Assertions;

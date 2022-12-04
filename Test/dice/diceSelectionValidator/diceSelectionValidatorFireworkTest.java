@@ -1,7 +1,7 @@
-package dice;
+package dice.diceSelectionValidator;
 
-import dice.diceSelectionValidator.DiceSelectionValidatorFirework;
-import dice.diceSelectionValidator.DiceSelectionValidator;
+import dice.Dice;
+import dice.DiceFace;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
