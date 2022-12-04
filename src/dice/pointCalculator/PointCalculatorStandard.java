@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class PointsCalculatorStandard implements PointCalculator {
+public class PointCalculatorStandard implements PointCalculator {
 
 
 

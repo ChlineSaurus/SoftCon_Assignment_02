@@ -4,7 +4,7 @@ import dice.diceSelectionValidator.DiceSelectionValidatorFirework;
 import dice.diceSelectionValidator.DiceSelectionValidatorStandard;
 import dice.notNullRoll.NotNullRollStandard;
 import dice.notNullRoll.NotNullRollStraight;
-import dice.pointCalculator.PointsCalculatorStandard;
+import dice.pointCalculator.PointCalculatorStandard;
 import exceptions.IllegalUserInputException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -43,7 +43,7 @@ public class DiceTowerTest {
     @Test()
     public void removeDiceTestInvalid() throws Exception{
 
-        diceTower.setStrategy(new PointsCalculatorStandard(),new DiceSelectionValidatorStandard(),new NotNullRollStandard());
+        diceTower.setStrategy(new PointCalculatorStandard(),new DiceSelectionValidatorStandard(),new NotNullRollStandard());
         Integer [] array1={3,3,3};
         List<Dice> customdice1=DiceListSetUp(array1);
         Integer [] array2={1,2,3};
@@ -68,7 +68,7 @@ public class DiceTowerTest {
     }
     @Test
     public void removeDiceTestValid() throws Exception{
-        diceTower.setStrategy(new PointsCalculatorStandard(),new DiceSelectionValidatorStandard(),new NotNullRollStandard());
+        diceTower.setStrategy(new PointCalculatorStandard(),new DiceSelectionValidatorStandard(),new NotNullRollStandard());
         Integer [] array1={3,3,3};
         List<Dice> customdice1=DiceListSetUp(array1);
         Integer [] array2={1,2,3};
@@ -90,7 +90,7 @@ public class DiceTowerTest {
         @Test
         public void diceListToValueTest() throws Exception{
 
-            diceTower.setStrategy(new PointsCalculatorStandard(),new DiceSelectionValidatorFirework(),new NotNullRollStandard());
+            diceTower.setStrategy(new PointCalculatorStandard(),new DiceSelectionValidatorFirework(),new NotNullRollStandard());
             Integer [] diceArray={2,4,6};
             ArrayList<Dice> expected=DiceListSetUp(diceArray);
             ArrayList<DiceFace> diceFaces=new ArrayList<>();
@@ -113,7 +113,7 @@ public class DiceTowerTest {
         }
         @Test
         public void checklengthofTaken() throws Exception{
-            diceTower.setStrategy(new PointsCalculatorStandard(),new DiceSelectionValidatorStandard(),new NotNullRollStandard());
+            diceTower.setStrategy(new PointCalculatorStandard(),new DiceSelectionValidatorStandard(),new NotNullRollStandard());
             Integer [] array1={1,3,3};
             List<Dice> customdice1=DiceListSetUp(array1);
             Integer [] array2={3,3,3};
@@ -137,7 +137,7 @@ public class DiceTowerTest {
         }
         @Test
         public void TestnewTurn() throws Exception{
-        diceTower.setStrategy(new PointsCalculatorStandard(), new DiceSelectionValidatorStandard(), new NotNullRollStraight());
+        diceTower.setStrategy(new PointCalculatorStandard(), new DiceSelectionValidatorStandard(), new NotNullRollStraight());
         diceTower.newTurn();
         Field f=diceTower.getClass().getDeclaredField("takenDices");
         f.setAccessible(true);
@@ -147,7 +147,7 @@ public class DiceTowerTest {
         }
         @Test
         public void madeTutto() throws Exception{
-        diceTower.setStrategy(new PointsCalculatorStandard(), new DiceSelectionValidatorStandard(), new NotNullRollStraight());
+        diceTower.setStrategy(new PointCalculatorStandard(), new DiceSelectionValidatorStandard(), new NotNullRollStraight());
         diceTower.newTurn();
         Field f=diceTower.getClass().getDeclaredField("notTakenDices");
         f.setAccessible(true);
@@ -158,7 +158,7 @@ public class DiceTowerTest {
         }
         @Test
         public void removeIllegaldice ()throws IllegalUserInputException{
-        diceTower.setStrategy(new PointsCalculatorStandard(), new DiceSelectionValidatorStandard(), new NotNullRollStraight());
+        diceTower.setStrategy(new PointCalculatorStandard(), new DiceSelectionValidatorStandard(), new NotNullRollStraight());
         ArrayList<DiceFace> dicesToBeRemoved=new ArrayList<>();
         boolean isCaught=false;
         try {diceTower.removeDice(dicesToBeRemoved);}
@@ -170,7 +170,7 @@ public class DiceTowerTest {
     }
     @Test
     public void removeIllegaldice2 ()throws Exception{
-        diceTower.setStrategy(new PointsCalculatorStandard(), new DiceSelectionValidatorStandard(), new NotNullRollStraight());
+        diceTower.setStrategy(new PointCalculatorStandard(), new DiceSelectionValidatorStandard(), new NotNullRollStraight());
         ArrayList<DiceFace> dicesToBeRemoved=new ArrayList<>();
         dicesToBeRemoved.add(DiceFace.One);
         dicesToBeRemoved.add(DiceFace.One);
