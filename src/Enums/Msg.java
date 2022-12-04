@@ -6,7 +6,8 @@ public enum Msg {
             "Player. If you want to start press Enter twice!", GameConstants.minAllowedPlayers.definedConstant,
             GameConstants.maxAllowedPlayers.definedConstant)),
     playerNameInputToSmall("Your Player name was to long. Please give a smaller Input"),
-    necessaryPointsQuestion("Until how many Points do you want to play the game? Please enter a Number: "),
+    necessaryPointsQuestion("Until how many Points do you want to play the game? Please enter a Number between "+GameConstants.minAllowedPoints.definedConstant +
+            " and "+ GameConstants.maxAllowedPoints.definedConstant+ ":"),
     notEnoughPlayer("You currently dont have enough players"),
     pointInputOutOfBounds("The minimum necessary points are "
             + GameConstants.minAllowedPoints.definedConstant + " the maximum are " + GameConstants.maxAllowedPoints.definedConstant),
@@ -30,7 +31,7 @@ public enum Msg {
     tuttoAndCloverleafOrFireworks("You have a tutto but you must go on."),
     stopOrContinueQuestion("Enter \"S\" if you want to stop or \"R\" if you want to continue: "),
     announceNextPlayer("Your turn is over, the next player is: "),
-    decoration("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+-+-+-+-+-+-+-+-+-+-+-+-+-" +
+    decoration("\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+-+-+-+-+-+-+-+-+-+-+-+-+-" +
             "+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"),
     displayOrRollQuestion("For displaying your score please enter \"D\" for rolling the Dice please enter \"R\""),
     endOrRollQuestion("Enter to reroll the dice \"R\" and if you want to end your turn \"E\""),

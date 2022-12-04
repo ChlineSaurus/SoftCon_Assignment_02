@@ -115,8 +115,13 @@ public class PlayerManager {
     }
 
     private void declareWinner() {
-        List<Player> winner =getPlayersWithMaxScore();
-        UI.Display.declareWinner(winner.get(0).name);
+        Player winner = players.get(1);
+        for(Player aPlayer: players) {
+            if (aPlayer.getScore() > winner.getScore()) {
+                winner = aPlayer;
+            }
+        }
+        UI.Display.declareWinner(winner.name);
         exit(0);
     }
 
