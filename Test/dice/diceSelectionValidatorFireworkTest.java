@@ -72,7 +72,17 @@ public class diceSelectionValidatorFireworkTest {
         List<Dice> chosenDiceToKeep=diceListSetUp(chosenDice);
         List<Dice> rolledDices=diceListSetUp(rolledDice);
         List<Dice> takenDices=diceListSetUp(takenDice);
-        boolean temp=mustSelectAllValidDice.isUserSelectionValid(chosenDiceToKeep,rolledDices,takenDices);
         Assertions.assertTrue(mustSelectAllValidDice.isUserSelectionValid(chosenDiceToKeep,rolledDices,takenDices));
+    }
+    @Test
+    public void takeNonExistingDices(){
+        Integer [] chosenDice={2,3,2};
+        Integer [] rolledDice={2,2,2,2};
+        Integer [] takenDice={5,1};
+        List<Dice> chosenDiceToKeep=diceListSetUp(chosenDice);
+        List<Dice> rolledDices=diceListSetUp(rolledDice);
+        List<Dice> takenDices=diceListSetUp(takenDice);
+        Assertions.assertFalse(mustSelectAllValidDice.isUserSelectionValid(chosenDiceToKeep,rolledDices,takenDices));
+
     }
 }

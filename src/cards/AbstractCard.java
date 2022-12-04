@@ -5,7 +5,7 @@ import cards.cards.cardInterfaces.bonusSystemInterface.PlusPoints;
 import cards.cards.cardInterfaces.bonusSystemInterface.TimesX2Points;
 import dice.DiceTower;
 import dice.notNullRoll.NotNullRollStandard;
-import dice.pointCalculator.PointsCalculatorStandard;
+import dice.pointCalculator.PointCalculatorStandard;
 import dice.diceSelectionValidator.DiceSelectionValidatorStandard;
 import exceptions.IllegalUserInputException;
 
@@ -69,7 +69,7 @@ public abstract class AbstractCard {
     }
 
     public void injectStrategyToTower(DiceTower aDiceTower) {
-        aDiceTower.setStrategy(new PointsCalculatorStandard(), new DiceSelectionValidatorStandard(), new NotNullRollStandard());
+        aDiceTower.setStrategy(new PointCalculatorStandard(), new DiceSelectionValidatorStandard(), new NotNullRollStandard());
     }
     public int getDeductPoints() {
             return deductionPoints;
