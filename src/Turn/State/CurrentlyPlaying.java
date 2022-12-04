@@ -77,7 +77,7 @@ public class CurrentlyPlaying implements TurnState{
                 }
                 aTurn.temporaryScore += aTurn.removeDice(diceToRemove);
                 if (aTurn.validDiceExist()){
-                    message = "If you want to take more Dice enter the Numbers, else press Enter";
+                    message = Msg.standardRollQuestion.message;
                 } else {
                     break;
                 }
@@ -91,7 +91,7 @@ public class CurrentlyPlaying implements TurnState{
         ArrayList<Character> allowedChar = new ArrayList<>();
         allowedChar.add('E');
         allowedChar.add('R');
-        aTurn.displayTurn("Enter to reroll the dice \"R\" and if you want to end your turn \"E\"");
+        aTurn.displayTurn(Msg.endOrRollQuestion.message);
         Character nextAction;
         while(true) {
             try {

@@ -1,5 +1,6 @@
 package Turn.State;
 
+import Enums.Msg;
 import Input.TuttoInput;
 import Turn.Turn;
 import UI.Display;
@@ -31,7 +32,7 @@ public class StartPlayerTurn implements TurnState {
         ArrayList<Character> possibleNextAction = new ArrayList<>();
         possibleNextAction.add('R');
         possibleNextAction.add('D');
-        UI.Display.displayMessage("For displaying your score please enter \"D\" for rolling the Dice please enter \"R\"");
+        UI.Display.displayMessage(Msg.displayOrRollQuestion.message);
         boolean validInput = false;
         while (!validInput) {
             try {

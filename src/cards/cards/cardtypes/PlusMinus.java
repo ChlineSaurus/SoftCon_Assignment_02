@@ -21,6 +21,7 @@ public class PlusMinus extends AbstractCard {
         requiredForPoints= TuttoRequired.One;
         requiredForBonus=TuttoRequired.One;
     }
+
     @Override
     public void injectStrategyToTower(DiceTower aDiceTower){
         aDiceTower.setStrategy(new PointCalculatorNoPointsForRoll(),new DiceSelectionValidatorStandard(), new NotNullRollStandard());

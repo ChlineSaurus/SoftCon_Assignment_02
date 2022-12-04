@@ -1,5 +1,6 @@
 package cards;
 
+import Enums.Msg;
 import cards.cards.cardInterfaces.bonusSystemInterface.BonusSystem;
 import cards.cards.cardInterfaces.bonusSystemInterface.PlusPoints;
 import cards.cards.cardInterfaces.bonusSystemInterface.TimesX2Points;
@@ -56,7 +57,7 @@ public abstract class AbstractCard {
 
     public void userTriesToEndTurn() throws IllegalUserInputException {
         if (requiredForPoints!=TuttoRequired.Zero){
-            throw new IllegalUserInputException("If you end your turn now, you'll recieve zeropoints, roll again!, type 'r'");
+            throw new IllegalUserInputException(Msg.notAllowedToTakePoints.message);
         }
     }
 

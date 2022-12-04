@@ -86,11 +86,10 @@ public class DiceTower {
         }
         ArrayList<Dice> temporaryTakenDices = createTemporaryTakenDices(dicesToRemove);
         if (temporaryTakenDices.size() < dicesToRemove.size()) {
-
-            throw new IllegalUserInputException(Msg.notAllowedNumberException.message);
+            throw new IllegalUserInputException(Msg.notExistingDiceTakenException.message);
         }
         if (!diceSelectionValidator.isUserSelectionValid(temporaryTakenDices,notTakenDices,takenDices)){
-            throw new IllegalUserInputException("Make sure that only take valid dice, read the description to see if any special rules apply: ");
+            throw new IllegalUserInputException(Msg.notAllowedDiceInInput.message);
         }
         else {
             diceTakenSinceRoll = true;

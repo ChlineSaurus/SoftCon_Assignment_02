@@ -1,5 +1,6 @@
 package Turn.State;
 
+import Enums.Msg;
 import Turn.Turn;
 import players.PlayerManager;
 
@@ -10,9 +11,8 @@ public class EndTurn implements TurnState{
     public EndTurn(Turn aTurn){this.aTurn = aTurn;}
     @Override
     public void next() {
-        String myEndTurnMessage = "Your turn is over, now it is " +playerManager.getNextPlayersName() +"'s turn.\n" +
-                "+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+-+-+-+-+-+-+-+-+-+-+-+-+-" +
-                "+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n";
+        String myEndTurnMessage = Msg.announceNextPlayer.message + playerManager.getNextPlayersName() +
+                Msg.decoration.message;
         aTurn.displayTurn(myEndTurnMessage);
         aTurn.newTurn();
     }
