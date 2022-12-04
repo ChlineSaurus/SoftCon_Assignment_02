@@ -1,6 +1,5 @@
 package cards.cards.cardtypes;
 
-
 import cards.AbstractCard;
 import cards.TuttoRequired;
 import dice.DiceTower;
@@ -10,7 +9,6 @@ import dice.diceSelectionValidator.DiceSelectionValidatorFirework;
 import exceptions.IllegalUserInputException;
 
 public class Fireworks extends AbstractCard {
-
 
     public Fireworks(){
         immunity=true;
@@ -28,10 +26,12 @@ public class Fireworks extends AbstractCard {
 
 
     }
+
     @Override
     public void injectStrategyToTower(DiceTower aDiceTower) {
         aDiceTower.setStrategy(new PointCalculatorStandard(), new DiceSelectionValidatorFirework(), new NotNullRollStandard());
     }
+
     @Override
     public void userTriesToEndTurn() throws IllegalUserInputException {
         throw new IllegalUserInputException("Your Card is a Firework, you are not allowed to stop. Press 'r'" +

@@ -1,6 +1,5 @@
 package cards.cards.cardtypes;
 
-
 import cards.AbstractCard;
 import cards.TuttoRequired;
 import dice.DiceTower;
@@ -21,7 +20,6 @@ public class Straight extends AbstractCard {
             """;
     requiredForPoints= TuttoRequired.One;
     requiredForBonus=TuttoRequired.One;
-
     }
 
     @Override

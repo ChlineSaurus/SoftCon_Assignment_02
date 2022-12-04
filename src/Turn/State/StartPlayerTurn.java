@@ -45,5 +45,4 @@ public class StartPlayerTurn implements TurnState {
             DisplayOrRoll();
         }
     }
-
 }

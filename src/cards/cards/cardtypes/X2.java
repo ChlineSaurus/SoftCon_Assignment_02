@@ -1,6 +1,5 @@
 package cards.cards.cardtypes;
 
-
 import cards.AbstractCard;
 import cards.TuttoRequired;
 

@@ -1,6 +1,5 @@
 package cards.cards.cardtypes;
 
-
 import cards.AbstractCard;
 import cards.TuttoRequired;
 import dice.DiceTower;
@@ -26,5 +25,4 @@ public class PlusMinus extends AbstractCard {
     public void injectStrategyToTower(DiceTower aDiceTower){
         aDiceTower.setStrategy(new PointCalculatorNoPointsForRoll(),new DiceSelectionValidatorStandard(), new NotNullRollStandard());
     }
-
 }

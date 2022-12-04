@@ -1,6 +1,5 @@
 package cards.cards.cardtypes;
 
-
 import Enums.GameConstants;
 import cards.AbstractCard;
 import cards.TuttoRequired;
@@ -20,6 +19,7 @@ public class Cloverleaf extends AbstractCard {
         requiredForPoints= TuttoRequired.Two;
         requiredForBonus=TuttoRequired.Two;
     }
+
     @Override
     public int tuttoAchieved(int currentPoints){
         if (!isPointConditionAchieved()){
