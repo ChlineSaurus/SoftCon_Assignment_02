@@ -77,7 +77,6 @@ public class PlayerManager {
     }
 
     private List<Player> getPlayersWithMaxScore(){
-        assert !currentPlayerIsPointLeader();
         int maxScore=getMaxScore();
         List<Player> playersWithMaxScore=new ArrayList<Player>();
 
