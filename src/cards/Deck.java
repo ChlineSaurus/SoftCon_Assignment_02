@@ -1,6 +1,5 @@
 package cards;
 
-
 import cards.cards.cardtypes.*;
 
 import java.util.ArrayList;
@@ -11,11 +10,11 @@ public class Deck
     private DeckStack aCards;
     private ArrayList<AbstractCard> cards;
 
-    //Creates a new deck of 56 cards, shuffled.
     public Deck()
     {
         createDeckStack();
     }
+
     public void createDeckStack(){
         cards=new ArrayList<AbstractCard>();
 
@@ -55,21 +54,18 @@ public class Deck
         aCards=new DeckStack(cards);
     }
 
-    private void shuffle()
-    {
+    private void shuffle() {
         Collections.shuffle(cards);
-        }
+    }
 
-    public AbstractCard draw()
-    {
+    public AbstractCard draw() {
         if (isEmpty()){
             createDeckStack();
         }
         return aCards.pop();
     }
 
-    public boolean isEmpty()
-    {
+    public boolean isEmpty() {
         return aCards.isEmpty();
     }
 }

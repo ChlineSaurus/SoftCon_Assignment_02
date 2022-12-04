@@ -1,11 +1,8 @@
 package cards;
 
-
 import java.util.ArrayList;
 
-
-public class DeckStack
-{
+public class DeckStack {
     private final ArrayList<AbstractCard> aCards;
     public DeckStack(){
         aCards = new ArrayList<>();

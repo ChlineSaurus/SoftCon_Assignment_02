@@ -12,7 +12,6 @@ import exceptions.IllegalUserInputException;
 public abstract class AbstractCard {
 
     protected String name;
-
     protected String description;
     protected boolean endTurn;
     protected boolean immunity;
@@ -30,17 +29,18 @@ public abstract class AbstractCard {
         name="still needs to be no name";
     }
 
-
-
     protected void setBonusSystemStandard(){
         bonusSystem=new PlusPoints();
     }
+
     protected void setBonusSystemX2(){
         bonusSystem=new TimesX2Points();
     }
+
     public boolean isImmunity(){
         return immunity;
     }
+
     public int tuttoAchieved(int currentPoints){
         if (!isPointConditionAchieved()){
             requiredForPoints=TuttoRequired.getEnum((requiredForPoints.integerValue)-1);
@@ -53,17 +53,21 @@ public abstract class AbstractCard {
         }
         return currentPoints;
     }
+
     public void userTriesToEndTurn() throws IllegalUserInputException {
         if (requiredForPoints!=TuttoRequired.Zero){
             throw new IllegalUserInputException("If you end your turn now, you'll recieve zeropoints, roll again!, type 'r'");
         }
     }
+
     protected boolean isBonusConditionAchieved(){
         return this.requiredForBonus==TuttoRequired.Zero;
     }
+
     protected boolean isPointConditionAchieved(){
         return this.requiredForPoints==TuttoRequired.Zero;
     }
+
     public boolean haveToContinueRolling(){
         return this.requiredForPoints!=TuttoRequired.Zero;
     }
@@ -71,6 +75,7 @@ public abstract class AbstractCard {
     public void injectStrategyToTower(DiceTower aDiceTower) {
         aDiceTower.setStrategy(new PointCalculatorStandard(), new DiceSelectionValidatorStandard(), new NotNullRollStandard());
     }
+
     public int getDeductPoints() {
             return deductionPoints;
         }
@@ -78,6 +83,7 @@ public abstract class AbstractCard {
     public String getName(){
         return name;
     }
+
     public String getDescription(){
         return description;
     }
