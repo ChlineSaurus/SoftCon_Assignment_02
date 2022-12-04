@@ -57,12 +57,10 @@ public class CurrentlyPlaying implements TurnState{
         }
     }
 
-    private boolean diceRemovalAttempt(ArrayList<DiceFace> diceToRemove) throws IllegalUserInputException{
+    private boolean diceRemovalAttempt() throws IllegalUserInputException{
 
         if (!aTurn.isDiceTakenSinceRoll()) {
             throw new IllegalUserInputException(Msg.takeAtLeastOneValidDice.message);
-        } else if ( !aTurn.validDiceExist()) {
-            throw new IllegalUserInputException(Msg.invalidDicesSelected.message);
         } else {
             return true;
         }
@@ -73,7 +71,7 @@ public class CurrentlyPlaying implements TurnState{
             aTurn.displayTurn(message);
             try {
                 ArrayList<DiceFace> diceToRemove = TuttoInput.takeDiceListInput();
-                if (diceToRemove.size()==0 &&diceRemovalAttempt(diceToRemove)){
+                if (diceToRemove.size()==0 &&diceRemovalAttempt()){
                     break;
                 }
                 aTurn.temporaryScore += aTurn.removeDice(diceToRemove);

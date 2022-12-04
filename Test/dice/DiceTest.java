@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 
-
 public class DiceTest {
 
     Dice dice=new Dice();
@@ -17,4 +16,10 @@ public class DiceTest {
         Assertions.assertEquals(faceValue, getFaceValue);
     }
 
+    @Test
+    public void testDiceAssertion() throws Exception{
+        Assertions.assertThrows(AssertionError.class, () -> {
+            dice.getFaceValue();
+        });
+    }
 }

@@ -28,7 +28,6 @@ public class DiceSelectionValidatorFirework implements DiceSelectionValidator {
             Integer occurences=entry.getValue();
             if (faceValue!=DiceFace.One && faceValue!=DiceFace.Five){
                 requiredToBeSelected.put(faceValue,occurences-(occurences%3));
-                //make sure the correct amount of dice are there for nonguaranteed points
             }
         }
         return requiredToBeSelected;

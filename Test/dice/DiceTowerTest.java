@@ -10,6 +10,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -197,5 +199,15 @@ public class DiceTowerTest {
         assert !diceTower.diceTakenSinceRoll();
     }
 
+    @Test
+    public void nullAsInput() throws Exception{
+        Method m = diceTower.getClass().getDeclaredMethod("removeTemporaryTakenDices", List.class);
+        m.setAccessible(true);
+        Exception e = Assertions.assertThrows(InvocationTargetException.class, () -> {
+            List<Dice> nuller = null;
+            m.invoke(diceTower, nuller);
+        });
+        Assertions.assertEquals(AssertionError.class, e.getCause().getClass());
+    }
 }
 
