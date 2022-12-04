@@ -1,5 +1,7 @@
-package cards;
+package cards.cardTypes;
 
+import cards.AbstractCard;
+import cards.TuttoRequired;
 import cards.cards.cardtypes.Cloverleaf;
 
 import exceptions.IllegalUserInputException;

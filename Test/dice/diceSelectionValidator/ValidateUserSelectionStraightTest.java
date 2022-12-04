@@ -1,7 +1,7 @@
-package dice;
+package dice.diceSelectionValidator;
 
-import dice.diceSelectionValidator.DiceSelectionValidator;
-import dice.diceSelectionValidator.DiceSelectionValidatorStandard;
+import dice.Dice;
+import dice.DiceFace;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -9,9 +9,8 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
-public class diceSelectionValidatorStandardTest {
-    DiceSelectionValidator validateNonStraight=new DiceSelectionValidatorStandard();
-
+public class ValidateUserSelectionStraightTest {
+    DiceSelectionValidator diceSelectionValidator =new DiceSelectionValidatorStraight();
     public List<Dice> diceListSetUp(Integer[] customDiceValueArray){
         List<Dice> diceList=new ArrayList<Dice>();
         for (Integer integer : customDiceValueArray) {
@@ -32,26 +31,15 @@ public class diceSelectionValidatorStandardTest {
         }
         return diceList;
     }
-
     @Test
     public void testValidDices(){
-        Integer [] chosenDice={1,1};
-        Integer [] rolledDice={1,1,5,2};
-        Integer [] takenDice={5,1};
+        Integer [] chosenDice={1};
+        Integer [] rolledDice={1,5,2};
+        Integer [] takenDice={5,2,3};
         List<Dice> chosenDiceToKeep=diceListSetUp(chosenDice);
         List<Dice> rolledDices=diceListSetUp(rolledDice);
         List<Dice> takenDices=diceListSetUp(takenDice);
-        Assertions.assertTrue(validateNonStraight.isUserSelectionValid(chosenDiceToKeep,rolledDices,takenDices));
-    }
-    @Test
-    public void testValidDices2(){
-        Integer [] chosenDice={2,2,2};
-        Integer [] rolledDice={2,2,2,2};
-        Integer [] takenDice={5,1};
-        List<Dice> chosenDiceToKeep=diceListSetUp(chosenDice);
-        List<Dice> rolledDices=diceListSetUp(rolledDice);
-        List<Dice> takenDices=diceListSetUp(takenDice);
-        Assertions.assertTrue(validateNonStraight.isUserSelectionValid(chosenDiceToKeep,rolledDices,takenDices));
+        Assertions.assertTrue(diceSelectionValidator.isUserSelectionValid(chosenDiceToKeep,rolledDices,takenDices));
     }
     @Test
     public void testInValidDices(){
@@ -61,7 +49,17 @@ public class diceSelectionValidatorStandardTest {
         List<Dice> chosenDiceToKeep=diceListSetUp(chosenDice);
         List<Dice> rolledDices=diceListSetUp(rolledDice);
         List<Dice> takenDices=diceListSetUp(takenDice);
-        Assertions.assertFalse(validateNonStraight.isUserSelectionValid(chosenDiceToKeep,rolledDices,takenDices));
+        Assertions.assertFalse(diceSelectionValidator.isUserSelectionValid(chosenDiceToKeep,rolledDices,takenDices));
 
+    }
+    @Test
+    public void testMultipleInValidDices(){
+        Integer [] chosenDice={1,1};
+        Integer [] rolledDice={1,1,5,2};
+        Integer [] takenDice={5,3};
+        List<Dice> chosenDiceToKeep=diceListSetUp(chosenDice);
+        List<Dice> rolledDices=diceListSetUp(rolledDice);
+        List<Dice> takenDices=diceListSetUp(takenDice);
+        Assertions.assertFalse(diceSelectionValidator.isUserSelectionValid(chosenDiceToKeep,rolledDices,takenDices));
     }
 }

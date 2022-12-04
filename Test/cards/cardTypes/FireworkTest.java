@@ -1,4 +1,4 @@
-package cards;
+package cards.cardTypes;
 
 import cards.cards.cardtypes.Fireworks;
 import dice.Dice;
