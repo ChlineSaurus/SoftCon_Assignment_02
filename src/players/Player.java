@@ -1,6 +1,7 @@
 package players;
 
 public class Player implements Comparable<Player>{
+
     public final String name;
     private int score;
 

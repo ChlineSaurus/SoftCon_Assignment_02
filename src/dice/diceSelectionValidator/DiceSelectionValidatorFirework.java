@@ -9,7 +9,6 @@ import java.util.Map;
 
 public class DiceSelectionValidatorFirework implements DiceSelectionValidator {
 
-
     private Map<DiceFace, Integer> setUpRequiredDice(List<Dice> rolledDices){
         Map<DiceFace,Integer> requiredToBeSelected=new HashMap<DiceFace,Integer>();
         for (Dice aDice:rolledDices){

@@ -14,7 +14,6 @@ public class SetUp {
         while (true) {
             System.out.println(Msg.necessaryPointsQuestion.message);
             try {
-                //make sure that is within in the limit the input and lower level
                 necessaryPoints = Input.takeIntegerInput();
                 if (necessaryPoints<GameConstants.minAllowedPoints.definedConstant || necessaryPoints>GameConstants.maxAllowedPoints.definedConstant){
                 throw new IllegalUserInputException(Msg.pointInputOutOfBounds.message);
@@ -24,8 +23,6 @@ public class SetUp {
             catch (IllegalUserInputException e) {
                 System.out.println(e.getMessage());
             }
-
-
         }
         ArrayList<Player> players = new ArrayList<Player>();
         int playerCounter = 0;
@@ -47,7 +44,4 @@ public class SetUp {
         }
         PlayerManager.getInstance(players,necessaryPoints);
     }
-
-
-
 }

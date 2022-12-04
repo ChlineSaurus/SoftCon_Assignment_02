@@ -11,7 +11,8 @@ public class EndTurn implements TurnState{
     @Override
     public void next() {
         String myEndTurnMessage = "Your turn is over, now it is " +playerManager.getNextPlayersName() +"'s turn.\n" +
-                "+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n";
+                "+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+-+-+-+-+-+-+-+-+-+-+-+-+-" +
+                "+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n";
         aTurn.displayTurn(myEndTurnMessage);
         aTurn.newTurn();
     }

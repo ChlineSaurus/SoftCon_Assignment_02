@@ -5,11 +5,8 @@ import Enums.GameConstants;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
 import static java.lang.System.exit;
 
-
-//singleton!!!
 public class PlayerManager {
 
     private static PlayerManager uniqueInstance;
@@ -68,6 +65,7 @@ public class PlayerManager {
         }
         return true;
     }
+
     private int getMaxScore(){
         int maxScore= currentPlayer.getScore();
         for (Player aPlayer:players){
@@ -76,8 +74,8 @@ public class PlayerManager {
             }
         }
         return maxScore;
-
     }
+
     private List<Player> getPlayersWithMaxScore(){
         assert !currentPlayerIsPointLeader();
         int maxScore=getMaxScore();
@@ -90,6 +88,7 @@ public class PlayerManager {
         }
         return playersWithMaxScore;
     }
+
     public void deductLeadingPlayersPoints(int deductpoints){
         if (!currentPlayerIsPointLeader()){
             List<Player> deductPlayerspoints=getPlayersWithMaxScore();
@@ -106,6 +105,7 @@ public class PlayerManager {
         }
         return playersName;
     }
+
     public List<Integer> getPlayersScore(){
         List<Integer> playersScore=new ArrayList<Integer>();
         for (Player aPlayer:players){
@@ -119,6 +119,7 @@ public class PlayerManager {
         UI.Display.declareWinner(winner.get(0).name);
         exit(0);
     }
+
     public String getNextPlayersName(){
         int nextPlayersIndex=(currentPlayerIndex+1)%(players.size());
         return players.get(nextPlayersIndex).name;

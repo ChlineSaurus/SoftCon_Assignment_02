@@ -49,9 +49,11 @@ public class Turn {
     public void setCurrentState(TurnState currentState) {
         this.currentState = currentState;
     }
+
     public void execute() {
         currentState.next();
     }
+
     public void displayTurn(String message) {
         PlayerManager thePlayerManager = PlayerManager.getInstance();
         UI.Display.displayGameState(diceTower.showNotTakenDices(), diceTower.showTakenDices(),

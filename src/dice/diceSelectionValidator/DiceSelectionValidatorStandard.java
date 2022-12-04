@@ -11,7 +11,6 @@ public class DiceSelectionValidatorStandard implements DiceSelectionValidator {
 
     private Map<DiceFace,Integer> selectedDice;
 
-
     @Override
     public boolean isUserSelectionValid(List<Dice> chosenDicesToKeep, List<Dice> rolledDices, List<Dice> takenDices) {
         selectedDice=new HashMap<DiceFace, Integer>();
@@ -33,6 +32,5 @@ public class DiceSelectionValidatorStandard implements DiceSelectionValidator {
             }
         }
         return true;
-
     }
 }

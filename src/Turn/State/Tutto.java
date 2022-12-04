@@ -12,6 +12,7 @@ public class Tutto implements TurnState{
     Turn aTurn;
 
     public Tutto(Turn aTurn){this.aTurn = aTurn;}
+
     @Override
     public void next() {
         aTurn.temporaryScore = aTurn.turnCard.tuttoAchieved(aTurn.temporaryScore);

@@ -9,8 +9,6 @@ import java.util.Map;
 
 public class PointCalculatorStandard implements PointCalculator {
 
-
-
     private void setUpDiceCounter(List<Dice> newlyTakenDices, Map<DiceFace,Integer> diceCounter){
         for (Dice aDice:newlyTakenDices){
             DiceFace faceValue=aDice.getFaceValue();
@@ -31,7 +29,6 @@ public class PointCalculatorStandard implements PointCalculator {
         for (Map.Entry<DiceFace, Integer> entry : diceCounter.entrySet()){
             DiceFace faceValue=entry.getKey();
             Integer occurences=entry.getValue();
-
             while (occurences>=3){
                 if (faceValue==DiceFace.One){
                     points+=1000;
@@ -41,7 +38,6 @@ public class PointCalculatorStandard implements PointCalculator {
                 }
                 occurences-=3;
             }
-
             while (occurences>0){
                 if (faceValue==DiceFace.Five){
                     points+=50;
@@ -55,5 +51,4 @@ public class PointCalculatorStandard implements PointCalculator {
         }
         return points;
     }
-
 }

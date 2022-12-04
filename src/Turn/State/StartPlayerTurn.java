@@ -12,6 +12,7 @@ public class StartPlayerTurn implements TurnState {
     public StartPlayerTurn(Turn aTurn){
         this.aTurn = aTurn;
     }
+
     @Override
     public void next() {
         while(true) {

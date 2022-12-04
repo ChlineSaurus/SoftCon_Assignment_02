@@ -13,6 +13,7 @@ public class TuttoInput extends Input{
         return transformDiceListInput(input);
 
     }
+
     private static ArrayList <DiceFace> transformDiceListInput(ArrayList<Integer> input) throws IllegalUserInputException {
         ArrayList<DiceFace> returnList = new ArrayList<DiceFace>();
         for (Integer aInputInteger: input){
@@ -24,7 +25,6 @@ public class TuttoInput extends Input{
         }
         return returnList;
     }
-
 
     public static Character takeRestrictedCharInput(ArrayList<Character> allowedChars) throws IllegalUserInputException {
         Character input = Input.takeCharInput();

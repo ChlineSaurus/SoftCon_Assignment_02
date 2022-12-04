@@ -10,15 +10,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DiceTower {
+
     final private ArrayList<Dice> notTakenDices;
     final private ArrayList<Dice> takenDices;
-
-    //the dices the user selects
     private boolean diceTakenSinceRoll;
-
     private PointCalculator pointCalculator;
     private NotNullRoll notNullRollValidator;
     private DiceSelectionValidator diceSelectionValidator;
+
     public DiceTower(){
         notTakenDices = new ArrayList<Dice>();
         for(int i = 0; i < 6; i++) {
@@ -73,7 +72,6 @@ public class DiceTower {
         }
     }
 
-
     public boolean notNullRoll(){
         return notNullRollValidator.notNullRoll(notTakenDices, takenDices);
     }
@@ -83,17 +81,14 @@ public class DiceTower {
         if (dicesToRemove.size() == 0) {
             throw new IllegalUserInputException(Msg.noDiceTakenException.message);
         }
-        //one has to check if the taken dice are valid or can the user make mistakes
         if (dicesToRemove.size() > notTakenDices.size()) {
             throw new IllegalUserInputException(Msg.toManyDiceTakenException.message);
         }
         ArrayList<Dice> temporaryTakenDices = createTemporaryTakenDices(dicesToRemove);
-
         if (temporaryTakenDices.size() < dicesToRemove.size()) {
 
             throw new IllegalUserInputException(Msg.notAllowedNumberException.message);
         }
-
         if (!diceSelectionValidator.isUserSelectionValid(temporaryTakenDices,notTakenDices,takenDices)){
             throw new IllegalUserInputException("Make sure that only take valid dice, read the description to see if any special rules apply: ");
         }

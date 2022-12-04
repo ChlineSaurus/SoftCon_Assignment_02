@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Input {
+
     static private final Scanner scanner = new Scanner(System.in);
 
     private static String readInput() {

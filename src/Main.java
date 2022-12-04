@@ -11,11 +11,5 @@ public class Main {
         while (true) {
             aTurn.execute();
         }
-
-        //TurnState.Turn aTurn = new TurnState.Turn();
-
-        //aTurn.nextState();
-
     }
-
 }

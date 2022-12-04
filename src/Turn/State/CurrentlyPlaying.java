@@ -14,6 +14,7 @@ public class CurrentlyPlaying implements TurnState{
     public CurrentlyPlaying(Turn pTurn){
         this.aTurn = pTurn;
     }
+
     @Override
     public void next() {
         if(aTurn.turnCard.isEndTurn()) {
@@ -23,6 +24,7 @@ public class CurrentlyPlaying implements TurnState{
         }
         TurnFlow();
     }
+
     private void nullRollAction(){
         if (!aTurn.validDiceExist()) {
             aTurn.displayTurn(Msg.nullRoll.message);
@@ -57,13 +59,13 @@ public class CurrentlyPlaying implements TurnState{
     }
 
     private boolean diceRemovalAttempt() throws IllegalUserInputException{
-
         if (!aTurn.isDiceTakenSinceRoll()) {
             throw new IllegalUserInputException(Msg.takeAtLeastOneValidDice.message);
         } else {
             return true;
         }
     }
+
     private void takeDice() {
         String message = Msg.explainHowToTakeDice.message;
         while (true) {
