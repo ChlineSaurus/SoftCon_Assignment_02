@@ -1,6 +1,7 @@
 package turn;
 
 import Turn.Turn;
+import cards.AbstractCard;
 import dice.Dice;
 import dice.DiceFace;
 import dice.DiceTower;
@@ -54,5 +55,13 @@ public class DiceSetUp {
             }
             i++;
         }
+    }
+
+    public static void DiceTowerSetUp(Turn aTurn, AbstractCard aCard) throws Exception{
+        Field fDiceTower = aTurn.getClass().getDeclaredField("diceTower");
+        fDiceTower.setAccessible(true);
+        DiceTower theDiceTower = (DiceTower) fDiceTower.get(aTurn);
+        aCard.injectStrategyToTower(theDiceTower);
+        aTurn.turnCard = aCard;
     }
 }

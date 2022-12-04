@@ -43,10 +43,10 @@ public class CurrentlyPlayingTest {
         Method specialTurnStateMethod= turnState.getClass().getDeclaredMethod("diceRemovalAttempt");
         specialTurnStateMethod.setAccessible(true);
         aTurn.rollNotTakenDices();
+        DiceSetUp.DiceTowerSetUp(aTurn, new X2());
         DiceSetUp.tuttoSetup(aTurn);
         ArrayList<DiceFace> diceToRemove = new ArrayList<>();
         diceToRemove.add(DiceFace.One);
-        aTurn.turnCard = new X2();
         aTurn.removeDice(diceToRemove);
         Assertions.assertTrue((Boolean) specialTurnStateMethod.invoke(turnState));
     }
@@ -58,7 +58,7 @@ public class CurrentlyPlayingTest {
         CurrentlyPlaying turnState = new CurrentlyPlaying(aTurn);
         Method specialTurnStateMethod = turnState.getClass().getDeclaredMethod("nullRollAction");
         specialTurnStateMethod.setAccessible(true);
-        aTurn.turnCard = new X2();
+        DiceSetUp.DiceTowerSetUp(aTurn, new X2());
         aTurn.temporaryScore = 100;
         DiceSetUp.tuttoSetup(aTurn);
         specialTurnStateMethod.invoke(turnState);
@@ -68,10 +68,10 @@ public class CurrentlyPlayingTest {
         Assertions.assertEquals(CurrentlyPlaying.class, state.getClass());
         DiceSetUp.NullSetup(aTurn);
         specialTurnStateMethod.invoke(turnState);
-        aTurnFields=aTurn.getClass().getDeclaredField("currentState");
-        aTurnFields.setAccessible(true);
-        state=(TurnState) aTurnFields.get(aTurn);
-        Assertions.assertEquals(EndTurn.class, state.getClass());
+        Field bTurnFields=aTurn.getClass().getDeclaredField("currentState");
+        bTurnFields.setAccessible(true);
+        TurnState bstate=(TurnState) aTurnFields.get(aTurn);
+        Assertions.assertEquals(EndTurn.class, bstate.getClass());
         Assertions.assertEquals(0, aTurn.temporaryScore);
     }
 
@@ -82,7 +82,7 @@ public class CurrentlyPlayingTest {
         CurrentlyPlaying turnState = new CurrentlyPlaying(aTurn);
         Method specialTurnStateMethod = turnState.getClass().getDeclaredMethod("nullRollAction");
         specialTurnStateMethod.setAccessible(true);
-        aTurn.turnCard = new Fireworks();
+        DiceSetUp.DiceTowerSetUp(aTurn, new Fireworks());
         aTurn.temporaryScore = 100;
         DiceSetUp.NullSetup(aTurn);
         specialTurnStateMethod.invoke(turnState);

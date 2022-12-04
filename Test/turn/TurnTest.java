@@ -6,6 +6,7 @@ import Turn.State.StartPlayerTurn;
 import Turn.State.TurnState;
 import Turn.Turn;
 import cards.Deck;
+import cards.cards.cardtypes.X2;
 import dice.DiceFace;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -62,6 +63,7 @@ public class TurnTest {
     @Test
     public void lawOfDemeterDiceTowerTest() throws Exception {
         setUpSingelton.cleanUpSingelton();
+        DiceSetUp.DiceTowerSetUp(aTurn, new X2());
         aTurn.newRoll();
         DiceSetUp.tuttoSetup(aTurn);
         Assertions.assertTrue(aTurn.validDiceExist());

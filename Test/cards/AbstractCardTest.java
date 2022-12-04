@@ -87,4 +87,5 @@ class AbstractCardTest {
     void isEndTurn() {
         Assertions.assertFalse((fireworks.isEndTurn()));
     }
+
 }

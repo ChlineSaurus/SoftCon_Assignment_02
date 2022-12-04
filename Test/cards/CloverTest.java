@@ -10,20 +10,6 @@ import java.lang.reflect.Field;
 
 public class CloverTest {
 
-
-
-    /*Field[] aDiceFields = aDice.getClass().getDeclaredFields();
-    *             for (Field field : aDiceFields) {
-                if (field.getName().equals("currentFaceValue")) {
-                    field.setAccessible(true);
-                    try {
-                        field.set(aDice, DiceFace.getEnum(integer));
-                    } catch (IllegalAccessException e) {
-                        throw new RuntimeException(e);
-                    }
-                }
-            }*/
-
     public AbstractCard modifiedClover() throws Exception{
         AbstractCard clover=new Cloverleaf();
         Field [] cloverFields=clover.getClass().getDeclaredFields();
@@ -44,11 +30,10 @@ public class CloverTest {
 
 
     @Test
-    public void achievingTuttoTwice() throws Exception{
+    public void haveToContinue() throws Exception{
         AbstractCard clover=new Cloverleaf();
         Assertions.assertEquals(5000,clover.tuttoAchieved(5000));
-
-
+        Assertions.assertTrue(clover.haveToContinueRolling());
     }
     @Test
     public void userTriesToEndTurn() throws IllegalUserInputException {
