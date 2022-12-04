@@ -209,5 +209,51 @@ public class DiceTowerTest {
         });
         Assertions.assertEquals(AssertionError.class, e.getCause().getClass());
     }
+    @Test
+    public void testDiceAssertion() throws Exception{
+        Method m = diceTower.getClass().getDeclaredMethod("removeTemporaryTakenDices", List.class);
+        m.setAccessible(true);
+        Field notTakenField=diceTower.getClass().getDeclaredField("notTakenDices");
+        Integer [] arraynoTakenDices={3,5,6};
+        Integer [] temporarayTakenArray={3,5,6,1};
+        ArrayList<Dice> diceNotTaken=DiceListSetUp(arraynoTakenDices);
+        ArrayList<Dice> temporary=DiceListSetUp(temporarayTakenArray);
+        notTakenField.setAccessible(true);
+        notTakenField.set(diceTower,diceNotTaken);
+        Exception e=Assertions.assertThrows(InvocationTargetException.class, () -> {
+            m.invoke(diceTower,temporary);
+
+        });
+        Assertions.assertEquals(AssertionError.class, e.getCause().getClass());
+
+    }
+    @Test
+    public void temporaryShorterThan() throws Exception{
+        diceTower.setStrategy(new PointCalculatorStandard(), new DiceSelectionValidatorStandard(), new NotNullRollStraight());
+        ArrayList<DiceFace> dicesToBeRemoved=new ArrayList<>();
+        dicesToBeRemoved.add(DiceFace.One);
+        dicesToBeRemoved.add(DiceFace.One);
+
+        Field notTakenDicesField=diceTower.getClass().getDeclaredField("notTakenDices");
+        Integer []notTakenDiceArray ={5,1};
+        ArrayList<Dice> notTakenDices=DiceListSetUp(notTakenDiceArray);
+        notTakenDicesField.setAccessible(true);
+        notTakenDicesField.set(diceTower,notTakenDices);
+        Integer []TakenDiceArray={1,1,5,1};
+        ArrayList<Dice> takenDices=DiceListSetUp(TakenDiceArray);
+        Field takenDicesField=diceTower.getClass().getDeclaredField("takenDices");
+        takenDicesField.setAccessible(true);
+        takenDicesField.set(diceTower,takenDices);
+
+        boolean isCaught=false;
+        try {diceTower.removeDice(dicesToBeRemoved);}
+        catch (IllegalUserInputException e){
+            isCaught=true;
+        }
+        assert isCaught;
+
+    }
+
 }
+
 

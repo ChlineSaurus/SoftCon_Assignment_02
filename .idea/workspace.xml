@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="renaming">
+    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="1 branch">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/dice/CalucaltePointsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/dice/CalucaltePointsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/dice/diceSelectionValidatorFireworkTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/dice/diceSelectionValidatorFireworkTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/dice/DiceTowerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/dice/DiceTowerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/dice/NotNullNonStraightTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/dice/NotNullNonStraightTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SetUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SetUp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,35 +85,49 @@
       <recent name="dice.userDiceSelectionValidation" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.diceSelectionValidatorFireworkTest">
-    <configuration name="AbstractCardTest.isImmunity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.DiceTowerTest">
+    <configuration name="DiceTowerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftCon_Assignment_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cards.*" />
+          <option name="PATTERN" value="dice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cards" />
-      <option name="MAIN_CLASS_NAME" value="cards.AbstractCardTest" />
-      <option name="METHOD_NAME" value="isImmunity" />
+      <option name="PACKAGE_NAME" value="dice" />
+      <option name="MAIN_CLASS_NAME" value="dice.DiceTowerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiceTowerTest.testDiceAssertion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SoftCon_Assignment_02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dice" />
+      <option name="MAIN_CLASS_NAME" value="dice.DiceTowerTest" />
+      <option name="METHOD_NAME" value="testDiceAssertion" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CloverTest.achievingTuttoTwice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NotNullNonStraightTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftCon_Assignment_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cards.*" />
+          <option name="PATTERN" value="dice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cards" />
-      <option name="MAIN_CLASS_NAME" value="cards.CloverTest" />
-      <option name="METHOD_NAME" value="achievingTuttoTwice" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="dice" />
+      <option name="MAIN_CLASS_NAME" value="dice.NotNullNonStraightTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -147,36 +162,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="newTurn.CurrentlyPlayingInputValidation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SoftCon_Assignment_02" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="turn.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="turn" />
-      <option name="MAIN_CLASS_NAME" value="turn.newTurn" />
-      <option name="METHOD_NAME" value="CurrentlyPlayingInputValidation" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
+      <item itemvalue="JUnit.DiceTowerTest" />
+      <item itemvalue="JUnit.DiceTowerTest.testDiceAssertion" />
+      <item itemvalue="JUnit.NotNullNonStraightTest" />
       <item itemvalue="JUnit.diceSelectionValidatorFireworkTest" />
-      <item itemvalue="JUnit.AbstractCardTest.isImmunity" />
-      <item itemvalue="JUnit.CloverTest.achievingTuttoTwice" />
-      <item itemvalue="JUnit.newTurn.CurrentlyPlayingInputValidation" />
       <item itemvalue="JUnit.Whole project" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.diceSelectionValidatorFireworkTest" />
-        <item itemvalue="JUnit.CloverTest.achievingTuttoTwice" />
-        <item itemvalue="JUnit.AbstractCardTest.isImmunity" />
-        <item itemvalue="JUnit.newTurn.CurrentlyPlayingInputValidation" />
+        <item itemvalue="JUnit.DiceTowerTest" />
+        <item itemvalue="JUnit.DiceTowerTest.testDiceAssertion" />
+        <item itemvalue="JUnit.NotNullNonStraightTest" />
         <item itemvalue="JUnit.Whole project" />
+        <item itemvalue="JUnit.diceSelectionValidatorFireworkTest" />
       </list>
     </recent_temporary>
   </component>
@@ -219,14 +218,7 @@
       <workItem from="1670102707423" duration="309000" />
       <workItem from="1670103549375" duration="7936000" />
       <workItem from="1670111773500" duration="1413000" />
-      <workItem from="1670173514624" duration="4572000" />
-    </task>
-    <task id="LOCAL-00023" summary="fixedproblem in metaprogramming">
-      <created>1669316791303</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1669316791303</updated>
+      <workItem from="1670173514624" duration="6761000" />
     </task>
     <task id="LOCAL-00024" summary="changing tests">
       <created>1669323390402</created>
@@ -564,7 +556,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670181644800</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="1 branch">
+      <created>1670182009410</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1670182009410</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -594,7 +593,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changes dicetower so that it works temporary dice" />
     <MESSAGE value="better now but problem that 7 dice" />
     <MESSAGE value="fixing 7 dice problem think dices are good to go" />
     <MESSAGE value="fixed issues removes correct dices problem is that if you roll 5 5 5 and select them singley you'll recieve 150 points and not 500" />
@@ -619,7 +617,8 @@
     <MESSAGE value="breaking down currentlyplaying into further compartments" />
     <MESSAGE value="the most simple tests get you the most covearage" />
     <MESSAGE value="renaming" />
-    <option name="LAST_COMMIT_MESSAGE" value="renaming" />
+    <MESSAGE value="1 branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="1 branch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -646,10 +645,10 @@
       <FILTER>dice.notNullRoll.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$All_in_SoftCon_Assignment_02.ic" NAME="All in SoftCon_Assignment_02 Coverage Results" MODIFIED="1670101066971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$NotNullNonStraightTest.ic" NAME="NotNullNonStraightTest Coverage Results" MODIFIED="1669747295586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$NotNullNonStraightTest.ic" NAME="NotNullNonStraightTest Coverage Results" MODIFIED="1670182803309" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dice.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$diceSelectionValidatorFireworkTest.ic" NAME="diceSelectionValidatorFireworkTest Coverage Results" MODIFIED="1670181928678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$diceSelectionValidatorFireworkTest.ic" NAME="diceSelectionValidatorFireworkTest Coverage Results" MODIFIED="1670181967146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
       <FILTER>dice.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$PlayerManagerTest.ic" NAME="PlayerManagerTest Coverage Results" MODIFIED="1670100978888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
@@ -661,7 +660,7 @@
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$DiceTowerTest_removeDiceTest.ic" NAME="DiceTowerTest.removeDiceTest Coverage Results" MODIFIED="1669743724412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dice.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$Whole_project.ic" NAME="Whole project Coverage Results" MODIFIED="1670112256116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$Whole_project.ic" NAME="Whole project Coverage Results" MODIFIED="1670182035647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$PlayerManagerTest_deductionPointsNormal.ic" NAME="PlayerManagerTest.deductionPointsNormal Coverage Results" MODIFIED="1670100882895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>players.*</FILTER>
     </SUITE>
@@ -679,6 +678,9 @@
     </SUITE>
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$BonusCardTest_userTriesToEndTurn.ic" NAME="BonusCardTest.userTriesToEndTurn Coverage Results" MODIFIED="1670085561914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>cards.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$DiceTowerTest_testDiceAssertion.ic" NAME="DiceTowerTest.testDiceAssertion Coverage Results" MODIFIED="1670183716449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>dice.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$ValidateUserSelectionStraightTest.ic" NAME="ValidateUserSelectionStraightTest Coverage Results" MODIFIED="1669747189655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dice.*</FILTER>

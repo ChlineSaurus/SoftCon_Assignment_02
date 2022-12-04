@@ -47,7 +47,7 @@ public class NotNullNonStraightTest {
     @Test
     public void testLegalRoll2(){
         Integer[] takenArray={1};
-        Integer[] notTakenArray={2,2,3,4,1};
+        Integer[] notTakenArray={2,2,3,5,1};
         List<Dice> takenDice=DiceListSetUp(takenArray);
         List<Dice> notTakenDice=DiceListSetUp(notTakenArray);
         Assertions.assertTrue(notNullRoll.notNullRoll(notTakenDice,takenDice));
