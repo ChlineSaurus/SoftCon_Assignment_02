@@ -29,7 +29,7 @@ public enum Msg {
     //Turn Interaction Messages
     tuttoAndCloverleafOrFireworks("You have a tutto but you must go on."),
     stopOrContinueQuestion("Enter \"S\" if you want to stop or \"R\" if you want to continue: "),
-    announceNextPlayer("Your turn is over, the next player is:"),
+    announceNextPlayer("Your turn is over, the next player is: "),
     decoration("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+-+-+-+-+-+-+-+-+-+-+-+-+-" +
             "+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"),
     displayOrRollQuestion("For displaying your score please enter \"D\" for rolling the Dice please enter \"R\""),
