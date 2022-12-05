@@ -3,12 +3,10 @@ package Enums;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class MsgTest {
     @Test
     public void TestStopOrContinueQuestion(){
-        Assertions.assertEquals("Enter 's' if you want to stop or 'c' if you want to continue: ",Msg.stopOrContinueQuestion.message);
+        Assertions.assertEquals("Enter \"S\" if you want to stop or \"R\" if you want to continue: ",Msg.stopOrContinueQuestion.message);
     }
     @Test
     public void TestillegalCharException(){
