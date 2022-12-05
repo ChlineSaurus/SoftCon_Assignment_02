@@ -7,7 +7,7 @@ public enum Msg {
             GameConstants.maxAllowedPlayers.definedConstant)),
     playerNameInputToSmall("Your Player name was to long. Please give a smaller Input"),
     necessaryPointsQuestion("Until how many Points do you want to play the game? Please enter a Number between "+GameConstants.minAllowedPoints.definedConstant +
-            " and "+ GameConstants.maxAllowedPoints.definedConstant+ ":"),
+            " and "+ GameConstants.maxAllowedPoints.definedConstant+ " and press enter:"),
     notEnoughPlayer("You currently dont have enough players"),
     pointInputOutOfBounds("The minimum necessary points are "
             + GameConstants.minAllowedPoints.definedConstant + " the maximum are " + GameConstants.maxAllowedPoints.definedConstant),

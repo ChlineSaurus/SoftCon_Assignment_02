@@ -40,9 +40,7 @@ class AbstractCardTest {
         assertEquals( true, fireworks.isImmunity());
     }
 
-    @Test
-    public void tuttoAchieved() {
-    }
+
 
     @Test
     void userTriesToEndTurn() {
@@ -52,14 +50,7 @@ class AbstractCardTest {
                 });
     }
 
-    @Test
-    void haveToContinueRolling() {
-    }
 
-    @Test
-    void injectStrategyToTower() {
-
-    }
 
     @Test
     void getDeductPoints() {
