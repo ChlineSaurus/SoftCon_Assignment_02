@@ -2,6 +2,7 @@ package Enums;
 
 public enum Msg {
     //Setup Enums.Messages
+
     setUpInstruction(String.format("You may play with %2d to %2d Players: Please enter a name if you want to add a " +
             "Player and press enter. If you want to start press Enter TWICE!", GameConstants.minAllowedPlayers.definedConstant,
             GameConstants.maxAllowedPlayers.definedConstant)),
@@ -12,7 +13,7 @@ public enum Msg {
     pointInputOutOfBounds("The minimum necessary points are "
             + GameConstants.minAllowedPoints.definedConstant + " the maximum are " + GameConstants.maxAllowedPoints.definedConstant),
     takeAtLeastOneValidDice("You can't exit, you must take at least one Dice"),
-    explainHowToTakeDice("Please enter the dice you want to take, example: if you want take a one and five enter '15' or'51'"),
+    explainHowToTakeDice("Please enter the dice you want to take, example: if you want take a one and five enter '15' or'51' "),
 
     //Input Exceptions
     illegalCharException("You input contained other symbols than numbers, spaces and commas. Please give a valid Input"),

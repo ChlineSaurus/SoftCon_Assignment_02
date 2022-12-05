@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="emtpy tests removed in cards">
+    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="stop is now red">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/cards/cardtypes/Stop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/cards/cardtypes/Stop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Enums/Msg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Enums/Msg.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +87,7 @@
       <recent name="dice.userDiceSelectionValidation" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.MsgTest.TestStopOrContinueQuestion">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="SoftCon_Assignment_02" />
@@ -144,6 +144,7 @@
     </configuration>
     <configuration name="Whole project" type="JUnit" factoryName="JUnit" activateToolWindowBeforeRun="false" temporary="true" nameIsGenerated="true">
       <module name="SoftCon_Assignment_02" />
+      <extension name="coverage" sample_coverage="false" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -164,9 +165,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.Whole project" />
         <item itemvalue="JUnit.MsgTest.TestStopOrContinueQuestion" />
+        <item itemvalue="JUnit.Whole project" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.DiceTowerTest" />
         <item itemvalue="JUnit.DiceTowerTest.testDiceAssertion" />
       </list>
@@ -217,14 +218,8 @@
       <workItem from="1670192961906" duration="18000" />
       <workItem from="1670228781567" duration="584000" />
       <workItem from="1670230483538" duration="651000" />
-      <workItem from="1670231205292" duration="929000" />
-    </task>
-    <task id="LOCAL-00031" summary="get dicetowers to work">
-      <created>1669488401757</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1669488401757</updated>
+      <workItem from="1670231205292" duration="1024000" />
+      <workItem from="1670235487818" duration="2045000" />
     </task>
     <task id="LOCAL-00032" summary="@Elias bonus sollte jetzt funktionieren">
       <created>1669490432713</created>
@@ -562,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670231610943</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="stop is now red">
+      <created>1670232152694</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1670232152695</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -592,7 +594,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="straight works now" />
     <MESSAGE value="adding tests branch coverage is only 44%" />
     <MESSAGE value="AbstractCardTest" />
     <MESSAGE value="plus minus work correctly now&#10;new interface was necessary to avoid code duplication" />
@@ -617,7 +618,8 @@
     <MESSAGE value="all tests work now" />
     <MESSAGE value="changing msg" />
     <MESSAGE value="emtpy tests removed in cards" />
-    <option name="LAST_COMMIT_MESSAGE" value="emtpy tests removed in cards" />
+    <MESSAGE value="stop is now red" />
+    <option name="LAST_COMMIT_MESSAGE" value="stop is now red" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
