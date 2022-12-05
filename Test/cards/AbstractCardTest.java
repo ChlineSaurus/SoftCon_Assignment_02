@@ -2,6 +2,7 @@ package cards;
 
 import cards.cards.cardInterfaces.bonusSystemInterface.PlusPoints;
 import cards.cards.cardInterfaces.bonusSystemInterface.TimesX2Points;
+import cards.cards.cardtypes.Bonus;
 import cards.cards.cardtypes.Fireworks;
 import exceptions.IllegalUserInputException;
 import org.junit.jupiter.api.Assertions;
@@ -9,6 +10,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.lang.reflect.Field;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -79,4 +81,12 @@ class AbstractCardTest {
         Assertions.assertFalse((fireworks.isEndTurn()));
     }
 
+    @Test
+    void notYetUsedDefaultSetting() throws Exception{
+        AbstractCard aCard = new Bonus(800);
+        Field f = aCard.getClass().getSuperclass().getDeclaredField("requiredForBonus");
+        f.setAccessible(true);
+        f.set(aCard, TuttoRequired.Two);
+        Assertions.assertEquals(60, aCard.tuttoAchieved(60));
+    }
 }
