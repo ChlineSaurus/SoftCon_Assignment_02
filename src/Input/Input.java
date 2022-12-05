@@ -36,7 +36,7 @@ public class Input {
                 returnList.add(Integer.parseInt(Character.toString(input.charAt(i))));
             }
         } catch (NumberFormatException e) {
-            throw new IllegalUserInputException(Msg.illegalCharException.message);
+            throw new IllegalUserInputException(Msg.illegalCharException.message+"if you want take a one and five enter 15 or 51");
         }
         return returnList;
     }

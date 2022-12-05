@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="making adjustmets to reduce branches">
+    <list default="true" id="2d7c8c4b-7931-42c0-a061-826b7bfce578" name="Changes" comment="all tests work now">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Enums/Msg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Enums/Msg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Input/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Input/Input.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +88,7 @@
       <recent name="dice.userDiceSelectionValidation" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MsgTest.TestStopOrContinueQuestion">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="SoftCon_Assignment_02" />
@@ -163,8 +165,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MsgTest.TestStopOrContinueQuestion" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.MsgTest.TestStopOrContinueQuestion" />
         <item itemvalue="JUnit.Whole project" />
         <item itemvalue="JUnit.DiceTowerTest" />
         <item itemvalue="JUnit.DiceTowerTest.testDiceAssertion" />
@@ -214,13 +216,8 @@
       <workItem from="1670188503566" duration="2400000" />
       <workItem from="1670192788710" duration="117000" />
       <workItem from="1670192961906" duration="18000" />
-    </task>
-    <task id="LOCAL-00028" summary="trying to implement the the three folders into to dicetower &#10;namely CalculateRollPoints&#10;Notnullroll&#10;ValidateUserSelection works but needs to be imbed to dicetower">
-      <created>1669398346188</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1669398346188</updated>
+      <workItem from="1670228781567" duration="584000" />
+      <workItem from="1670230483538" duration="455000" />
     </task>
     <task id="LOCAL-00029" summary="Singleton PlayerManager">
       <created>1669462859271</created>
@@ -558,7 +555,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670192877148</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="all tests work now">
+      <created>1670228928306</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1670228928306</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -588,7 +592,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="next player replaced with the name of the next player" />
     <MESSAGE value="next player works now ... message is now callled msg" />
     <MESSAGE value="minimal changes" />
     <MESSAGE value="straight works now" />
@@ -613,7 +616,8 @@
     <MESSAGE value="restructuring test folder structure" />
     <MESSAGE value="fixing error namely game winner not being declared" />
     <MESSAGE value="making adjustmets to reduce branches" />
-    <option name="LAST_COMMIT_MESSAGE" value="making adjustmets to reduce branches" />
+    <MESSAGE value="all tests work now" />
+    <option name="LAST_COMMIT_MESSAGE" value="all tests work now" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -655,7 +659,7 @@
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$DiceTowerTest_removeDiceTest.ic" NAME="DiceTowerTest.removeDiceTest Coverage Results" MODIFIED="1669743724412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dice.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$Whole_project.ic" NAME="Whole project Coverage Results" MODIFIED="1670192849748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$Whole_project.ic" NAME="Whole project Coverage Results" MODIFIED="1670228841935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SoftCon_Assignment_02$PlayerManagerTest_deductionPointsNormal.ic" NAME="PlayerManagerTest.deductionPointsNormal Coverage Results" MODIFIED="1670100882895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>players.*</FILTER>
     </SUITE>

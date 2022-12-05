@@ -3,7 +3,7 @@ package Enums;
 public enum Msg {
     //Setup Enums.Messages
     setUpInstruction(String.format("You may play with %2d to %2d Players: Please enter a name if you want to add a " +
-            "Player. If you want to start press Enter twice!", GameConstants.minAllowedPlayers.definedConstant,
+            "Player and press enter. If you want to start press Enter TWICE!", GameConstants.minAllowedPlayers.definedConstant,
             GameConstants.maxAllowedPlayers.definedConstant)),
     playerNameInputToSmall("Your Player name was to long. Please give a smaller Input"),
     necessaryPointsQuestion("Until how many Points do you want to play the game? Please enter a Number between "+GameConstants.minAllowedPoints.definedConstant +
@@ -34,7 +34,7 @@ public enum Msg {
     decoration("\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+-+-+-+-+-+-+-+-+-+-+-+-+-" +
             "+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"),
     displayOrRollQuestion("For displaying your score please enter \"D\" for rolling the Dice please enter \"R\""),
-    endOrRollQuestion("Enter to reroll the dice \"R\" and if you want to end your turn \"E\""),
+    endOrRollQuestion("Enter \"R\" to roll the remaining dice and if you want to end your turn \"E\""),
     standardRollQuestion("If you want to take more Dice enter the Numbers, else press Enter");
 
 
