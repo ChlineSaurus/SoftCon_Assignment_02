@@ -26,10 +26,11 @@ public enum Msg {
     notExistingDiceTakenException("You wanted to take a dice, that doesn't exist. Please give a valid Input"),
     notAllowedDiceInInput("Make sure that only take valid dice, read the description to see if any special rules apply: "),
     notAllowedToTakePoints("If you end your turn now, you'll receive zero points, roll again!, type \"R\""),
+    FireworkCantExit("Your Card is a Firework, you are not allowed to stop. Press \"R\" to continue."),
 
     //Turn Interaction Messages
     tuttoAndCloverleafOrFireworks("You have a tutto but you must go on."),
-    stopOrContinueQuestion("Enter \"S\" if you want to stop or \"R\" if you want to continue: "),
+    stopOrContinueQuestion("Enter \"S\" if you want to stop or \"C\" if you want to continue: "),
     announceNextPlayer("Your turn is over, the next player is: "),
     decoration("\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+-+-+-+-+-+-+-+-+-+-+-+-+-" +
             "+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"),

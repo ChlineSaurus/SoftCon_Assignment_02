@@ -47,9 +47,7 @@ public class Deck
             }
             bonusPoints+=100;
         }
-        for(int i=0;i<5000;i++) {
-            Fireworks fireworks = new Fireworks();
-        }
+
         shuffle();
         aCards=new DeckStack(cards);
     }

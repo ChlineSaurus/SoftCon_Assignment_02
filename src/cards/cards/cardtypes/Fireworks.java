@@ -1,11 +1,12 @@
 package cards.cards.cardtypes;
 
+import Enums.Msg;
 import cards.AbstractCard;
 import cards.TuttoRequired;
 import dice.DiceTower;
+import dice.diceSelectionValidator.DiceSelectionValidatorFirework;
 import dice.notNullRoll.NotNullRollStandard;
 import dice.pointCalculator.PointCalculatorStandard;
-import dice.diceSelectionValidator.DiceSelectionValidatorFirework;
 import exceptions.IllegalUserInputException;
 
 public class Fireworks extends AbstractCard {
@@ -34,8 +35,7 @@ public class Fireworks extends AbstractCard {
 
     @Override
     public void userTriesToEndTurn() throws IllegalUserInputException {
-        throw new IllegalUserInputException("Your Card is a Firework, you are not allowed to stop. Press 'r'" +
-                "to continue.");
+        throw new IllegalUserInputException(Msg.FireworkCantExit.message);
     }
 
     @Override
